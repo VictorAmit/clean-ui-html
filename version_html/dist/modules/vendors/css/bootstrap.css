@@ -1,0 +1,19 @@
+/*  BOOTSTRAP V4 CUSTOM STYLES */
+@import url(bootstrap/grid.css);
+@import url(bootstrap/card.css);
+@import url(bootstrap/utilities.css);
+@import url(bootstrap/buttons.css);
+@import url(bootstrap/table.css);
+@import url(bootstrap/typography.css);
+@import url(bootstrap/breadcrumb.css);
+@import url(bootstrap/forms.css);
+@import url(bootstrap/dropdowns.css);
+@import url(bootstrap/selectboxes.css);
+@import url(bootstrap/badge.css);
+@import url(bootstrap/carousel.css);
+@import url(bootstrap/collapse.css);
+@import url(bootstrap/modal.css);
+@import url(bootstrap/alerts.css);
+@import url(bootstrap/pagination.css);
+@import url(bootstrap/tabs.css);
+@import url(bootstrap/popovers.css);

@@ -1,0 +1,13 @@
+// Import mixins from "core" module
+@import '../../core/css/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  DROPIFY */
+
+.dropify-wrapper {
+    border: 1px solid $gray-border;
+    border-radius: 5px;
+    &.disabled {
+        opacity: .5;
+    }
+}

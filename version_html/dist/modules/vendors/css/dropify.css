@@ -1,0 +1,10 @@
+/*  DROPIFY */
+.dropify-wrapper {
+    border: 1px solid #e4e9f0;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.dropify-wrapper.disabled {
+    opacity: .5;
+}
