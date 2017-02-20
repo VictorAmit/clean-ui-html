@@ -32,14 +32,11 @@
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
 }
@@ -47,7 +44,6 @@
 .cat__wizard .steps ul li {
     -webkit-box-flex: 200;
     -webkit-flex-grow: 200;
-       -moz-box-flex: 200;
         -ms-flex-positive: 200;
             flex-grow: 200;
     margin-bottom: 0.71rem;
@@ -114,8 +110,6 @@
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
     }
