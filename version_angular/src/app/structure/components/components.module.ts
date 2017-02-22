@@ -21,6 +21,9 @@ import { ComponentsSteps } from './steps.page';
 import { ComponentsTabs } from './tabs.page';
 import { ComponentsTextEditor } from './text-editor.page';
 import { ComponentsTooltipsPopovers } from './tooltips-popovers.page';
+import { ComponentsNgBootstrap } from './ng-bootstrap.page';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 export const routes: Routes = [
   { path: 'components/badges-labels', component: ComponentsBadgesLabels },
@@ -41,13 +44,15 @@ export const routes: Routes = [
   { path: 'components/steps', component: ComponentsSteps },
   { path: 'components/tabs', component: ComponentsTabs },
   { path: 'components/text-editor', component: ComponentsTextEditor },
-  { path: 'components/tooltips-popovers', component: ComponentsTooltipsPopovers }
+  { path: 'components/tooltips-popovers', component: ComponentsTooltipsPopovers },
+  { path: 'components/ng-bootstrap', component: ComponentsNgBootstrap }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    NgbModule
   ],
   declarations: [
     ComponentsBadgesLabels,
@@ -68,7 +73,8 @@ export const routes: Routes = [
     ComponentsSteps,
     ComponentsTabs,
     ComponentsTextEditor,
-    ComponentsTooltipsPopovers
+    ComponentsTooltipsPopovers,
+    ComponentsNgBootstrap
   ]
 
 })

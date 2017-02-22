@@ -144,6 +144,13 @@
                 </ul>
             </li>
             <li class="cat__menu-left__divider"><!-- --></li>
+            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['components/ng-bootstrap']">
+                    <span class="cat__menu-left__icon icmn-rocket"></span>
+                    Angular Components
+                </a>
+            </li>
+            <li class="cat__menu-left__divider"><!-- --></li>
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
                 <a href="javascript: void(0);">
                     <span class="cat__menu-left__icon icmn-list"></span>

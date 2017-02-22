@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Router, NavigationStart, NavigationEnd, RouterModule } from '@angular/router';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { routing } from './app.routing';
 
@@ -30,6 +31,7 @@ declare var NProgress: any;
         HttpModule,
         RouterModule,
         StructureModule,
+        NgbModule.forRoot(),
         routing
     ],
     providers: [],
