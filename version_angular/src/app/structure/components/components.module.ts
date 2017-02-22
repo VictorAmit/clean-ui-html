@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { Routes, RouterModule }  from '@angular/router';
+import { FormsModule }   from '@angular/forms';
 
 import { ComponentsBadgesLabels } from './badges-labels.page';
 import { ComponentsBreadcrumbs } from './breadcrumbs.page';
@@ -52,7 +53,8 @@ export const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   declarations: [
     ComponentsBadgesLabels,

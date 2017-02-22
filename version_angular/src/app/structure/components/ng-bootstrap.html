@@ -260,7 +260,22 @@
                 <div class="mb-5">
 
                     <!-- Modal -->
-                    <button class="btn btn-default">Launch demo modal</button>
+                    <template #content let-c="close" let-d="dismiss">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Modal title</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="d()">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" (click)="c()">Close</button>
+                      </div>
+                    </template>
+                    <template ngbModalContainer></template>
+                    <button class="btn btn-default" (click)="openModal(content)">Launch demo modal</button>
                     <!-- End Modal -->
 
                 </div>
@@ -278,13 +293,13 @@
 
                     <!-- Pagination -->
                     <p>Default pagination</p>
-                    <ngb-pagination [collectionSize]="70" [(page)]="page"></ngb-pagination>
+                    <ngb-pagination [collectionSize]="70" [(page)]="paginationCurrent"></ngb-pagination>
 
                     <p>directionLinks = false</p>
-                    <ngb-pagination [collectionSize]="70" [(page)]="page" [directionLinks]="false"></ngb-pagination>
+                    <ngb-pagination [collectionSize]="70" [(page)]="paginationCurrent" [directionLinks]="false"></ngb-pagination>
 
                     <p>boundaryLinks = true</p>
-                    <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+                    <ngb-pagination [collectionSize]="70" [(page)]="paginationCurrent" [boundaryLinks]="true"></ngb-pagination>
                     <!-- End Pagination -->
 
                 </div>
@@ -367,7 +382,7 @@
                         }
                     </style>
                     <div class="ngb-rating-example">
-                        <ngb-rating [(rate)]="currentRate">
+                        <ngb-rating [(rate)]="ratingCurrent">
                             <template let-fill="fill">
                                 <span class="star" [class.filled]="fill === 100">&#9733;</span>
                             </template>
@@ -440,7 +455,7 @@
                 <div class="mb-5">
 
                     <!-- Timepicker -->
-                    <ngb-timepicker></ngb-timepicker>
+                    <ngb-timepicker [(ngModel)]="timepickerModel"></ngb-timepicker>
                     <!-- End Timepicker -->
 
                 </div>
@@ -489,7 +504,7 @@
                 <div class="mb-5">
 
                   <!-- Typeahead -->
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" [(ngModel)]="typeaheadModel" [ngbTypeahead]="typeaheadSearch" />
                   <!-- End Typeahead -->
 
                 </div>
