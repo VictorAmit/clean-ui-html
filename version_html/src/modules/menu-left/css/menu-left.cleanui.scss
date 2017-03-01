@@ -19,6 +19,17 @@
         transform: translate3d(rem(-250), 0, 0);
         transition: transform .2s ease-in-out;
 
+        @at-root {
+            // box shadow option
+            .cat__config--shadow {
+                @media (min-width: $sm-min-width){
+                    .cat__menu-left {
+                        box-shadow: 0 0 200px -30px rgba($black-lighten-more,.4);
+                    }
+                }
+            }
+        }
+
         // next styles affects on "block-top-bar" module
         // left padding
         @at-root {

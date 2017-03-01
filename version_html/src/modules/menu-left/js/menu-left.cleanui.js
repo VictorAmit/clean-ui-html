@@ -5,9 +5,14 @@ $(function(){
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
+    $('.cat__menu-left').after('<div class="cat__menu-left__backdrop cat__menu-left__action--backdrop-toggle"><!-- --></div>');
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // submenu
+
     $('.cat__menu-left__submenu > a').on('click', function(){
 
-        if ($('body').hasClass('cat__layout--vertical') || $('body').width() < 768) {
+        if ($('body').hasClass('cat__config--vertical') || $('body').width() < 768) {
 
             var parent = $(this).parent(),
                 opened = $('.cat__menu-left__submenu--toggled');
@@ -24,7 +29,7 @@ $(function(){
 
     // remove submenu toggle class when viewport back to full view
     $(window).on('resize', function(){
-        if ($('body').hasClass('cat__layout--horizontal') || $('body').width() > 768) {
+        if ($('body').hasClass('cat__config--horizontal') || $('body').width() > 768) {
             $('.cat__menu-left__submenu--toggled').removeClass('cat__menu-left__submenu--toggled').find('> .cat__menu-left__list').attr('style', '');
         }
     });
@@ -33,7 +38,7 @@ $(function(){
     /////////////////////////////////////////////////////////////////////////////////////////
     // custom scroll init
 
-    if ($('body').hasClass('cat__layout--vertical')) {
+    if ($('body').hasClass('cat__config--vertical')) {
         if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
             $('.cat__menu-left__inner').each(function () {
                 $(this).jScrollPane({

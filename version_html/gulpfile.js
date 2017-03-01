@@ -9,7 +9,8 @@
 
 var cleanui = {
     "version": "2.0.0",
-    "title": "Clean UI Admin Template Premium",
+    "templateName": "Clean UI Admin Template Modular",
+    "pageTitle": "Clean UI Admin Template Modular",
     "description": "Clean UI – a modern professional admin template, based on Bootstrap 4 framework. Clean UI is a powerful and super flexible tool, which suits best for any kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.",
 };
 
@@ -116,7 +117,8 @@ gulp.task('build:structure', function () {
             gulp.src(path.src.structure) // get structure templates
                 .pipe(ignore.exclude('**/_head.html')) // exclude mixins.scss file
                 .pipe(data({
-                    pageTitle: cleanui.title,
+                    templateName: cleanui.templateName,
+                    pageTitle: cleanui.pageTitle,
                     productVersion: cleanui.version
                 })) // set variables
                 .pipe(wrap({src: path.src.versions + arrayHtml[i]})) // insert all pages to layout
@@ -274,7 +276,8 @@ gulp.task('watch', function(){
 gulp.task('build:structure:compile', function () {
     return gulp.src(path.src.structure)
         .pipe(data({
-            pageTitle: cleanui.title,
+            templateName: cleanui.templateName,
+            pageTitle: cleanui.pageTitle,
             productVersion: cleanui.version
         })) // set variables
         .pipe(template()) // replace DATA variables

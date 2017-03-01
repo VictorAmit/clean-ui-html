@@ -98,7 +98,7 @@ export class ComponentsNotificationsAlerts implements OnInit {
           title: "Sweet!",
           text: "Here's a custom image.",
           confirmButtonClass: "btn-success",
-          imageUrl: '/assets/components/core/img/avatars/1.jpg'
+          imageUrl: '/assets/modules/core/img/avatars/1.jpg'
         });
       });
 

@@ -44,7 +44,8 @@ $base__font-size: 14 !default;
 @function rem($px, $base: $base__font-size) {
   @return #{floor( ($px/$base) * 100 ) / 100}rem; // to REMs
 
-  //@return #{$px}px; // to PXs
+  // commen code above and uncomment below for change REMs to PXs
+  //@return #{$px}px;
 }
 
 

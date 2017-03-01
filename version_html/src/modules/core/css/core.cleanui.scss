@@ -70,10 +70,44 @@ code {
     background: $gray-lighten-more;
 }
 
+// pre element
+pre {
+    color: $text;
+    padding: rem(20);
+    border-radius: 3px;
+    border: 1px solid $gray-border;
+    background: $gray-lighten-more;
+
+    &.cat__core__pre--darken {
+        background: $black-lighten;
+        $color: $text;
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  CORE OPTIONS */
 
-.cat__core {
+.cat__config {
+
+    // vertical layout (default)
+    &--vertical {
+
+    }
+
+    // horizontal layout
+    &--horizontal {
+
+    }
+
+    // unfixed option
+    &--unfixed {
+
+    }
+
+    // compact option
+    &--compact {
+
+    }
 
     // super clean mode option
     &--superclean {
@@ -83,6 +117,9 @@ code {
         .card {
             border: none !important;
             border-radius: 0 !important;
+        }
+        .cat__core__top-sidebar {
+            margin: 0 0 rem(20);
         }
     }
 
@@ -98,13 +135,7 @@ code {
 
     // shadow option
     &--shadow {
-        @media (min-width: $sm-min-width){
 
-            // next styles affects on "menu-left" module
-            .cat__menu-left {
-                box-shadow: 0 0 200px -30px rgba($black-lighten-more,.4);
-            }
-        }
     }
 }
 
@@ -113,7 +144,29 @@ code {
 
 .cat__core {
 
-    // left & right sidebars
+    // scroll top button
+    &__scroll-top {
+        position: fixed;
+        z-index: 1100;
+        bottom: rem(40);
+        right: rem(40);
+        border-radius: 5px;
+        background: $gray-lighten;
+        color: $gray-darken;
+        text-align: center;
+        width: rem(60);
+        height: rem(60);
+        padding: rem(20);
+        opacity: .8;
+
+        &:hover, &:focus, &:active {
+            opacity: 1;
+            color: $white;
+            background: $gray;
+        }
+    }
+
+    // left & right card sidebars
     &__card-with-sidebar {
         position: relative;
         min-height: rem(400);
@@ -123,7 +176,7 @@ code {
             width: 1px;
             background: $gray-border;
             position: absolute;
-            left: 240px;
+            left: rem(240);
             top: 0;
             height: 100%;
             z-index: 0;
@@ -137,18 +190,19 @@ code {
             position: absolute;
             top: 0;
             left: 0;
-            width: 240px;
-            padding: 25px;
+            width: rem(240);
+            padding: rem(15);
             overflow-y: auto;
             height: 100%;
         }
         .card-header, .card-block, .card-footer {
-            margin-left: 240px;
+            margin-left: rem(240);
         }
+
         &--right {
             &:before {
                 left: auto;
-                right: 240px;
+                right: rem(240);
             }
             .cat__core__card-sidebar {
                 left: auto;
@@ -156,7 +210,49 @@ code {
             }
             .card-header, .card-block, .card-footer {
                 margin-left: 0;
-                margin-right: 240px;
+                margin-right: rem(240);
+            }
+        }
+
+        &--large {
+            &:before {
+                left: rem(320);
+            }
+            .cat__core__card-sidebar {
+                width: rem(320);
+            }
+            .card-header, .card-block, .card-footer {
+                margin-left: rem(320);
+            }
+
+            &.cat__core__card-with-sidebar--right {
+                &:before {
+                    left: auto;
+                    right: rem(320);
+                }
+                .card-header, .card-block, .card-footer {
+                    margin-right: rem(320);
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @media (max-width: $md-max-width) {
+            &:before, &:after {
+                display: none;
+            }
+
+            .cat__core__card-sidebar {
+                position: static;
+                margin-bottom: rem(0);
+                width: auto;
+                overflow: auto;
+                height: auto;
+            }
+
+            .card-header, .card-block, .card-footer {
+                margin-left: 0;
+                margin-right: 0;
             }
         }
     }
@@ -170,6 +266,11 @@ code {
             background: $white;
             border-bottom: 1px solid $gray-border;
         }
+    }
+
+    // scrollable block
+    &__scrollable {
+        overflow: auto;
     }
 
     // avatar
@@ -215,21 +316,25 @@ code {
 
     // quick height
     @at-root {
-        .height-100 {height: 100px;}
-        .height-200 {height: 200px;}
-        .height-300 {height: 300px;}
-        .height-400 {height: 400px;}
-        .height-500 {height: 500px;}
+        .height-100 {height: rem(100);}
+        .height-200 {height: rem(200);}
+        .height-300 {height: rem(300);}
+        .height-400 {height: rem(400);}
+        .height-500 {height: rem(500);}
+        .height-600 {height: rem(600);}
+        .height-700 {height: rem(700);}
     }
 
     // quick width
     @at-root {
-        .width-50 {width: 50px;}
-        .width-100 {width: 100px;}
-        .width-200 {width: 200px;}
-        .width-300 {width: 300px;}
-        .width-400 {width: 400px;}
-        .width-500 {width: 500px;}
+        .width-50 {width: rem(50);}
+        .width-100 {width: rem(100);}
+        .width-200 {width: rem(200);}
+        .width-300 {width: rem(300);}
+        .width-400 {width: rem(400);}
+        .width-500 {width: rem(500);}
+        .width-600 {width: rem(600);}
+        .width-700 {width: rem(700);}
     }
 
     // example block

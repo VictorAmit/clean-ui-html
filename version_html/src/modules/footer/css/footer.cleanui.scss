@@ -32,5 +32,13 @@
             left: 0;
             width: rem(30);
         }
+
+        @at-root {
+            .cat__core--superclean {
+                .cat__footer {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }

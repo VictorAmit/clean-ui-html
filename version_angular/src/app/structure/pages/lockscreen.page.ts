@@ -42,7 +42,7 @@ export class PagesLockscreen implements OnInit {
           final = next > max ? min : next;
 
         $('.random-bg-image').data('img', final);
-        $('.cat__pages__login').data('img', final).css('backgroundImage', 'url(/assets/components/pages/img/login/' + final + '.jpg)');
+        $('.cat__pages__login').data('img', final).css('backgroundImage', 'url(/assets/modules/pages/img/login/' + final + '.jpg)');
       })
 
     });

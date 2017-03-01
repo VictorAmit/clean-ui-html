@@ -11,6 +11,7 @@
 
 .note-editor {
     border-color: $gray-border !important;
+    border-radius: 3px;
     .note-codable {
         outline: none;
         background: lighten($black, 3%) !important;

@@ -1,48 +1,22 @@
-## README ##
+### Description ###
 
-### Detailed documentation will be availalble soon. **Please be a patient!** ###
+Clean UI is the first framework in the world, which uses the concept of modularity. The use of such approach allows you to drastically reduce the time and cost of development. Build the interface from the ready blocks and modules quickly and easily, like Lego! And all this is available now for Angular (version 2 or higher).
 
-It's a new version of Clean UI Admin Template. Refactored and improved.
-Now it's full modular and it on BEM (block-element-modifier) - each module and component are separated from each other.
-After final release we will start to develop new modules that replicate the functionality of popular services such as YouTube, Facebook, etc. You can easily implement it after - since all styles and selectors are unique and not break your UI.
+This is a completely modular framework, built on the latest technologies, such as BEM methodology (Block Element Modifier). You can learn more about the methodology here. Following the simple and understandable rules of this methodology allows the easy support of code even after long-term development. Adding new functionality and modifying the old one has never been so easy before. The presence of a variety of useful development methodologies make this process easier and more enjoyable; for example, such feature as rem measurement units make mobile versions of applications, built on the basis of Clean UI, look great on any type of devices. Open our template on your mobile phone and be sure to verify it yourself!
 
-Enjoy!
+Clean UI - a modern professional admin template, based on Bootstrap 4 framework. It's a powerful and super flexible tool, which suits best for any kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc. Clean UI is fully responsive, which means that it looks perfect on mobiles and tablets.
+
+Our template is fully based on SASS pre-processor, includes 50+ commented SASS files. Each file corresponds to a single component, layout, page, plugin or extension – so you can easily find necessary piece of code and edit it for your needs. The package includes CSS files compiled from SASS.
 
 
-### Issues Tracker ###
+### Installation ###
 
-Please use Issues Tracker for post issues / founded bugs or write to [support@cleanuitemplate.com](mailto:support@cleanuitemplate.com)
+Please read documentation (version_html/dist/versions/menu-left/documentation-index.html).
 
-### Prebuilt Pages ###
+### Git Repository ###
 
-* /version_html/dist/versions/ page templates
-* /version_html/dist/modules/ clean ui assets (modules)
-* /version_html/dist/vendors/ vendors assets
+Please send purchase code and email for invitation to support@cleanuitemplate.com for get access to GitLab repository.
 
-### Installing Environment ###
+### Support ###
 
-* Install Node.js 7.5.0 ([https://nodejs.org](https://nodejs.org))
-* Install Gulp and Bower "npm install --global bower gulp"
-
-### Static version serving ###
-
-* "cd version_html/" enter to static version folder
-* "npm install" install node plugins (once)
-* "bower install" install vendors plugins (once)
-* "gulp" for live serving
-
-### Angular version serving ###
-
-* "npm install -g angular/cli" install Angular CLI globally
-* "cd version_angular/" enter to angular version folder
-* "npm install" install node plugins (once)
-* "ng start" for live serving
-* "ng build --prod --aot" for production build (/dist/ folder)
-
-### Roadmap ###
-
-* "21 FEB 2017" Ng-Bootstrap directives, Themes Module
-* "22 FEB 2017" Apps Pages Module, Ng-Bootstrap directives
-* "23 FEB 2017" Dashboards Module (draggable, widgets, etc.)
-* "25 FEB 2017" Detailed Documentation / Code Documentation
-* "27 FEB 2017" Bug Fixes, Final 2.0.0 Release
+Use comments on Themeforest item page or write to [support@cleanuitemplate.com](mailto:support@cleanuitemplate.com).

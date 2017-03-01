@@ -7,11 +7,11 @@
     UNFIXED TOP BAR MODIFIER */
 
 body.cat {
-    &__layout {
+    &__config {
         &--vertical {
 
             // unfixed top bar
-            &.cat__layout--unfixed {
+            &.cat__config--unfixed {
 
                 // next styles affects on "block-top-bar" module
                 // set body top padding to 0 (remove space for fixed top bar)
@@ -23,7 +23,7 @@ body.cat {
             }
 
             // vertical boxed layout
-            &.cat__layout--boxed {
+            &.cat__config--boxed {
 
                 // next styles affects on "block-top-bar" module
                 // custom styles of top bar module
@@ -71,7 +71,7 @@ body.cat {
             }
 
             // vertical compact layout
-            &.cat__layout--compact {
+            &.cat__config--compact {
 
                 // > 768px (breakpoint) styles
                 @media (min-width: $sm-min-width) {
@@ -172,14 +172,14 @@ body.cat {
                 }
 
                 // compact and boxed
-                &.cat__layout--boxed {
+                &.cat__config--boxed {
                     @media (min-width: $sm-min-width) {
                         padding-left: rem(150);
                     }
                 }
 
                 // unfixed top bar margin on iconbar layout
-                &.cat__layout--unfixed {
+                &.cat__config--unfixed {
 
                     // next styles affects on "block-top-bar" module
                     // remove fixed position from top bar
