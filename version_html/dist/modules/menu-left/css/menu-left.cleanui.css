@@ -449,7 +449,7 @@
 }
 
 .cat__menu-left .jspScrollable .jspPane, .cat__menu-left .jspScrollable .jspContainer {
-    width: 99.8% !important;
+    width: 100% !important;
 }
 
 .cat__menu-left .jspScrollable .jspCap {

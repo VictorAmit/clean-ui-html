@@ -46,6 +46,7 @@
         "assets/modules/core/css/core.cleanui.css",
         "assets/modules/vendors/css/vendors.cleanui.css",
         "assets/modules/layouts/css/layouts-pack.cleanui.css",
+        "assets/modules/themes/css/themes.cleanui.css",
         "assets/modules/menu-left/css/menu-left.cleanui.css",
         "assets/modules/menu-right/css/menu-right.cleanui.css",
         "assets/modules/top-bar/css/top-bar.cleanui.css",

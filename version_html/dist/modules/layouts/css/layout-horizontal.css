@@ -68,7 +68,7 @@ body.cat__config--horizontal.cat__config--unfixed .cat__top-bar {
     body.cat__config--horizontal .cat__menu-left__list--root > li.cat__menu-left__item:before {
         top: auto;
         bottom: 0;
-        height: 3px;
+        height: 2px;
         width: 100%;
     }
     body.cat__config--horizontal .cat__menu-left__list--root > li.cat__menu-left__item > a {
