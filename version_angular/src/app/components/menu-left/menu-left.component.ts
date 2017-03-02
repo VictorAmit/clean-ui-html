@@ -48,6 +48,7 @@ export class MenuLeftComponent implements OnInit {
         if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
           $('.cat__menu-left__inner').each(function () {
             $(this).jScrollPane({
+              contentWidth: '0px',
               autoReinitialise: true,
               autoReinitialiseDelay: 100
             });
