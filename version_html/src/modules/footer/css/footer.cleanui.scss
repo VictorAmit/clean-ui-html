@@ -6,7 +6,7 @@
 
 .cat {
     &__footer {
-        margin-bottom: rem(-20);
+        margin-bottom: rem(-19);
         background: $gray-border;
         border-radius: 5px 5px 0px 0px;
         padding: rem(50) rem(20) rem(30);
@@ -34,7 +34,7 @@
         }
 
         @at-root {
-            .cat__core--superclean {
+            .cat__config--superclean {
                 .cat__footer {
                     margin-bottom: 0;
                 }

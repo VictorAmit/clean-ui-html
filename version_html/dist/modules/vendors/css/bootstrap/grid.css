@@ -18,3 +18,9 @@
     padding-left: 0.71rem;
     padding-right: 0.71rem;
 }
+
+@media (max-width: 1599px) {
+    .hidden-xxl-down {
+        display: none;
+    }
+}

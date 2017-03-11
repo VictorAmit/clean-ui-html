@@ -9,8 +9,8 @@ declare var jQuery: any;
 
 export class DocumentationIndex implements OnInit {
   ngOnInit() {
-    $(function () {
 
+    $(function () {
 
       // scroll to chapter
       $('.scroll-to-chapter a').on('click', function(e){
@@ -62,6 +62,7 @@ export class DocumentationIndex implements OnInit {
       });
 
     });
+
   }
 }
 

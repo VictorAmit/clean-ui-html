@@ -13,10 +13,13 @@
         width: rem(250);
         height: 100%;
         background: $gray-lighten;
-        padding: rem(20);
         transform: translate3d(rem(250),0,0);
         transition: transform .2s ease-in-out;
         overflow-y: auto;
+
+        &__inner {
+            padding: rem(20);
+        }
 
         // header styles
         &__header {

@@ -45,6 +45,7 @@ Contact: hello@mediatec.org
     <link rel="stylesheet" type="text/css" href="../../vendors/cleanhtmlvideoplayer/src/player.css">
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <script src="../../vendors/tether/dist/js/tether.min.js"></script>
+    <script src="../../vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="../../vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
@@ -84,7 +85,7 @@ Contact: hello@mediatec.org
     <script src="../../vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
     <script src="../../vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
 
-    <!-- CLEAN UI ADMIN TEMPLATE-->
+    <!-- CLEAN UI ADMIN TEMPLATE MODULES-->
     <!-- v2.0.0 -->
     <link rel="stylesheet" type="text/css" href="../../modules/core/css/core.cleanui.css">
     <link rel="stylesheet" type="text/css" href="../../modules/vendors/css/vendors.cleanui.css">
@@ -101,183 +102,179 @@ Contact: hello@mediatec.org
     <script src="../../modules/menu-right/js/menu-right.cleanui.js"></script>
 </head>
 <body class="cat__config--vertical cat__config--compact cat__menu-left--colorful">
-
-<!-- START: menu-right -->
 <div class="cat__menu-right">
-    <div class="cat__menu-right__header">
-        <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
-        Theme Settings
+    <div class="cat__menu-right__inner">
+        <div class="cat__menu-right__header">
+            <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
+            Theme Settings
+        </div>
+        <div class="cat__menu-right__content">
+            <div class="cat__menu-right__descr">
+                This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
+            </div>
+            <div class="cat__menu-right__label">
+                Theme Style
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Boxed Layout
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Compact Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Fixed Top Bar
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Super Clean Mode
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Colorful Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Menu Shadow
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Squared Corners
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cat__menu-right__content">
-        <div class="cat__menu-right__descr">
-            This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
-        </div>
-        <div class="cat__menu-right__label">
-            Theme Style
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Boxed Layout
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Compact Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Fixed Top Bar
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Super Clean Mode
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Colorful Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Menu Shadow
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Squared Corners
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
-<!-- END: menu-right -->
-
-<!-- START: menu-left -->
 <nav class="cat__menu-left">
     <div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
         <div class="cat__menu-left__pin-button">
@@ -869,20 +866,14 @@ Contact: hello@mediatec.org
         </ul>
     </div>
 </nav>
-<!-- END: menu-left -->
-
-<!-- START: top-bar -->
 <div class="cat__top-bar">
-
     <!-- left aligned items -->
     <div class="cat__top-bar__left">
-
         <div class="cat__top-bar__logo">
             <a href="dashboards-alpha.html">
                 <img src="../../modules/core/img/logo.png" />
             </a>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -909,7 +900,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -928,7 +918,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-lg-down">
             <div class="cat__top-bar__search">
                 <i class="icmn-search"><!-- --></i>
@@ -936,11 +925,12 @@ Contact: hello@mediatec.org
             </div>
         </div>
     </div>
-
     <!-- right aligned items -->
     <div class="cat__top-bar__right">
-
         <div class="cat__top-bar__item hidden-sm-down">
+            <a href="javascript: void(9);" class="btn btn-sm btn-default btn-rounded">Buy Now 25$</a>
+        </div>
+        <div class="cat__top-bar__item hidden-xxl-down hidden-sm-down">
             <div class="cat__top-bar__mini-chart">
                 Server Load:
                 <div class="cat__top-bar__mini-chart__inner">
@@ -957,7 +947,6 @@ Contact: hello@mediatec.org
                 20%
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1043,7 +1032,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="dropdown cat__top-bar__avatar-dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1063,312 +1051,296 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="cat__top-bar__menu-button cat__menu-right__action--menu-toggle">
                 <i class="fa fa-bars"><!-- --></i>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- END: top-bar -->
-
-<!-- START: content-block -->
 <div class="cat__content">
+<!-- START: apps/calendar -->
+<section class="card cat__core__card-with-sidebar cat__core__card-with-sidebar--right">
+    <div class="cat__core__card-sidebar">
+        <div class="px-3 py-1">
+            <h5 class="mb-3">
+                <strong>Calendars</strong>
+            </h5>
+            <ul class="list-unstyled">
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Gmail
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Apple Calendar
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6" checked="">
+                            Birthdays
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="example6">
+                            Weekends
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <h5 class="mb-3">
+                <strong>Events</strong>
+            </h5>
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--default"></span>
+                    Default
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--primary"></span>
+                    Primary
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--secondary"></span>
+                    Secondary
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--success"></span>
+                    Success
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--danger"></span>
+                    Danger
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--info"></span>
+                    Info
+                </li>
+                <li class="mb-2">
+                    <span class="cat__core__donut cat__core__donut--warning"></span>
+                    Warning
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-header">
+        <div class="pull-right">
+            <div class="dropdown mt-2 d-inline-block">
+                <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="icmn-database mr-2"></i>
+                    <span class="hidden-lg-down">Dashboards</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="" role="menu">
+                    <div class="dropdown-header">Active</div>
+                    <a class="dropdown-item" href="javascript:void(0)">Project Management</a>
+                    <a class="dropdown-item" href="javascript:void(0)">User Inetrface Development</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Documentation</a>
+                    <div class="dropdown-header">Inactive</div>
+                    <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-cog"></i> Settings</a>
+                </ul>
+            </div>
+        </div>
+        <h4 class="mt-1 mb-1 text-black">
+            <strong>Calendar App</strong>
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="cat__apps__calendar"></div>
+    </div>
+</section>
+<!-- END: apps/calendar -->
 
-    <!-- START: apps/calendar -->
-    <section class="card cat__core__card-with-sidebar cat__core__card-with-sidebar--right">
-        <div class="cat__core__card-sidebar">
-            <div class="px-3 py-1">
-                <h5 class="mb-3">
-                    <strong>Calendars</strong>
-                </h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="example6" checked="">
-                                Gmail
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="example6" checked="">
-                                Apple Calendar
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="example6" checked="">
-                                Birthdays
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="example6">
-                                Weekends
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-                <h5 class="mb-3">
-                    <strong>Events</strong>
-                </h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--default"></span>
-                        Default
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--primary"></span>
-                        Primary
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--secondary"></span>
-                        Secondary
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--success"></span>
-                        Success
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--danger"></span>
-                        Danger
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--info"></span>
-                        Info
-                    </li>
-                    <li class="mb-2">
-                        <span class="cat__core__donut cat__core__donut--warning"></span>
-                        Warning
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="card-header">
-            <div class="pull-right">
-                <div class="dropdown mt-2 d-inline-block">
-                    <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="icmn-database mr-2"></i>
-                        <span class="hidden-lg-down">Dashboards</span>
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="" role="menu">
-                        <div class="dropdown-header">Active</div>
-                        <a class="dropdown-item" href="javascript:void(0)">Project Management</a>
-                        <a class="dropdown-item" href="javascript:void(0)">User Inetrface Development</a>
-                        <a class="dropdown-item" href="javascript:void(0)">Documentation</a>
-                        <div class="dropdown-header">Inactive</div>
-                        <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-cog"></i> Settings</a>
-                    </ul>
-                </div>
-            </div>
-            <h4 class="mt-1 mb-1 text-black">
-                <strong>Calendar App</strong>
-            </h4>
-        </div>
-        <div class="card-block">
-            <div class="cat__apps__calendar"></div>
-        </div>
-    </section>
-    <!-- END: apps/calendar -->
-    
-    <!-- START: page scripts -->
-    <script>
-        $(function() {
-    
-            ///////////////////////////////////////////////////
-            // FULL CALENDAR
-            $('.cat__apps__calendar').fullCalendar({
-                //aspectRatio: 2,
-                height: 800,
-                header: {
-                    left: 'prev, next',
-                    center: 'title',
-                    right: 'month, agendaWeek, agendaDay'
-                },
-                buttonIcons: {
-                    prev: 'none fa fa-arrow-left',
-                    next: 'none fa fa-arrow-right',
-                    prevYear: 'none fa fa-arrow-left',
-                    nextYear: 'none fa fa-arrow-right'
-                },
-                defaultDate: '2016-05-12',
-                editable: true,
-                eventLimit: true, // allow "more" link when too many events
-                viewRender: function(view, element) {
-                    if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
-                        $('.fc-scroller').jScrollPane({
-                            autoReinitialise: true,
-                            autoReinitialiseDelay: 100
-                        });
-                    }
-                },
-                events: [
-                    {
-                        title: 'All Day Event',
-                        start: '2016-05-01',
-                        className: 'fc-event-success'
-                    },
-                    {
-                        title: 'Long Event',
-                        start: '2016-05-07',
-                        end: '2016-05-10'
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: '2016-05-09T16:00:00',
-                        className: 'fc-event-default'
-                    },
-                    {
-                        id: 999,
-                        title: 'Repeating Event',
-                        start: '2016-05-16T16:00:00',
-                        className: 'fc-event-success'
-                    },
-                    {
-                        title: 'Conference',
-                        start: '2016-05-11',
-                        end: '2016-05-13',
-                        className: 'fc-event-danger'
-                    },
-                    {
-                        title: 'Meeting',
-                        start: '2016-05-12T10:30:00',
-                        end: '2016-05-12T12:30:00',
-                        className: 'fc-event-default'
-                    },
-                    {
-                        title: 'Lunch',
-                        start: '2016-05-12T12:00:00',
-                        className: 'fc-event-default'
-                    },
-                    {
-                        title: 'Meeting',
-                        start: '2016-05-12T14:30:00',
-                        className: 'fc-event-info'
-                    },
-                    {
-                        title: 'Happy Hour',
-                        start: '2016-05-12T17:30:00'
-                    },
-                    {
-                        title: 'Dinner',
-                        start: '2016-05-12T20:00:00'
-                    },
-                    {
-                        title: 'Birthday Party',
-                        start: '2016-05-13T07:00:00',
-                        className: 'fc-event-danger'
-                    },
-                    {
-                        title: 'Click for Google',
-                        url: 'javascript: alert("Clicked: External URL");',
-                        start: '2016-05-28',
-                        className: 'fc-event-warning'
-                    }
-                ],
-                eventClick: function(calEvent, jsEvent, view) {
-                    if (!$(this).hasClass('event-clicked')) {
-                        $('.fc-event').removeClass('event-clicked');
-                        $(this).addClass('event-clicked');
-                    }
+<!-- START: page scripts -->
+<script>
+    $(function() {
+
+        ///////////////////////////////////////////////////
+        // FULL CALENDAR
+        $('.cat__apps__calendar').fullCalendar({
+            //aspectRatio: 2,
+            height: 800,
+            header: {
+                left: 'prev, next',
+                center: 'title',
+                right: 'month, agendaWeek, agendaDay'
+            },
+            buttonIcons: {
+                prev: 'none fa fa-arrow-left',
+                next: 'none fa fa-arrow-right',
+                prevYear: 'none fa fa-arrow-left',
+                nextYear: 'none fa fa-arrow-right'
+            },
+            defaultDate: '2016-05-12',
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            viewRender: function(view, element) {
+                if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
+                    $('.fc-scroller').jScrollPane({
+                        autoReinitialise: true,
+                        autoReinitialiseDelay: 100
+                    });
                 }
-            });
-    
-    
+            },
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2016-05-01',
+                    className: 'fc-event-success'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2016-05-07',
+                    end: '2016-05-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-05-09T16:00:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2016-05-16T16:00:00',
+                    className: 'fc-event-success'
+                },
+                {
+                    title: 'Conference',
+                    start: '2016-05-11',
+                    end: '2016-05-13',
+                    className: 'fc-event-danger'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-05-12T10:30:00',
+                    end: '2016-05-12T12:30:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2016-05-12T12:00:00',
+                    className: 'fc-event-default'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2016-05-12T14:30:00',
+                    className: 'fc-event-info'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2016-05-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2016-05-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2016-05-13T07:00:00',
+                    className: 'fc-event-danger'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'javascript: alert("Clicked: External URL");',
+                    start: '2016-05-28',
+                    className: 'fc-event-warning'
+                }
+            ],
+            eventClick: function(calEvent, jsEvent, view) {
+                if (!$(this).hasClass('event-clicked')) {
+                    $('.fc-event').removeClass('event-clicked');
+                    $(this).addClass('event-clicked');
+                }
+            }
         });
-    </script>
-    <!-- END: page scripts -->
 
-    <!-- START: footer -->
-    <div class="cat__footer">
-        <div class="cat__footer__top">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+    });
+</script>
+<!-- END: page scripts -->
+<div class="cat__footer">
+    <div class="cat__footer__top">
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
+                        </ul>
                     </div>
-                    <div class="cat__footer__description">
-                        <p>Clean UI – a modern professional admin template, based on Bootstrap 4
-                            framework. Clean UI is a powerful and super flexible tool, which suits best for any
-                            kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
-                            Clean UI is fully responsive, which means that it looks perfect on mobiles and
-                            tablets</p>
-    
-                        <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
-                            Each file corresponds to a single component, layout, page, plugin or extension –
-                            so you can easily find necessary piece of code and edit it for your needs.
-                            The package includes both normal and minified CSS files, compiled from SASS</p>
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cat__footer__bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-primary">
-                        Buy Now 25$
-                    </a>
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-md-8">
-                    <div class="cat__footer__company">
-                        <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
-                        <span>
-                            © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
-                            <br>
-                            All rights reserved
-                        </span>
-                    </div>
+                <div class="cat__footer__description">
+                    <p>Clean UI – a modern professional admin template, based on Bootstrap 4
+                        framework. Clean UI is a powerful and super flexible tool, which suits best for any
+                        kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
+                        Clean UI is fully responsive, which means that it looks perfect on mobiles and
+                        tablets</p>
+
+                    <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
+                        Each file corresponds to a single component, layout, page, plugin or extension –
+                        so you can easily find necessary piece of code and edit it for your needs.
+                        The package includes both normal and minified CSS files, compiled from SASS</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END: footer -->
-
+    <div class="cat__footer__bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-default btn-rounded">
+                    Buy Now 25$
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="cat__footer__company">
+                    <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
+                    <span>
+                        © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
+                        <br>
+                        All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);"><i class="icmn-arrow-up"></i></a>
 </div>
-<!-- END: content-block -->
-
-<a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);">
-    <i class="icmn-arrow-up"></i>
-</a>
-
+</div>
 </body>
 </html>

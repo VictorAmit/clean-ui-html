@@ -45,6 +45,7 @@ Contact: hello@mediatec.org
     <link rel="stylesheet" type="text/css" href="../../vendors/cleanhtmlvideoplayer/src/player.css">
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <script src="../../vendors/tether/dist/js/tether.min.js"></script>
+    <script src="../../vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="../../vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
@@ -84,7 +85,7 @@ Contact: hello@mediatec.org
     <script src="../../vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
     <script src="../../vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
 
-    <!-- CLEAN UI ADMIN TEMPLATE-->
+    <!-- CLEAN UI ADMIN TEMPLATE MODULES-->
     <!-- v2.0.0 -->
     <link rel="stylesheet" type="text/css" href="../../modules/core/css/core.cleanui.css">
     <link rel="stylesheet" type="text/css" href="../../modules/vendors/css/vendors.cleanui.css">
@@ -101,183 +102,179 @@ Contact: hello@mediatec.org
     <script src="../../modules/menu-right/js/menu-right.cleanui.js"></script>
 </head>
 <body class="cat__config--horizontal cat__config--compact cat__menu-left--colorful">
-
-<!-- START: menu-right -->
 <div class="cat__menu-right">
-    <div class="cat__menu-right__header">
-        <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
-        Theme Settings
+    <div class="cat__menu-right__inner">
+        <div class="cat__menu-right__header">
+            <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
+            Theme Settings
+        </div>
+        <div class="cat__menu-right__content">
+            <div class="cat__menu-right__descr">
+                This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
+            </div>
+            <div class="cat__menu-right__label">
+                Theme Style
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Boxed Layout
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Compact Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Fixed Top Bar
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Super Clean Mode
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Colorful Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Menu Shadow
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Squared Corners
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cat__menu-right__content">
-        <div class="cat__menu-right__descr">
-            This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
-        </div>
-        <div class="cat__menu-right__label">
-            Theme Style
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Boxed Layout
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Compact Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Fixed Top Bar
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Super Clean Mode
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Colorful Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Menu Shadow
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Squared Corners
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
-<!-- END: menu-right -->
-
-<!-- START: menu-left -->
 <nav class="cat__menu-left">
     <div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
         <div class="cat__menu-left__pin-button">
@@ -861,20 +858,14 @@ Contact: hello@mediatec.org
         </ul>
     </div>
 </nav>
-<!-- END: menu-left -->
-
-<!-- START: top-bar -->
 <div class="cat__top-bar">
-
     <!-- left aligned items -->
     <div class="cat__top-bar__left">
-
         <div class="cat__top-bar__logo">
             <a href="dashboards-alpha.html">
                 <img src="../../modules/core/img/logo.png" />
             </a>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -901,7 +892,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -920,7 +910,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-lg-down">
             <div class="cat__top-bar__search">
                 <i class="icmn-search"><!-- --></i>
@@ -928,11 +917,12 @@ Contact: hello@mediatec.org
             </div>
         </div>
     </div>
-
     <!-- right aligned items -->
     <div class="cat__top-bar__right">
-
         <div class="cat__top-bar__item hidden-sm-down">
+            <a href="javascript: void(9);" class="btn btn-sm btn-default btn-rounded">Buy Now 25$</a>
+        </div>
+        <div class="cat__top-bar__item hidden-xxl-down hidden-sm-down">
             <div class="cat__top-bar__mini-chart">
                 Server Load:
                 <div class="cat__top-bar__mini-chart__inner">
@@ -949,7 +939,6 @@ Contact: hello@mediatec.org
                 20%
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1035,7 +1024,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="dropdown cat__top-bar__avatar-dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1055,22 +1043,15 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="cat__top-bar__menu-button cat__menu-right__action--menu-toggle">
                 <i class="fa fa-bars"><!-- --></i>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- END: top-bar -->
-
-<!-- START: content-block -->
 <div class="cat__content">
-
-    <!-- START: layout/typography -->
+<!-- START: layout/typography -->
 <section class="card">
     <div class="card-header">
         <span class="cat__core__title">
@@ -1083,15 +1064,13 @@ Contact: hello@mediatec.org
             <div class="col-lg-6">
                 <!-- Headings -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Headings</strong>
-                    </h4>
-                    <br />
-                    <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>,
+                    </h5>
+                    <p class="text-muted">All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>,
                         are available. <code>.h1</code> through <code>.h6</code> classes
                         are also available, for when you want to match the font styling
                         of a heading but still want your text to be displayed inline</p>
-                    <br />
                     <h1>h1. Bootstrap heading <span class="badge badge-default">LABEL</span></h1>
                     <h2>h2. Bootstrap heading <span class="badge badge-primary">LABEL</span></h2>
                     <h3>h3. Bootstrap heading <span class="badge badge-info">LABEL</span></h3>
@@ -1105,12 +1084,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-6">
                 <!-- Styled Headings -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Styled Headings</strong>
-                    </h4>
-                    <br />
-                    <p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag or the <code>.small</code> class</p>
                     <h1><i class="icmn-home mr-3" aria-hidden="true"></i>Bootstrap heading
                         <span class="text-muted">Secondary text</span>
                     </h1>
@@ -1138,10 +1115,9 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Body Copy -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Body Copy</strong>
-                    </h4>
-                    <br />
+                    </h5>
                     <p>Bootstrap's global default <code>font-size</code> is
                         <strong>1rem</strong>, with a <code>line-height</code> of
                         <strong>1.5</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs)
@@ -1153,10 +1129,9 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Highlight -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Highlight</strong>
-                    </h4>
-                    <br />
+                    </h5>
                     <p>For highlighting a run of text due to its relevance in another
                         context, use the <code>&lt;mark&gt;</code> tag. Like this:</p>
                     <p>You can use the mark tag to
@@ -1167,13 +1142,11 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Addresses -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Addresses</strong>
-                    </h4>
-                    <br />
+                    </h5>
                     <p>Present contact information for the nearest ancestor or the entire
                         body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code></p>
-                    <br />
                     <address>
                         <strong>Twitter, Inc.</strong>
                         <br> 795 Folsom Ave, Suite 600
@@ -1194,12 +1167,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Lists - Unordered -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Lists - Unordered</strong>
-                    </h4>
-                    <br />
-                    <p>A list of items in which the order does not explicitly matter</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">A list of items in which the order does not explicitly matter</p>
                     <ul>
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Nulla volutpat aliquam velit
@@ -1219,12 +1190,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Lists - Ordered -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Lists - Ordered</strong>
-                    </h4>
-                    <br />
-                    <p>A list of items in which the order does explicitly matter</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">A list of items in which the order does explicitly matter</p>
                     <ol>
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Nulla volutpat aliquam velit
@@ -1244,13 +1213,11 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Lists - Unstyled -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Lists - Unstyled</strong>
-                    </h4>
-                    <br />
-                    <p>Remove the default default styles and left margin on list
+                    </h5>
+                    <p class="text-muted">Remove the default default styles and left margin on list
                         items. Apply to each nested lists if you need</p>
-                    <br />
                     <ul class="list-unstyled">
                         <li>Lorem ipsum dolor sit amet</li>
                         <li>Nulla volutpat aliquam velit
@@ -1271,12 +1238,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Lists - Icons -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Lists - Icons</strong>
-                    </h4>
-                    <br />
-                    <p>A list of terms with icons</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">A list of terms with icons</p>
                     <ul class="list-unstyled">
                         <li>
                             <i class="icmn-checkmark2 mr-2" aria-hidden="true"></i>
@@ -1301,12 +1266,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4 col-sm-6">
                 <!-- Collapsible Submenu -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Collapsible Submenu</strong>
-                    </h4>
-                    <br />
-                    <p>A list of terms with icons</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">A list of terms with icons</p>
                     <ul class="list-unstyled">
                         <li>
                             <i class="icmn-checkmark2 mr-2" aria-hidden="true"></i>
@@ -1333,12 +1296,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Lists - Inline -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Lists - Inline</strong>
-                    </h4>
-                    <br />
-                    <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">Place all list items on a single line with <code>display: inline-block;</code> and some light padding</p>
                     <ul class="list-inline">
                         <li class="list-inline-item">Lorem ipsum</li>
                         <li class="list-inline-item">Phasellus iaculis</li>
@@ -1352,12 +1313,10 @@ Contact: hello@mediatec.org
             <div class="col-lg-4">
                 <!-- Description -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Description</strong>
-                    </h4>
-                    <br />
-                    <p>A list of terms with their associated descriptions</p>
-                    <br />
+                    </h5>
+                    <p class="text-muted">A list of terms with their associated descriptions</p>
                     <dl>
                         <dt>Description lists</dt>
                         <dd>A description list is perfect for defining terms</dd>
@@ -1374,13 +1333,11 @@ Contact: hello@mediatec.org
             <div class="col-lg-8">
                 <!-- Horizontal Description -->
                 <div class="mb-5">
-                    <h4 class="text-black">
+                    <h5 class="text-black">
                         <strong>Horizontal Description</strong>
-                    </h4>
-                    <br />
-                    <p>Use the well as a simple effect on an element to give it an inset
+                    </h5>
+                    <p class="text-muted">Use the well as a simple effect on an element to give it an inset
                         effect</p>
-                    <br />
                     <dl class="row">
                         <dt class="col-sm-3">Description lists</dt>
                         <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
@@ -1408,11 +1365,9 @@ Contact: hello@mediatec.org
                 <h4 class="text-black">
                     <strong>Blockquotes</strong>
                 </h4>
-                <br />
-                <p>Add a <code>&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
-                <br />
+                <p class="text-muted">Add a <code>&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
                 <div class="row">
-                    <div class="col-lg-10 mb-5">
+                    <div class="col-lg-10 mb-2">
                         <blockquote class="blockquote">
                             <p class="mb-0">
                                 Led cursus ante dapibus diam. Sed nisi. Nulla quis sem
@@ -1429,7 +1384,7 @@ Contact: hello@mediatec.org
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-10 offset-lg-2 mb-5">
+                    <div class="col-lg-10 offset-lg-2">
                         <blockquote class="blockquote blockquote-reverse">
                             <p class="mb-0">
                                 Led cursus ante dapibus diam. Sed nisi. Nulla quis sem
@@ -1451,83 +1406,74 @@ Contact: hello@mediatec.org
     </div>
 </section>
 <!-- END: layout/typography -->
-
-    <!-- START: footer -->
-    <div class="cat__footer">
-        <div class="cat__footer__top">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="cat__footer">
+    <div class="cat__footer__top">
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
+                        </ul>
                     </div>
-                    <div class="cat__footer__description">
-                        <p>Clean UI – a modern professional admin template, based on Bootstrap 4
-                            framework. Clean UI is a powerful and super flexible tool, which suits best for any
-                            kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
-                            Clean UI is fully responsive, which means that it looks perfect on mobiles and
-                            tablets</p>
-    
-                        <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
-                            Each file corresponds to a single component, layout, page, plugin or extension –
-                            so you can easily find necessary piece of code and edit it for your needs.
-                            The package includes both normal and minified CSS files, compiled from SASS</p>
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cat__footer__bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-primary">
-                        Buy Now 25$
-                    </a>
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-md-8">
-                    <div class="cat__footer__company">
-                        <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
-                        <span>
-                            © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
-                            <br>
-                            All rights reserved
-                        </span>
-                    </div>
+                <div class="cat__footer__description">
+                    <p>Clean UI – a modern professional admin template, based on Bootstrap 4
+                        framework. Clean UI is a powerful and super flexible tool, which suits best for any
+                        kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
+                        Clean UI is fully responsive, which means that it looks perfect on mobiles and
+                        tablets</p>
+
+                    <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
+                        Each file corresponds to a single component, layout, page, plugin or extension –
+                        so you can easily find necessary piece of code and edit it for your needs.
+                        The package includes both normal and minified CSS files, compiled from SASS</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END: footer -->
-
+    <div class="cat__footer__bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-default btn-rounded">
+                    Buy Now 25$
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="cat__footer__company">
+                    <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
+                    <span>
+                        © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
+                        <br>
+                        All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);"><i class="icmn-arrow-up"></i></a>
 </div>
-<!-- END: content-block -->
-
-<a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);">
-    <i class="icmn-arrow-up"></i>
-</a>
-
+</div>
 </body>
 </html>

@@ -1,33 +1,11 @@
 //= ../../../templates/versions/_head.html
 <body class="cat__config--horizontal cat__menu-left--colorful">
-
-<!-- START: menu-right -->
 //= ../../../modules/menu-right/templates/menu-right.html
-<!-- END: menu-right -->
-
-<!-- START: menu-left -->
 //= ../../../modules/menu-left/templates/menu-top.html
-<!-- END: menu-left -->
-
-<!-- START: top-bar -->
 //= ../../../modules/top-bar/templates/top-bar.html
-<!-- END: top-bar -->
-
-<!-- START: content-block -->
 <div class="cat__content">
-
-    <%= contents %>
-
-    <!-- START: footer -->
-    //= ../../../modules/footer/templates/footer.html
-    <!-- END: footer -->
-
+<%= contents %>
+//= ../../../modules/footer/templates/footer.html
 </div>
-<!-- END: content-block -->
-
-<a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);">
-    <i class="icmn-arrow-up"></i>
-</a>
-
 </body>
 </html>

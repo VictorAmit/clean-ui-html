@@ -1,6 +1,6 @@
 /* FOOTER */
 .cat__footer {
-    margin-bottom: -1.43rem;
+    margin-bottom: -1.36rem;
     background: #e4e9f0;
     -webkit-border-radius: 5px 5px 0px 0px;
             border-radius: 5px 5px 0px 0px;
@@ -34,6 +34,6 @@
     width: 2.14rem;
 }
 
-.cat__core--superclean .cat__footer {
+.cat__config--superclean .cat__footer {
     margin-bottom: 0;
 }

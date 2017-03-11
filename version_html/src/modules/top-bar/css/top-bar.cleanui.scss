@@ -2,7 +2,7 @@
 @import '../../core/css/mixins';
 
 /////////////////////////////////////////////////////////////////////////////////////////
-/*  STYLES FOR "BLOCK-TOP-BAR" MODULE */
+/*  STYLES FOR "TOP-BAR" MODULE */
 
 // space for top bar block
 body {
@@ -102,6 +102,7 @@ body {
         &__mini-chart {
             height: rem(30);
             line-height: rem(30);
+
             &__inner {
                 height: 80%;
                 display: inline-flex;

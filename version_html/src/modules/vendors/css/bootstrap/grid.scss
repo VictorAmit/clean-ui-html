@@ -23,3 +23,9 @@
     padding-left: rem(10);
     padding-right: rem(10);
 }
+
+@media (max-width: $xxl-max-width) {
+    .hidden-xxl-down {
+        display: none;
+    }
+}

@@ -45,6 +45,7 @@ Contact: hello@mediatec.org
     <link rel="stylesheet" type="text/css" href="../../vendors/cleanhtmlvideoplayer/src/player.css">
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <script src="../../vendors/tether/dist/js/tether.min.js"></script>
+    <script src="../../vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="../../vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
@@ -84,7 +85,7 @@ Contact: hello@mediatec.org
     <script src="../../vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
     <script src="../../vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
 
-    <!-- CLEAN UI ADMIN TEMPLATE-->
+    <!-- CLEAN UI ADMIN TEMPLATE MODULES-->
     <!-- v2.0.0 -->
     <link rel="stylesheet" type="text/css" href="../../modules/core/css/core.cleanui.css">
     <link rel="stylesheet" type="text/css" href="../../modules/vendors/css/vendors.cleanui.css">
@@ -101,183 +102,179 @@ Contact: hello@mediatec.org
     <script src="../../modules/menu-right/js/menu-right.cleanui.js"></script>
 </head>
 <body class="cat__config--horizontal cat__config--boxed cat__menu-left--colorful">
-
-<!-- START: menu-right -->
 <div class="cat__menu-right">
-    <div class="cat__menu-right__header">
-        <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
-        Theme Settings
+    <div class="cat__menu-right__inner">
+        <div class="cat__menu-right__header">
+            <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
+            Theme Settings
+        </div>
+        <div class="cat__menu-right__content">
+            <div class="cat__menu-right__descr">
+                This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
+            </div>
+            <div class="cat__menu-right__label">
+                Theme Style
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Boxed Layout
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Compact Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Fixed Top Bar
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Super Clean Mode
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Colorful Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Menu Shadow
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Squared Corners
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cat__menu-right__content">
-        <div class="cat__menu-right__descr">
-            This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
-        </div>
-        <div class="cat__menu-right__label">
-            Theme Style
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Boxed Layout
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Compact Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Fixed Top Bar
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Super Clean Mode
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Colorful Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Menu Shadow
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Squared Corners
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
-<!-- END: menu-right -->
-
-<!-- START: menu-left -->
 <nav class="cat__menu-left">
     <div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
         <div class="cat__menu-left__pin-button">
@@ -861,20 +858,14 @@ Contact: hello@mediatec.org
         </ul>
     </div>
 </nav>
-<!-- END: menu-left -->
-
-<!-- START: top-bar -->
 <div class="cat__top-bar">
-
     <!-- left aligned items -->
     <div class="cat__top-bar__left">
-
         <div class="cat__top-bar__logo">
             <a href="dashboards-alpha.html">
                 <img src="../../modules/core/img/logo.png" />
             </a>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -901,7 +892,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -920,7 +910,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-lg-down">
             <div class="cat__top-bar__search">
                 <i class="icmn-search"><!-- --></i>
@@ -928,11 +917,12 @@ Contact: hello@mediatec.org
             </div>
         </div>
     </div>
-
     <!-- right aligned items -->
     <div class="cat__top-bar__right">
-
         <div class="cat__top-bar__item hidden-sm-down">
+            <a href="javascript: void(9);" class="btn btn-sm btn-default btn-rounded">Buy Now 25$</a>
+        </div>
+        <div class="cat__top-bar__item hidden-xxl-down hidden-sm-down">
             <div class="cat__top-bar__mini-chart">
                 Server Load:
                 <div class="cat__top-bar__mini-chart__inner">
@@ -949,7 +939,6 @@ Contact: hello@mediatec.org
                 20%
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1035,7 +1024,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="dropdown cat__top-bar__avatar-dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1055,434 +1043,418 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="cat__top-bar__menu-button cat__menu-right__action--menu-toggle">
                 <i class="fa fa-bars"><!-- --></i>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- END: top-bar -->
-
-<!-- START: content-block -->
 <div class="cat__content">
-
-    <!-- START: apps/mail -->
-    <section class="card cat__core__card-with-sidebar cat__core__card-with-sidebar--large">
-        <div class="cat__core__card-sidebar">
-            <div class="cat__apps__messaging__header">
-                <input class="form-control cat__apps__messaging__header__input" placeholder="Search..." />
-                <i class="icmn-search"></i>
-                <button></button>
-            </div>
-            <div class="cat__apps__messaging__list cat__apps__messaging__list--no-avatar">
-                <div class="cat__apps__messaging__tab">
-                    <div class="cat__apps__messaging__tab__content">
-                        <div class="mb-1">
-                            <strong>Inbox (7)</strong>
-                        </div>
-                        <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                        <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                        <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+<!-- START: apps/mail -->
+<section class="card cat__core__card-with-sidebar cat__core__card-with-sidebar--large">
+    <div class="cat__core__card-sidebar">
+        <div class="cat__apps__messaging__header">
+            <input class="form-control cat__apps__messaging__header__input" placeholder="Search..." />
+            <i class="icmn-search"></i>
+            <button></button>
+        </div>
+        <div class="cat__apps__messaging__list cat__apps__messaging__list--no-avatar">
+            <div class="cat__apps__messaging__tab">
+                <div class="cat__apps__messaging__tab__content">
+                    <div class="mb-1">
+                        <strong>Inbox (7)</strong>
                     </div>
-                </div>
-                <div class="cat__apps__messaging__tab cat__apps__messaging__tab--selected">
-                    <div class="cat__apps__messaging__tab__content">
-                        <div class="mb-1">
-                            <strong>Sent Mail</strong>
-                        </div>
-                        <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                        <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                        <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
-                    </div>
-                </div>
-                <div class="cat__apps__messaging__tab">
-                    <div class="cat__apps__messaging__tab__content">
-                        <div class="mb-1">
-                            <strong>Drafts (1)</strong>
-                        </div>
-                        <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                        <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                        <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
-                    </div>
-                </div>
-                <div class="cat__apps__messaging__tab">
-                    <div class="cat__apps__messaging__tab__content">
-                        <div class="mb-1">
-                            <strong>Spam (17)</strong>
-                        </div>
-                        <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                        <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                        <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
-                    </div>
-                </div>
-                <div class="cat__apps__messaging__tab">
-                    <div class="cat__apps__messaging__tab__content">
-                        <div class="mb-1">
-                            <strong>Deleted Messages</strong>
-                        </div>
-                        <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                        <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                        <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
-                    </div>
+                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
+                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
+                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
-        </div>
-        <div class="card-header">
-            <a href="javascript: void(0);" class="btn btn-sm btn-primary pull-right" data-toggle="modal" data-target="#compose">Compose Mail</a>
-            <div class="nav-tabs-horizontal cat__apps__messaging__nav-tabs pull-left">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript: void(0);" data-toggle="tab" data-target="#profile2" role="tab" aria-expanded="false">
-                            <i class="icmn-home"></i>
-                            <span class="hidden-md-down">Primary</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="javascript: void(0);" data-toggle="tab" data-target="#messages2" role="tab" aria-expanded="true">
-                            <i class="icmn-users"></i>
-                            <span class="hidden-md-down">Social</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript: void(0);" data-toggle="tab" data-target="#settings2" role="tab">
-                            <i class="icmn-price-tags"></i>
-                            <span class="hidden-md-down">Promotion</span>
-                        </a>
-                    </li>
-                </ul>
+            <div class="cat__apps__messaging__tab cat__apps__messaging__tab--selected">
+                <div class="cat__apps__messaging__tab__content">
+                    <div class="mb-1">
+                        <strong>Sent Mail</strong>
+                    </div>
+                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
+                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
+                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                </div>
             </div>
-        </div>
-        <div class="card-block">
-            <table class="table table-hover nowrap" id="example1" width="100%">
-                <thead>
-                <tr>
-                    <th class="no-sort width-10"></th>
-                    <th class="no-sort width-10"></th>
-                    <th class="width-150">From</th>
-                    <th>Message</th>
-                    <th class="no-sort width-10"></th>
-                    <th class="no-sort width-50"></th>
-                </tr>
-                </thead>
-                <tfoot>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th>From</th>
-                    <th>Message</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                </tfoot>
-                <tbody>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-warning"></i></td>
-                    <td>GoDaddy</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>2:54AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Hetzner</td>
-                    <td>Ipsum is simply dummy text of the printing and typesetting</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>6:39AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>mail@google.com</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing</td>
-                    <td></td>
-                    <td>1:48AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Google.com</td>
-                    <td>Is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>8:38AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-warning"></i></td>
-                    <td>GoDaddy</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>2:54AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Hetzner</td>
-                    <td>Ipsum is simply dummy text of the printing and typesetting</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>6:39AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>mail@google.com</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing</td>
-                    <td></td>
-                    <td>1:48AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Google.com</td>
-                    <td>Is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>8:38AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-warning"></i></td>
-                    <td>GoDaddy</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>2:54AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Hetzner</td>
-                    <td>Ipsum is simply dummy text of the printing and typesetting</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>6:39AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>mail@google.com</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing</td>
-                    <td></td>
-                    <td>1:48AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Google.com</td>
-                    <td>Is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>8:38AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-warning"></i></td>
-                    <td>GoDaddy</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>2:54AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Hetzner</td>
-                    <td>Ipsum is simply dummy text of the printing and typesetting</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>6:39AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>mail@google.com</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing</td>
-                    <td></td>
-                    <td>1:48AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Google.com</td>
-                    <td>Is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>8:38AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Google.com</td>
-                    <td>Is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>8:38AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-warning"></i></td>
-                    <td>GoDaddy</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>2:54AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>Hetzner</td>
-                    <td>Ipsum is simply dummy text of the printing and typesetting</td>
-                    <td><i class="icmn-attachment text-default"></i></td>
-                    <td>6:39AM</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox"></td>
-                    <td><i class="icmn-star-full text-default"></i></td>
-                    <td>mail@google.com</td>
-                    <td>Lorem Ipsum is simply dummy text of the printing</td>
-                    <td></td>
-                    <td>1:48AM</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <!-- START: compose mail modal -->
-    <div class="modal fade modal-size-large" id="compose" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Compose Message</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="To" />
+            <div class="cat__apps__messaging__tab">
+                <div class="cat__apps__messaging__tab__content">
+                    <div class="mb-1">
+                        <strong>Drafts (1)</strong>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" />
-                    </div>
-                    <div class="summernote"></div>
+                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
+                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
+                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn width-200 btn-primary"><i class="fa fa-send mr-2"></i> Send</button>
-                    <button type="button" class="btn btn-link">Attachment</button>
+            </div>
+            <div class="cat__apps__messaging__tab">
+                <div class="cat__apps__messaging__tab__content">
+                    <div class="mb-1">
+                        <strong>Spam (17)</strong>
+                    </div>
+                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
+                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
+                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                </div>
+            </div>
+            <div class="cat__apps__messaging__tab">
+                <div class="cat__apps__messaging__tab__content">
+                    <div class="mb-1">
+                        <strong>Deleted Messages</strong>
+                    </div>
+                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
+                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
+                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END: compose mail modal -->
-    <!-- END: apps/mail -->
-    
-    <!-- START: page scripts -->
-    <script>
-        $(function() {
-    
-            ///////////////////////////////////////////////////
-            // SIDEBAR CURRENT STATE
-            $('.cat__apps__messaging__tab').on('click', function(){
-                $('.cat__apps__messaging__tab').removeClass('cat__apps__messaging__tab--selected');
-                $(this).addClass('cat__apps__messaging__tab--selected');
-            });
-    
-            ///////////////////////////////////////////////////
-            // TEXT EDITOR
-            $(function() {
-                $('.summernote').summernote({
-                    height: 200
-                });
-            });
-    
-            ///////////////////////////////////////////////////
-            // DATATABLES
-            $('#example1').DataTable({
-                responsive: true,
-                "order": [],
-                "columnDefs": [ {
-                    "targets"  : 'no-sort',
-                    "orderable": false
-                }],
-                "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]]
-            });
-    
-        });
-    </script>
-    <!-- END: page scripts -->
-
-    <!-- START: footer -->
-    <div class="cat__footer">
-        <div class="cat__footer__top">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
-                    </div>
-                    <div class="cat__footer__description">
-                        <p>Clean UI – a modern professional admin template, based on Bootstrap 4
-                            framework. Clean UI is a powerful and super flexible tool, which suits best for any
-                            kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
-                            Clean UI is fully responsive, which means that it looks perfect on mobiles and
-                            tablets</p>
-    
-                        <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
-                            Each file corresponds to a single component, layout, page, plugin or extension –
-                            so you can easily find necessary piece of code and edit it for your needs.
-                            The package includes both normal and minified CSS files, compiled from SASS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cat__footer__bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-primary">
-                        Buy Now 25$
+    <div class="card-header">
+        <a href="javascript: void(0);" class="btn btn-sm btn-primary pull-right" data-toggle="modal" data-target="#compose">Compose Mail</a>
+        <div class="nav-tabs-horizontal cat__apps__messaging__nav-tabs pull-left">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript: void(0);" data-toggle="tab" data-target="#profile2" role="tab" aria-expanded="false">
+                        <i class="icmn-home"></i>
+                        <span class="hidden-md-down">Primary</span>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="javascript: void(0);" data-toggle="tab" data-target="#messages2" role="tab" aria-expanded="true">
+                        <i class="icmn-users"></i>
+                        <span class="hidden-md-down">Social</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript: void(0);" data-toggle="tab" data-target="#settings2" role="tab">
+                        <i class="icmn-price-tags"></i>
+                        <span class="hidden-md-down">Promotion</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-block">
+        <table class="table table-hover nowrap" id="example1" width="100%">
+            <thead>
+            <tr>
+                <th class="no-sort width-10"></th>
+                <th class="no-sort width-10"></th>
+                <th class="width-150">From</th>
+                <th>Message</th>
+                <th class="no-sort width-10"></th>
+                <th class="no-sort width-50"></th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>From</th>
+                <th>Message</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-warning"></i></td>
+                <td>GoDaddy</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>2:54AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Hetzner</td>
+                <td>Ipsum is simply dummy text of the printing and typesetting</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>6:39AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>mail@google.com</td>
+                <td>Lorem Ipsum is simply dummy text of the printing</td>
+                <td></td>
+                <td>1:48AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Google.com</td>
+                <td>Is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>8:38AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-warning"></i></td>
+                <td>GoDaddy</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>2:54AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Hetzner</td>
+                <td>Ipsum is simply dummy text of the printing and typesetting</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>6:39AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>mail@google.com</td>
+                <td>Lorem Ipsum is simply dummy text of the printing</td>
+                <td></td>
+                <td>1:48AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Google.com</td>
+                <td>Is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>8:38AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-warning"></i></td>
+                <td>GoDaddy</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>2:54AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Hetzner</td>
+                <td>Ipsum is simply dummy text of the printing and typesetting</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>6:39AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>mail@google.com</td>
+                <td>Lorem Ipsum is simply dummy text of the printing</td>
+                <td></td>
+                <td>1:48AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Google.com</td>
+                <td>Is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>8:38AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-warning"></i></td>
+                <td>GoDaddy</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>2:54AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Hetzner</td>
+                <td>Ipsum is simply dummy text of the printing and typesetting</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>6:39AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>mail@google.com</td>
+                <td>Lorem Ipsum is simply dummy text of the printing</td>
+                <td></td>
+                <td>1:48AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Google.com</td>
+                <td>Is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>8:38AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Google.com</td>
+                <td>Is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>8:38AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-warning"></i></td>
+                <td>GoDaddy</td>
+                <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>2:54AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>Hetzner</td>
+                <td>Ipsum is simply dummy text of the printing and typesetting</td>
+                <td><i class="icmn-attachment text-default"></i></td>
+                <td>6:39AM</td>
+            </tr>
+            <tr>
+                <td class="text-center"><input type="checkbox"></td>
+                <td><i class="icmn-star-full text-default"></i></td>
+                <td>mail@google.com</td>
+                <td>Lorem Ipsum is simply dummy text of the printing</td>
+                <td></td>
+                <td>1:48AM</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- START: compose mail modal -->
+<div class="modal fade modal-size-large" id="compose" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Compose Message</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="To" />
                 </div>
-                <div class="col-md-8">
-                    <div class="cat__footer__company">
-                        <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
-                        <span>
-                            © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
-                            <br>
-                            All rights reserved
-                        </span>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject" />
+                </div>
+                <div class="summernote"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn width-200 btn-primary"><i class="fa fa-send mr-2"></i> Send</button>
+                <button type="button" class="btn btn-link">Attachment</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: compose mail modal -->
+<!-- END: apps/mail -->
+
+<!-- START: page scripts -->
+<script>
+    $(function() {
+
+        ///////////////////////////////////////////////////
+        // SIDEBAR CURRENT STATE
+        $('.cat__apps__messaging__tab').on('click', function(){
+            $('.cat__apps__messaging__tab').removeClass('cat__apps__messaging__tab--selected');
+            $(this).addClass('cat__apps__messaging__tab--selected');
+        });
+
+        ///////////////////////////////////////////////////
+        // TEXT EDITOR
+        $(function() {
+            $('.summernote').summernote({
+                height: 200
+            });
+        });
+
+        ///////////////////////////////////////////////////
+        // DATATABLES
+        $('#example1').DataTable({
+            responsive: true,
+            "order": [],
+            "columnDefs": [ {
+                "targets"  : 'no-sort',
+                "orderable": false
+            }],
+            "lengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]]
+        });
+
+    });
+</script>
+<!-- END: page scripts -->
+<div class="cat__footer">
+    <div class="cat__footer__top">
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
+                        </ul>
                     </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
+                </div>
+                <div class="cat__footer__description">
+                    <p>Clean UI – a modern professional admin template, based on Bootstrap 4
+                        framework. Clean UI is a powerful and super flexible tool, which suits best for any
+                        kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
+                        Clean UI is fully responsive, which means that it looks perfect on mobiles and
+                        tablets</p>
+
+                    <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
+                        Each file corresponds to a single component, layout, page, plugin or extension –
+                        so you can easily find necessary piece of code and edit it for your needs.
+                        The package includes both normal and minified CSS files, compiled from SASS</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END: footer -->
-
+    <div class="cat__footer__bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-default btn-rounded">
+                    Buy Now 25$
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="cat__footer__company">
+                    <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
+                    <span>
+                        © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
+                        <br>
+                        All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);"><i class="icmn-arrow-up"></i></a>
 </div>
-<!-- END: content-block -->
-
-<a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);">
-    <i class="icmn-arrow-up"></i>
-</a>
-
+</div>
 </body>
 </html>

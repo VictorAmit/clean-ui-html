@@ -58,6 +58,7 @@
       "scripts": [
         "assets/vendors/jquery/dist/jquery.js",
         "assets/vendors/tether/dist/js/tether.min.js",
+        "assets/vendors/jquery-ui/jquery-ui.min.js",
         "assets/vendors/bootstrap/dist/js/bootstrap.min.js",
         "assets/vendors/jquery-mousewheel/jquery.mousewheel.min.js",
         "assets/vendors/jscrollpane/script/jquery.jscrollpane.min.js",

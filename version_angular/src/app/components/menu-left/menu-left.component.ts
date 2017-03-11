@@ -16,6 +16,11 @@ export class MenuLeftComponent implements OnInit {
       /////////////////////////////////////////////////////////////////////////////////////////
       // submenu
 
+      $('.cat__menu-left').after('<div class="cat__menu-left__backdrop cat__menu-left__action--backdrop-toggle"><!-- --></div>');
+
+      /////////////////////////////////////////////////////////////////////////////////////////
+      // submenu
+
       $('.cat__menu-left__submenu > a').on('click', function(){
 
         if ($('body').hasClass('cat__config--vertical') || $('body').width() < 768) {

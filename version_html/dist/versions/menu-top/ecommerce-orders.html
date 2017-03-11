@@ -45,6 +45,7 @@ Contact: hello@mediatec.org
     <link rel="stylesheet" type="text/css" href="../../vendors/cleanhtmlvideoplayer/src/player.css">
     <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <script src="../../vendors/tether/dist/js/tether.min.js"></script>
+    <script src="../../vendors/jquery-ui/jquery-ui.min.js"></script>
     <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="../../vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
@@ -84,7 +85,7 @@ Contact: hello@mediatec.org
     <script src="../../vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
     <script src="../../vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
 
-    <!-- CLEAN UI ADMIN TEMPLATE-->
+    <!-- CLEAN UI ADMIN TEMPLATE MODULES-->
     <!-- v2.0.0 -->
     <link rel="stylesheet" type="text/css" href="../../modules/core/css/core.cleanui.css">
     <link rel="stylesheet" type="text/css" href="../../modules/vendors/css/vendors.cleanui.css">
@@ -101,183 +102,179 @@ Contact: hello@mediatec.org
     <script src="../../modules/menu-right/js/menu-right.cleanui.js"></script>
 </head>
 <body class="cat__config--horizontal cat__menu-left--colorful">
-
-<!-- START: menu-right -->
 <div class="cat__menu-right">
-    <div class="cat__menu-right__header">
-        <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
-        Theme Settings
+    <div class="cat__menu-right__inner">
+        <div class="cat__menu-right__header">
+            <span class="fa fa-times pull-right cat__menu-right__action--menu-toggle"><!-- --></span>
+            Theme Settings
+        </div>
+        <div class="cat__menu-right__content">
+            <div class="cat__menu-right__descr">
+                This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
+            </div>
+            <div class="cat__menu-right__label">
+                Theme Style
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Boxed Layout
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Compact Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Fixed Top Bar
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Super Clean Mode
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Colorful Menu
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Menu Shadow
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="cat__menu-right__label">
+                Squared Corners
+            </div>
+            <div class="cat__menu-right__setting cat__menu-right--example-option">
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
+                        </label>
+                    </div>
+                    <div class="btn-group">
+                        <label class="btn btn-default">
+                            <input type="radio" name="options-corners" value="" autocomplete="off"> Off
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cat__menu-right__content">
-        <div class="cat__menu-right__descr">
-            This module "block-menu-right" gives possibility to construct custom blocks with any widgets, components and elements inside, like this theme settings
-        </div>
-        <div class="cat__menu-right__label">
-            Theme Style
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="" autocomplete="off"> Dark
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--light" autocomplete="off"> Light
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--green" autocomplete="off"> Green
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--blue" autocomplete="off"> Blue
-                    </label>
-                </div>
-            </div>
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--red" autocomplete="off"> Red
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-theme" value="cat__theme--orange" autocomplete="off"> Orange
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Boxed Layout
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--boxed" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Compact Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="cat__config--compact" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-boxed" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Fixed Top Bar
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-topbar" value="cat__config--unfixed" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Super Clean Mode
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="cat__config--superclean" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-superclean" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Colorful Menu
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="cat__menu-left--colorful" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-colorful" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Menu Shadow
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="cat__config--shadow" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-shadow" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="cat__menu-right__label">
-            Squared Corners
-        </div>
-        <div class="cat__menu-right__setting cat__menu-right--example-option">
-            <div class="btn-group btn-group-justified" data-toggle="buttons">
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="cat__config--squared-corners" autocomplete="off"> On
-                    </label>
-                </div>
-                <div class="btn-group">
-                    <label class="btn btn-default">
-                        <input type="radio" name="options-corners" value="" autocomplete="off"> Off
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
-<!-- END: menu-right -->
-
-<!-- START: menu-left -->
 <nav class="cat__menu-left">
     <div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
         <div class="cat__menu-left__pin-button">
@@ -861,20 +858,14 @@ Contact: hello@mediatec.org
         </ul>
     </div>
 </nav>
-<!-- END: menu-left -->
-
-<!-- START: top-bar -->
 <div class="cat__top-bar">
-
     <!-- left aligned items -->
     <div class="cat__top-bar__left">
-
         <div class="cat__top-bar__logo">
             <a href="dashboards-alpha.html">
                 <img src="../../modules/core/img/logo.png" />
             </a>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -901,7 +892,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -920,7 +910,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-lg-down">
             <div class="cat__top-bar__search">
                 <i class="icmn-search"><!-- --></i>
@@ -928,11 +917,12 @@ Contact: hello@mediatec.org
             </div>
         </div>
     </div>
-
     <!-- right aligned items -->
     <div class="cat__top-bar__right">
-
         <div class="cat__top-bar__item hidden-sm-down">
+            <a href="javascript: void(9);" class="btn btn-sm btn-default btn-rounded">Buy Now 25$</a>
+        </div>
+        <div class="cat__top-bar__item hidden-xxl-down hidden-sm-down">
             <div class="cat__top-bar__mini-chart">
                 Server Load:
                 <div class="cat__top-bar__mini-chart__inner">
@@ -949,7 +939,6 @@ Contact: hello@mediatec.org
                 20%
             </div>
         </div>
-
         <div class="cat__top-bar__item hidden-sm-down">
             <div class="dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1035,7 +1024,6 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="dropdown cat__top-bar__avatar-dropdown">
                 <a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -1055,435 +1043,419 @@ Contact: hello@mediatec.org
                 </ul>
             </div>
         </div>
-
         <div class="cat__top-bar__item">
             <div class="cat__top-bar__menu-button cat__menu-right__action--menu-toggle">
                 <i class="fa fa-bars"><!-- --></i>
             </div>
         </div>
-
     </div>
-
 </div>
-<!-- END: top-bar -->
-
-<!-- START: content-block -->
 <div class="cat__content">
+<!-- END: ecommerce/orders -->
+<section class="card">
+    <div class="card-header">
+        <a href="javascript: void(0);" class="pull-right btn btn-sm btn-primary">Create New Order</a>
+        <span class="cat__core__title">
+            <strong>Orders</strong>
+        </span>
+    </div>
+    <div class="card-block">
+        <table class="table table-hover nowrap" id="example1" width="100%">
+            <thead class="thead-default">
+            <tr>
+                <th>ID</th>
+                <th>Purchase Date</th>
+                <th>Customer</th>
+                <th>Grand Total</th>
+                <th>Tax</th>
+                <th>Shipping</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Grand Total</th>
+                <th>Tax</th>
+                <th>Shipping</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000010</a></td>
+                <td>2014/06/13</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
+                <td>$56.00</td>
+                <td>$5.60</td>
+                <td>$10.00</td>
+                <td>85</td>
+                <td><span class="badge badge-primary">Processing</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000011</a></td>
+                <td>2014/09/12</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
+                <td>$63.40</td>
+                <td>$6.34</td>
+                <td>$10.00</td>
+                <td>77</td>
+                <td><span class="badge badge-primary">Processing</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000012</a></td>
+                <td>2013/09/27</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
+                <td>$456.00</td>
+                <td>$45.60</td>
+                <td>$0.00</td>
+                <td>82</td>
+                <td><span class="badge badge-primary">Processing</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000013</a></td>
+                <td>2013/06/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
+                <td>$871.14</td>
+                <td>$87.11</td>
+                <td>$10.00</td>
+                <td>68</td>
+                <td><span class="badge badge-primary">Processing</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000014</a></td>
+                <td>2013/05/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
+                <td>$19.10</td>
+                <td>$1.91</td>
+                <td>$10.00</td>
+                <td>63</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000015</a></td>
+                <td>2014/06/13</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
+                <td>$56.00</td>
+                <td>$5.60</td>
+                <td>$10.00</td>
+                <td>85</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000016</a></td>
+                <td>2014/09/12</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
+                <td>$63.40</td>
+                <td>$6.34</td>
+                <td>$10.00</td>
+                <td>77</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000017</a></td>
+                <td>2013/09/27</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
+                <td>$456.00</td>
+                <td>$45.60</td>
+                <td>$0.00</td>
+                <td>82</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000018</a></td>
+                <td>2013/06/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
+                <td>$871.14</td>
+                <td>$87.11</td>
+                <td>$10.00</td>
+                <td>68</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000019</a></td>
+                <td>2013/05/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
+                <td>$19.10</td>
+                <td>$1.91</td>
+                <td>$10.00</td>
+                <td>63</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000021</a></td>
+                <td>2014/06/13</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
+                <td>$56.00</td>
+                <td>$5.60</td>
+                <td>$10.00</td>
+                <td>85</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000022</a></td>
+                <td>2014/09/12</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
+                <td>$63.40</td>
+                <td>$6.34</td>
+                <td>$10.00</td>
+                <td>77</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000023</a></td>
+                <td>2013/09/27</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
+                <td>$456.00</td>
+                <td>$45.60</td>
+                <td>$0.00</td>
+                <td>82</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000024</a></td>
+                <td>2013/06/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
+                <td>$871.14</td>
+                <td>$87.11</td>
+                <td>$10.00</td>
+                <td>68</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000025</a></td>
+                <td>2013/05/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
+                <td>$19.10</td>
+                <td>$1.91</td>
+                <td>$10.00</td>
+                <td>63</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000026</a></td>
+                <td>2014/06/13</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
+                <td>$56.00</td>
+                <td>$5.60</td>
+                <td>$10.00</td>
+                <td>85</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000027</a></td>
+                <td>2014/09/12</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
+                <td>$63.40</td>
+                <td>$6.34</td>
+                <td>$10.00</td>
+                <td>77</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000028</a></td>
+                <td>2013/09/27</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
+                <td>$456.00</td>
+                <td>$45.60</td>
+                <td>$0.00</td>
+                <td>82</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000029</a></td>
+                <td>2013/06/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
+                <td>$871.14</td>
+                <td>$87.11</td>
+                <td>$10.00</td>
+                <td>68</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">000030</a></td>
+                <td>2013/05/28</td>
+                <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
+                <td>$19.10</td>
+                <td>$1.91</td>
+                <td>$10.00</td>
+                <td>63</td>
+                <td><span class="badge badge-default">Complete</span></td>
+                <td>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
+                    <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!-- END: ecommerce/orders -->
 
-    <!-- END: ecommerce/orders -->
-    <section class="card">
-        <div class="card-header">
-            <a href="javascript: void(0);" class="pull-right btn btn-sm btn-primary">Create New Order</a>
-            <span class="cat__core__title">
-                <strong>Orders</strong>
-            </span>
-        </div>
-        <div class="card-block">
-            <table class="table table-hover nowrap" id="example1" width="100%">
-                <thead class="thead-default">
-                <tr>
-                    <th>ID</th>
-                    <th>Purchase Date</th>
-                    <th>Customer</th>
-                    <th>Grand Total</th>
-                    <th>Tax</th>
-                    <th>Shipping</th>
-                    <th>Quantity</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tfoot>
-                <tr>
-                    <th>ID</th>
-                    <th>Date</th>
-                    <th>Customer</th>
-                    <th>Grand Total</th>
-                    <th>Tax</th>
-                    <th>Shipping</th>
-                    <th>Quantity</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-                </tfoot>
-                <tbody>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000010</a></td>
-                    <td>2014/06/13</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
-                    <td>$56.00</td>
-                    <td>$5.60</td>
-                    <td>$10.00</td>
-                    <td>85</td>
-                    <td><span class="badge badge-primary">Processing</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000011</a></td>
-                    <td>2014/09/12</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
-                    <td>$63.40</td>
-                    <td>$6.34</td>
-                    <td>$10.00</td>
-                    <td>77</td>
-                    <td><span class="badge badge-primary">Processing</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000012</a></td>
-                    <td>2013/09/27</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
-                    <td>$456.00</td>
-                    <td>$45.60</td>
-                    <td>$0.00</td>
-                    <td>82</td>
-                    <td><span class="badge badge-primary">Processing</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000013</a></td>
-                    <td>2013/06/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
-                    <td>$871.14</td>
-                    <td>$87.11</td>
-                    <td>$10.00</td>
-                    <td>68</td>
-                    <td><span class="badge badge-primary">Processing</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000014</a></td>
-                    <td>2013/05/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
-                    <td>$19.10</td>
-                    <td>$1.91</td>
-                    <td>$10.00</td>
-                    <td>63</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000015</a></td>
-                    <td>2014/06/13</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
-                    <td>$56.00</td>
-                    <td>$5.60</td>
-                    <td>$10.00</td>
-                    <td>85</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000016</a></td>
-                    <td>2014/09/12</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
-                    <td>$63.40</td>
-                    <td>$6.34</td>
-                    <td>$10.00</td>
-                    <td>77</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000017</a></td>
-                    <td>2013/09/27</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
-                    <td>$456.00</td>
-                    <td>$45.60</td>
-                    <td>$0.00</td>
-                    <td>82</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000018</a></td>
-                    <td>2013/06/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
-                    <td>$871.14</td>
-                    <td>$87.11</td>
-                    <td>$10.00</td>
-                    <td>68</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000019</a></td>
-                    <td>2013/05/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
-                    <td>$19.10</td>
-                    <td>$1.91</td>
-                    <td>$10.00</td>
-                    <td>63</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000021</a></td>
-                    <td>2014/06/13</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
-                    <td>$56.00</td>
-                    <td>$5.60</td>
-                    <td>$10.00</td>
-                    <td>85</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000022</a></td>
-                    <td>2014/09/12</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
-                    <td>$63.40</td>
-                    <td>$6.34</td>
-                    <td>$10.00</td>
-                    <td>77</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000023</a></td>
-                    <td>2013/09/27</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
-                    <td>$456.00</td>
-                    <td>$45.60</td>
-                    <td>$0.00</td>
-                    <td>82</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000024</a></td>
-                    <td>2013/06/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
-                    <td>$871.14</td>
-                    <td>$87.11</td>
-                    <td>$10.00</td>
-                    <td>68</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000025</a></td>
-                    <td>2013/05/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
-                    <td>$19.10</td>
-                    <td>$1.91</td>
-                    <td>$10.00</td>
-                    <td>63</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000026</a></td>
-                    <td>2014/06/13</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Damon</a></td>
-                    <td>$56.00</td>
-                    <td>$5.60</td>
-                    <td>$10.00</td>
-                    <td>85</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000027</a></td>
-                    <td>2014/09/12</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Torrey</a></td>
-                    <td>$63.40</td>
-                    <td>$6.34</td>
-                    <td>$10.00</td>
-                    <td>77</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000028</a></td>
-                    <td>2013/09/27</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Miracle</a></td>
-                    <td>$456.00</td>
-                    <td>$45.60</td>
-                    <td>$0.00</td>
-                    <td>82</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000029</a></td>
-                    <td>2013/06/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Wilhelmine</a></td>
-                    <td>$871.14</td>
-                    <td>$87.11</td>
-                    <td>$10.00</td>
-                    <td>68</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">000030</a></td>
-                    <td>2013/05/28</td>
-                    <td><a href="javascript: void(0);" class="cat__core__link--underlined">Hubert</a></td>
-                    <td>$19.10</td>
-                    <td>$1.91</td>
-                    <td>$10.00</td>
-                    <td>63</td>
-                    <td><span class="badge badge-default">Complete</span></td>
-                    <td>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined mr-2"><i class="icmn-pencil"><!-- --></i> View</a>
-                        <a href="javascript: void(0);" class="cat__core__link--underlined"><small><i class="icmn-cross"><!-- --></i></small> Remove</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <!-- END: ecommerce/orders -->
-    
-    <!-- START: page scripts -->
-    <script>
-        $(function () {
-    
-            // Datatables
-            $('#example1').DataTable({
-                "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
-                responsive: true,
-                "autoWidth": false
-            });
-    
-        })
-    </script>
-    <!-- END: page scripts -->
+<!-- START: page scripts -->
+<script>
+    $(function () {
 
-    <!-- START: footer -->
-    <div class="cat__footer">
-        <div class="cat__footer__top">
-            <div class="row">
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <ul class="list-unstyled mb-3">
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
-                                <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        // Datatables
+        $('#example1').DataTable({
+            "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
+            responsive: true,
+            "autoWidth": false
+        });
+
+    })
+</script>
+<!-- END: page scripts -->
+<div class="cat__footer">
+    <div class="cat__footer__top">
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="mb-3">
-                        <strong>Check Out Preselected Demos</strong>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu (Default)</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Ecommerce Version</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed Container</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Iconbar Vertical Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Inverse Color Scheme</a></li>
+                        </ul>
                     </div>
-                    <div class="cat__footer__description">
-                        <p>Clean UI – a modern professional admin template, based on Bootstrap 4
-                            framework. Clean UI is a powerful and super flexible tool, which suits best for any
-                            kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
-                            Clean UI is fully responsive, which means that it looks perfect on mobiles and
-                            tablets</p>
-    
-                        <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
-                            Each file corresponds to a single component, layout, page, plugin or extension –
-                            so you can easily find necessary piece of code and edit it for your needs.
-                            The package includes both normal and minified CSS files, compiled from SASS</p>
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-3">
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Super Clean Mode + Menu Shadow</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Compact Horizontal Menu</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Vertical Menu + Boxed</a></li>
+                            <li class="mb-2"><a target="_blank" href="javascript: void(0);">Horizontal Menu + Boxed</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cat__footer__bottom">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-primary">
-                        Buy Now 25$
-                    </a>
+            <div class="col-lg-6 mb-3">
+                <div class="mb-3">
+                    <strong>Check Out Preselected Demos</strong>
                 </div>
-                <div class="col-md-8">
-                    <div class="cat__footer__company">
-                        <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
-                        <span>
-                            © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
-                            <br>
-                            All rights reserved
-                        </span>
-                    </div>
+                <div class="cat__footer__description">
+                    <p>Clean UI – a modern professional admin template, based on Bootstrap 4
+                        framework. Clean UI is a powerful and super flexible tool, which suits best for any
+                        kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.
+                        Clean UI is fully responsive, which means that it looks perfect on mobiles and
+                        tablets</p>
+
+                    <p>Clean UI is fully based on SASS pre-processor, includes 50+ commented SASS files.
+                        Each file corresponds to a single component, layout, page, plugin or extension –
+                        so you can easily find necessary piece of code and edit it for your needs.
+                        The package includes both normal and minified CSS files, compiled from SASS</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- END: footer -->
-
+    <div class="cat__footer__bottom">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="https://themeforest.net/item/clean-ui-premium-bootstrap-4-admin-template-angular-starter-kit/16678285?s_rank=4&ref=mediatec_software" target="_blank" class="btn btn-default btn-rounded">
+                    Buy Now 25$
+                </a>
+            </div>
+            <div class="col-md-8">
+                <div class="cat__footer__company">
+                    <img class="cat__footer__company-logo" src="../../modules/footer/img/mediatec.png" target="_blank" title="Mediatec Software">
+                    <span>
+                        © 2016 <a href="http://mediatec.org/" target="_blank">Mediatec Software</a>
+                        <br>
+                        All rights reserved
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);"><i class="icmn-arrow-up"></i></a>
 </div>
-<!-- END: content-block -->
-
-<a href="javascript: void(0);" class="cat__core__scroll-top" onclick="$('body, html').animate({'scrollTop': 0}, 500);">
-    <i class="icmn-arrow-up"></i>
-</a>
-
+</div>
 </body>
 </html>

@@ -7,6 +7,7 @@
 $color1: #fff;
 $color2: #000730;
 $color3: #000942;
+$color4: rgba(255,255,255,.17);
 
 body.cat {
     &__theme {
@@ -15,11 +16,11 @@ body.cat {
             // "menu-left" module styles
 
             .cat__menu-left__logo {
-                background: lighten($color3, 3%);
+                background: lighten($color3, 7%);
             }
 
             .cat__menu-left__lock {
-                background: lighten($color3, 3%);
+                background: lighten($color3, 7%);
             }
 
             .cat__menu-left__pin-button {
@@ -47,7 +48,7 @@ body.cat {
             }
 
             .cat__menu-left__divider {
-                background: lighten($color3, 8%);
+                background: $color4;
             }
 
             .cat__menu-left__icon {
@@ -55,21 +56,21 @@ body.cat {
             }
 
             .cat__menu-left__submenu.cat__menu-left__item > a::after {
-                border-color: transparent lighten($color2, 20%) transparent transparent;
+                border-color: transparent $color4 transparent transparent;
             }
 
             .cat__menu-left__item--active > a,
             .cat__menu-left__item:hover > a,
             .cat__menu-left__item:active > a,
             .cat__menu-left__item:focus > a {
-                background: lighten($color3, 3%);
+                background: lighten($color3, 7%);
             }
 
             .cat__menu-left__submenu--toggled.cat__menu-left__item {
-                background: $color3;
                 color: $color1;
 
                 > a {
+                    background: lighten($color3, 7%);
                     color: $white;
                     .cat__menu-left__icon {
                         color: $white;

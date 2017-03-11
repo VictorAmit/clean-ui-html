@@ -23,11 +23,6 @@
     float: left;
 }
 
-.cat__apps__chat-block__avatar .cat__core__avatar {
-    width: 3.57rem;
-    height: 3.57rem;
-}
-
 .cat__apps__chat-block__content {
     padding: 0.71rem 1.07rem 0.07rem;
     background: #f2f4f8;
@@ -66,12 +61,6 @@
     padding: 2.5rem 2.5rem 1.78rem 2.5rem;
 }
 
-.cat__apps__profile__card .cat__core__avatar {
-    width: 9rem;
-    height: 9rem;
-    border: 5px solid #ffffff;
-}
-
 @media (max-width: 1199px) {
     .cat__apps__profile__card {
         margin-top: 0;
@@ -87,11 +76,6 @@
 
 .cat__apps__profile__wall__avatar {
     float: left;
-}
-
-.cat__apps__profile__wall__avatar .cat__core__avatar {
-    width: 3.57rem;
-    height: 3.57rem;
 }
 
 .cat__apps__profile__wall__content {
@@ -113,6 +97,10 @@
 .cat__apps__profile__wall__media-object {
     margin: 0 0 1.42rem 0;
     max-width: 35.71rem;
+}
+
+.cat__apps__messaging {
+    overflow-x: hidden;
 }
 
 .cat__apps__messaging__header {
@@ -180,8 +168,6 @@
 }
 
 .cat__apps__messaging__tab__avatar .cat__core__avatar {
-    width: 3.85rem;
-    height: 3.85rem;
     border: 2px solid #ffffff;
 }
 

@@ -32,11 +32,6 @@
             }
             &__avatar {
                 float: left;
-
-                .cat__core__avatar {
-                    width: rem(50);
-                    height: rem(50);
-                }
             }
             &__content {
                 padding: rem(10) rem(15) rem(1);
@@ -77,12 +72,6 @@
                 background-size: cover;
                 padding: rem(35) rem(35) rem(25) rem(35);
 
-                .cat__core__avatar {
-                    width: 9rem;
-                    height: 9rem;
-                    border: 5px solid $white;
-                }
-
                 @media (max-width: $xl-max-width) {
                     margin-top: 0;
                 }
@@ -97,11 +86,6 @@
                 }
                 &__avatar {
                     float: left;
-
-                    .cat__core__avatar {
-                        width: rem(50);
-                        height: rem(50);
-                    }
                 }
                 &__content {
                     margin-left: rem(70);
@@ -124,6 +108,8 @@
 
         // messaging app
         &__messaging {
+            overflow-x: hidden;
+
             &__header {
                 border-bottom: 1px solid $gray-border;
                 padding: 0 rem(15) rem(10);
@@ -181,8 +167,6 @@
                 &__avatar {
                     float: left;
                     .cat__core__avatar {
-                        width: rem(54);
-                        height: rem(54);
                         border: 2px solid $white;
                     }
                 }

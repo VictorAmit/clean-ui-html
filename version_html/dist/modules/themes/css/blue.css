@@ -1,10 +1,10 @@
 /* THEMES: RED */
 body.cat__theme--blue .cat__menu-left__logo {
-    background: #000b51;
+    background: #000e66;
 }
 
 body.cat__theme--blue .cat__menu-left__lock {
-    background: #000b51;
+    background: #000e66;
 }
 
 body.cat__theme--blue .cat__menu-left__pin-button {
@@ -32,7 +32,7 @@ body.cat__theme--blue .cat__menu-left__item > a {
 }
 
 body.cat__theme--blue .cat__menu-left__divider {
-    background: #000f6b;
+    background: rgba(255, 255, 255, 0.17);
 }
 
 body.cat__theme--blue .cat__menu-left__icon {
@@ -40,22 +40,22 @@ body.cat__theme--blue .cat__menu-left__icon {
 }
 
 body.cat__theme--blue .cat__menu-left__submenu.cat__menu-left__item > a::after {
-    border-color: transparent #001696 transparent transparent;
+    border-color: transparent rgba(255, 255, 255, 0.17) transparent transparent;
 }
 
 body.cat__theme--blue .cat__menu-left__item--active > a,
 body.cat__theme--blue .cat__menu-left__item:hover > a,
 body.cat__theme--blue .cat__menu-left__item:active > a,
 body.cat__theme--blue .cat__menu-left__item:focus > a {
-    background: #000b51;
+    background: #000e66;
 }
 
 body.cat__theme--blue .cat__menu-left__submenu--toggled.cat__menu-left__item {
-    background: #000942;
     color: #fff;
 }
 
 body.cat__theme--blue .cat__menu-left__submenu--toggled.cat__menu-left__item > a {
+    background: #000e66;
     color: #ffffff;
 }
 

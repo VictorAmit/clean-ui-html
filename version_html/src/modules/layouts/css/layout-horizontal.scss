@@ -13,7 +13,7 @@ body.cat {
             // unfixed top bar and left menu
             &.cat__config--unfixed {
 
-                // next styles affects on "block-top-bar" module
+                // next styles affects on "top-bar" module
                 // set body top padding to 0 (remove space for fixed top bar)
                 padding-top: 0;
                 overflow-x: hidden;
@@ -39,7 +39,7 @@ body.cat {
                     margin-left: 0;
                 }
 
-                // next styles affects on "block-top-bar" module
+                // next styles affects on "top-bar" module
                 .cat__top-bar {
                     top: rem(65);
                     padding-left: rem(20);
@@ -194,7 +194,7 @@ body.cat {
                 // horizontal boxed layout
                 &.cat__config--boxed {
 
-                    // next styles affects on "block-menu-left" module
+                    // next styles affects on "menu-left" module
                     // custom styles of menu left module
                     .cat__menu-left {
                         left: 0;
@@ -203,7 +203,7 @@ body.cat {
                         margin: 0 auto;
                     }
 
-                    // next styles affects on "block-top-bar" module
+                    // next styles affects on "top-bar" module
                     // custom styles of top bar module
                     .cat__top-bar {
                         width: auto !important;

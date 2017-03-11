@@ -5,12 +5,34 @@ $(function(){
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle right menu
 
-    // submenu script
     $('.cat__menu-right__action--menu-toggle').on('click', function(){
-
         $('body').toggleClass('cat__menu-right--visible');
-
     });
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // custom scroll init
+
+    if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
+        $('.cat__menu-right').each(function () {
+            $(this).jScrollPane({
+                contentWidth: '0px',
+                autoReinitialise: true,
+                autoReinitialiseDelay: 100
+            });
+            var api = $(this).data('jsp'),
+                throttleTimeout;
+            $(window).bind('resize', function () {
+                if (!throttleTimeout) {
+                    throttleTimeout = setTimeout(function () {
+                        api.reinitialise();
+                        throttleTimeout = null;
+                    }, 50);
+                }
+            });
+        });
+    }
+
+
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // options scripts
@@ -32,6 +54,7 @@ $(function(){
         });
         if (!found) {
             $(this).find('input[value=""]').parent().trigger('click');
+            $('.cat__menu-right .jspPane').css({top: 0})
         }
 
         // change options on click

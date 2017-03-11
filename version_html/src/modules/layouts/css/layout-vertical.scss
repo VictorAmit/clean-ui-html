@@ -13,7 +13,7 @@ body.cat {
             // unfixed top bar
             &.cat__config--unfixed {
 
-                // next styles affects on "block-top-bar" module
+                // next styles affects on "top-bar" module
                 // set body top padding to 0 (remove space for fixed top bar)
                 padding-top: 0;
                 // remove fixed position from top bar
@@ -25,7 +25,7 @@ body.cat {
             // vertical boxed layout
             &.cat__config--boxed {
 
-                // next styles affects on "block-top-bar" module
+                // next styles affects on "top-bar" module
                 // custom styles of top bar module
                 .cat__top-bar {
                     width: auto !important;
@@ -82,7 +82,7 @@ body.cat {
                         margin-left: rem(150);
                     }
 
-                    // next styles affects on "block-top-bar" module
+                    // next styles affects on "top-bar" module
                     // hide logo
                     .cat__top-bar {
                         left: rem(150);
@@ -92,7 +92,7 @@ body.cat {
                         }
                     }
 
-                    // next styles affects on "block-menu-left" module
+                    // next styles affects on "menu-left" module
                     // custom styles for left menu
                     .cat__menu-left {
                         transform: none;
@@ -181,7 +181,7 @@ body.cat {
                 // unfixed top bar margin on iconbar layout
                 &.cat__config--unfixed {
 
-                    // next styles affects on "block-top-bar" module
+                    // next styles affects on "top-bar" module
                     // remove fixed position from top bar
                     .cat__top-bar {
                         margin-left: rem(150);
