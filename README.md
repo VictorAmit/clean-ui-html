@@ -1,8 +1,6 @@
 ### Important Information ###
 
-This repository now contains only source files. For build you need to run in console 1. "npm install --global bower gulp" 2. "npm install" 3. "bower install" 4. "gulp". All files will be built to "dist/" folder.
-
-With 2.1.0 update the Angular version moved to another GIT repository. Now it's separate product which updates asynchronously with the static version (in few days after release here). Please write to support@cleanuitemplate.com for adding you to Angular version GIT repo if you need. All new users will be added to both repositories by default now. Thanks!
+This repository now contains only source files. For build see Installation section. With 2.1.0 update the Angular version moved to another GIT repository. Now it's separate product which updates asynchronously with the static version (in few days after release here). All new users will be added to group "cleanui-admin-template" that contains both GIT repositories (html and angular). Thanks!
 
 ### Description ###
 
