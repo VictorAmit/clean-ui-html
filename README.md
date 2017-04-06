@@ -1,3 +1,9 @@
+### Important Information ###
+
+This repository now contains only source files. For build you need to run in console 1. "npm install --global bower gulp" 2. "npm install" 3. "bower install" 4. "gulp". All files will be built to "dist/" folder.
+
+With 2.1.0 update the Angular version moved to another GIT repository. Now it's separate product which updates asynchronously with the static version (in few days after release here). Please write to support@cleanuitemplate.com for adding you to Angular version GIT repo if you need. All new users will be added to both repositories by default now. Thanks!
+
 ### Description ###
 
 Clean UI is the first framework in the world, which uses the concept of modularity. The use of such approach allows you to drastically reduce the time and cost of development. Build the interface from the ready blocks and modules quickly and easily, like Lego! And all this is available now for Angular (version 2 or higher).
@@ -11,7 +17,7 @@ Our template is fully based on SASS pre-processor, includes 50+ commented SASS f
 
 ### Installation ###
 
-Please read documentation (version_html/dist/versions/menu-left/documentation-index.html).
+Please read documentation [http://admin.cleanuitemplate.com/livepreview/v/vertical-menu-visible.html#/documentation/index](http://admin.cleanuitemplate.com/livepreview/v/vertical-menu-visible.html#/documentation/index).
 
 ### Git Repository ###
 
