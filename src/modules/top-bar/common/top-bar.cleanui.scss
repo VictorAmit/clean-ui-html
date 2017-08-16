@@ -34,6 +34,10 @@ body {
             img {
                 max-height: rem(35);
             }
+
+            @media (max-width: $md-max-width) {
+                width: rem(150);
+            }
         }
 
         // avatar styles

@@ -39,7 +39,13 @@ $(function(){
     // custom scroll init
 
     if ($('body').hasClass('cat__config--vertical')) {
-        if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
+        if (!(/Mobi/.test(navigator.userAgent)) && jQuery().perfectScrollbar) {
+
+            $('.cat__menu-left__inner').perfectScrollbar({
+                theme: 'cleanui'
+            });
+
+            /*
             $('.cat__menu-left__inner').each(function () {
                 $(this).jScrollPane({
                     contentWidth: '0px',
@@ -57,8 +63,9 @@ $(function(){
                     }
                 });
             })
+            */
         }
-        $('.cat__menu-left__inner').css({overflow: 'auto'});
+        // $('.cat__menu-left__inner').css({overflow: 'auto'});
     }
 
 

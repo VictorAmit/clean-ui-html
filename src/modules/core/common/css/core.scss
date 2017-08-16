@@ -696,8 +696,104 @@ pre {
         -o-animation: fa-spin-delayed 3s infinite ease-in-out;
         animation: fa-spin-delayed 3s infinite ease-in-out;
     }
-}
 
+    // custom checkboxes and radios controls
+
+    &__control {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: rem(10);
+        cursor: pointer;
+
+        input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+
+        &__indicator {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background: $gray;
+            border-radius: 3px;
+
+            &:after {
+                position: absolute;
+                display: none;
+                content: '';
+            }
+        }
+
+        &:hover input ~ .cat__core__control__indicator,
+        input:focus ~ .cat__core__control__indicator {
+            background: $gray-darken;
+        }
+
+        input:checked ~ .cat__core__control__indicator {
+            background: $primary;
+        }
+
+        &:hover input:not([disabled]):checked ~ .cat__core__control__indicator,
+        .control input:checked:focus ~ .cat__core__control__indicator {
+            background: $primary;
+            opacity: .8;
+        }
+
+        input:disabled ~ .cat__core__control__indicator {
+            pointer-events: none;
+            opacity: .6;
+            background: $gray-lighten;
+        }
+
+        input:checked ~ .cat__core__control__indicator:after {
+            display: block;
+        }
+
+        input:checked ~ .cat__core__control__indicator:after {
+            display: block;
+        }
+
+        &--checkbox {
+            .cat__core__control__indicator:after {
+                top: 3px;
+                left: 6px;
+                width: 6px;
+                height: 10px;
+                transform: rotate(45deg);
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+            }
+
+            input:disabled ~ .cat__core__control__indicator:after {
+                border-color: #7b7b7b;
+            }
+        }
+
+        &--radio {
+            .cat__core__control__indicator {
+                border-radius: 50% !important;
+
+                &:after {
+                    top: 6px;
+                    left: 6px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50% !important;
+                    background: #fff;
+                }
+            }
+
+            input:disabled ~ .cat__core__control__indicator:after {
+                background: #7b7b7b;
+            }
+        }
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  CORE ANIMATIONS */
