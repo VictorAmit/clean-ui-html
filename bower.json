@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "authors": [
     "Mediatec Software http://www.mediatec.org <hello@mediatec.com>"
   ],
@@ -9,7 +9,6 @@
     "node_modules"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.6",
     "jquery": "3.2.1",
     "tether": "1.4.0",
     "jquery-mousewheel": "3.1.13",
@@ -44,7 +43,8 @@
     "chart.js": "2.6.0",
     "dropify": "0.2.2",
     "jquery-ui": "1.12.1",
-    "datatables": "latest"
+    "datatables": "latest",
+    "popper.js": "latest"
   },
   "resolutions": {
     "d3": "~3.5.0"
