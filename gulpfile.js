@@ -46,21 +46,21 @@ var gulp = require('gulp'),
 var path = {
     src: {
         versions: 'src/versions/',
-        structure: 'src/structure/**/*.html',
-        modules: 'src/modules/',
+        pages: 'src/pages/**/*.html',
+        components: 'src/components/',
 
-        templates: 'src/modules/**/**/*.html',
-        img: 'src/modules/**/img/**/*.*',
-        css: 'src/modules/**/**/*.scss',
-        js: 'src/modules/**/**/*.js',
-        favicon: 'src/modules/dummy-assets/img/favicon.ico',
+        templates: 'src/components/**/**/*.html',
+        img: 'src/components/**/img/**/*.*',
+        css: 'src/components/**/**/*.scss',
+        js: 'src/components/**/**/*.js',
+        favicon: 'src/components/dummy-assets/img/favicon.ico',
 
         vendors_by_bower: 'src/vendors/by_bower/**/*.*',
         vendors_by_hands: 'src/vendors/by_hands/**/*.*'
     },
     build: {
         versions: 'dist/versions/',
-        modules: 'dist/modules/',
+        components: 'dist/components/',
         vendors: 'dist/vendors/'
     },
     clean: ['dist/*']
@@ -97,7 +97,7 @@ gulp.task('serve', function () {
 
 
 /////////////////////////////////////////////////////////////////////////////
-// BUILD STRUCTURE
+// BUILD PAGES
 
 
 gulp.task('build:versions', function () {
@@ -108,7 +108,7 @@ gulp.task('build:versions', function () {
     for (var i in arrayHtml) {
         tasks.push(
             new Promise(function(resolve, reject) {
-                gulp.src(path.src.structure) // get structure templates
+                gulp.src(path.src.pages) // get pages templates
                     .pipe(ignore.exclude('**/head.html')) // exclude mixins.scss file
                     .pipe(data({
                         templateName: cleanui.templateName,
@@ -151,8 +151,8 @@ gulp.task('build:vendors', function() {
 // JAVASCRIPT BUILD
 
 gulp.task('build:js', function () {
-    gulp.src(path.src.js, {base: path.src.modules}) // get folder with js
-        .pipe(gulp.dest(path.build.modules)) // copy to destination folder
+    gulp.src(path.src.js, {base: path.src.components}) // get folder with js
+        .pipe(gulp.dest(path.build.components)) // copy to destination folder
         .on('end', function(){ browserSync.reload(); }) // reload BrowserSync
 });
 
@@ -162,7 +162,7 @@ gulp.task('build:js', function () {
 // STYLES BUILD
 
 gulp.task('build:css', function () {
-    gulp.src(path.src.css, {base: path.src.modules}) // get folder with css
+    gulp.src(path.src.css, {base: path.src.components}) // get folder with css
         .pipe(ignore.exclude('**/mixins.scss')) // exclude mixins.scss file
         .pipe(sass({outputStyle: 'expanded', indentWidth: 4})) // css formatting
         .on('error', printError) // print error if found
@@ -170,7 +170,7 @@ gulp.task('build:css', function () {
             browsers: ['last 30 versions', '> 1%', 'ie 9'],
             cascade: true
         })) // add cross-browser prefixes
-        .pipe(gulp.dest(path.build.modules))  // copy sources
+        .pipe(gulp.dest(path.build.components))  // copy sources
         .on('end', function(){ browserSync.reload(); }) // reload BrowserSync
 });
 
@@ -180,13 +180,13 @@ gulp.task('build:css', function () {
 // IMAGES BUILD
 
 gulp.task('build:img', function () {
-    gulp.src(path.src.img, {base: path.src.modules}) // get folder with images
+    gulp.src(path.src.img, {base: path.src.components}) // get folder with images
         .pipe(ignore.exclude('**/favicon.ico')) // exclude favicon.css file
         .on('error', printError) // print error if found
-        .pipe(gulp.dest(path.build.modules)); // copy to destination folder
+        .pipe(gulp.dest(path.build.components)); // copy to destination folder
 
-    gulp.src(path.src.favicon, {base: path.src.modules}) // get favicon
-        .pipe(gulp.dest(path.build.modules)); // copy to destination folder
+    gulp.src(path.src.favicon, {base: path.src.components}) // get favicon
+        .pipe(gulp.dest(path.build.components)); // copy to destination folder
 });
 
 
@@ -208,7 +208,7 @@ gulp.task('build', [
 // FILES CHANGE WATCHER
 
 gulp.task('watch', function(){
-    watch([path.src.versions, path.src.structure, path.src.templates], function() { // watch components, components, versions and templates folders
+    watch([path.src.versions, path.src.pages, path.src.templates], function() { // watch components, components, versions and templates folders
         gulp.start('build:versions'); // run build:versions task
     });
     watch([path.src.css], function() { // watch css folder

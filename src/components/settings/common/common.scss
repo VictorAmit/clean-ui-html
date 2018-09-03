@@ -1,0 +1,19 @@
+@import '../../../core/common/css/mixins';
+
+body.cat__config {
+  &--unfixed {
+    padding-top: 0;
+    overflow-x: hidden;
+    .cat__top-bar {
+      position: static;
+    }
+  }
+
+
+  &--vertical {
+
+  }
+  &--horizontal {
+
+  }
+}
