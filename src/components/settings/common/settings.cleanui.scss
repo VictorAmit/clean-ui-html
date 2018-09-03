@@ -2,16 +2,30 @@
 
 body.config {
 
-  &--superclean {
-    .utils__content {
-      padding: 0;
-    }
+  &--borderLess {
     .card {
-      border: none !important;
-      border-radius: 0 !important;
+      border: none;
+      &.utils__sortable__collapsed {
+        .card-header {
+          padding-bottom: rem(20);
+        }
+      }
     }
-    .utils__top-sidebar {
-      margin: 0 0 rem(20);
+
+    .card-header {
+      padding-top: rem(20);
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .card-footer {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .utils__title {
+      text-transform: uppercase;
+      font-size: rem(16);
     }
   }
 
@@ -66,15 +80,17 @@ body.config {
         }
       }
 
+      .utils__top-sidebar {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
       .utils__content {
         width: auto !important;
         max-width: $xl-max-width;
         margin: 0px auto !important;
-
-        // add background
-        @media (min-width: $sm-min-width) {
-          background: $white;
-        }
+        padding-left: 0;
+        padding-right: 0;
       }
 
     }
