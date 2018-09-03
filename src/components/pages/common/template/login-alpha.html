@@ -1,9 +1,9 @@
 <!-- START: pages/login-alpha -->
-<div class="cat__pages__login" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
-    <div class="cat__pages__login__header">
+<div class="pages__login" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
+    <div class="pages__login__header">
         <div class="row">
             <div class="col-lg-8">
-                <div class="cat__pages__login__header__logo">
+                <div class="pages__login__header__logo">
                     <a href="javascript: history.back();">
                         <img src="../../components/pages/common/img/logo-inverse.png" alt="Clean UI Admin Template" />
                     </a>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="cat__pages__login__header__menu">
+                <div class="pages__login__header__menu">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="javascript: history.back();">&larr; Back</a></li>
                         <li class="list-inline-item active"><a href="javascript: void(0);">Login</a></li>
@@ -23,18 +23,18 @@
             </div>
         </div>
     </div>
-    <div class="cat__pages__login__block">
+    <div class="pages__login__block">
         <div class="row">
             <div class="col-xl-12">
-                <div class="cat__pages__login__block__promo text-white text-center">
+                <div class="pages__login__block__promo text-white text-center">
                     <h1 class="mb-3">
                         <strong>WELCOME TO CLEAN UI ADMIN TEMPLATE</strong>
                     </h1>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s.</p>
                 </div>
-                <div class="cat__pages__login__block__inner">
-                    <div class="cat__pages__login__block__form">
+                <div class="pages__login__block__inner">
+                    <div class="pages__login__block__form">
                         <h4 class="text-uppercase">
                             <strong>Please log in</strong>
                         </h4>
@@ -59,7 +59,7 @@
                                        placeholder="Password">
                             </div>
                             <div class="form-group">
-                                <a href="javascript: void(0);" class="pull-right cat__core__link--blue cat__core__link--underlined">Forgot Password?</a>
+                                <a href="javascript: void(0);" class="pull-right utils__link--blue utils__link--underlined">Forgot Password?</a>
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="example6" checked>
@@ -70,7 +70,7 @@
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary mr-3">Sign In</button>
                                 <span class="register-link">
-                                    <a href="" class="cat__core__link--blue cat__core__link--underlined">Register</a> if you don't have account
+                                    <a href="" class="utils__link--blue utils__link--underlined">Register</a> if you don't have account
                                 </span>
                             </div>
                             <div class="form-group">
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <div class="cat__pages__login__footer text-center">
+    <div class="pages__login__footer text-center">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item"><a href="javascript: void(0);">Terms of Use</a></li>
             <li class="active list-inline-item"><a href="javascript: void(0);">Compliance</a></li>
@@ -134,7 +134,7 @@
 
         // Switch to fullscreen
         $('.switch-to-fullscreen').on('click', function () {
-            $('.cat__pages__login').toggleClass('cat__pages__login--fullscreen');
+            $('.pages__login').toggleClass('pages__login--fullscreen');
         })
 
         // Change BG
@@ -144,7 +144,7 @@
                 final = next > max ? min : next;
 
             $('.random-bg-image').data('img', final);
-            $('.cat__pages__login').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
+            $('.pages__login').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
         })
 
     });

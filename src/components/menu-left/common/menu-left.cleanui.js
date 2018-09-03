@@ -1,118 +1,92 @@
-$(function(){
+$(function () {
 
-    // scripts for "menu-left" module
+  // scripts for "menu-left" module
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // add backdrop
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // add backdrop
 
-    $('.cat__menu-left').after('<div class="cat__menu-left__backdrop cat__menu-left__action--backdrop-toggle"><!-- --></div>');
+  $('.menu-left').after('<div class="menu-left__backdrop menu-left__action--backdrop-toggle"><!-- --></div>')
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // submenu
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // submenu
 
-    $('.cat__menu-left__submenu > a').on('click', function(){
+  $('.menu-left__submenu > a').on('click', function () {
 
-        if ($('body').hasClass('cat__config--vertical') || $('body').width() < 768) {
+    if ($('body').hasClass('config--vertical') || $('body').width() < 768) {
 
-            var parent = $(this).parent(),
-                opened = $('.cat__menu-left__submenu--toggled');
+      var parent = $(this).parent(),
+        opened = $('.menu-left__submenu--toggled')
 
-            if (!parent.hasClass('cat__menu-left__submenu--toggled') && !parent.parent().closest('.cat__menu-left__submenu').length)
-                opened.removeClass('cat__menu-left__submenu--toggled').find('> .cat__menu-left__list').slideUp(200);
+      if (!parent.hasClass('menu-left__submenu--toggled') && !parent.parent().closest('.menu-left__submenu').length)
+        opened.removeClass('menu-left__submenu--toggled').find('> .menu-left__list').slideUp(200)
 
-            parent.toggleClass('cat__menu-left__submenu--toggled');
-            parent.find('> .cat__menu-left__list').slideToggle(200);
+      parent.toggleClass('menu-left__submenu--toggled')
+      parent.find('> .menu-left__list').slideToggle(200)
 
-        }
-
-    });
-
-    // remove submenu toggle class when viewport back to full view
-    $(window).on('resize', function(){
-        if ($('body').hasClass('cat__config--horizontal') || $('body').width() > 768) {
-            $('.cat__menu-left__submenu--toggled').removeClass('cat__menu-left__submenu--toggled').find('> .cat__menu-left__list').attr('style', '');
-        }
-    });
-
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // custom scroll init
-
-    if ($('body').hasClass('cat__config--vertical')) {
-        if (!(/Mobi/.test(navigator.userAgent)) && jQuery().perfectScrollbar) {
-
-            $('.cat__menu-left__inner').perfectScrollbar({
-                theme: 'cleanui'
-            });
-
-            /*
-            $('.cat__menu-left__inner').each(function () {
-                $(this).jScrollPane({
-                    contentWidth: '0px',
-                    autoReinitialise: true,
-                    autoReinitialiseDelay: 100
-                });
-                var api = $(this).data('jsp'),
-                    throttleTimeout;
-                $(window).bind('resize', function () {
-                    if (!throttleTimeout) {
-                        throttleTimeout = setTimeout(function () {
-                            api.reinitialise();
-                            throttleTimeout = null;
-                        }, 50);
-                    }
-                });
-            })
-            */
-        }
-        // $('.cat__menu-left__inner').css({overflow: 'auto'});
     }
 
+  })
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle menu
+  // remove submenu toggle class when viewport back to full view
+  $(window).on('resize', function () {
+    if ($('body').hasClass('config--horizontal') || $('body').width() > 768) {
+      $('.menu-left__submenu--toggled').removeClass('menu-left__submenu--toggled').find('> .menu-left__list').attr('style', '')
+    }
+  })
 
-    $('.cat__menu-left__action--menu-toggle').on('click', function(){
-        if ($('body').width() < 768) {
-            $('body').toggleClass('cat__menu-left--visible--mobile');
-        } else {
-            $('body').toggleClass('cat__menu-left--visible');
-        }
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // custom scroll init
+
+  if ($('body').hasClass('config--vertical')) {
+    if (!(/Mobi/.test(navigator.userAgent)) && jQuery().perfectScrollbar) {
+      $('.menu-left__inner').perfectScrollbar({
+        theme: 'cleanui'
+      })
+    }
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // toggle menu
+
+  $('.menu-left__action--menu-toggle').on('click', function () {
+    if ($('body').width() < 768) {
+      $('body').toggleClass('menu-left--visible--mobile')
+    } else {
+      $('body').toggleClass('menu-left--visible')
+    }
+  })
+
+  $('.menu-left__action--backdrop-toggle').on('click', function () {
+    $('body').removeClass('menu-left--visible--mobile')
+  })
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // colorful menu
+
+  var colorfulClasses = 'menu-left--colorful--primary menu-left--colorful--secondary menu-left--colorful--primary menu-left--colorful--default menu-left--colorful--info menu-left--colorful--success menu-left--colorful--warning menu-left--colorful--danger menu-left--colorful--yellow',
+    colorfulClassesArray = colorfulClasses.split(' ')
+
+  function setColorfulClasses () {
+    $('.menu-left__list--root > .menu-left__item').each(function () {
+      var randomClass = colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
+      $(this).addClass(randomClass)
     })
+  }
 
-    $('.cat__menu-left__action--backdrop-toggle').on('click', function(){
-        $('body').removeClass('cat__menu-left--visible--mobile');
-    })
+  function removeColorfulClasses () {
+    $('.menu-left__list--root > .menu-left__item').removeClass(colorfulClasses)
+  }
 
+  if ($('body').hasClass('menu-left--colorful')) {
+    setColorfulClasses()
+  }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // colorful menu
+  $('body').on('setColorfulClasses', function () {
+    setColorfulClasses()
+  })
 
-    var colorfulClasses = 'cat__menu-left--colorful--primary cat__menu-left--colorful--secondary cat__menu-left--colorful--primary cat__menu-left--colorful--default cat__menu-left--colorful--info cat__menu-left--colorful--success cat__menu-left--colorful--warning cat__menu-left--colorful--danger cat__menu-left--colorful--yellow',
-        colorfulClassesArray = colorfulClasses.split(' ');
+  $('body').on('removeColorfulClasses', function () {
+    removeColorfulClasses()
+  })
 
-    function setColorfulClasses() {
-        $('.cat__menu-left__list--root > .cat__menu-left__item').each(function(){
-            var randomClass = colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)];
-            $(this).addClass(randomClass);
-        })
-    }
-
-    function removeColorfulClasses() {
-        $('.cat__menu-left__list--root > .cat__menu-left__item').removeClass(colorfulClasses);
-    }
-
-    if ($('body').hasClass('cat__menu-left--colorful')) {
-        setColorfulClasses();
-    }
-
-    $('body').on('setColorfulClasses', function() {
-        setColorfulClasses();
-    });
-
-    $('body').on('removeColorfulClasses', function() {
-        removeColorfulClasses();
-    });
-
-
-});
+})

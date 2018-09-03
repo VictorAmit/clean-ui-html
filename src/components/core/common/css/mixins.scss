@@ -21,7 +21,6 @@ $blue-darken: #0072d6;
 $orange: #f2a654;
 $yellow: yellow;
 
-
 // Accent colors
 $default: #acb7bf;
 $primary: #0190fe;
@@ -31,14 +30,11 @@ $info: #0887c9;
 $warning: #f39834;
 $danger: #fb434a;
 
-
 // Font Family
 $base__font-family: 'PT Sans', sans-serif;
 
-
 // Font Size
 $base__font-size: 14 !default;
-
 
 // Convert value rem() sass mixin
 @function rem($px, $base: $base__font-size) {
@@ -48,24 +44,26 @@ $base__font-size: 14 !default;
   //@return #{$px}px;
 }
 
-
 // Transitions
 @mixin transition-fast() {
   transition: all 0.05s ease-in-out;
 }
+
 @mixin transition-middle() {
   transition: all 0.1s ease-in-out;
 }
+
 @mixin transition-slow() {
   transition: all 0.2s ease-in-out;
 }
+
 @mixin transition-very-slow() {
   transition: all 0.4s ease-in-out;
 }
+
 @mixin transition-color() {
   transition: color 0.2s ease-in-out;
 }
-
 
 // Responsive utils
 $xxl-min-width: 1600px;

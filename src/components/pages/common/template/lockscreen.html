@@ -1,23 +1,23 @@
 <!-- START: pages/lockscreen -->
-<div class="cat__pages__login" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
-    <div class="cat__pages__login__header">
+<div class="pages__login" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
+    <div class="pages__login__header">
         <div class="row">
             <div class="col-lg-8">
-                <div class="cat__pages__login__header__logo">
+                <div class="pages__login__header__logo">
                     <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 switch-to-fullscreen">Switch Fullscreen / Windowed</a>
                     <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 random-bg-image" data-img="1">Randomize Background Image</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="cat__pages__login__block">
+    <div class="pages__login__block">
         <div class="row">
             <div class="col-xl-12">
-                <div class="cat__pages__login__block__inner">
-                    <div class="cat__pages__login__block__form">
+                <div class="pages__login__block__inner">
+                    <div class="pages__login__block__form">
                         <form id="form-validation" name="form-validation" method="POST">
                             <div class="text-center mb-3">
-                                <span class="cat__core__avatar cat__core__avatar--border cat__core__avatar--90" href="javascript:void(0);">
+                                <span class="utils__avatar utils__avatar--border utils__avatar--90" href="javascript:void(0);">
                                     <img src="../../components/pages/common/img/login/avatar.jpg" alt="Alternative text to the image">
                                 </span>
                             </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="cat__pages__login__footer text-center">
+    <div class="pages__login__footer text-center">
 
     </div>
 </div>
@@ -76,7 +76,7 @@
 
         // Switch to fullscreen
         $('.switch-to-fullscreen').on('click', function () {
-            $('.cat__pages__login').toggleClass('cat__pages__login--fullscreen');
+            $('.pages__login').toggleClass('pages__login--fullscreen');
         })
 
         // Change BG
@@ -86,7 +86,7 @@
                     final = next > max ? min : next;
 
             $('.random-bg-image').data('img', final);
-            $('.cat__pages__login').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
+            $('.pages__login').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
         })
 
     });

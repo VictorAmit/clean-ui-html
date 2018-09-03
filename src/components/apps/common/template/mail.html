@@ -1,67 +1,67 @@
 <!-- START: apps/mail -->
-<section class="card cat__core__card-with-sidebar cat__core__card-with-sidebar--large">
-    <div class="cat__core__card-sidebar">
-        <div class="cat__apps__messaging__header">
-            <input class="form-control cat__apps__messaging__header__input" placeholder="Search..." />
+<section class="card utils__card-with-sidebar utils__card-with-sidebar--large">
+    <div class="utils__card-sidebar">
+        <div class="apps__messaging__header">
+            <input class="form-control apps__messaging__header__input" placeholder="Search..." />
             <i class="icmn-search"></i>
             <button></button>
         </div>
-        <div class="cat__apps__messaging__list cat__apps__messaging__list--no-avatar">
-            <div class="cat__apps__messaging__tab">
-                <div class="cat__apps__messaging__tab__content">
+        <div class="apps__messaging__list apps__messaging__list--no-avatar">
+            <div class="apps__messaging__tab">
+                <div class="apps__messaging__tab__content">
                     <div class="mb-1">
                         <strong>Inbox (7)</strong>
                     </div>
-                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                    <small class="apps__messaging__tab__time">8:34PM</small>
+                    <div class="apps__messaging__tab__name">Barak Obama</div>
+                    <div class="apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
-            <div class="cat__apps__messaging__tab cat__apps__messaging__tab--selected">
-                <div class="cat__apps__messaging__tab__content">
+            <div class="apps__messaging__tab apps__messaging__tab--selected">
+                <div class="apps__messaging__tab__content">
                     <div class="mb-1">
                         <strong>Sent Mail</strong>
                     </div>
-                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                    <small class="apps__messaging__tab__time">8:34PM</small>
+                    <div class="apps__messaging__tab__name">Barak Obama</div>
+                    <div class="apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
-            <div class="cat__apps__messaging__tab">
-                <div class="cat__apps__messaging__tab__content">
+            <div class="apps__messaging__tab">
+                <div class="apps__messaging__tab__content">
                     <div class="mb-1">
                         <strong>Drafts (1)</strong>
                     </div>
-                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                    <small class="apps__messaging__tab__time">8:34PM</small>
+                    <div class="apps__messaging__tab__name">Barak Obama</div>
+                    <div class="apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
-            <div class="cat__apps__messaging__tab">
-                <div class="cat__apps__messaging__tab__content">
+            <div class="apps__messaging__tab">
+                <div class="apps__messaging__tab__content">
                     <div class="mb-1">
                         <strong>Spam (17)</strong>
                     </div>
-                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                    <small class="apps__messaging__tab__time">8:34PM</small>
+                    <div class="apps__messaging__tab__name">Barak Obama</div>
+                    <div class="apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
-            <div class="cat__apps__messaging__tab">
-                <div class="cat__apps__messaging__tab__content">
+            <div class="apps__messaging__tab">
+                <div class="apps__messaging__tab__content">
                     <div class="mb-1">
                         <strong>Deleted Messages</strong>
                     </div>
-                    <small class="cat__apps__messaging__tab__time">8:34PM</small>
-                    <div class="cat__apps__messaging__tab__name">Barak Obama</div>
-                    <div class="cat__apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
+                    <small class="apps__messaging__tab__time">8:34PM</small>
+                    <div class="apps__messaging__tab__name">Barak Obama</div>
+                    <div class="apps__messaging__tab__text">Hello! Where you are now? I want to talk. Hello! Where you are now? I want to talk</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="card-header">
         <a href="javascript: void(0);" class="btn btn-sm btn-primary pull-right" data-toggle="modal" data-target="#compose">Compose Mail</a>
-        <div class="nav-tabs-horizontal cat__apps__messaging__nav-tabs pull-left">
+        <div class="nav-tabs-horizontal apps__messaging__nav-tabs pull-left">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link" href="javascript: void(0);" data-toggle="tab" data-target="#profile2" role="tab" aria-expanded="false">
@@ -306,9 +306,9 @@
 
         ///////////////////////////////////////////////////
         // SIDEBAR CURRENT STATE
-        $('.cat__apps__messaging__tab').on('click', function(){
-            $('.cat__apps__messaging__tab').removeClass('cat__apps__messaging__tab--selected');
-            $(this).addClass('cat__apps__messaging__tab--selected');
+        $('.apps__messaging__tab').on('click', function(){
+            $('.apps__messaging__tab').removeClass('apps__messaging__tab--selected');
+            $(this).addClass('apps__messaging__tab--selected');
         });
 
         ///////////////////////////////////////////////////

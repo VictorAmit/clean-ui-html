@@ -1,8 +1,8 @@
 {
   "name": "project",
-  "version": "2.1.1",
+  "version": "1.0.0",
   "author": "Mediatec Software http://www.mediatec.org <hello@mediatec.com>",
-  "description": "Clean UI Admin Template Premium",
+  "description": "Clean UI Admin Template HTML",
   "private": true,
   "devDependencies": {
     "browser-sync": "latest",

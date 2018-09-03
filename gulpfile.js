@@ -1,16 +1,16 @@
 'use strict';
 
 /*
- * CLEAN UI ADMIN TEMPLATE GULP FILE
+ * CLEAN UI ADMIN TEMPLATE HTML GULP FILE
  */
 
 /////////////////////////////////////////////////////////////////////////////
 // CONFIGURATION
 
 var cleanui = {
-    "version": "2.1.1",
-    "templateName": "Clean UI Admin Template Modular",
-    "pageTitle": "Clean UI Admin Template Modular",
+    "version": "1.0.0",
+    "templateName": "Clean UI Admin Template HTML",
+    "pageTitle": "Clean UI Admin Template HTML",
     "description": "Clean UI – a modern professional admin template, based on Bootstrap 4 framework. Clean UI is a powerful and super flexible tool, which suits best for any kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.",
 };
 
@@ -241,16 +241,3 @@ gulp.task('clean', function () {
 // DEFAULT TASK
 
 gulp.task('default', ['build', 'watch', 'serve']);
-
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////
-// VISUAL BUILDER //////////////////////////////////  ///  ///      //// TM ////
-////////////////////////////////////////////////////  //  ///  //  ////////////
-////////////////////////////////////////////////////  /  ///        //////////
-////////////////////////////////////////////////////    ///  ////  //////////
-////////////////////////////////////////////////////   ///        //////////
-///////////////////////////////////////////////////////////////////////////
