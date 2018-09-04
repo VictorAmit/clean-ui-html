@@ -9,10 +9,10 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: rem(250);
+  width: rem(280);
   height: 100%;
   background: $black-lighten;
-  transform: translate3d(rem(-250), 0, 0);
+  transform: translate3d(rem(-280), 0, 0);
   transition: transform .2s ease-in-out;
 
   @at-root {
@@ -30,7 +30,7 @@
   // left padding
   @at-root {
     .top-bar {
-      padding-left: rem(50);
+      padding-left: rem(80);
     }
   }
 
@@ -54,7 +54,7 @@
     // left margin when menu in default state
     @at-root {
       .utils__content {
-        margin-left: rem(50);
+        margin-left: rem(80);
       }
     }
 
@@ -62,7 +62,7 @@
     // left margin when menu visible
     @at-root {
       body.menu-left--visible .utils__content {
-        margin-left: rem(250);
+        margin-left: rem(280);
       }
     }
   }
@@ -72,7 +72,7 @@
 
     // show menu button when menu closed
     .menu-left__lock {
-      right: rem(-50);
+      right: rem(-80);
       transition: right .2s ease-in-out;
     }
 
@@ -135,8 +135,14 @@
           border-style: solid;
           position: absolute;
           top: rem(17);
-          right: rem(54);
-          transition: transform .1s ease-in-out;
+          right: rem(80);
+          transition: transform .1s ease-in-out, border-color 0.2s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            border-color: transparent $white transparent transparent;
+          }
         }
       }
     }
@@ -147,11 +153,16 @@
       // menu item
       &.menu-left__item {
         background: $black;
-        color: $white;
 
         > a {
+          color: $white;
+
+          .menu-left__icon {
+            color: $white;
+          }
           // arrow marker styles
           &:after {
+            border-color: transparent $white transparent transparent;
             transform: rotate(-90deg);
           }
         }
@@ -184,9 +195,17 @@
     > a {
       position: relative;
       min-height: rem(45);
-      padding: rem(12) rem(50) rem(12) rem(20);
+      padding: rem(12) rem(80) rem(12) rem(20);
       display: block;
       color: $gray-darken;
+
+      &:hover {
+        color: $white;
+
+        .menu-left__icon {
+          color: $white;
+        }
+      }
 
       // inner badge fitting
       > .badge {
@@ -195,15 +214,19 @@
     }
 
     // menu item states
-    &--active, &:hover, &:active, &:focus {
-      > a {
-        background: $black;
+    &--active {
+
+      > a, &:hover, &:active, &:focus {
+        background: $ant-blue;
         color: $white;
+
         > .menu-left__icon {
           color: $white;
         }
       }
     }
+
+
     &--disabled {
       > a {
         cursor: default;
@@ -223,11 +246,12 @@
     width: rem(20);
     text-align: center;
     top: rem(15);
-    right: rem(16);
+    right: rem(32);
     color: $text;
     font-weight: bold;
     line-height: 1.1;
     text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
   }
 
   // menu toggle button container for animated button
@@ -235,7 +259,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: rem(50);
+    width: rem(80);
     height: rem(65);
     cursor: pointer;
     background: $black;

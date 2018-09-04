@@ -14,7 +14,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: rem(65);
+
+  min-height: rem(65);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   background: $white;
   border-bottom: 1px solid $gray-border;
   padding-right: rem(20);
@@ -69,23 +74,27 @@ body {
 
   // left block
   &__left {
-    float: left;
+    //float: left;
     display: flex;
     align-items: center;
-    height: 100%;
+    //height: 100%;
 
     // margins of items inside left block
     .top-bar__item {
       margin-right: rem(30);
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
   // right block
   &__right {
-    float: right;
+    //float: right;
     display: flex;
     align-items: center;
-    height: 100%;
+    //height: 100%;
 
     // margins of items inside right block
     .top-bar__item {
@@ -96,6 +105,12 @@ body {
   // item styles
   &__item {
     padding-top: rem(5);
+
+    &--hiddenOn1300 {
+      @media(max-width: 1300px) {
+        display: none;
+      }
+    }
   }
 
   // mini chart
@@ -136,6 +151,8 @@ body {
   &__search {
     border-bottom: 1px solid $gray-border;
     margin-top: rem(4);
+    white-space: nowrap;
+
     input {
       border: none;
       position: relative;

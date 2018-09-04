@@ -15,6 +15,12 @@
   transition: transform .2s ease-in-out;
   overflow-y: auto;
 
+  &--example-option {
+    input {
+      display: none;
+    }
+  }
+
   &__inner {
     padding: rem(20);
   }
@@ -58,6 +64,8 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: rem(10);
+
+
   }
 
   // setting item

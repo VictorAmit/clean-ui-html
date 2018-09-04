@@ -7,6 +7,7 @@ $color1: #fff;
 $color2: #74708d;
 $color3: #e4e9f0;
 $color4: #e4e9f0;
+$color5: #e6f8ff;
 
 body.theme {
   &--light {
@@ -17,25 +18,46 @@ body.theme {
       border-right: 1px solid $color4;
     }
 
-    .menu-left__item > a {
-      color: $color2;
+    .menu-left__item {
+      & > a {
+        color: $color2;
+        &:hover, &:focus {
+          color: $ant-blue;
+        }
+
+        &:active {
+          color: $ant-blue;
+          background-color: $color5;
+        }
+      }
+
+      &.menu-left__submenu {
+        &:hover {
+          & > a {
+            &::after {
+              border-color: transparent $color2 transparent transparent;
+            }
+          }
+        }
+      }
     }
 
-    .menu-left__item--active > a,
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
-      background: $color3;
-      color: darken($color2, 20%);
+    .menu-left__item--active > a{
+      background: $color5;
     }
 
     .menu-left__submenu--toggled.menu-left__item {
-      background: $color3;
       color: $color2;
+      background-color: $white;
+      & > a {
+        .menu-left__icon {
+          color: #8f8ca4;
+        }
+      }
     }
 
     .menu-left__submenu > .menu-left__list {
-      background: lighten($color3, 5%);
+      background: $white;
     }
 
     .menu-left__icon {
