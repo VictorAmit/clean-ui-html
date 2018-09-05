@@ -1,40 +1,350 @@
 <!-- START: dashboard alpha -->
 <nav class="utils__top-sidebar utils__top-sidebar--bg">
-  <div class="pull-right">
-    <a href="javascript: void(0);" class="btn btn-sm btn-outline-default ladda-button">
-      Update
-      <span class="hidden-sm-down"> Dashboard</span>
-    </a>
-    <a href="javascript: void(0);" class="btn btn-sm btn-outline-default ladda-button reset-button">
-      Reset
-      <span class="hidden-sm-down"> Order</span>
-    </a>
-  </div>
-  <span class="font-size-18 d-block mb-2">
+    <div class="pull-right">
+        <a href="javascript: void(0);" class="btn btn-sm btn-outline-default ladda-button">
+            Update
+            <span class="hidden-sm-down"> Dashboard</span>
+        </a>
+        <a href="javascript: void(0);" class="btn btn-sm btn-outline-default ladda-button reset-button">
+            Reset
+            <span class="hidden-sm-down"> Order</span>
+        </a>
+    </div>
+    <span class="font-size-18 d-block mb-2">
         <span class="text-muted">Home ·</span>
         <strong>Dashboard Alpha</strong>
         <small class="text-muted">statistics, charts, recent events and reports</small>
     </span>
 </nav>
 <div class="row">
-  <div class="col-lg-12">
-
-  </div>
+    <div class="col-lg-12">
+        <div class="utils__title utils__title--flat mb-3">
+            <span class="text-uppercase font-size-16">Last Week Statistics</span>
+        </div>
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card chartCard">
+                    <div class="chartCard__chart">
+                        <div class="chart-area-1 chartist"></div>
+                    </div>
+                    <div class="chartCard__amount">1240</div>
+                    <div class="chartCard__title">Transactions</div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card chartCard">
+                    <div class="chartCard__chart">
+                        <div class="chart-area-2 chartist"></div>
+                    </div>
+                    <div class="chartCard__amount">$1240</div>
+                    <div class="chartCard__title">Income</div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="card chartCard">
+                    <div class="chartCard__chart">
+                        <div class="chart-area-3 chartist"></div>
+                    </div>
+                    <div class="chartCard__amount">$240.56</div>
+                    <div class="chartCard__title">Outcome</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="utils__title">Recently Referrals</div>
+                <div class="utils__titleDescription">
+                    Block with important Recently Referrals information
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead class="thead-default">
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Age</th>
+                        <th>Office</th>
+                        <th>Date</th>
+                        <th>Salary</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>Damon</td>
+                        <td>5516 Adolfo Green</td>
+                        <td>18</td>
+                        <td>Littelhaven</td>
+                        <td>2014/06/13</td>
+                        <td>553.536</td>
+                    </tr>
+                    <tr>
+                        <td>Miracle</td>
+                        <td>176 Hirthe Squares</td>
+                        <td>35</td>
+                        <td>Ryleetown</td>
+                        <td>2013/09/27</td>
+                        <td>784.802</td>
+                    </tr>
+                    <tr>
+                        <td>Torrey</td>
+                        <td>1995 Richie Neck</td>
+                        <td>15</td>
+                        <td>West Sedrickstad</td>
+                        <td>2014/09/12</td>
+                        <td>344.302</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="utils__title utils__title--flat mb-3">
+            <span class="text-uppercase font-size-16">Your Cards (3)</span>
+            <Button class="ml-3 btn btn-outline-default btn-sm">View All</Button>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="javascript: void(0);" class="card card--withShadow paymentCard">
+                    <span class="paymentCard__sum">$560,245.35</span>
+                    <div class="paymentCard__icon">
+                        <i class="lnr lnr-bookmark"></i>
+                    </div>
+                    <span class="paymentCard__name">David Beckham</span>
+                    <span class="paymentCard__number">8748-XXXX-1678-5416</span>
+                    <span class="paymentCard__type">MASTERCARD</span>
+                    <div class="paymentCard__footer">Expires at 03/22</div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="javascript: void(0);" class="card card--withShadow paymentCard">
+                    <span class="paymentCard__sum">$2,156.78</span>
+                    <div class="paymentCard__icon">
+                        <i class="lnr lnr-bookmark"></i>
+                    </div>
+                    <span class="paymentCard__name">Matt Daemon</span>
+                    <span class="paymentCard__number">4512-XXXX-1678-7528</span>
+                    <span class="paymentCard__type">VISA</span>
+                    <div class="paymentCard__footer">Expires at 02/20</div>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="javascript: void(0);" class="card card--withShadow paymentCard">
+                    <span class="paymentCard__sum">$1,467,98</span>
+                    <div class="paymentCard__icon">
+                        <i class="lnr lnr-hourglass"></i>
+                    </div>
+                    <span class="paymentCard__name">Mrs. Angelina Jolie</span>
+                    <span class="paymentCard__number">4512-XXXX-1678-7528</span>
+                    <span class="paymentCard__type">VISA</span>
+                    <div class="paymentCard__footer">Locked Temporary</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="utils__title utils__title--flat mb-3">
+            <span class="text-uppercase font-size-16">your accounts (6)</span>
+            <Button class="ml-3 btn btn-outline-default btn-sm">View All</Button>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <a href="javascript: void(0);" class="card card--withShadow paymentAccount">
+                    <div class="paymentAccount__icon">
+                        <i class="lnr lnr-inbox"></i>
+                    </div>
+                    <span class="paymentAccount__number">US 4658-1678-7528</span>
+                    <span class="paymentAccount__sum">$2,156.78</span>
+                    <div class="paymentAccount__footer">Current month charged: $10,200.00</div>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a href="javascript: void(0);" class="card card--withShadow paymentAccount">
+                    <div class="paymentAccount__icon">
+                        <i class="lnr lnr-inbox"></i>
+                    </div>
+                    <span class="paymentAccount__number">IBAN 445646-8748-4664-1678-5416</span>
+                    <span class="paymentAccount__sum">$560,245.35</span>
+                    <div class="paymentAccount__footer">Current month charged: $1,276.00</div>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a href="javascript: void(0);" class="card card--withShadow paymentAccount">
+                    <div class="paymentAccount__icon">
+                        <i class="lnr lnr-inbox"></i>
+                    </div>
+                    <span class="paymentAccount__number">US 4658-1678-7528</span>
+                    <span class="paymentAccount__sum">$2,156.78</span>
+                    <div class="paymentAccount__footer">Current month charged: $10,200.00</div>
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <a href="javascript: void(0);" class="card card--withShadow paymentAccount">
+                    <div class="paymentAccount__icon">
+                        <i class="lnr lnr-inbox"></i>
+                    </div>
+                    <span class="paymentAccount__number">IBAN 445646-8748-4664-1678-5416</span>
+                    <span class="paymentAccount__sum">$560,245.35</span>
+                    <div class="paymentAccount__footer">Current month charged: $1,276.00</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="utils__title utils__title--flat mb-3">
+            <span class="text-uppercase font-size-16">recent transactions (167)</span>
+            <Button class="ml-3 btn btn-outline-default btn-sm">View All</Button>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="javascript: void(0);" class="income card card--withShadow paymentTx">
+                    <div class="paymentTx__icon">
+                        <i class="lnr lnr-arrow-right"></i>
+                    </div>
+                    <div>
+                        <span class="paymentTx__amount">-$100.00</span>
+                        <sup class="paymentTx__info">US 4658-1678-7528</sup>
+                    </div>
+                    <div class="paymentTx__footer">To AMAZON COPR, NY, 1756</div>
+                </a>
+            </div>
+            <div class="col-lg-12">
+                <a href="javascript: void(0);" class="income card card--withShadow paymentTx paymentTx--income">
+                    <div class="paymentTx__icon">
+                        <i class="lnr lnr-arrow-left"></i>
+                    </div>
+                    <div>
+                        <span class="paymentTx__amount">+27,080.00</span>
+                        <sup class="paymentTx__info">4512-XXXX-1678-7528</sup>
+                    </div>
+                    <div class="paymentTx__footer">To DigitalOcean Cloud Hosting, Winnetka, LA</div>
+                </a>
+            </div>
+            <div class="col-lg-12">
+                <a href="javascript: void(0);" class="income card card--withShadow paymentTx paymentTx--income">
+                    <div class="paymentTx__icon">
+                        <i class="lnr lnr-arrow-left"></i>
+                    </div>
+                    <div>
+                        <span class="paymentTx__amount">+100,000.00</span>
+                        <sup class="paymentTx__info">6245-XXXX-1678-3256</sup>
+                    </div>
+                    <div class="paymentTx__footer">To Tesla Cars, LA, USA</div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center pb-5">
+            <button class="btn disabled btn-primary width-200">Load More...</button>
+        </div>
+    </div>
 </div>
 <!-- END: dashboard alpha -->
 
 <!-- START: page scripts -->
 <script>
-  $(function () {
+    $(function () {
 
-    ///////////////////////////////////////////////////////////
-    // tooltips
-    $('[data-toggle=tooltip]').tooltip()
+        ///////////////////////////////////////////////////////////
+        // tooltips
+        $('[data-toggle=tooltip]').tooltip()
 
-    ///////////////////////////////////////////////////////////
-    // ladda buttons
-    Ladda.bind('.ladda-button', {timeout: 2000})
+        ///////////////////////////////////////////////////////////
+        // ladda buttons
+        Ladda.bind('.ladda-button', {timeout: 2000})
 
-  })
+        ///////////////////////////////////////////////////////////
+        // Chartistcard
+
+        new Chartist.Line(".chart-area-1", {
+            series: [
+                [2, 11, 8, 14, 18, 20, 26]
+            ]
+        }, {
+            width: "120px",
+            height: "107px",
+
+            showPoint: false,
+            showLine: true,
+            showArea: true,
+            fullWidth: true,
+            showLabel: false,
+            axisX: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            axisY: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            chartPadding: 0,
+            low: 0,
+        });
+
+        new Chartist.Line(".chart-area-2", {
+            series: [
+                [20, 80, 67, 120, 132, 66, 97]
+            ]
+        }, {
+            width: "120px",
+            height: "107px",
+
+            showPoint: false,
+            showLine: true,
+            showArea: true,
+            fullWidth: true,
+            showLabel: false,
+            axisX: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            axisY: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            chartPadding: 0,
+            low: 0,
+        });
+
+        new Chartist.Line(".chart-area-3", {
+            series: [
+                [42, 40, 80, 67, 84, 20, 97]
+            ]
+        }, {
+            width: "120px",
+            height: "107px",
+
+            showPoint: false,
+            showLine: true,
+            showArea: true,
+            fullWidth: true,
+            showLabel: false,
+            axisX: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            axisY: {
+                showGrid: false,
+                showLabel: false,
+                offset: 0
+            },
+            chartPadding: 0,
+            low: 0,
+        });
+
+    })
 </script>
 <!-- END: page scripts -->

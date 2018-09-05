@@ -1,20 +1,20 @@
 <!-- START: pages/lockscreen -->
-<div class="pages__login" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
-    <div class="pages__login__header">
+<div class="lockscreen" style="background-image: url(../../components/pages/common/img/login/1.jpg)">
+    <div class="lockscreen__header">
         <div class="row">
             <div class="col-lg-8">
-                <div class="pages__login__header__logo">
+                <div class="lockscreen__header__logo">
                     <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 switch-to-fullscreen">Switch Fullscreen / Windowed</a>
                     <a href="javascript: void(0);" class="btn btn-sm btn-outline ml-3 random-bg-image" data-img="1">Randomize Background Image</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="pages__login__block">
+    <div class="lockscreen__block">
         <div class="row">
             <div class="col-xl-12">
-                <div class="pages__login__block__inner">
-                    <div class="pages__login__block__form">
+                <div class="lockscreen__block__inner">
+                    <div class="lockscreen__block__form">
                         <form id="form-validation" name="form-validation" method="POST">
                             <div class="text-center mb-3">
                                 <span class="utils__avatar utils__avatar--border utils__avatar--90" href="javascript:void(0);">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="pages__login__footer text-center">
+    <div class="lockscreen__footer text-center">
 
     </div>
 </div>
@@ -76,7 +76,7 @@
 
         // Switch to fullscreen
         $('.switch-to-fullscreen').on('click', function () {
-            $('.pages__login').toggleClass('pages__login--fullscreen');
+            $('.lockscreen').toggleClass('lockscreen--fullscreen');
         })
 
         // Change BG
@@ -86,7 +86,7 @@
                     final = next > max ? min : next;
 
             $('.random-bg-image').data('img', final);
-            $('.pages__login').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
+            $('.lockscreen').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
         })
 
     });
