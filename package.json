@@ -6,23 +6,23 @@
   "private": true,
   "devDependencies": {
     "browser-sync": "latest",
-    "mjml": "latest",
-    "rimraf": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
+    "gulp-data": "latest",
     "gulp-ignore": "latest",
-    "gulp-sass": "latest",
+    "gulp-print": "latest",
+    "gulp-promise": "latest",
     "gulp-rename": "latest",
+    "gulp-replace-task": "latest",
     "gulp-rigger": "latest",
+    "gulp-rimraf": "latest",
+    "gulp-sass": "latest",
+    "gulp-template": "latest",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
-    "gulp-template": "latest",
     "gulp-wrap": "latest",
-    "gulp-data": "latest",
-    "gulp-print": "latest",
-    "gulp-replace-task": "latest",
-    "gulp-rimraf": "latest",
-    "gulp-promise": "latest"
+    "mjml": "latest",
+    "rimraf": "latest"
   }
 }
