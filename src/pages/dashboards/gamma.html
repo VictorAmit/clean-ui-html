@@ -295,7 +295,7 @@
             </div>
             <div class="card-body graphCard">
                 <div class="row">
-                    <div class="col-xl-5">
+                    <div class="col-xl-6">
                         <table class="table graphCard__table">
                             <thead>
                             <tr>
@@ -325,24 +325,22 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="col-xl-5 col-lg-9">
+                    <div class="col-xl-6">
                         <div class="graphCard__donutChartist graphCard__donutChartist--example h-100 graphCard__donutChartist--widthCenterData graphCard__chartist--centered">
-                            <div class="graphCard__donutChartistArea-1 ct-chart-pie"></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-3">
-                        <div class="graphCard__donuts graphCard__donuts--centered h-100">
-                            <div class="nowrap mb-2">
+                            <div class="graphCard__donutChartistArea-1 ct-chart-pie mb-3"></div>
+                            <div class="graphCard__donuts text-center">
+                            <span class="text-nowrap mr-2 mb-2">
                                 <span class="utils__donut utils__donut--success"></span>
                                 Ready
-                            </div>
-                            <div class="nowrap mb-2">
+                            </span>
+                                <span class="text-nowrap mr-2 mb-2">
                                 <span class="utils__donut utils__donut--primary"></span>
                                 In progress
-                            </div>
-                            <div class="nowrap mb-2">
-                                <span class="utils__donut utils__donut--yellow"></span>
-                                Defect
+                            </span>
+                                <span class="text-nowrap mr-2 mb-2">
+                                <span class="utils__donut utils__donut--danger"></span>
+                                Defected
+                            </span>
                             </div>
                         </div>
                     </div>
@@ -412,7 +410,7 @@
             var total = chart.data.series.reduce(function (pv, cv) {
                 return pv + cv;
             }, 0);
-            return value + " " + Math.round(chart.data.series[index] / total * 100) + "%"
+            return Math.round(chart.data.series[index] / total * 100) + "%"
         }
     });
     chart.on('draw', function (ctx) {

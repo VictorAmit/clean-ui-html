@@ -12,6 +12,7 @@
 
     &--centered {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -119,9 +120,10 @@
      &--widthCenterData {
        .ct-label-pie {
          display: none;
-         font-size: rem(15);
+         font-size: rem(30);
          font-weight: 700;
          color: $gray;
+         transform: translate(1%, 6%);
        }
 
        .ct-label-pie:first-of-type {
@@ -149,7 +151,7 @@
   }
 
   &__donutChartistArea-1 {
-    height: rem(200);
+    height: rem(170);
   }
 
   &__donuts {
