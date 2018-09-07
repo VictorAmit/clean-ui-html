@@ -289,6 +289,9 @@
             },
             chartPadding: 0,
             low: 0,
+            plugins: [
+                Chartist.plugins.tooltip()
+            ]
         });
 
         new Chartist.Line(".chart-area-2", {

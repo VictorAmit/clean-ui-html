@@ -47,4 +47,8 @@
       box-shadow: 0 0 2.25rem #e1e1e1;
     }
   }
+
+  &--fullHeight {
+    height: calc(100% - 2.3rem);
+  }
 }
