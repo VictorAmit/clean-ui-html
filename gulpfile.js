@@ -8,10 +8,9 @@
 // CONFIGURATION
 
 var cleanui = {
-    "version": "1.0.0",
     "templateName": "Clean UI Admin Template HTML",
     "pageTitle": "Clean UI Admin Template HTML",
-    "description": "Clean UI – a modern professional admin template, based on Bootstrap 4 framework. Clean UI is a powerful and super flexible tool, which suits best for any kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.",
+    "description": "Clean UI HTML – a modern professional admin template, based on Bootstrap 4 framework. Clean UI is a powerful and super flexible tool, which suits best for any kind of web application: Web Applications; CRM; CMS; Admin Panels; Dashboards; etc.",
 };
 
 

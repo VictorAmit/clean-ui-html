@@ -33,7 +33,7 @@
     "datatables-fixedcolumns": "3.2.2",
     "chartist": "0.11.0",
     "chartist-plugin-tooltip": "0.0.18",
-    "c3": "0.4.16",
+    "c3": "0.6.8",
     "d3": "4.10.0",
     "peity": "3.2.1",
     "gsap": "1.20.2",
@@ -49,6 +49,7 @@
     "techan": "^0.8.0"
   },
   "resolutions": {
-    "d3": "~3.5.0"
+    "d3": "~4.10.0",
+    "chartist": "0.11.0"
   }
 }

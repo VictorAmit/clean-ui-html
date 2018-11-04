@@ -9,10 +9,10 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: rem(280);
+  width: rem(256);
   height: 100%;
   background: $black-lighten;
-  transform: translate3d(rem(-280), 0, 0);
+  transform: translate3d(rem(-256), 0, 0);
   transition: transform .2s ease-in-out;
 
   @at-root {
@@ -38,7 +38,7 @@
   @media (min-width: $sm-min-width) {
 
     // hide menu
-    transform: translate3d(rem(-200), 0, 0);
+    transform: translate3d(rem(-176), 0, 0);
 
     // show menu on hover
     &:hover {
@@ -62,7 +62,7 @@
     // left margin when menu visible
     @at-root {
       body.menu-left--visible .utils__content {
-        margin-left: rem(280);
+        margin-left: rem(256);
       }
     }
   }
