@@ -12,7 +12,7 @@
                 <h5 class="text-black"><strong>Basic Responsive Table</strong></h5>
                 <p class="text-muted">Element: read <a href="https://datatables.net/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
-                    <table class="table table-hover nowrap" id="example1" width="100%">
+                    <table class="table table-hover nowrap" id="example1">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -23,16 +23,6 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <tr>
                             <td>Damon</td>
@@ -419,6 +409,16 @@
                             <td>$336,046</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -428,7 +428,7 @@
                 <h5 class="text-black"><strong>Fixed Columns</strong></h5>
                 <p class="text-muted">Element: read <a href="https://datatables.net/extensions/fixedcolumns/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
-                    <table class="table table-hover nowrap" id="example2" width="100%">
+                    <table class="table table-hover nowrap" id="example2">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -439,16 +439,6 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <tr>
                             <td>Damon</td>
@@ -835,6 +825,16 @@
                             <td>$336,046</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -844,7 +844,7 @@
                 <h5 class="text-black"><strong>Modifiers from Basic Tables</strong></h5>
                 <p class="text-muted">Modifier: <code>.table-inverse</code>, etc.</p>
                 <div class="mb-5">
-                    <table class="table table-inverse nowrap" id="example3" width="100%">
+                    <table class="table table-inverse nowrap" id="example3">
                         <thead>
                         <tr>
                             <th>Name</th>
@@ -855,16 +855,6 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <tr>
                             <td>Damon</td>
@@ -1251,6 +1241,16 @@
                             <td>$336,046</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -1261,23 +1261,26 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('#example1').DataTable({
-            responsive: true
-        });
+      $('#example1').DataTable({
+        responsive: true
+      });
 
-        $('#example2').DataTable({
-            autoWidth: true,
-            scrollX: true,
-            fixedColumns: true
-        });
+      $('#example2').DataTable({
+        autoWidth: true,
+        scrollX: true,
+        fixedColumns: true
+      });
 
-        $('#example3').DataTable({
-            autoWidth: true,
-            scrollX: true,
-            fixedColumns: true
-        });
+      $('#example3').DataTable({
+        autoWidth: true,
+        scrollX: true,
+        fixedColumns: true
+      });
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

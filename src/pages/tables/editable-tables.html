@@ -23,16 +23,6 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <tr>
                             <td>Damon</td>
@@ -67,6 +57,16 @@
                             <td>$207,291</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -87,16 +87,6 @@
                             <th>Salary</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Date</th>
-                            <th>Salary</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <tr>
                             <td>Damon</td>
@@ -131,6 +121,16 @@
                             <td>$207,291</td>
                         </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -141,12 +141,15 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('#example1').editableTableWidget();
+      $('#example1').editableTableWidget();
 
-        $('#example2').editableTableWidget();
+      $('#example2').editableTableWidget();
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

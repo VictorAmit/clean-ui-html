@@ -54,41 +54,44 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function() {
+  (function($) {
+    "use strict";
+    $(function () {
 
-        // Form Validation
-        $('#form-validation').validate({
-            submit: {
-                settings: {
-                    inputContainer: '.form-group',
-                    errorListClass: 'form-control-error',
-                    errorClass: 'has-danger'
-                }
-            }
-        });
+      // Form Validation
+      $('#form-validation').validate({
+        submit: {
+          settings: {
+            inputContainer: '.form-group',
+            errorListClass: 'form-control-error',
+            errorClass: 'has-danger'
+          }
+        }
+      });
 
-        // Show/Hide Password
-        $('.password').password({
-            eyeClass: '',
-            eyeOpenClass: 'icmn-eye',
-            eyeCloseClass: 'icmn-eye-blocked'
-        });
+      // Show/Hide Password
+      $('.password').password({
+        eyeClass: '',
+        eyeOpenClass: 'icmn-eye',
+        eyeCloseClass: 'icmn-eye-blocked'
+      });
 
-        // Switch to fullscreen
-        $('.switch-to-fullscreen').on('click', function () {
-            $('.lockscreen').toggleClass('lockscreen--fullscreen');
-        })
+      // Switch to fullscreen
+      $('.switch-to-fullscreen').on('click', function () {
+        $('.lockscreen').toggleClass('lockscreen--fullscreen');
+      })
 
-        // Change BG
-        $('.random-bg-image').on('click', function () {
-            var min = 1, max = 5,
-                    next = Math.floor($('.random-bg-image').data('img')) + 1,
-                    final = next > max ? min : next;
+      // Change BG
+      $('.random-bg-image').on('click', function () {
+        var min = 1, max = 5,
+          next = Math.floor($('.random-bg-image').data('img')) + 1,
+          final = next > max ? min : next;
 
-            $('.random-bg-image').data('img', final);
-            $('.lockscreen').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
-        })
+        $('.random-bg-image').data('img', final);
+        $('.lockscreen').data('img', final).css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpg)');
+      })
 
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

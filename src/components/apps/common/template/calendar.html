@@ -82,7 +82,7 @@
                     <span class="hidden-lg-down">Dashboards</span>
                     <span class="caret"></span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="" role="menu">
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
                     <div class="dropdown-header">Active</div>
                     <a class="dropdown-item" href="javascript:void(0)">Project Management</a>
                     <a class="dropdown-item" href="javascript:void(0)">User Inetrface Development</a>
@@ -91,7 +91,7 @@
                     <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon icmn-cog"></i> Settings</a>
-                </ul>
+                </div>
             </div>
         </div>
         <h4 class="mt-1 mb-1 text-black">
@@ -106,109 +106,109 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function() {
-
-        ///////////////////////////////////////////////////
-        // FULL CALENDAR
-        $('.apps__calendar').fullCalendar({
-            //aspectRatio: 2,
-            height: 800,
-            header: {
-                left: 'prev, next',
-                center: 'title',
-                right: 'month, agendaWeek, agendaDay'
-            },
-            buttonIcons: {
-                prev: 'none fa fa-arrow-left',
-                next: 'none fa fa-arrow-right',
-                prevYear: 'none fa fa-arrow-left',
-                nextYear: 'none fa fa-arrow-right'
-            },
-            defaultDate: '2016-05-12',
-            editable: true,
-            eventLimit: true, // allow "more" link when too many events
-            viewRender: function(view, element) {
-                if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
-                    $('.fc-scroller').jScrollPane({
-                        autoReinitialise: true,
-                        autoReinitialiseDelay: 100
-                    });
-                }
-            },
-            events: [
-                {
-                    title: 'All Day Event',
-                    start: '2016-05-01',
-                    className: 'fc-event-success'
-                },
-                {
-                    title: 'Long Event',
-                    start: '2016-05-07',
-                    end: '2016-05-10'
-                },
-                {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: '2016-05-09T16:00:00',
-                    className: 'fc-event-default'
-                },
-                {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: '2016-05-16T16:00:00',
-                    className: 'fc-event-success'
-                },
-                {
-                    title: 'Conference',
-                    start: '2016-05-11',
-                    end: '2016-05-13',
-                    className: 'fc-event-danger'
-                },
-                {
-                    title: 'Meeting',
-                    start: '2016-05-12T10:30:00',
-                    end: '2016-05-12T12:30:00',
-                    className: 'fc-event-default'
-                },
-                {
-                    title: 'Lunch',
-                    start: '2016-05-12T12:00:00',
-                    className: 'fc-event-default'
-                },
-                {
-                    title: 'Meeting',
-                    start: '2016-05-12T14:30:00',
-                    className: 'fc-event-info'
-                },
-                {
-                    title: 'Happy Hour',
-                    start: '2016-05-12T17:30:00'
-                },
-                {
-                    title: 'Dinner',
-                    start: '2016-05-12T20:00:00'
-                },
-                {
-                    title: 'Birthday Party',
-                    start: '2016-05-13T07:00:00',
-                    className: 'fc-event-danger'
-                },
-                {
-                    title: 'Click for Google',
-                    url: 'javascript: alert("Clicked: External URL");',
-                    start: '2016-05-28',
-                    className: 'fc-event-warning'
-                }
-            ],
-            eventClick: function(calEvent, jsEvent, view) {
-                if (!$(this).hasClass('event-clicked')) {
-                    $('.fc-event').removeClass('event-clicked');
-                    $(this).addClass('event-clicked');
-                }
-            }
-        });
-
-
+  (function($) {
+    "use strict";
+    $(function () {
+      ///////////////////////////////////////////////////
+      // FULL CALENDAR
+      $('.apps__calendar').fullCalendar({
+        //aspectRatio: 2,
+        height: 800,
+        header: {
+          left: 'prev, next',
+          center: 'title',
+          right: 'month, agendaWeek, agendaDay'
+        },
+        buttonIcons: {
+          prev: 'none fa fa-arrow-left',
+          next: 'none fa fa-arrow-right',
+          prevYear: 'none fa fa-arrow-left',
+          nextYear: 'none fa fa-arrow-right'
+        },
+        defaultDate: '2016-05-12',
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        viewRender: function (view, element) {
+          if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
+            $('.fc-scroller').jScrollPane({
+              autoReinitialise: true,
+              autoReinitialiseDelay: 100
+            });
+          }
+        },
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2016-05-01',
+            className: 'fc-event-success'
+          },
+          {
+            title: 'Long Event',
+            start: '2016-05-07',
+            end: '2016-05-10'
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2016-05-09T16:00:00',
+            className: 'fc-event-default'
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2016-05-16T16:00:00',
+            className: 'fc-event-success'
+          },
+          {
+            title: 'Conference',
+            start: '2016-05-11',
+            end: '2016-05-13',
+            className: 'fc-event-danger'
+          },
+          {
+            title: 'Meeting',
+            start: '2016-05-12T10:30:00',
+            end: '2016-05-12T12:30:00',
+            className: 'fc-event-default'
+          },
+          {
+            title: 'Lunch',
+            start: '2016-05-12T12:00:00',
+            className: 'fc-event-default'
+          },
+          {
+            title: 'Meeting',
+            start: '2016-05-12T14:30:00',
+            className: 'fc-event-info'
+          },
+          {
+            title: 'Happy Hour',
+            start: '2016-05-12T17:30:00'
+          },
+          {
+            title: 'Dinner',
+            start: '2016-05-12T20:00:00'
+          },
+          {
+            title: 'Birthday Party',
+            start: '2016-05-13T07:00:00',
+            className: 'fc-event-danger'
+          },
+          {
+            title: 'Click for Google',
+            url: 'javascript: alert("Clicked: External URL");',
+            start: '2016-05-28',
+            className: 'fc-event-warning'
+          }
+        ],
+        eventClick: function (calEvent, jsEvent, view) {
+          if (!$(this).hasClass('event-clicked')) {
+            $('.fc-event').removeClass('event-clicked');
+            $(this).addClass('event-clicked');
+          }
+        }
+      });
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

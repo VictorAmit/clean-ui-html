@@ -3,6 +3,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  ECOMMERCE: DASHBOARD  */
 
+@at-root {
+  .wizard > .content {
+    background: $white !important;
+  }
+}
+
 .ecommerce {
   &__dashboard__list__img {
     display: inline-block;
@@ -30,7 +36,7 @@
       > .body {
         width: 100%;
         height: auto;
-        padding: rem(15);
+        padding: 0;
         position: relative;
       }
     }
@@ -169,6 +175,7 @@
           text-transform: uppercase;
           font-size: rem(10);
           font-weight: bold;
+          white-space: nowrap;
         }
       }
       &__img {

@@ -1,5 +1,5 @@
 <!-- END: ecommerce/orders -->
-<section class="card">
+<div class="card">
     <div class="card-header">
         <a href="javascript: void(0);" class="pull-right btn btn-sm btn-primary">Create New Order</a>
         <span class="utils__title">
@@ -7,7 +7,7 @@
         </span>
     </div>
     <div class="card-body">
-        <table class="table table-hover nowrap" id="example1" width="100%">
+        <table class="table table-hover nowrap" id="example1">
             <thead class="thead-default">
             <tr>
                 <th>ID</th>
@@ -21,19 +21,6 @@
                 <th>Action</th>
             </tr>
             </thead>
-            <tfoot>
-            <tr>
-                <th>ID</th>
-                <th>Date</th>
-                <th>Customer</th>
-                <th>Grand Total</th>
-                <th>Tax</th>
-                <th>Shipping</th>
-                <th>Quantity</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-            </tfoot>
             <tbody>
             <tr>
                 <td><a href="javascript: void(0);" class="utils__link--underlined">000010</a></td>
@@ -316,22 +303,38 @@
                 </td>
             </tr>
             </tbody>
+            <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Customer</th>
+                <th>Grand Total</th>
+                <th>Tax</th>
+                <th>Shipping</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </tfoot>
         </table>
     </div>
-</section>
+</div>
 <!-- END: ecommerce/orders -->
 
 <!-- START: page scripts -->
 <script>
+  (function($) {
+    "use strict";
     $(function () {
 
-        // Datatables
-        $('#example1').DataTable({
-            "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
-            responsive: true,
-            "autoWidth": false
-        });
+      // Datatables
+      $('#example1').DataTable({
+        "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
+        responsive: true,
+        "autoWidth": false
+      });
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

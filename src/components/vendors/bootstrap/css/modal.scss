@@ -9,16 +9,7 @@
   }
   .modal-header {
     .close {
-      outline: none !important;
-      width: 30px;
-      height: 30px;
-      display: inline-block;
-      line-height: 30px;
-      text-align: center;
-      span {
-        position: relative;
-        top: 3px;
-      }
+      background: $white;
     }
   }
   &.modal-size-small {

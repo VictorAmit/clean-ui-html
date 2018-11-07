@@ -18,7 +18,7 @@
                             <th>#</th>
                             <th>First Name</th>
                             <th>Username</th>
-                            <th width="200">Levels</th>
+                            <th style="width: 200px">Levels</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -116,7 +116,7 @@
                             <th>#</th>
                             <th>First Name</th>
                             <th>Username</th>
-                            <th width="200">Progress</th>
+                            <th style="width: 200px">Progress</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -202,7 +202,7 @@
                             <th>#</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th width="200">Username</th>
+                            <th style="width: 200px">Username</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -353,16 +353,6 @@
                                 <th>Salary</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Date</th>
-                                <th>Salary</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             <tr>
                                 <td>Damon</td>
@@ -453,6 +443,16 @@
                                 <td>$336,046</td>
                             </tr>
                         </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Date</th>
+                            <th>Salary</th>
+                        </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -463,12 +463,13 @@
 
 <!-- START: page scripts -->
 <script>
-
+  (function($) {
+    "use strict";
     $(function () {
 
-        $("[data-toggle=tooltip]").tooltip();
+      $("[data-toggle=tooltip]").tooltip();
 
     });
-
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

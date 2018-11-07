@@ -36,17 +36,17 @@
                             <label class="col-md-3 col-form-label" for="l4">With Actions on Left</label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <div class="input-group-btn">
-                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action
                                         </button>
-                                        <ul class="dropdown-menu">
+                                        <div class="dropdown-menu">
                                             <a class="dropdown-item" href="javascript: void(0);">Action</a>
                                             <a class="dropdown-item" href="javascript: void(0);">Another action</a>
                                             <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
-                                            <li class="dropdown-divider"> </li>
+                                            <div class="dropdown-divider"> </div>
                                             <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
-                                        </ul>
+                                        </div>
                                     </div>
                                     <input type="text" class="form-control" id="l4">
                                 </div>
@@ -57,17 +57,17 @@
                             <div class="col-md-9">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="l5">
-                                    <div class="input-group-btn">
-                                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
                                             Action
                                         </button>
-                                        <ul class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-menu dropdown-menu-right">
                                             <a class="dropdown-item" href="javascript: void(0);">Action</a>
                                             <a class="dropdown-item" href="javascript: void(0);">Another action</a>
                                             <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
-                                            <li class="dropdown-divider"> </li>
+                                            <div class="dropdown-divider"> </div>
                                             <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -76,12 +76,12 @@
                             <label class="col-md-3 col-form-label" for="l8">Search</label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="" placeholder="Search..." id="l8">
-                                    <span class="input-group-btn">
-                                        <a href="javascript: void(0);" class="btn btn-success">
+                                    <input type="text" class="form-control" placeholder="Search..." id="l8">
+                                    <div class="input-group-append">
+                                        <a href="javascript: void(0);" class="btn btn-success btn-sm">
                                             Search files
                                         </a>
-                                    </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -96,9 +96,11 @@
                             <label class="col-md-3 col-form-label" for="l2">Email Address</label>
                             <div class="col-md-9">
                                 <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="icmn-mail2"></i>
-                                    </span>
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="icmn-mail2"></i>
+                                        </div>
+                                    </div>
                                     <input type="email" class="form-control" placeholder="Email Address" id="l2">
                                 </div>
                             </div>
@@ -108,9 +110,11 @@
                             <div class="col-md-9">
                                 <div class="input-group">
                                     <input type="password" class="form-control" placeholder="Password" id="l3">
-                                    <span class="input-group-addon">
-                                        <i class="icmn-key"></i>
-                                    </span>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">
+                                            <i class="icmn-key"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -217,9 +221,11 @@
                                     <label for="l31">Password</label>
                                     <div class="input-group">
                                         <input type="password" class="form-control" placeholder="Password" id="l31">
-                                        <span class="input-group-addon">
-                                            <i class="icmn-key"></i>
-                                        </span>
+                                        <div class="input-group-append">
+                                            <div class="input-group-text">
+                                                <i class="icmn-key"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -249,9 +255,11 @@
                                 <div class="form-group">
                                     <label for="l34">Input with Icon</label>
                                     <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="icmn-search"></i>
-                                        </span>
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="icmn-search"></i>
+                                            </div>
+                                        </div>
                                         <input class="input-error form-control" type="text" value="" id="l34">
                                     </div>
                                 </div>
@@ -370,9 +378,17 @@
                         <div class="form-group mr-2">
                             <label class="sr-only" for="exampleInputAmount">Amount</label>
                             <div class="input-group">
-                                <div class="input-group-addon">$</div>
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        $
+                                    </div>
+                                </div>
                                 <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                                <div class="input-group-addon">.00</div>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        .00
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <a href="javascript: void(0);" class="btn btn-primary">Transfer cash</a>
@@ -387,7 +403,7 @@
                     <h5 class="text-black"><strong>Column Sizing</strong></h5>
                     <p class="text-muted">Element: read <a href="https://v4-alpha.getbootstrap.com/components/forms/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                     <!-- Column Sizing -->
-                    <form role="form">
+                    <form>
                         <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group">

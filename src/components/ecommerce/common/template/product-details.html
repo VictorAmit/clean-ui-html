@@ -1,5 +1,5 @@
 <!-- START: ecommerce/product-details -->
-<section class="card">
+<div class="card">
     <div class="card-header">
         <span class="utils__title">
             <strong>Product Details</strong>
@@ -17,28 +17,28 @@
                             <i class="icmn-heart"><!-- --></i>
                         </div>
                         <a href="javascript: void(0);">
-                            <img id="targetPhoto" src="../../components/ecommerce/common/img/001.jpg" />
+                            <img id="targetPhoto" src="../../components/ecommerce/common/img/001.jpg" alt="" />
                         </a>
                     </div>
                 </div>
                 <div class="ecommerce__product__photos clearfix">
                     <div class="ecommerce__product__photos-item ecommerce__product__photos-item--active">
-                        <img src="../../components/ecommerce/common/img/001.jpg" />
+                        <img src="../../components/ecommerce/common/img/001.jpg" alt="" />
                     </div>
                     <div class="ecommerce__product__photos-item">
-                        <img src="../../components/ecommerce/common/img/002.jpg" />
+                        <img src="../../components/ecommerce/common/img/002.jpg" alt="" />
                     </div>
                     <div class="ecommerce__product__photos-item">
-                        <img src="../../components/ecommerce/common/img/003.jpg" />
+                        <img src="../../components/ecommerce/common/img/003.jpg" alt="" />
                     </div>
                     <div class="ecommerce__product__photos-item">
-                        <img src="../../components/ecommerce/common/img/004.jpg" />
+                        <img src="../../components/ecommerce/common/img/004.jpg" alt="" />
                     </div>
                     <div class="ecommerce__product__photos-item">
-                        <img src="../../components/ecommerce/common/img/002.jpg" />
+                        <img src="../../components/ecommerce/common/img/002.jpg" alt="" />
                     </div>
                     <div class="ecommerce__product__photos-item">
-                        <img src="../../components/ecommerce/common/img/003.jpg" />
+                        <img src="../../components/ecommerce/common/img/003.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                                     <option>Option 2</option>
                                 </optgroup>
                                 <optgroup label="Group 2">
-                                    <option selected>Option 3</option>
+                                    <option>Option 3</option>
                                     <option>Option 4</option>
                                     <option>Option 5</option>
                                 </optgroup>
@@ -139,7 +139,7 @@
                             </li>
                         </ul>
                         <div class="tab-content pt-3 pb-3">
-                            <div class="tab-pane active" id="tab1" role="tabcard">
+                            <div class="tab-pane active" id="tab1">
                                 <dl class="dl-horizontal user-profile-dl">
                                     <dt>Description lists</dt>
                                     <dd>A description list is perfect for defining terms</dd>
@@ -154,7 +154,7 @@
                                         ea quis qui</dd>
                                 </dl>
                             </div>
-                            <div class="tab-pane" id="tab2" role="tabcard">
+                            <div class="tab-pane" id="tab2">
                                 <p>
                                     Mnesarchum velit cumanum utuntur tantam deterritum, democritum vulgo contumeliae
                                     abest studuisse quanta telos. Inmensae. Arbitratu dixisset
@@ -180,10 +180,10 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
-<section class="card">
+<div class="card">
     <div class="card-header">
         <span class="utils__title">
             <strong>Related Products</strong>
@@ -202,7 +202,7 @@
                                 <i class="icmn-heart"><!-- --></i>
                             </div>
                             <a href="javascript: void(0);">
-                                <img src="../../components/ecommerce/common/img/001.jpg" />
+                                <img src="../../components/ecommerce/common/img/001.jpg" alt="" />
                             </a>
                         </div>
                         <div class="ecommerce__catalog__item__title">
@@ -234,7 +234,7 @@
                                 <i class="icmn-heart"><!-- --></i>
                             </div>
                             <a href="javascript: void(0);">
-                                <img src="../../components/ecommerce/common/img/002.jpg" />
+                                <img src="../../components/ecommerce/common/img/002.jpg" alt="" />
                             </a>
                         </div>
                         <div class="ecommerce__catalog__item__title">
@@ -263,7 +263,7 @@
                                 <i class="icmn-heart"><!-- --></i>
                             </div>
                             <a href="javascript: void(0);">
-                                <img src="../../components/ecommerce/common/img/003.jpg" />
+                                <img src="../../components/ecommerce/common/img/003.jpg" alt="" />
                             </a>
                         </div>
                         <div class="ecommerce__catalog__item__title">
@@ -292,7 +292,7 @@
                                 <i class="icmn-heart"><!-- --></i>
                             </div>
                             <a href="javascript: void(0);">
-                                <img src="../../components/ecommerce/common/img/004.jpg" />
+                                <img src="../../components/ecommerce/common/img/004.jpg" alt="" />
                             </a>
                         </div>
                         <div class="ecommerce__catalog__item__title">
@@ -317,34 +317,35 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- END: ecommerce/product-details -->
 
 
 <!-- START: page scripts -->
 <script>
-
+  (function($) {
+    "use strict";
     $(function () {
 
-        // Heart toggle
-        $('.ecommerce__catalog__item__like').on('click', function(){
-            $(this).toggleClass('ecommerce__catalog__item__like--selected')
-        });
+      // Heart toggle
+      $('.ecommerce__catalog__item__like').on('click', function () {
+        $(this).toggleClass('ecommerce__catalog__item__like--selected')
+      });
 
-        // Active photo toggle
-        $('.ecommerce__product__photos-item').on('click', function(){
-            $('#targetPhoto').attr('src', $(this).find('img').attr('src'));
-            $('.ecommerce__product__photos-item').removeClass('ecommerce__product__photos-item--active');
-            $(this).addClass('ecommerce__product__photos-item--active')
-        });
+      // Active photo toggle
+      $('.ecommerce__product__photos-item').on('click', function () {
+        $('#targetPhoto').attr('src', $(this).find('img').attr('src'));
+        $('.ecommerce__product__photos-item').removeClass('ecommerce__product__photos-item--active');
+        $(this).addClass('ecommerce__product__photos-item--active')
+      });
 
-        // Tooltip
-        $("[data-toggle=tooltip]").tooltip();
+      // Tooltip
+      $("[data-toggle=tooltip]").tooltip();
 
-        // Select 2
-        $('.select2').select2();
+      // Select 2
+      $('.select2').select2();
 
     });
-
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

@@ -22,12 +22,14 @@
 
 <!-- START: page scripts -->
 <script>
-
-    $(function() {
-        $('.summernote').summernote({
-            height: 350
-        });
+  (function($) {
+    "use strict";
+    $(function () {
+      $('.summernote').summernote({
+        height: 350
+      });
     });
+  })(jQuery)
 
 </script>
 <!-- END: page scripts -->

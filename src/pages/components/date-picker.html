@@ -13,14 +13,6 @@
                 <p class="text-muted">Element: read <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
                     <div class="form-group">
-                        <label class="input-group datepicker-only-init">
-                            <input type="text" class="form-control" placeholder="Select Date" />
-                            <span class="input-group-addon">
-                                <i class="icmn-calendar"></i>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="form-group">
                         <input type="text" class="form-control datepicker-only-init" placeholder="Select Date" />
                     </div>
                 </div>
@@ -29,14 +21,6 @@
                 <h5 class="text-black"><strong>Time Picker Only</strong></h5>
                 <p class="text-muted">Element: read <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
-                    <div class="form-group">
-                        <label class="input-group timepicker-init">
-                            <input type="text" class="form-control" placeholder="Select Time" />
-                            <span class="input-group-addon">
-                                <i class="icmn-clock"></i>
-                            </span>
-                        </label>
-                    </div>
                     <div class="form-group">
                         <input type="text" class="form-control timepicker-init" placeholder="Select Time" />
                     </div>
@@ -55,7 +39,7 @@
             </div>
             <div class="col-lg-6">
                 <h5 class="text-black"><strong>Ranged Date Picker</strong></h5>
-                <br />
+                <p class="text-muted">Element: read <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
                     <div class="row">
                         <div class="col-lg-3">
@@ -97,79 +81,82 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('.datepicker-init').datetimepicker({
-            widgetPositioning: {
-                horizontal: 'left'
-            },
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-arrow-up",
-                down: "fa fa-arrow-down",
-                previous: 'fa fa-arrow-left',
-                next: 'fa fa-arrow-right'
-            }
-        });
+      $('.datepicker-init').datetimepicker({
+        widgetPositioning: {
+          horizontal: 'left'
+        },
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        }
+      });
 
-        $('.datepicker-only-init').datetimepicker({
-            widgetPositioning: {
-                horizontal: 'left'
-            },
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-arrow-up",
-                down: "fa fa-arrow-down",
-                previous: 'fa fa-arrow-left',
-                next: 'fa fa-arrow-right'
-            },
-            format: 'LL'
-        });
+      $('.datepicker-only-init').datetimepicker({
+        widgetPositioning: {
+          horizontal: 'left'
+        },
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        },
+        format: 'LL'
+      });
 
-        $('.timepicker-init').datetimepicker({
-            widgetPositioning: {
-                horizontal: 'left'
-            },
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-arrow-up",
-                down: "fa fa-arrow-down",
-                previous: 'fa fa-arrow-left',
-                next: 'fa fa-arrow-right'
-            },
-            format: 'LT'
-        });
+      $('.timepicker-init').datetimepicker({
+        widgetPositioning: {
+          horizontal: 'left'
+        },
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        },
+        format: 'LT'
+      });
 
-        $('.datepicker-inline-init').datetimepicker({
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-arrow-up",
-                down: "fa fa-arrow-down",
-                previous: 'fa fa-arrow-left',
-                next: 'fa fa-arrow-right'
-            },
-            inline: true,
-            sideBySide: false
-        });
+      $('.datepicker-inline-init').datetimepicker({
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        },
+        inline: true,
+        sideBySide: false
+      });
 
-        $('.timepicker-inline-init').datetimepicker({
-            icons: {
-                time: "fa fa-clock-o",
-                date: "fa fa-calendar",
-                up: "fa fa-arrow-up",
-                down: "fa fa-arrow-down",
-                previous: 'fa fa-arrow-left',
-                next: 'fa fa-arrow-right'
-            },
-            format: 'LT',
-            inline: true,
-            sideBySide: false
-        });
+      $('.timepicker-inline-init').datetimepicker({
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        },
+        format: 'LT',
+        inline: true,
+        sideBySide: false
+      });
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

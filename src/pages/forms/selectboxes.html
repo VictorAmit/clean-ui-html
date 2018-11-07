@@ -289,16 +289,19 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('.select2').select2();
-        $('.select2-tags').select2({
-            tags: true,
-            tokenSeparators: [',', ' ']
-        });
+      $('.select2').select2();
+      $('.select2-tags').select2({
+        tags: true,
+        tokenSeparators: [',', ' ']
+      });
 
-        $('.selectpicker').selectpicker();
+      $('.selectpicker').selectpicker();
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

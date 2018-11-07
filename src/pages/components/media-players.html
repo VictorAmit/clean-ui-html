@@ -144,9 +144,12 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
-        $('.mediatec-cleanvideoplayer').cleanvideoplayer();
-        $('.mediatec-cleanaudioplayer').cleanaudioplayer();
+  (function($) {
+    "use strict";
+    $(function () {
+      $('.mediatec-cleanvideoplayer').cleanvideoplayer();
+      $('.mediatec-cleanaudioplayer').cleanaudioplayer();
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

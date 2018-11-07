@@ -113,7 +113,7 @@
 </section>
 
 <!-- START: upload file modal -->
-<div class="modal fade modal-size-large" id="upload" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+<div class="modal fade modal-size-large" id="upload" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -137,10 +137,13 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function() {
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('.dropify').dropify();
+      $('.dropify').dropify();
 
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

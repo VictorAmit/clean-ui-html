@@ -1,5 +1,5 @@
 <!-- START: ecommerce/dashboard -->
-<section class="card">
+<div class="card">
     <div class="card-header">
         <a href="javascript: void(0);" class="pull-right btn btn-sm btn-primary">Reload Data</a>
         <a href="javascript: void(0);" class="pull-right btn btn-sm btn-outline-primary mr-2">Edit Profile</a>
@@ -22,7 +22,7 @@
                         </li>
                     </ul>
                     <div class="tab-content padding-top-20">
-                        <div class="tab-pane active" id="a1" role="tabcard">
+                        <div class="tab-pane active" id="a1">
                             <select aria-controls="example1" class="form-control input-sm mb-3 width-100">
                                 <option value="10">Last Day</option>
                                 <option value="25">Last 7 Days</option>
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="a2" role="tabcard">
+                        <div class="tab-pane" id="a2">
                             <select aria-controls="example1" class="form-control input-sm mb-3 width-100">
                                 <option value="10">Last Day</option>
                                 <option value="25">Last 7 Days</option>
@@ -145,10 +145,10 @@
                         </li>
                     </ul>
                     <div class="tab-content padding-top-20">
-                        <div class="tab-pane active" id="b1" role="tabcard">
+                        <div class="tab-pane active" id="b1">
                             <div class="cui-ecommerce-dashboard-info">
                                 <div class="cui-ecommerce-dashboard-info__block">
-                                    <table class="table table-hover nowrap" id="example1" width="100%">
+                                    <table class="table table-hover nowrap" id="example1">
                                         <thead class="thead-default">
                                         <tr>
                                             <th>ID</th>
@@ -157,14 +157,6 @@
                                             <th>Order Quantity</th>
                                         </tr>
                                         </thead>
-                                        <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Order Quantity</th>
-                                        </tr>
-                                        </tfoot>
                                         <tbody>
                                         <tr>
                                             <td>000012</td>
@@ -239,14 +231,22 @@
                                             <td>63</td>
                                         </tr>
                                         </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Order Quantity</th>
+                                        </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="b2" role="tabcard">
+                        <div class="tab-pane" id="b2">
                             <div class="cui-ecommerce-dashboard-info">
                                 <div class="cui-ecommerce-dashboard-info__block">
-                                    <table class="table table-hover nowrap" id="example2" width="100%">
+                                    <table class="table table-hover nowrap" id="example2">
                                         <thead class="thead-default">
                                         <tr>
                                             <th>ID</th>
@@ -255,14 +255,6 @@
                                             <th>Views</th>
                                         </tr>
                                         </thead>
-                                        <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Views</th>
-                                        </tr>
-                                        </tfoot>
                                         <tbody>
                                         <tr>
                                             <td>000014</td>
@@ -325,14 +317,22 @@
                                             <td>77</td>
                                         </tr>
                                         </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Views</th>
+                                        </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane" id="b3" role="tabcard">
+                        <div class="tab-pane" id="b3">
                             <div class="cui-ecommerce-dashboard-info">
                                 <div class="cui-ecommerce-dashboard-info__block">
-                                    <table class="table table-hover nowrap" id="example3" width="100%">
+                                    <table class="table table-hover nowrap" id="example3">
                                         <thead class="thead-default">
                                         <tr>
                                             <th>ID</th>
@@ -341,14 +341,6 @@
                                             <th>Total</th>
                                         </tr>
                                         </thead>
-                                        <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        </tfoot>
                                         <tbody>
                                         <tr>
                                             <td>000014</td>
@@ -411,22 +403,6 @@
                                             <td>$53.00</td>
                                         </tr>
                                         </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="b4" role="tabcard">
-                            <div class="cui-ecommerce-dashboard-info">
-                                <div class="cui-ecommerce-dashboard-info__block">
-                                    <table class="table table-hover nowrap" id="example3" width="100%">
-                                        <thead class="thead-default">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Date</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        </thead>
                                         <tfoot>
                                         <tr>
                                             <th>ID</th>
@@ -435,6 +411,22 @@
                                             <th>Total</th>
                                         </tr>
                                         </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="b4">
+                            <div class="cui-ecommerce-dashboard-info">
+                                <div class="cui-ecommerce-dashboard-info__block">
+                                    <table class="table table-hover nowrap" id="example4">
+                                        <thead class="thead-default">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Date</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </thead>
                                         <tbody>
                                         <tr>
                                             <td>000016</td>
@@ -497,6 +489,14 @@
                                             <td>$51553.00</td>
                                         </tr>
                                         </tbody>
+                                        <tfoot>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Total</th>
+                                        </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
@@ -550,10 +550,10 @@
                                 <th>
                                     Customers
                                 </th>
-                                <th width="20%">
+                                <th class="width-20p">
                                     Items
                                 </th>
-                                <th width="20%">
+                                <th class="width-20p">
                                     Total
                                 </th>
                             </tr>
@@ -631,10 +631,10 @@
                             <th>
                                 Search Term
                             </th>
-                            <th width="20%">
+                            <th class="width-20p">
                                 Result
                             </th>
-                            <th width="20%">
+                            <th class="width-20p">
                                 Uses
                             </th>
                         </tr>
@@ -689,10 +689,10 @@
                             <th>
                                 Search Term
                             </th>
-                            <th width="20%">
+                            <th class="width-20p">
                                 Result
                             </th>
-                            <th width="20%">
+                            <th class="width-20p">
                                 Uses
                             </th>
                         </tr>
@@ -738,64 +738,67 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- END: ecommerce/dashboard -->
 
 <!-- START: page scripts -->
 <script>
+  (function($) {
+    "use strict";
     $(function () {
 
-        // AREA
-        var chart1 = new Chartist.Line(".chart-area-1", {
-            labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-            series: [
-                [2, 4, 7, 25, 5, 28, 31]
-            ]
-        }, {
-            fullWidth: !0,
-            chartPadding: {
-                right: 15,
-                left: -15
-            },
-            low: 0,
-            showArea: true,
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        });
+      // AREA
+      var chart1 = new Chartist.Line(".chart-area-1", {
+        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        series: [
+          [2, 4, 7, 25, 5, 28, 31]
+        ]
+      }, {
+        fullWidth: !0,
+        chartPadding: {
+          right: 15,
+          left: -15
+        },
+        low: 0,
+        showArea: true,
+        plugins: [
+          Chartist.plugins.tooltip()
+        ]
+      });
 
-        var chart2 = new Chartist.Line(".chart-area-2", {
-            labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-            series: [
-                [3, 10, 65, 23, 81, 17, 3]
-            ]
-        }, {
-            fullWidth: !0,
-            chartPadding: {
-                right: 15,
-                left: -15
-            },
-            low: 0,
-            showArea: true,
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        });
+      var chart2 = new Chartist.Line(".chart-area-2", {
+        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        series: [
+          [3, 10, 65, 23, 81, 17, 3]
+        ]
+      }, {
+        fullWidth: !0,
+        chartPadding: {
+          right: 15,
+          left: -15
+        },
+        low: 0,
+        showArea: true,
+        plugins: [
+          Chartist.plugins.tooltip()
+        ]
+      });
 
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            chart1.update();
-            chart2.update();
-        });
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        chart1.update();
+        chart2.update();
+      });
 
-        // Datatables
-        $('#example1, #example2, #example3, #example4').DataTable({
-            responsive: true,
-            "autoWidth": false,
-            "columnDefs": [
-                { "width": "25%", "targets": 3 }
-            ]
-        });
+      // Datatables
+      $('#example1, #example2, #example3, #example4').DataTable({
+        responsive: true,
+        "autoWidth": false,
+        "columnDefs": [
+          {"width": "25%", "targets": 3}
+        ]
+      });
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

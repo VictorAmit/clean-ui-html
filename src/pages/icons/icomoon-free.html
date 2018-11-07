@@ -1,5 +1,5 @@
 <!-- START: icons/icomoon-free -->
-<section class="card">
+<div class="card">
     <div class="card-header">
         <span class="utils__title">
             <strong>Icomoon Free</strong>
@@ -504,19 +504,22 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 <!-- END: icons/icomoon-free -->
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('.utils__icons-block li').each(function(){
-            $(this).tooltip({
-                title: $(this).find('i').attr('class')
-            });
-        })
+      $('.utils__icons-block li').each(function () {
+        $(this).tooltip({
+          title: $(this).find('i').attr('class')
+        });
+      })
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

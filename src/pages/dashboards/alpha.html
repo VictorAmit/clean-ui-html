@@ -247,103 +247,106 @@
 
 <!-- START: page scripts -->
 <script>
+  (function($) {
+    "use strict";
     $(function () {
 
-        ///////////////////////////////////////////////////////////
-        // tooltips
-        $('[data-toggle=tooltip]').tooltip()
+      ///////////////////////////////////////////////////////////
+      // tooltips
+      $('[data-toggle=tooltip]').tooltip()
 
-        ///////////////////////////////////////////////////////////
-        // ladda buttons
-        Ladda.bind('.ladda-button', {timeout: 2000})
+      ///////////////////////////////////////////////////////////
+      // ladda buttons
+      Ladda.bind('.ladda-button', {timeout: 2000})
 
-        ///////////////////////////////////////////////////////////
-        // Chartistcard
+      ///////////////////////////////////////////////////////////
+      // Chartistcard
 
-        new Chartist.Line(".chart-area-1", {
-            series: [
-                [2, 11, 8, 14, 18, 20, 26]
-            ]
-        }, {
-            width: "120px",
-            height: "107px",
+      new Chartist.Line(".chart-area-1", {
+        series: [
+          [2, 11, 8, 14, 18, 20, 26]
+        ]
+      }, {
+        width: "120px",
+        height: "107px",
 
-            showPoint: false,
-            showLine: true,
-            showArea: true,
-            fullWidth: true,
-            showLabel: false,
-            axisX: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            axisY: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            chartPadding: 0,
-            low: 0,
-            plugins: [
-                Chartist.plugins.tooltip()
-            ]
-        });
+        showPoint: false,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        chartPadding: 0,
+        low: 0,
+        plugins: [
+          Chartist.plugins.tooltip()
+        ]
+      });
 
-        new Chartist.Line(".chart-area-2", {
-            series: [
-                [20, 80, 67, 120, 132, 66, 97]
-            ]
-        }, {
-            width: "120px",
-            height: "107px",
+      new Chartist.Line(".chart-area-2", {
+        series: [
+          [20, 80, 67, 120, 132, 66, 97]
+        ]
+      }, {
+        width: "120px",
+        height: "107px",
 
-            showPoint: false,
-            showLine: true,
-            showArea: true,
-            fullWidth: true,
-            showLabel: false,
-            axisX: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            axisY: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            chartPadding: 0,
-            low: 0,
-        });
+        showPoint: false,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        chartPadding: 0,
+        low: 0,
+      });
 
-        new Chartist.Line(".chart-area-3", {
-            series: [
-                [42, 40, 80, 67, 84, 20, 97]
-            ]
-        }, {
-            width: "120px",
-            height: "107px",
+      new Chartist.Line(".chart-area-3", {
+        series: [
+          [42, 40, 80, 67, 84, 20, 97]
+        ]
+      }, {
+        width: "120px",
+        height: "107px",
 
-            showPoint: false,
-            showLine: true,
-            showArea: true,
-            fullWidth: true,
-            showLabel: false,
-            axisX: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            axisY: {
-                showGrid: false,
-                showLabel: false,
-                offset: 0
-            },
-            chartPadding: 0,
-            low: 0,
-        });
+        showPoint: false,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0
+        },
+        chartPadding: 0,
+        low: 0,
+      });
 
     })
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

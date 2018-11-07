@@ -109,3 +109,12 @@ span.input-group-addon {
     }
   }
 }
+
+.input-group .add-on.input-group-addon {
+  width: 30px;
+  text-align: center;
+  display: inline-block;
+  i {
+    line-height: 2.2;
+  }
+}

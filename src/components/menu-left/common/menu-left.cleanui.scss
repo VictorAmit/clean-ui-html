@@ -406,12 +406,12 @@
       content: "";
     }
     &:before {
-      top: rem(-6);
+      top: -6px;
       transform-origin: top right;
       transition: transform .2s;
     }
     &:after {
-      bottom: rem(-6);
+      bottom: -6px;
       transform-origin: bottom right;
       transition: transform .2s, width .2s;
     }

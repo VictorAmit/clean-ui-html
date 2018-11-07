@@ -1886,7 +1886,7 @@
                   editable-table
                 </td>
                 <td>
-                  This tiny (3KB, < 120 lines) jQuery plugin turns any table into an editable spreadsheet
+                  This tiny (3KB, &lt; 120 lines) jQuery plugin turns any table into an editable spreadsheet
                 </td>
                 <td>
                   <a href="https://github.com/mindmup/editable-table" target="_blank">https://github.com/mindmup/editable-table</a>
@@ -1980,61 +1980,59 @@
 
 <!-- START: page scripts -->
 <script>
-  $(function () {
+  (function($) {
+    "use strict";
+    $(function () {
 
-    // scroll to chapter
-    $('.scroll-to-chapter a').on('click', function (e) {
+      // scroll to chapter
+      $('.scroll-to-chapter a').on('click', function (e) {
 
-      e.preventDefault()
+        e.preventDefault()
 
-      var id = $(this).attr('href'),
-        offset = $(id).offset().top - 85
+        var id = $(this).attr('href'),
+          offset = $(id).offset().top - 85
 
-      $('body, html').stop().animate({'scrollTop': offset}, 500)
+        $('body, html').stop().animate({'scrollTop': offset}, 500)
 
-    })
+      })
 
-    // back to top
-    $('.back-to-top').on('click', function (e) {
+      // back to top
+      $('.back-to-top').on('click', function (e) {
 
-      e.preventDefault()
+        e.preventDefault()
 
-      $('body, html').stop().animate({'scrollTop': 0}, 500)
+        $('body, html').stop().animate({'scrollTop': 0}, 500)
 
-    })
+      })
 
-    // scroll table of contest
-    var tableEl = $('.table-of-contents');
-    var tableOffset = tableEl.offset().top;
-    var windowEl = $(window);
-    var contentEl = $('.utils__content');
-    var contentOffset = contentEl.offset().top;
+      // scroll table of contest
+      var tableEl = $('.table-of-contents');
+      var tableOffset = tableEl.offset().top;
+      var windowEl = $(window);
+      var contentEl = $('.utils__content');
+      var contentOffset = contentEl.offset().top;
 
-    windowEl.on('scroll', function () {
-      if (windowEl.width() >= 991) {
-        var windowTop = windowEl.scrollTop()
+      windowEl.on('scroll', function () {
+        if (windowEl.width() >= 991) {
+          var windowTop = windowEl.scrollTop()
 
-        if (windowTop > tableOffset) {
-          if (windowTop < contentEl.height() - tableEl.height() - tableOffset - contentOffset - 20 - 200) {
-            tableEl.css('transform', 'translate3d(0px, ' + (windowTop - tableOffset + contentOffset + 20) + 'px, 0px)')
+          if (windowTop > tableOffset) {
+            if (windowTop < contentEl.height() - tableEl.height() - tableOffset - contentOffset - 20 - 200) {
+              tableEl.css('transform', 'translate3d(0px, ' + (windowTop - tableOffset + contentOffset + 20) + 'px, 0px)')
+            }
+          } else {
+            tableEl.css('transform', 'translate3d(0px, 0px, 0px)')
           }
-        } else {
+        }
+      })
+
+      windowEl.on('resize', function () {
+        if (windowEl < 991) {
           tableEl.css('transform', 'translate3d(0px, 0px, 0px)')
         }
-      }
-    })
+      })
 
-    windowEl.on('resize', function () {
-      if (windowEl < 991) {
-        tableEl.css('transform', 'translate3d(0px, 0px, 0px)')
-      }
     })
-
-  })
+  })(jQuery)
 </script>
-<style>
-  .table-of-contents {
-    transition: all .1s ease-in-out;
-  }
-</style>
 <!-- END: page scripts -->

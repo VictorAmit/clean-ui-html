@@ -396,148 +396,151 @@
 
 <!-- START: page scripts -->
 <script>
+  (function($) {
+    "use strict";
     var chart = new Chartist.Pie('.graphCard__donutChartistArea-1', {
-        labels: ["Ready", "In Progress", "Defected"],
-        series: [90, 35, 18]
+      labels: ["Ready", "In Progress", "Defected"],
+      series: [90, 35, 18]
     }, {
-        donut: true,
-        donutWidth: 25,
-        labelInterpolationFnc: function (value, index) {
-            var total = chart.data.series.reduce(function (pv, cv) {
-                return pv + cv;
-            }, 0);
-            return Math.round(chart.data.series[index] / total * 100) + "%"
-        }
+      donut: true,
+      donutWidth: 25,
+      labelInterpolationFnc: function (value, index) {
+        var total = chart.data.series.reduce(function (pv, cv) {
+          return pv + cv;
+        }, 0);
+        return Math.round(chart.data.series[index] / total * 100) + "%"
+      }
     });
     chart.on('draw', function (ctx) {
-        if (ctx.type === 'label') {
-            ctx.element.addClass("ct-label-pie");
-            ctx.element.attr({
-                dx: ctx.element.root().width() / 2,
-                dy: ctx.element.root().height() / 2,
-                "id": "ct-label-pie-" + ctx.index
-            });
-        } else if (ctx.type === 'slice') {
-            ctx.element.attr({
-                'id': "ct-slice-pie-" + ctx.index
-            });
+      if (ctx.type === 'label') {
+        ctx.element.addClass("ct-label-pie");
+        ctx.element.attr({
+          dx: ctx.element.root().width() / 2,
+          dy: ctx.element.root().height() / 2,
+          "id": "ct-label-pie-" + ctx.index
+        });
+      } else if (ctx.type === 'slice') {
+        ctx.element.attr({
+          'id': "ct-slice-pie-" + ctx.index
+        });
 
-        }
+      }
     });
 
     $(document).on('mouseenter', '.ct-slice-donut', function () {
-        $(this).css({
-            'opacity': '0.8'
-        });
-        var index = $(this).attr('id').slice(-1);
-        $(".ct-label-pie").css({
-            'display': 'none'
-        });
-        $("#ct-label-pie-" + index).css({
-            'display': 'block'
-        });
+      $(this).css({
+        'opacity': '0.8'
+      });
+      var index = $(this).attr('id').slice(-1);
+      $(".ct-label-pie").css({
+        'display': 'none'
+      });
+      $("#ct-label-pie-" + index).css({
+        'display': 'block'
+      });
     });
 
     $(document).on('mouseleave', '.ct-slice-donut', function () {
-        $(this).css({
-            'opacity': '1'
-        });
+      $(this).css({
+        'opacity': '1'
+      });
     });
 
 
     new Chartist.Line(".graphCard__chartistArea-1", {
-        series: [
-            [232, 111, 138, 144, 118, 210, 236]
-        ]
+      series: [
+        [232, 111, 138, 144, 118, 210, 236]
+      ]
     }, {
 
-        lineSmooth: Chartist.Interpolation.none({
-            fillHoles: false
-        }),
-        height: "150px",
+      lineSmooth: Chartist.Interpolation.none({
+        fillHoles: false
+      }),
+      height: "150px",
 
-        showPoint: true,
-        showLine: true,
-        showArea: true,
-        fullWidth: true,
+      showPoint: true,
+      showLine: true,
+      showArea: true,
+      fullWidth: true,
+      showLabel: false,
+      axisX: {
+        showGrid: false,
         showLabel: false,
-        axisX: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        axisY: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        chartPadding: 0,
-        low: 0,
-        plugins: [
-            Chartist.plugins.tooltip()
-        ]
+        offset: 0
+      },
+      axisY: {
+        showGrid: false,
+        showLabel: false,
+        offset: 0
+      },
+      chartPadding: 0,
+      low: 0,
+      plugins: [
+        Chartist.plugins.tooltip()
+      ]
     });
 
     new Chartist.Line(".graphCard__chartistArea-2", {
-        series: [
-            [3, 14, 37, 26, 48, 8, 63, 21, 24, 52]
-        ]
+      series: [
+        [3, 14, 37, 26, 48, 8, 63, 21, 24, 52]
+      ]
     }, {
 
-        lineSmooth: Chartist.Interpolation.none({
-            fillHoles: false
-        }),
-        height: "150px",
+      lineSmooth: Chartist.Interpolation.none({
+        fillHoles: false
+      }),
+      height: "150px",
 
-        showPoint: true,
-        showLine: true,
-        showArea: true,
-        fullWidth: true,
+      showPoint: true,
+      showLine: true,
+      showArea: true,
+      fullWidth: true,
+      showLabel: false,
+      axisX: {
+        showGrid: false,
         showLabel: false,
-        axisX: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        axisY: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        chartPadding: 0,
-        low: 0,
-        plugins: [
-            Chartist.plugins.tooltip()
-        ]
+        offset: 0
+      },
+      axisY: {
+        showGrid: false,
+        showLabel: false,
+        offset: 0
+      },
+      chartPadding: 0,
+      low: 0,
+      plugins: [
+        Chartist.plugins.tooltip()
+      ]
     });
     new Chartist.Line(".graphCard__chartistArea-3", {
-        series: [
-            [51, 8, 50, 45, 95, 90, 43, 13, 37, 52]
-        ]
+      series: [
+        [51, 8, 50, 45, 95, 90, 43, 13, 37, 52]
+      ]
     }, {
 
-        height: "250px",
+      height: "250px",
 
-        showPoint: true,
-        showLine: true,
-        showArea: true,
-        fullWidth: true,
+      showPoint: true,
+      showLine: true,
+      showArea: true,
+      fullWidth: true,
+      showLabel: false,
+      axisX: {
+        showGrid: false,
         showLabel: false,
-        axisX: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        axisY: {
-            showGrid: false,
-            showLabel: false,
-            offset: 0
-        },
-        chartPadding: 0,
-        low: 0,
-        plugins: [
-            Chartist.plugins.tooltip()
-        ]
+        offset: 0
+      },
+      axisY: {
+        showGrid: false,
+        showLabel: false,
+        offset: 0
+      },
+      chartPadding: 0,
+      low: 0,
+      plugins: [
+        Chartist.plugins.tooltip()
+      ]
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

@@ -38,16 +38,19 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function() {
+  (function($) {
+    "use strict";
+    $(function () {
 
-        autosize($('#textarea'));
+      autosize($('#textarea'));
 
-        $('#password').password({
-            eyeClass: '',
-            eyeOpenClass: 'icmn-eye',
-            eyeCloseClass: 'icmn-eye-blocked'
-        });
+      $('#password').password({
+        eyeClass: '',
+        eyeOpenClass: 'icmn-eye',
+        eyeCloseClass: 'icmn-eye-blocked'
+      });
 
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

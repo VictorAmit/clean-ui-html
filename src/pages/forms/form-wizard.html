@@ -18,6 +18,7 @@
                             <span class="wizard__steps__title">Account Info</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>Try the keyboard navigation by clicking arrow left or right!</p>
                         </section>
                         <h3>
@@ -25,6 +26,7 @@
                             <span class="wizard__steps__title">Billing Info</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>Wonderful transition effects.</p>
                         </section>
                         <h3>
@@ -32,6 +34,7 @@
                             <span class="wizard__steps__title">Confirmation</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>The next and previous buttons help you to navigate through your content.</p>
                         </section>
                     </div>
@@ -46,18 +49,21 @@
                             <span class="wizard__steps__title">Account Info</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>Try the keyboard navigation by clicking arrow left or right!</p>
                         </section>
                         <h3>
                             <span class="wizard__steps__title">Billing Info</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>Wonderful transition effects.</p>
                         </section>
                         <h3>
                             <span class="wizard__steps__title">Confirmation</span>
                         </h3>
                         <section class="text-center">
+                            <h3 class="d-none">Title</h3>
                             <p>The next and previous buttons help you to navigate through your content.</p>
                         </section>
                     </div>
@@ -70,22 +76,25 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function() {
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $("#example-icons").steps({
-            headerTag: "h3",
-            bodyTag: "section",
-            transitionEffect: "slideLeft",
-            autoFocus: true
-        });
+      $("#example-icons").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        autoFocus: true
+      });
 
-        $("#example-numbers").steps({
-            headerTag: "h3",
-            bodyTag: "section",
-            transitionEffect: "slideLeft",
-            autoFocus: true
-        });
+      $("#example-numbers").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        autoFocus: true
+      });
 
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->

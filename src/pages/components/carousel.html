@@ -147,17 +147,17 @@
                 <p class="text-muted">Element: read <a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">official documentation<small><i class="icmn-link ml-1"><!-- --></i></small></a></p>
                 <div class="mb-5">
                     <div class="owl-carousel owl-theme owl-demo-img" id="owl3">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=1" data-src-retina="http://placehold.it/350x250/9dabb6/ffffff/&text=1" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=2" data-src-retina="http://placehold.it/350x250/9dabb6/ffffff/&text=2" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=3" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=4" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=5" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=6" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=7" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=8" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=9" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=10" alt="">
-                        <img class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=11" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=1" data-src-retina="http://placehold.it/350x250/9dabb6/ffffff/&text=1" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=2" data-src-retina="http://placehold.it/350x250/9dabb6/ffffff/&text=2" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=3" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=4" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=5" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=6" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=7" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=8" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=9" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=10" alt="">
+                        <img src="/" class="owl-lazy" data-src="http://placehold.it/350x250/9dabb6/ffffff/&text=11" alt="">
                     </div>
                 </div>
             </div>
@@ -198,83 +198,86 @@
 
 <!-- START: page scripts -->
 <script>
-    $(function(){
+  (function($) {
+    "use strict";
+    $(function () {
 
-        $('#owl1').owlCarousel({
-            loop:true,
-            margin:10,
-            responsive:{
-                0: {
-                    items:1
-                },
-                600: {
-                    items:2
-                },
-                1000: {
-                    items:4
-                }
-            }
-        });
+      $('#owl1').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
 
-        $('#owl2').owlCarousel({
-            stagePadding: 50,
-            loop:true,
-            margin:10,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:2
-                },
-                1000:{
-                    items:3
-                }
-            }
-        });
+      $('#owl2').owlCarousel({
+        stagePadding: 50,
+        loop: true,
+        margin: 10,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
 
-        $('#owl3').owlCarousel({
-            items:4,
-            lazyLoad:true,
-            loop:true,
-            margin:10,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:2
-                },
-                1000:{
-                    items:4
-                }
-            }
-        });
+      $('#owl3').owlCarousel({
+        items: 4,
+        lazyLoad: true,
+        loop: true,
+        margin: 10,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 4
+          }
+        }
+      });
 
-        $('#owl4').owlCarousel({
-            items:1,
-            margin:10,
-            autoHeight:true
-        });
+      $('#owl4').owlCarousel({
+        items: 1,
+        margin: 10,
+        autoHeight: true
+      });
 
-        $('#owl5').owlCarousel({
-            items:1,
-            merge:true,
-            loop:true,
-            margin:10,
-            video:true,
-            lazyLoad:true,
-            center:true,
-            responsive:{
-                480:{
-                    items:2
-                },
-                600:{
-                    items:4
-                }
-            }
-        });
+      $('#owl5').owlCarousel({
+        items: 1,
+        merge: true,
+        loop: true,
+        margin: 10,
+        video: true,
+        lazyLoad: true,
+        center: true,
+        responsive: {
+          480: {
+            items: 2
+          },
+          600: {
+            items: 4
+          }
+        }
+      });
 
     });
+  })(jQuery)
 </script>
 <!-- END: page scripts -->
