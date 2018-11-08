@@ -50,7 +50,7 @@ body.config {
     &.config--boxed {
       // next styles affects on "styles-core" module
       // set body padding for create space for left menu
-      padding-left: rem(50);
+      padding-left: rem(80);
 
       @media (max-width: $sm-max-width) {
         padding-left: 0;
@@ -63,7 +63,7 @@ body.config {
         max-width: $xl-max-width;
         margin: 0px auto !important;
         right: 0;
-        left: rem(50);
+        left: rem(80);
         padding-left: rem(20);
 
         // body width < $xl-min-width
