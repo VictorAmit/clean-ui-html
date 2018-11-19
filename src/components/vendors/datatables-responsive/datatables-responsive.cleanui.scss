@@ -29,6 +29,7 @@ $close-button-background: $default !default;
 }
 
 table.dataTable {
+  width: 100% !important;
   &.dtr-inline.collapsed > tbody {
     > tr > td:first-child,
     > tr > th:first-child {
