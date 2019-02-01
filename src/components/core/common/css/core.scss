@@ -79,6 +79,11 @@ pre {
     }
   }
 
+  &__contentInner {
+    max-width: rem(1560);
+    margin: 0 auto;
+  }
+
   // sortable cards
   &__sortable {
     padding-bottom: rem(50);
