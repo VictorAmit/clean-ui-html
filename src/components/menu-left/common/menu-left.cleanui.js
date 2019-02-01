@@ -6,6 +6,16 @@
   $(function () {
 
     /////////////////////////////////////////////////////////////////////////////////////////
+    // set active menu item
+    
+    var url = window.location.href
+    var page = url.substr(url.lastIndexOf('/') + 1)
+    var currentItem = $('.menu-left').find('a[href="' + page + '"]')
+    currentItem.parent().toggleClass('menu-left__item--active')
+    currentItem.closest('.menu-left__submenu').addClass('menu-left__submenu--toggled').find('> .menu-left__list').slideToggle(0)
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////
     // add backdrop
 
     $('.menu-left').after('<div class="menu-left__backdrop menu-left__action--backdrop-toggle"><!-- --></div>')
