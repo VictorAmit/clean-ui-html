@@ -10,7 +10,7 @@
     
     var url = window.location.href
     var page = url.substr(url.lastIndexOf('/') + 1)
-    var currentItem = $('.menu-left').find('a[href="' + page + '"]')
+    var currentItem = $('.menu-left__list--root').find('a[href="' + page + '"]')
     currentItem.parent().toggleClass('menu-left__item--active')
     currentItem.closest('.menu-left__submenu').addClass('menu-left__submenu--toggled').find('> .menu-left__list').slideToggle(0)
 
