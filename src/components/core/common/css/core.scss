@@ -72,16 +72,13 @@ pre {
   // main container
   &__content {
     padding: rem(30);
+    max-width: rem(1560);
+    margin: 0 auto;
 
     @media (max-width: $sm-max-width) {
       padding: rem(20);
       overflow-x: hidden;
     }
-  }
-
-  &__contentInner {
-    max-width: rem(1560);
-    margin: 0 auto;
   }
 
   // sortable cards
@@ -243,29 +240,6 @@ pre {
         margin-left: 0;
         margin-right: 0;
       }
-    }
-  }
-
-  // top sidebars
-  &__top-sidebar {
-    margin: rem(-30) rem(-30) rem(20) rem(-30);
-    padding: rem(15) rem(30);
-    &--bg {
-      padding: rem(15) rem(30);
-      background: $white;
-      border-bottom: 1px solid $gray-border;
-    }
-
-    + .utils__top-sidebar {
-      margin-top: 0;
-    }
-
-    @media (max-width: $sm-max-width) {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-
-      padding: rem(15);
     }
   }
 
@@ -517,7 +491,7 @@ pre {
   // card title
   &__title {
     font-size: rem(17);
-    color: $black-lighten-more;
+    color: $black;
   }
   &__titleDescription {
     color: $text-lighten;

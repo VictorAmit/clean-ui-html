@@ -15,7 +15,9 @@ body.theme {
     // "menu-left" module styles
     .menu-left {
       background: $color1;
-      border-right: 1px solid $color4;
+      &__inner {
+        border-right: 1px solid $gray-border;
+      }
     }
 
     .menu-left__item {

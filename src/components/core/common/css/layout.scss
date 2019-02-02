@@ -1,0 +1,30 @@
+@import 'mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  "CORE" MODULE STYLES */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  min-height: 100vh;
+
+  &.layout--hasMenu {
+    flex-direction: row;
+  }
+
+  &__content {
+    flex: auto;
+    min-height: 0;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+
+  &__header {
+    flex: 0 0 auto;
+    height: 64px;
+  }
+}
+

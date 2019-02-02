@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.paymentTx {
+.paymentTransaction {
   padding: rem(15) rem(25);
   position: relative;
   border-left: 4px solid $danger !important;
@@ -8,7 +8,7 @@
   &--income {
     border-left: 4px solid $success !important;
 
-    .paymentTx__icon {
+    .paymentTransaction__icon {
       i {
         color: $success;
       }

@@ -3,43 +3,15 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  STYLES FOR "TOP-BAR" MODULE */
 
-// space for top bar block
-body {
-  padding-top: rem(65);
-}
-
 .top-bar {
-  position: fixed;
-  z-index: 990;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  min-height: rem(65);
+  min-height: rem(64);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   background: $white;
   border-bottom: 1px solid $gray-border;
-  padding-right: rem(20);
   color: $text;
-
-  // logo styles
-  &__logo {
-    width: rem(200);
-    height: rem(65);
-    display: inline-block;
-    padding: rem(14) rem(18);
-    margin-right: rem(20);
-    img {
-      max-height: rem(35);
-    }
-
-    @media (max-width: $md-max-width) {
-      width: rem(150);
-    }
-  }
+  padding: 0 rem(20);
 
   // avatar styles
   &__avatar {
