@@ -46,7 +46,8 @@ input:-ms-input-placeholder {
   padding-bottom: rem(9);
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled,
+.form-control[readonly] {
   background-color: $gray-lighten;
 }
 

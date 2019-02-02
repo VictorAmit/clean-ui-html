@@ -12,7 +12,6 @@ $color6: #c7c5d1;
 
 body.theme {
   &--orange {
-
     // "top-bar" module styles
     .top-bar {
       background: lighten($color5, 35%);
@@ -32,7 +31,7 @@ body.theme {
     }
 
     .menu-left__pin-button {
-      opacity: .7;
+      opacity: 0.7;
 
       &:hover {
         opacity: 1;
@@ -43,7 +42,8 @@ body.theme {
       background: #fff;
     }
 
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
+    .menu-left__pin-button div:before,
+    .menu-left__pin-button div:after {
       background: #fff;
     }
 
@@ -166,6 +166,5 @@ body.theme {
         }
       }
     }
-
   }
 }

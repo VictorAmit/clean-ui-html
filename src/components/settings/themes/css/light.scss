@@ -11,7 +11,6 @@ $color5: #e6f8ff;
 
 body.theme {
   &--light {
-
     // "menu-left" module styles
     .menu-left {
       background: $color1;
@@ -23,7 +22,8 @@ body.theme {
     .menu-left__item {
       & > a {
         color: $color2;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           color: $ant-blue;
         }
 
@@ -44,7 +44,7 @@ body.theme {
       }
     }
 
-    .menu-left__item--active > a{
+    .menu-left__item--active > a {
       background: $color5;
     }
 
@@ -116,6 +116,5 @@ body.theme {
         }
       }
     }
-
   }
 }

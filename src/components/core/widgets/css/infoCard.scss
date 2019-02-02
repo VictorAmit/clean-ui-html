@@ -49,8 +49,13 @@
     }
   }
 
-  &--default, &--primary, &--secondary,
-  &--success, &--info, &--warning, &--danger {
+  &--default,
+  &--primary,
+  &--secondary,
+  &--success,
+  &--info,
+  &--warning,
+  &--danger {
     color: $white !important;
   }
 
@@ -95,7 +100,7 @@
 
   &--disabled {
     cursor: not-allowed;
-    opacity: .65;
+    opacity: 0.65;
   }
 
   &--squared {
@@ -143,5 +148,4 @@
     margin-bottom: rem(16) !important;
     margin-top: 0 !important;
   }
-
 }

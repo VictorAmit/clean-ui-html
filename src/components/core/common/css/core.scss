@@ -25,7 +25,9 @@ a {
   text-decoration: none;
   color: $text;
   @include transition-color();
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: $blue;
     text-decoration: none;
   }
@@ -37,11 +39,15 @@ input {
   color: $text-darken-more;
 }
 
-button, input {
+button,
+input {
   box-shadow: none !important;
 }
 
-input[type=text], input[type=password], input[type=email], textarea {
+input[type='text'],
+input[type='password'],
+input[type='email'],
+textarea {
   appearance: none !important;
 }
 
@@ -98,11 +104,12 @@ pre {
     }
 
     &__collapsed {
-      > .card-body, > .card-footer {
+      > .card-body,
+      > .card-footer {
         display: none;
       }
       > .card-header {
-        border-bottom: none
+        border-bottom: none;
       }
 
       .utils__sortable__collapse {
@@ -143,9 +150,11 @@ pre {
     width: rem(60);
     height: rem(60);
     padding: rem(20);
-    opacity: .8;
+    opacity: 0.8;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       opacity: 1;
       color: $white;
       background: $gray;
@@ -170,7 +179,7 @@ pre {
     &:after {
       display: table;
       clear: both;
-      content: "";
+      content: '';
     }
     .utils__card-sidebar {
       position: absolute;
@@ -181,7 +190,9 @@ pre {
       overflow-y: auto;
       height: 100%;
     }
-    .card-header, .card-body, .card-footer {
+    .card-header,
+    .card-body,
+    .card-footer {
       margin-left: rem(240);
     }
 
@@ -194,7 +205,9 @@ pre {
         left: auto;
         right: 0;
       }
-      .card-header, .card-body, .card-footer {
+      .card-header,
+      .card-body,
+      .card-footer {
         margin-left: 0;
         margin-right: rem(240);
       }
@@ -207,7 +220,9 @@ pre {
       .utils__card-sidebar {
         width: rem(320);
       }
-      .card-header, .card-body, .card-footer {
+      .card-header,
+      .card-body,
+      .card-footer {
         margin-left: rem(320);
       }
 
@@ -216,7 +231,9 @@ pre {
           left: auto;
           right: rem(320);
         }
-        .card-header, .card-body, .card-footer {
+        .card-header,
+        .card-body,
+        .card-footer {
           margin-right: rem(320);
           margin-left: 0;
         }
@@ -224,7 +241,8 @@ pre {
     }
 
     @media (max-width: $md-max-width) {
-      &:before, &:after {
+      &:before,
+      &:after {
         display: none;
       }
 
@@ -236,7 +254,9 @@ pre {
         height: auto;
       }
 
-      .card-header, .card-body, .card-footer {
+      .card-header,
+      .card-body,
+      .card-footer {
         margin-left: 0;
         margin-right: 0;
       }
@@ -300,67 +320,67 @@ pre {
   // font size
   @at-root {
     .font-size-0 {
-      font-size: rem(0)
+      font-size: rem(0);
     }
 
     .font-size-10 {
-      font-size: rem(10)
+      font-size: rem(10);
     }
 
     .font-size-12 {
-      font-size: rem(12)
+      font-size: rem(12);
     }
 
     .font-size-14 {
-      font-size: rem(14)
+      font-size: rem(14);
     }
 
     .font-size-16 {
-      font-size: rem(16)
+      font-size: rem(16);
     }
 
     .font-size-18 {
-      font-size: rem(18)
+      font-size: rem(18);
     }
 
     .font-size-20 {
-      font-size: rem(20)
+      font-size: rem(20);
     }
 
     .font-size-24 {
-      font-size: rem(24)
+      font-size: rem(24);
     }
 
     .font-size-26 {
-      font-size: rem(26)
+      font-size: rem(26);
     }
 
     .font-size-30 {
-      font-size: rem(30)
+      font-size: rem(30);
     }
 
     .font-size-36 {
-      font-size: rem(36)
+      font-size: rem(36);
     }
 
     .font-size-40 {
-      font-size: rem(40)
+      font-size: rem(40);
     }
 
     .font-size-50 {
-      font-size: rem(50)
+      font-size: rem(50);
     }
 
     .font-size-60 {
-      font-size: rem(60)
+      font-size: rem(60);
     }
 
     .font-size-70 {
-      font-size: rem(70)
+      font-size: rem(70);
     }
 
     .font-size-80 {
-      font-size: rem(80)
+      font-size: rem(80);
     }
   }
 
@@ -469,9 +489,9 @@ pre {
   // links
   &__link {
     &--underlined {
-      border-bottom: 1px solid rgba($black-lighten-more, .25);
+      border-bottom: 1px solid rgba($black-lighten-more, 0.25);
       &:hover {
-        border-bottom-color: rgba($blue, .2);
+        border-bottom-color: rgba($blue, 0.2);
       }
     }
     &--blue {
@@ -480,9 +500,9 @@ pre {
         color: $blue-darken;
       }
       &.link-underlined {
-        border-bottom: 1px solid rgba($blue, .25);
+        border-bottom: 1px solid rgba($blue, 0.25);
         &:hover {
-          border-bottom-color: rgba($blue, .2);
+          border-bottom-color: rgba($blue, 0.2);
         }
       }
     }
@@ -590,8 +610,13 @@ pre {
         margin-bottom: 0;
       }
     }
-    &--default, &--primary, &--secondary,
-    &--success, &--info, &--warning, &--danger {
+    &--default,
+    &--primary,
+    &--secondary,
+    &--success,
+    &--info,
+    &--warning,
+    &--danger {
       color: $white !important;
     }
     &--default {
@@ -624,7 +649,7 @@ pre {
     }
     &--disabled {
       cursor: not-allowed;
-      opacity: .65;
+      opacity: 0.65;
     }
     &--squared {
       border-radius: 0;
@@ -673,7 +698,7 @@ pre {
       }
 
       @media (max-width: $md-max-width) {
-        [class^="col-"]:last-child {
+        [class^='col-']:last-child {
           .utils__step {
             margin-bottom: rem(-13) !important;
           }
@@ -685,8 +710,9 @@ pre {
   // steps inline (pills)
   &__steps-inline {
     display: inline-block;
-    &:before, &:after {
-      content: " ";
+    &:before,
+    &:after {
+      content: ' ';
       display: table;
     }
     .utils__step {
@@ -783,12 +809,12 @@ pre {
     &:hover input:not([disabled]):checked ~ .utils__control__indicator,
     .control input:checked:focus ~ .utils__control__indicator {
       background: $primary;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     input:disabled ~ .utils__control__indicator {
       pointer-events: none;
-      opacity: .6;
+      opacity: 0.6;
       background: $gray-lighten;
     }
 

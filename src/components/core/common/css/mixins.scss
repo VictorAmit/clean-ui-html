@@ -1,5 +1,5 @@
 // Colors
-$white: #ffffff;
+$white: #fff;
 
 $text: #74708d;
 $text-lighten: #c0bdd0;
@@ -17,10 +17,9 @@ $black: #0e0b20;
 $black-lighten: #222034;
 $black-lighten-more: #393749;
 
+$ant-blue: #0190fe;
 
-$ant-blue: #0190FE;
-
-$blue: #0088ff;
+$blue: #08f;
 $blue-darken: #0072d6;
 $orange: #f2a654;
 $yellow: yellow;
@@ -42,7 +41,7 @@ $base__font-size: 13 !default;
 
 // Convert value rem() sass mixin
 @function rem($px, $base: $base__font-size) {
-  @return #{floor( ($px/$base) * 100 ) / 100}rem; // to REMs
+  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
 
   // comment code above and uncomment below for change REMs to PXs
   //@return #{$px}px;

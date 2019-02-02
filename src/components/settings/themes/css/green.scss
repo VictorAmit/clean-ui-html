@@ -11,7 +11,6 @@ $color5: #528e74;
 
 body.theme {
   &--green {
-
     // top-bar
     .top-bar {
       background: $color5;
@@ -27,7 +26,7 @@ body.theme {
     }
 
     .top-bar__search {
-      border-bottom-color: rgba($color1, .2);
+      border-bottom-color: rgba($color1, 0.2);
     }
 
     .top-bar__search input {
@@ -46,7 +45,7 @@ body.theme {
       color: $color1;
 
       &:hover {
-        opacity: .7;
+        opacity: 0.7;
       }
     }
 
@@ -60,7 +59,7 @@ body.theme {
     }
 
     .menu-left__pin-button {
-      opacity: .7;
+      opacity: 0.7;
 
       &:hover {
         opacity: 1;
@@ -71,7 +70,8 @@ body.theme {
       background: #fff;
     }
 
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
+    .menu-left__pin-button div:before,
+    .menu-left__pin-button div:after {
       background: #fff;
     }
 
@@ -179,6 +179,5 @@ body.theme {
         }
       }
     }
-
   }
 }

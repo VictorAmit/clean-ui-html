@@ -6,11 +6,10 @@
 $color1: #fff;
 $color2: #000730;
 $color3: #000942;
-$color4: rgba(255, 255, 255, .17);
+$color4: rgba(255, 255, 255, 0.17);
 
 body.theme {
   &--blue {
-
     // "menu-left" module styles
 
     .menu-left__logo {
@@ -22,7 +21,7 @@ body.theme {
     }
 
     .menu-left__pin-button {
-      opacity: .7;
+      opacity: 0.7;
 
       &:hover {
         opacity: 1;
@@ -33,7 +32,8 @@ body.theme {
       background: #fff;
     }
 
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
+    .menu-left__pin-button div:before,
+    .menu-left__pin-button div:after {
       background: #fff;
     }
 
@@ -91,7 +91,6 @@ body.theme {
 
     // horizontal layout
     &.config--horizontal {
-
       @media (min-width: 768px) {
         .menu-left__list--root > li.menu-left__item {
           > a {
@@ -103,6 +102,5 @@ body.theme {
         }
       }
     }
-
   }
 }

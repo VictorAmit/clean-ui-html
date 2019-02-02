@@ -1,7 +1,6 @@
 @import '../../core/common/css/mixins';
 
 body.config {
-
   &--borderLess {
     .card {
       border: none;
@@ -30,7 +29,9 @@ body.config {
   }
 
   &--squaredCorners {
-    .card, .footer, .utils__widget {
+    .card,
+    .footer,
+    .utils__widget {
       border-radius: 0 !important;
     }
   }
@@ -42,7 +43,8 @@ body.config {
     }
 
     &:not(.config--horizontal) {
-      .utils__content, .footer {
+      .utils__content,
+      .footer {
         padding-right: 0;
       }
     }

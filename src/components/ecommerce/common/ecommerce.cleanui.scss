@@ -46,7 +46,7 @@
     }
     table {
       .text-right {
-        input[type=text] {
+        input[type='text'] {
           display: inline-block;
           text-align: center;
         }
@@ -189,7 +189,7 @@
             min-height: rem(250);
             max-height: rem(250);
             max-width: 100%;
-            transition: transform .4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
           }
           &:hover {
             img {
@@ -255,13 +255,13 @@
         cursor: pointer;
         color: $black-lighten-more;
         i {
-          transition: all .2s ease-in-out;
-          opacity: .2;
+          transition: all 0.2s ease-in-out;
+          opacity: 0.2;
           color: $text;
         }
         &:hover {
           i {
-            opacity: .4;
+            opacity: 0.4;
           }
         }
         &--selected {

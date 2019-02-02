@@ -4,7 +4,8 @@
 /*  JQUERY STEPS */
 
 .wizard {
-  &__steps__icon, .number {
+  &__steps__icon,
+  .number {
     border: 3px solid $primary;
     border-radius: 100%;
     width: rem(45);
@@ -51,7 +52,8 @@
             display: none;
           }
         }
-        &:before, &:after {
+        &:before,
+        &:after {
           position: absolute;
           content: '';
           display: block;
@@ -77,10 +79,12 @@
           }
         }
         &.disabled {
-          &:before, &:after {
+          &:before,
+          &:after {
             background: $gray-darken;
           }
-          .wizard__steps__icon, .number {
+          .wizard__steps__icon,
+          .number {
             border-color: $gray-darken;
             background: $gray-darken;
             color: $white;
@@ -104,7 +108,8 @@
         border-color: $default;
         min-width: rem(120);
         text-align: center;
-        &:hover, &:active {
+        &:hover,
+        &:active {
           background-color: lighten($default, 6%);
           border-color: lighten($default, 6%);
         }
@@ -115,7 +120,7 @@
           border-color: $default !important;
           color: $white !important;
           cursor: not-allowed;
-          opacity: .65;
+          opacity: 0.65;
         }
       }
     }

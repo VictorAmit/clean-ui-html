@@ -8,7 +8,7 @@
   border-color: $gray;
   top: 115%;
   padding: rem(8) 0;
-  box-shadow: 0 10px 35px -5px rgba(0,0,0,.15);
+  box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.15);
   .dropdown-icon {
     margin-right: rem(5);
   }
@@ -28,7 +28,8 @@
     @include transition-color();
     a {
       color: $text;
-      &:hover, &:active {
+      &:hover,
+      &:active {
         background: none;
         color: $blue;
       }
@@ -44,7 +45,9 @@
     &.active {
       background: $gray-lighten !important;
     }
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       background: none;
       color: $blue;
     }
@@ -53,50 +56,50 @@
 
 .dropdown-animate {
   overflow: hidden;
-  > .dropdown-item, .dropdown-header {
+  > .dropdown-item,
+  .dropdown-header {
     animation-name: dropdown-slide-left;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     animation-fill-mode: both;
     &:nth-child(1) {
-      animation-delay: .02s;
+      animation-delay: 0.02s;
     }
     &:nth-child(2) {
-      animation-delay: .04s;
+      animation-delay: 0.04s;
     }
     &:nth-child(3) {
-      animation-delay: .06s;
+      animation-delay: 0.06s;
     }
     &:nth-child(4) {
-      animation-delay: .08s;
+      animation-delay: 0.08s;
     }
     &:nth-child(5) {
-      animation-delay: .10s;
+      animation-delay: 0.1s;
     }
     &:nth-child(6) {
-      animation-delay: .12s;
+      animation-delay: 0.12s;
     }
     &:nth-child(7) {
-      animation-delay: .14s;
+      animation-delay: 0.14s;
     }
     &:nth-child(8) {
-      animation-delay: .16s;
+      animation-delay: 0.16s;
     }
     &:nth-child(9) {
-      animation-delay: .18s;
+      animation-delay: 0.18s;
     }
     &:nth-child(10) {
-      animation-delay: .20s;
+      animation-delay: 0.2s;
     }
   }
-
 }
 
 .open {
   > .dropdown-menu {
     animation-name: dropdown-slide-bottom;
-    animation-duration: .15s;
+    animation-duration: 0.15s;
     animation-fill-mode: both;
-    animation-delay: .01s;
+    animation-delay: 0.01s;
     display: block;
   }
 }
@@ -114,7 +117,8 @@
       @include transition-color();
     }
   }
-  &:hover, &.show {
+  &:hover,
+  &.show {
     .dropdown-toggle {
       > i {
         color: $gray-darken;

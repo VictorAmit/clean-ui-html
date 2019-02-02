@@ -11,14 +11,13 @@
   background: $black-lighten;
   position: relative;
   z-index: 1;
-  
 
   @at-root {
     // box shadow option
     .menu-left--shadow {
       @media (min-width: $sm-min-width) {
         .menu-left {
-          box-shadow: 0 0 200px -30px rgba($black-lighten-more, .4);
+          box-shadow: 0 0 200px -30px rgba($black-lighten-more, 0.4);
           &__inner {
             border: none !important;
           }
@@ -58,7 +57,6 @@
 
   // submenu styles
   &__submenu {
-
     // submenu ul list
     > .menu-left__list {
       display: none;
@@ -77,7 +75,7 @@
           position: absolute;
           top: rem(17);
           right: rem(80);
-          transition: transform .1s ease-in-out, border-color 0.2s ease-in-out;
+          transition: transform 0.1s ease-in-out, border-color 0.2s ease-in-out;
         }
 
         &:hover {
@@ -90,7 +88,6 @@
 
     // toggled submenu
     &--toggled {
-
       // menu item
       &.menu-left__item {
         background: $black;
@@ -120,7 +117,7 @@
     list-style: none;
     padding-left: 0;
     &--root {
-      margin: rem(20) 0;;
+      margin: rem(20) 0;
     }
   }
 
@@ -156,8 +153,10 @@
 
     // menu item states
     &--active {
-
-      > a, &:hover, &:active, &:focus {
+      > a,
+      &:hover,
+      &:active,
+      &:focus {
         background: $ant-blue;
         color: $white;
 
@@ -172,7 +171,7 @@
         cursor: default;
         background: transparent !important;
         color: $gray-darken !important;
-        opacity: .4;
+        opacity: 0.4;
         > .menu-left__icon {
           color: $text !important;
         }
@@ -211,56 +210,72 @@
       }
 
       &.menu-left--colorful--primary {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $primary;
           }
         }
       }
       &.menu-left--colorful--secondary {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $secondary;
           }
         }
       }
       &.menu-left--colorful--default {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $default;
           }
         }
       }
       &.menu-left--colorful--info {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $info;
           }
         }
       }
       &.menu-left--colorful--success {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $success;
           }
         }
       }
       &.menu-left--colorful--warning {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $warning;
           }
         }
       }
       &.menu-left--colorful--danger {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $danger;
           }
         }
       }
       &.menu-left--colorful--yellow {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+        &:hover,
+        &.menu-left__submenu--toggled,
+        &.menu-left__item--active {
           &:before {
             background-color: $yellow;
           }
@@ -274,7 +289,6 @@
 // backdrop block for menu mobile view
 
 @media (max-width: $sm-max-width) {
-
   // backdrop block styles
   .menu-left__backdrop {
     position: fixed;
@@ -290,7 +304,7 @@
 
     // visible styles
     body.menu-left--visible--mobile & {
-      opacity: .4;
+      opacity: 0.4;
       visibility: visible;
       transition: opacity 0.2s ease-in-out;
     }
@@ -317,11 +331,11 @@
     outline: none;
     &:hover {
       .jspVerticalBar {
-        opacity: .7;
+        opacity: 0.7;
         @include transition-very-slow();
       }
       .jspHorizontalBar {
-        opacity: .7;
+        opacity: 0.7;
         @include transition-very-slow();
       }
     }
@@ -346,7 +360,8 @@
         bottom: 0;
       }
     }
-    .jspPane, .jspContainer {
+    .jspPane,
+    .jspContainer {
       width: 100% !important;
     }
     .jspCap {

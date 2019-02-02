@@ -3,7 +3,7 @@
 .userCard {
   background: $white;
   position: relative;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border: 1px solid $gray-border;
 
   @media (max-width: $md-max-width) {
@@ -16,7 +16,6 @@
 
   &--whiteFont {
     .userCard {
-
       &__userName {
         color: $white;
       }
@@ -42,10 +41,10 @@
     border: 1px solid $gray;
     border-radius: 500px;
     cursor: pointer;
-    opacity: .7;
+    opacity: 0.7;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: rem(3);
       left: rem(9);
@@ -54,7 +53,7 @@
       background: $gray;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       width: rem(13);
       height: 1px;

@@ -11,7 +11,6 @@ $color5: #d24667;
 
 body.theme {
   &--red {
-
     // "menu-left" module styles
     .menu-left__logo {
       background: $color5;
@@ -22,7 +21,7 @@ body.theme {
     }
 
     .menu-left__pin-button {
-      opacity: .7;
+      opacity: 0.7;
 
       &:hover {
         opacity: 1;
@@ -33,7 +32,8 @@ body.theme {
       background: #fff;
     }
 
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
+    .menu-left__pin-button div:before,
+    .menu-left__pin-button div:after {
       background: #fff;
     }
 
@@ -141,6 +141,5 @@ body.theme {
         }
       }
     }
-
   }
 }

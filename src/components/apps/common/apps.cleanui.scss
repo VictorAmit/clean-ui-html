@@ -4,7 +4,6 @@
 /*  STYLES FOR "APPS" MODULE */
 
 .apps {
-
   // chat block
   &__chat-block {
     &__item {
@@ -12,7 +11,7 @@
 
       &--right {
         .apps__chat-block__content {
-          margin-left: 0px;
+          margin-left: 0;
           margin-right: 70px;
 
           &:after {
@@ -93,7 +92,7 @@
       }
       &__message-img {
         border-radius: 3px;
-        margin: 0 rem(5) rem(10) 0px;
+        margin: 0 rem(5) rem(10) 0;
         max-width: rem(200);
       }
       &__media-object {
@@ -242,7 +241,7 @@
         height: 100%;
         padding: rem(57) rem(20) 0;
         text-align: center;
-        background: rgba($black, .8);
+        background: rgba($black, 0.8);
 
         @media (max-width: $md-max-width) {
           text-align: left;

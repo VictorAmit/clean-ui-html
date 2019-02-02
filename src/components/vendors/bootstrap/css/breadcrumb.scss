@@ -17,7 +17,8 @@
       &:before {
         display: none !important;
       }
-      > a, > span {
+      > a,
+      > span {
         display: inline-block;
         padding: 9px 30px;
         position: relative;
@@ -67,7 +68,8 @@
         }
       }
       &:first-child {
-        > a, > span {
+        > a,
+        > span {
           margin-left: 0;
           &:before {
             display: none;
@@ -75,7 +77,8 @@
         }
       }
       &:last-child {
-        > a, > span {
+        > a,
+        > span {
           &:after {
             display: none;
           }
@@ -83,7 +86,7 @@
       }
       &:after {
         padding: 0;
-        content: "";
+        content: '';
       }
     }
   }

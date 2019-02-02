@@ -12,7 +12,8 @@
       .nav-link {
         border: none;
         border-bottom: 3px solid transparent;
-        &.active, &:focus {
+        &.active,
+        &:focus {
           border-bottom-color: $primary !important;
         }
         &:hover {
@@ -26,7 +27,7 @@
 .nav-tabs-vertical {
   &:after {
     clear: both;
-    content: "";
+    content: '';
     display: block;
   }
   .nav-tabs {
@@ -36,15 +37,16 @@
     margin-right: 30px;
     display: block;
     .nav-item {
-      margin: 0px -2px 1px 0px;
+      margin: 0 -2px 1px 0;
       float: none;
       cursor: pointer;
       .nav-link {
         border: none;
         border-right: 3px solid transparent;
-        padding-left: 0px;
-        border-radius: 0px;
-        &.active, &:focus {
+        padding-left: 0;
+        border-radius: 0;
+        &.active,
+        &:focus {
           border-right-color: $primary !important;
         }
         &:hover {

@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 .ProfileHeadCard {
-  border: 0px solid $white;
+  border: 0 solid $white;
   background: $white;
   position: relative;
   border-radius: 3px;
@@ -9,7 +9,7 @@
     height: rem(250);
     background: $gray-lighten-more center center;
     background-size: cover;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     line-height: 1.1;
     padding: rem(25) rem(30);
   }

@@ -9,7 +9,8 @@
     color: $text;
     outline: none;
     margin-bottom: rem(10);
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $default;
       color: $white;
       border-color: $default;
@@ -36,7 +37,8 @@
     color: $black-lighten-more;
     outline: none;
     border-radius: 3px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $default;
       color: $white;
       border-color: $default;

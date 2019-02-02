@@ -9,7 +9,7 @@
   margin: 0 auto;
   &__inner {
     background: $gray-border;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0 0;
     padding: rem(50) rem(30) rem(30);
   }
   &__bottom {
@@ -20,7 +20,7 @@
   &__company {
     padding-left: rem(50);
     position: relative;
-    display: inline-block;
+    display: block;
     float: right;
 
     @media (max-width: $sm-max-width) {

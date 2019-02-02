@@ -124,8 +124,6 @@ table.dataTable {
       min-width: 75px;
       font-weight: bold;
     }
-    span.dtr-data {
-    }
   }
   .child {
     li {
@@ -150,5 +148,5 @@ table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:after {
-  bottom: .7em;
+  bottom: 0.7em;
 }

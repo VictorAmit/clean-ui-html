@@ -55,12 +55,14 @@
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 3px 1px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
-  .irs-slider.state_hover, .irs-slider:hover {
+  .irs-slider.state_hover,
+  .irs-slider:hover {
     background: $white;
   }
-  .irs-min, .irs-max {
+  .irs-min,
+  .irs-max {
     color: $black-lighten-more;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.333;
     text-shadow: none;
     top: 0;
@@ -68,19 +70,24 @@
     background: #e1e4e9;
     border-radius: 3px;
   }
-  .lt-ie9 .irs-min, .lt-ie9 .irs-max {
+  .lt-ie9 .irs-min,
+  .lt-ie9 .irs-max {
     background: $gray;
   }
-  .irs-from, .irs-to, .irs-single {
+  .irs-from,
+  .irs-to,
+  .irs-single {
     color: $white;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.333;
     text-shadow: none;
     padding: 1px 5px;
     background: #00a8ff;
     border-radius: 3px;
   }
-  .lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+  .lt-ie9 .irs-from,
+  .lt-ie9 .irs-to,
+  .lt-ie9 .irs-single {
     background: $gray-darken;
   }
   .irs-grid {
@@ -97,6 +104,6 @@
   .irs-grid-text {
     bottom: 3px;
     color: #99a4ac;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }

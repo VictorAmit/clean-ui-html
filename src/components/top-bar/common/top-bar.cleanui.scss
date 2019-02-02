@@ -29,7 +29,6 @@
     }
   }
   &__avatar-dropdown {
-
     // next styles affects on "vendors#bootstrap" module
     // dropdown arrow fix
     .dropdown-toggle {
@@ -79,7 +78,7 @@
     padding-top: rem(5);
 
     &--hiddenOn1300 {
-      @media(max-width: 1300px) {
+      @media (max-width: 1300px) {
         display: none;
       }
     }
@@ -129,7 +128,7 @@
       border: none;
       position: relative;
       top: -1px;
-      opacity: .6;
+      opacity: 0.6;
       width: rem(160);
       &:focus {
         opacity: 1;
