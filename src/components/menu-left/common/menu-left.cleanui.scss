@@ -8,7 +8,7 @@
   max-width: 256px;
   min-width: 256px;
   width: 256px;
-  background: $black-lighten;
+  background: $menuBg;
   position: relative;
   z-index: 1;
 
@@ -31,7 +31,7 @@
     width: 256px;
     height: rem(64);
     display: inline-block;
-    background: $black;
+    background: $menuBg-darken;
     padding: rem(14) rem(18);
     a {
       line-height: rem(33);
@@ -60,7 +60,7 @@
     // submenu ul list
     > .menu-left__list {
       display: none;
-      background: $black;
+      background: $menuBg-darken;
     }
 
     // submenu menu item modifier (adds arrow marker)
@@ -90,7 +90,7 @@
     &--toggled {
       // menu item
       &.menu-left__item {
-        background: $black;
+        background: $menuBg-darken;
 
         > a {
           color: $white;
