@@ -16,7 +16,7 @@
 
           &:after {
             left: auto;
-            right: rem(14);
+            right: rem(-13);
             border: rem(7) solid transparent;
             border-left-color: #f2f4f8;
           }
@@ -40,7 +40,7 @@
       &:after {
         position: absolute;
         top: rem(22);
-        left: rem(-14);
+        left: rem(-13);
         width: 0;
         height: 0;
         display: block;
