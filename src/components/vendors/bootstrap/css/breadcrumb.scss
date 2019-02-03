@@ -6,7 +6,7 @@
 .breadcrumb {
   background: $gray-lighten-more;
 
-  &--custom {
+  &-custom {
     display: inline-block;
     padding: 0;
     margin-bottom: 0;
@@ -34,7 +34,7 @@
           width: 0;
           height: 0;
           border-style: solid;
-          border-width: 39px 10px 0 0;
+          border-width: 41px 10px 0 0;
           border-color: transparent $gray-lighten transparent transparent;
 
           @include transition-slow();

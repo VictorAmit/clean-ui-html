@@ -3,14 +3,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  ECOMMERCE: DASHBOARD  */
 
-@at-root {
-  .wizard > .content {
-    background: $white !important;
-  }
-}
-
-.ecommerce {
-  &__dashboard__list__img {
+.cui-ecommerce {
+  &-dashboard-list-img {
     display: inline-block;
     width: rem(60);
     height: rem(60);
@@ -29,8 +23,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  ECOMMERCE: CART / CHECKOUT  */
 
-.ecommerce {
-  &__cart {
+.cui-ecommerce {
+  &-cart {
     .content {
       min-height: rem(100);
       > .body {
@@ -58,30 +52,27 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  ECOMMERCE: PRODUCT DETAILS */
 
-.ecommerce {
-  &__product {
-    &__descr {
+.cui-ecommerce {
+  &-product {
+    &-descr {
       margin-top: rem(10);
     }
-    &__option {
+    &-option {
       margin-bottom: rem(20);
       &:last-child {
         margin-bottom: rem(5);
       }
-      .ecommerce--catalog--item--descr--sizes {
-        margin: 0;
-      }
     }
-    &__option_title {
+    &-option_title {
       color: $text;
       margin-bottom: rem(10);
     }
-    &__price {
+    &-price {
       font-size: rem(31);
       font-weight: bold;
       margin: 20px 0;
     }
-    &__price-before {
+    &-price-before {
       display: inline-block;
       margin-left: rem(10);
       font-size: rem(18);
@@ -91,18 +82,18 @@
       top: rem(-3);
       font-weight: normal;
     }
-    &__sku {
+    &-sku {
       float: right;
       color: $text;
       text-align: right;
       margin-top: rem(3);
     }
-    &__rating {
+    &-rating {
       margin-top: rem(5);
       color: $orange;
       font-size: rem(18);
     }
-    &__controls {
+    &-controls {
       .btn {
         padding: rem(15) rem(40) !important;
       }
@@ -111,11 +102,11 @@
         padding: rem(15) rem(15) !important;
       }
     }
-    &__photos {
+    &-photos {
       margin-left: rem(-20);
       margin-top: rem(-15);
     }
-    &__photos-item {
+    &-photos-item {
       margin-left: rem(20);
       width: calc(25% - 1.42rem);
       text-align: center;
@@ -130,14 +121,15 @@
         width: rem(70);
         max-width: 100%;
       }
-      &--active {
+      &-active {
         border-color: $primary;
       }
     }
-    &__main-title {
+    &-main-title {
       margin-top: rem(20);
+      font-size: rem(36)
     }
-    &__info {
+    &-info {
       margin-top: rem(40);
     }
   }
@@ -146,16 +138,16 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  ECOMMERCE: PRODUCTS CATALOG  */
 
-.ecommerce {
-  &__catalog {
-    &__item {
+.cui-ecommerce {
+  &-catalog {
+    &-item {
       padding: rem(20);
       border-radius: 5px;
       border: 1px solid $gray-border;
       margin-bottom: rem(35);
       position: relative;
       background: $white;
-      &__status {
+      &-status {
         position: absolute;
         top: 0;
         left: 0;
@@ -165,7 +157,7 @@
         height: 0;
         border-color: $danger transparent transparent $danger;
         z-index: 10;
-        &__title {
+        &-title {
           position: relative;
           top: rem(-6);
           left: rem(-17);
@@ -178,7 +170,7 @@
           white-space: nowrap;
         }
       }
-      &__img {
+      &-img {
         position: relative;
         text-align: center;
         height: rem(250);
@@ -198,7 +190,7 @@
           }
         }
       }
-      &__title {
+      &-title {
         font-size: rem(16);
         text-transform: uppercase;
         font-weight: bold;
@@ -213,11 +205,11 @@
           overflow: hidden;
         }
       }
-      &__descr {
+      &-descr {
         padding-right: rem(100);
         font-style: italic;
         color: $black-lighten-more;
-        &__sizes {
+        &-sizes {
           font-style: normal;
           margin: rem(15) 0 rem(10);
           span {
@@ -233,20 +225,20 @@
           }
         }
       }
-      &__price {
+      &-price {
         font-size: rem(26);
         position: absolute;
         top: rem(10);
         right: 0;
         text-align: right;
-        &--old {
+        &-old {
           font-size: rem(16);
           font-weight: normal;
           text-decoration: line-through;
           color: $text;
         }
       }
-      &__like {
+      &-like {
         position: absolute;
         z-index: 100;
         top: rem(10);
@@ -264,13 +256,13 @@
             opacity: 0.4;
           }
         }
-        &--selected {
+        &-selected {
           i {
             opacity: 1 !important;
           }
         }
       }
-      &__img-remove {
+      &-img-remove {
         position: absolute;
         z-index: 100;
         top: rem(10);

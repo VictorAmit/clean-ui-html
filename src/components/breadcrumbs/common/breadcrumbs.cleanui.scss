@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 /* BREADCRUMBS */
 
-.breadcrumbs {
+.cui-breadcrumbs {
   padding: rem(10) rem(20);
   color: $black;
-  &--bg {
+  &-bg {
     background: $white;
     border-bottom: 1px solid $gray-border;
   }
