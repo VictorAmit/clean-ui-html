@@ -11,6 +11,9 @@
   background: $menuBg;
   position: relative;
   z-index: 1;
+  transition: width 0.3s, flex 0.3s, max-width 0.3s, min-width 0.3s, transform 0.3s;
+  font-size: 13px;
+  overflow: hidden;
 
   @at-root {
     // box shadow option
@@ -28,88 +31,56 @@
 
   // logo styles
   &__logo {
-    width: 256px;
-    height: rem(64);
-    display: inline-block;
+    height: 64px;
+    display: block;
     background: $menuBg-darken;
-    padding: rem(14) rem(18);
-    a {
-      line-height: rem(33);
-    }
+    padding: 13px 20px 15px 22px;
+    overflow: hidden;
+    transition: width 0.3s;
     img {
-      max-height: rem(35);
-      max-width: 90%;
-      vertical-align: bottom;
+      height: 36px;
     }
   }
 
-  // inner block, fix for jScrollPane
-  &__inner {
-    // position: absolute;
-    // top: rem(64);
-    // bottom: 0;
-    // width: 100% !important;
+  &__trigger {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    width: 256px;
+    height: 48px;
+    background: $gray-border;
+    transition: width 0.3s;
+    &:after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      border-left: 2px solid darken($gray-darken, 15%);
+      border-top: 2px solid darken($gray-darken, 15%);
+      transform: rotate(-45deg);
+    }
+  }
 
+  &__inner {
+    position: fixed;
+    width: 256px;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s;
     @media (max-width: $sm-max-width) {
       overflow-y: auto;
     }
   }
 
-  // submenu styles
-  &__submenu {
-    // submenu ul list
-    > .menu-left__list {
-      display: none;
-      background: $menuBg-darken;
-    }
-
-    // submenu menu item modifier (adds arrow marker)
-    &.menu-left__item {
-      > a {
-        &:after {
-          display: block;
-          content: '';
-          border-width: rem(5) rem(5) rem(5) 0;
-          border-color: transparent $black-lighten-more transparent transparent;
-          border-style: solid;
-          position: absolute;
-          top: rem(17);
-          right: rem(80);
-          transition: transform 0.1s ease-in-out, border-color 0.2s ease-in-out;
-        }
-
-        &:hover {
-          &::after {
-            border-color: transparent $white transparent transparent;
-          }
-        }
-      }
-    }
-
-    // toggled submenu
-    &--toggled {
-      // menu item
-      &.menu-left__item {
-        background: $menuBg-darken;
-
-        > a {
-          color: $white;
-
-          .menu-left__icon {
-            color: $white;
-          }
-          // arrow marker styles
-          &:after {
-            border-color: transparent $white transparent transparent;
-            transform: rotate(-90deg);
-          }
-        }
-
-        > .menu-left__icon {
-          color: $white;
-        }
-      }
-    }
+  &__scroll {
+    position: absolute;
+    top: 64px;
+    height: calc(100% - 64px - 48px);
+    width: 100%;
   }
 
   // ul list
@@ -125,15 +96,19 @@
   &__divider {
     background: $black-lighten-more;
     height: 1px;
-    margin: rem(10) rem(20);
+    margin: 0 rem(23) rem(8);
   }
 
   // menu item
   &__item {
+    margin: rem(4) 0 rem(8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     > a {
       position: relative;
-      min-height: rem(45);
-      padding: rem(12) rem(80) rem(12) rem(20);
+      min-height: rem(40);
+      padding: rem(9) rem(60) rem(9) rem(24);
       display: block;
       color: $gray-darken;
 
@@ -157,7 +132,7 @@
       &:hover,
       &:active,
       &:focus {
-        background: $ant-blue;
+        background: $primary;
         color: $white;
 
         > .menu-left__icon {
@@ -184,17 +159,93 @@
     position: absolute;
     width: rem(20);
     text-align: center;
-    top: rem(15);
-    right: rem(32);
+    top: rem(13);
+    right: rem(20);
     color: $text;
-    font-weight: bold;
-    line-height: 1.1;
+    font-size: 13px;
     text-transform: uppercase;
     transition: color 0.2s ease-in-out;
   }
 
-  // colorful menu
+  // submenu styles
+  &__submenu {
+    // submenu items padding
+    .menu-left__item {
+      > a {
+        padding-left: rem(48);
+      }
+    }
 
+    // submenu ul list
+    > .menu-left__list {
+      display: none;
+      background: $menuBg-darken;
+    }
+
+    // submenu menu item modifier (adds arrow marker)
+    &.menu-left__item {
+      > a {
+        &:after,
+        &:before {
+          content: '';
+          position: absolute;
+          right: 50px;
+          top: 20px;
+          vertical-align: baseline;
+          background: $gray-darken;
+          width: 6px;
+          height: 2px;
+          border-radius: 2px;
+          transition: all 0.3s;
+        }
+
+        &:after {
+          transform: rotate(45deg) translateX(-2px);
+        }
+
+        &:before {
+          transform: rotate(-45deg) translateX(2px);
+        }
+
+        &:hover {
+          &:after,
+          &:before {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    // toggled submenu
+    &--toggled {
+      // menu item
+      &.menu-left__item {
+        background: $menuBg-darken;
+
+        > a {
+          color: $white;
+
+          .menu-left__icon {
+            color: $white;
+          }
+
+          &:after {
+            transform: rotate(-45deg) translateX(-2px);
+          }
+
+          &:before {
+            transform: rotate(45deg) translateX(2px);
+          }
+        }
+
+        > .menu-left__icon {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  // colorful menu
   &__list--root {
     > .menu-left__item {
       position: relative;
@@ -283,6 +334,149 @@
       }
     }
   }
+
+  &__handler {
+    position: absolute;
+    right: -41px;
+    top: 72px;
+    width: 41px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 0;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #001529;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+
+    &__icon {
+      width: 14px;
+      height: 2px;
+      background: #fff;
+      position: relative;
+      transition: background 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        height: 2px;
+        transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      }
+
+      &:before {
+        top: -5px;
+      }
+
+      &:after {
+        top: 5px;
+      }
+    }
+  }
+
+  // toggled menu
+  @media (min-width: $sm-min-width) {
+    @at-root {
+      .menu-left--toggled {
+        .menu-left {
+          flex: 0 0 80px;
+          max-width: 80px;
+          min-width: 80px;
+          width: 80px;
+
+          .menu-left__item > a {
+            &:after {
+              transform: rotate(-45deg) translateY(2px);
+            }
+            &:before {
+              transform: rotate(45deg) translateY(-2px);
+            }
+          }
+
+          .menu-left__list--root > .menu-left__item > a {
+            &:after,
+            &:before {
+              right: 23px;
+              background: $gray-border !important;
+            }
+            > .menu-left__icon {
+              right: 35px;
+              display: inline !important;
+            }
+          }
+
+          .menu-left__list--root {
+            .menu-left__item--special {
+              display: none !important;
+            }
+            > .menu-left__item {
+              > * {
+                display: none !important;
+              }
+              > a {
+                display: block !important;
+                > * {
+                  display: none !important;
+                }
+              }
+            }
+          }
+
+          .menu-left__inner {
+            width: 80px;
+          }
+
+          .menu-left__trigger {
+            width: 80px;
+            &:after {
+              left: 40%;
+              transform: rotate(-225deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // mobile menu
+  @media (max-width: $sm-max-width) {
+    @at-root {
+      .menu-left {
+        position: fixed;
+        z-index: 9999;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: visible;
+        transform: translateX(-256px);
+
+        .menu-left__inner {
+          position: absolute;
+        }
+
+        .menu-left__trigger {
+          display: none;
+        }
+
+        .menu-left__scroll {
+          height: calc(100% - 64px);
+        }
+      }
+
+      .menu-left--toggled-mobile {
+        .menu-left {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -303,24 +497,11 @@
     transition: opacity 0.2s ease-in-out;
 
     // visible styles
-    body.menu-left--visible--mobile & {
+    .menu-left--toggled-mobile & {
       opacity: 0.4;
       visibility: visible;
-      transition: opacity 0.2s ease-in-out;
     }
   }
-
-  // preventing body scroll
-  body.menu-left--visible--mobile {
-    overflow: hidden;
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////
-/*  ANIMATED BUTTON (MENU TOGGLE) */
-
-.menu-left__pin-button {
-  display: none;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////

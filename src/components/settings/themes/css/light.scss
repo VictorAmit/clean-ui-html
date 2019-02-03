@@ -24,11 +24,11 @@ body.theme {
         color: $color2;
         &:hover,
         &:focus {
-          color: $ant-blue;
+          color: $primary;
         }
 
         &:active {
-          color: $ant-blue;
+          color: $primary;
           background-color: $color5;
         }
       }

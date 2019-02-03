@@ -108,8 +108,8 @@
   .dropdown-toggle {
     position: relative;
     &:after {
-      margin-top: rem(-1);
       color: $gray;
+      vertical-align: middle;
       @include transition-color();
     }
     > i {

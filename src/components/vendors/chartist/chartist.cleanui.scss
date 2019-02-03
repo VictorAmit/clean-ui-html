@@ -3,49 +3,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  CHARTIST */
 
-body {
-  nav.left-menu {
-    .chartist-theme-dark {
-      background: transparent;
-    }
-    .ct-grid {
-      stroke: $gray-darken;
-    }
-    .ct-label {
-      color: $gray-darken;
-    }
-  }
-  &.theme-dark,
-  &.theme-blue {
-    nav.left-menu {
-      .ct-grid {
-        stroke: #53494b;
-      }
-      .ct-label {
-        color: #514d6a;
-      }
-    }
-  }
-
-  &.menu-iconbar:not(.menu-top) {
-    nav.left-menu {
-      .example-left-menu-chart {
-        width: 159px;
-        overflow: hidden;
-        svg {
-          width: 159px !important;
-        }
-      }
-    }
-  }
-}
-
-nav.left-menu {
-  .ct-label {
-    color: $black-lighten-more;
-  }
-}
-
 .chartist .ct-series.ct-series-a .ct-bar,
 .chartist .ct-series.ct-series-a .ct-line,
 .chartist .ct-series.ct-series-a .ct-point,

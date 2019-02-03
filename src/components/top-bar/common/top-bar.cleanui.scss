@@ -4,7 +4,7 @@
 /*  STYLES FOR "TOP-BAR" MODULE */
 
 .top-bar {
-  min-height: rem(64);
+  min-height: 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,13 +31,14 @@
   &__avatar-dropdown {
     // next styles affects on "vendors#bootstrap" module
     // dropdown arrow fix
+    margin-top: 5px;
     .dropdown-toggle {
       padding-right: rem(18);
       display: inline-block;
       &:after {
         position: absolute;
         top: 50%;
-        margin-top: rem(-1);
+        margin-top: -5px;
         right: rem(0);
       }
     }
@@ -52,7 +53,7 @@
 
     // margins of items inside left block
     .top-bar__item {
-      margin-right: rem(30);
+      margin-right: rem(20);
 
       &:last-child {
         margin-right: 0;
@@ -69,18 +70,7 @@
 
     // margins of items inside right block
     .top-bar__item {
-      margin-left: rem(30);
-    }
-  }
-
-  // item styles
-  &__item {
-    padding-top: rem(5);
-
-    &--hiddenOn1300 {
-      @media (max-width: 1300px) {
-        display: none;
-      }
+      margin-left: rem(20);
     }
   }
 
@@ -88,6 +78,11 @@
   &__mini-chart {
     height: rem(30);
     line-height: rem(30);
+    margin-left: rem(20);
+
+    @media (max-width: 1300px) {
+      display: none;
+    }
 
     &__inner {
       height: 80%;
@@ -120,24 +115,32 @@
 
   // search box
   &__search {
-    border-bottom: 1px solid $gray-border;
-    margin-top: rem(4);
-    white-space: nowrap;
+    position: relative;
 
     input {
-      border: none;
-      position: relative;
-      top: -1px;
-      opacity: 0.6;
-      width: rem(160);
-      &:focus {
-        opacity: 1;
+      background-color: $gray-lighten;
+      border: 1px solid $gray-border;
+      padding: 4px 15px 4px 34px;
+      transition: all 0.3s;
+      border-radius: 4px;
+
+      &:focus,
+      &:hover {
+        border-color: $primary;
+      }
+
+      @media screen and (max-width: $sm-max-width) {
+        width: 30px !important;
+        padding-left: 22px !important;
       }
     }
+
     i {
+      position: absolute;
+      top: 10px;
+      left: 14px;
       cursor: pointer;
       color: $gray;
-      margin-right: rem(5);
       &:hover {
         color: $text-darken;
       }

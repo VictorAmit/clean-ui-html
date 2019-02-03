@@ -20,15 +20,49 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // add backdrop
 
-    $('.menu-left').after(
-      '<div class="menu-left__backdrop menu-left__action--backdrop-toggle"><!-- --></div>',
-    )
+    $('.menu-left').after('<div class="menu-left__backdrop"><!-- --></div>')
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // menu logic
+
+    $('.menu-left__trigger--action').on('click', function() {
+      $('body').toggleClass('menu-left--toggled')
+    })
+
+    var isTabletView = false
+
+    function toggleMenu() {
+      if (!isTabletView) {
+        $('body').addClass('menu-left--toggled')
+      }
+    }
+
+    if ($(window).width() < 992) {
+      toggleMenu()
+      isTabletView = true
+    }
+
+    $(window).on('resize', function() {
+      if ($(window).width() <= 992) {
+        toggleMenu()
+        isTabletView = true
+      } else {
+        isTabletView = false
+      }
+    })
+
+    $('.menu-left__handler, .menu-left__backdrop').on('click', function() {
+      $('body').toggleClass('menu-left--toggled-mobile')
+    })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
     $('.menu-left__submenu > a').on('click', function() {
-      if ($('body').hasClass('config--vertical') || $('body').width() < 768) {
+      if ($('body').hasClass('menu-left--toggled') && !($('body').width() < 768)) {
+        return
+      }
+      if ($('body').find('.menu-left').length) {
         var parent = $(this).parent(),
           opened = $('.menu-left__submenu--toggled')
 
@@ -46,41 +80,16 @@
       }
     })
 
-    // remove submenu toggle class when viewport back to full view
-    $(window).on('resize', function() {
-      if ($('body').hasClass('config--horizontal') || $('body').width() > 768) {
-        $('.menu-left__submenu--toggled')
-          .removeClass('menu-left__submenu--toggled')
-          .find('> .menu-left__list')
-          .attr('style', '')
-      }
-    })
-
     /////////////////////////////////////////////////////////////////////////////////////////
     // custom scroll init
 
-    if ($('body').hasClass('config--vertical')) {
+    if ($('body').find('.menu-left').length) {
       if (!/Mobi/.test(navigator.userAgent) && jQuery().perfectScrollbar) {
-        $('.menu-left__inner').perfectScrollbar({
+        $('.menu-left__scroll').perfectScrollbar({
           theme: 'cleanui',
         })
       }
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle menu
-
-    $('.menu-left__action--menu-toggle').on('click', function() {
-      if ($('body').width() < 768) {
-        $('body').toggleClass('menu-left--visible--mobile')
-      } else {
-        $('body').toggleClass('menu-left--visible')
-      }
-    })
-
-    $('.menu-left__action--backdrop-toggle').on('click', function() {
-      $('body').removeClass('menu-left--visible--mobile')
-    })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // colorful menu

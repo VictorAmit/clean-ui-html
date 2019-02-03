@@ -3,6 +3,7 @@
 .register {
   background-size: cover;
   background-color: $gray-lighten-more;
+  transition: background 0.5s;
 
   &--fullscreen {
     position: fixed;
