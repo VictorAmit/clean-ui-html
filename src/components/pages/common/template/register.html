@@ -1,9 +1,9 @@
 <!-- START: pages/register -->
-<div class="register" style="background-image: url(../../components/pages/common/img/login/1.jpeg)">
-  <div class="register__header">
+<div class="cui-register" style="background-image: url(../../components/pages/common/img/login/1.jpeg)">
+  <div class="cui-register-header">
     <div class="row">
       <div class="col-lg-8">
-        <div class="register__header__logo">
+        <div class="cui-register-header-logo">
           <a href="javascript: history.back();">
             <img
               src="../../components/pages/common/img/logo-inverse.png"
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="register__header__menu">
+        <div class="cui-register-header-menu">
           <ul class="list-unstyled list-inline">
             <li class="list-inline-item"><a href="javascript: history.back();">&larr; Back</a></li>
             <li class="list-inline-item active"><a href="javascript: void(0);">Login</a></li>
@@ -35,11 +35,11 @@
       </div>
     </div>
   </div>
-  <div class="register__block">
+  <div class="cui-register-block">
     <div class="row">
       <div class="col-xl-12">
-        <div class="register__block__inner">
-          <div class="register__block__form">
+        <div class="cui-register-block-inner">
+          <div class="cui-register-block-form">
             <h4 class="text-uppercase">
               <strong>Please register</strong>
             </h4>
@@ -47,7 +47,7 @@
             <form id="form-validation" name="form-validation" method="POST">
               <div class="form-group">
                 <div class="form-input-icon form-input-icon-right">
-                  <i class="icmn-spinner11 utils__spin"></i>
+                  <i class="icmn-spinner11"></i>
                   <input
                     id="validation-email"
                     class="form-control"
@@ -85,7 +85,7 @@
       </div>
     </div>
   </div>
-  <div class="register__footer text-center">
+  <div class="cui-register-footer text-center">
     <ul class="list-unstyled list-inline">
       <li class="list-inline-item"><a href="javascript: void(0);">Terms of Use</a></li>
       <li class="active list-inline-item"><a href="javascript: void(0);">Compliance</a></li>
@@ -122,7 +122,7 @@
 
       // Switch to fullscreen
       $('.switch-to-fullscreen').on('click', function() {
-        $('.register').toggleClass('register--fullscreen')
+        $('.cui-register').toggleClass('cui-register-fullscreen')
       })
 
       // Change BG
@@ -133,7 +133,7 @@
           final = next > max ? min : next
 
         $('.random-bg-image').data('img', final)
-        $('.register')
+        $('.cui-register')
           .data('img', final)
           .css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpeg)')
       })

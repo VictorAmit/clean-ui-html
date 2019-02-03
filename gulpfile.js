@@ -139,10 +139,10 @@ gulp.task('build:versions', function () {
 /////////////////////////////////////////////////////////////////////////////
 // VENDORS BUILD
 
-gulp.task('build:vendors', function() {
-    gulp.src([path.src.vendors_by_bower, path.src.vendors_by_hands]) // get folders with vendors components
-        .pipe(gulp.dest(path.build.vendors)); // copy to destination folder
-});
+// gulp.task('build:vendors', function() {
+//     gulp.src([path.src.vendors_by_bower, path.src.vendors_by_hands]) // get folders with vendors components
+//         .pipe(gulp.dest(path.build.vendors)); // copy to destination folder
+// });
 
 
 
@@ -198,7 +198,7 @@ gulp.task('build', [
     'build:css', // run build:css task
     'build:js', // run build:js task
     'build:img', // run build:img task
-    'build:vendors' // run build:vendors task
+    // 'build:vendors' // run build:vendors task
 ]);
 
 
@@ -219,9 +219,9 @@ gulp.task('watch', function(){
     watch([path.src.img], function() { // watch img folder
         gulp.start('build:img'); // run build:img task
     });
-    watch([path.src.vendors_by_bower, path.src.vendors_by_hands], function() { // watch folder with vendors components
-        gulp.start('build:vendors'); // run build:vendors task
-    });
+    // watch([path.src.vendors_by_bower, path.src.vendors_by_hands], function() { // watch folder with vendors components
+    //     gulp.start('build:vendors'); // run build:vendors task
+    // });
 });
 
 

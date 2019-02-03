@@ -9,49 +9,28 @@ $color3: #e4e9f0;
 $color4: #e4e9f0;
 $color5: #d24667;
 
-body.theme {
-  &--red {
-    // "menu-left" module styles
-    .menu-left__logo {
-      background: $color5;
-    }
-
-    .menu-left__lock {
-      background: $color5;
-    }
-
-    .menu-left__pin-button {
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .menu-left__pin-button div {
-      background: #fff;
-    }
-
-    .menu-left__pin-button div:before,
-    .menu-left__pin-button div:after {
-      background: #fff;
-    }
-
-    .menu-left {
+body.cui-theme {
+  &-red {
+    // "cui-menu-left" module styles
+    .cui-menu-left {
       background: $color1;
-      &__inner {
+      &-inner {
         border-right: 1px solid $gray-border;
       }
     }
 
-    .menu-left__item > a {
+    .cui-menu-left-logo {
+      background: $color5;
+    }
+
+    .cui-menu-left-item > a {
       color: $color2;
     }
 
-    .menu-left__item--active > a,
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
+    .cui-menu-left-item-active > a,
+    .cui-menu-left-item:hover > a,
+    .cui-menu-left-item:active > a,
+    .cui-menu-left-item:focus > a {
       background: $color5;
       color: $white;
 
@@ -60,86 +39,77 @@ body.theme {
       }
     }
 
-    .menu-left__submenu--toggled.menu-left__item {
+    .cui-menu-left-submenu-toggled.cui-menu-left-item {
       background: $color5;
       color: $color1;
 
       > a {
         color: $white;
-        .menu-left__icon {
+        .cui-menu-left-icon {
           color: $white;
         }
       }
     }
 
-    .menu-left__submenu > .menu-left__list {
+    .cui-menu-left-submenu > .cui-menu-left-list {
       background: lighten($color3, 5%);
     }
 
-    .menu-left__icon {
+    .cui-menu-left-icon {
       color: lighten($color2, 30%);
     }
 
-    .menu-left__item--active > a > .menu-left__icon,
-    .menu-left__item:hover > a > .menu-left__icon,
-    .menu-left__item:active > a > .menu-left__icon,
-    .menu-left__item:focus > a > .menu-left__icon {
+    .cui-menu-left-item-active > a > .cui-menu-left-icon,
+    .cui-menu-left-item:hover > a > .cui-menu-left-icon,
+    .cui-menu-left-item:active > a > .cui-menu-left-icon,
+    .cui-menu-left-item:focus > a > .cui-menu-left-icon {
       color: $color1;
     }
 
-    .menu-left__submenu.menu-left__item > a:after {
+    .cui-menu-left-submenu.cui-menu-left-item > a:after {
       border-color: transparent lighten($color2, 30%) transparent transparent;
     }
 
-    .menu-left__divider {
+    .cui-menu-left-divider {
       background: $color3;
     }
 
-    .menu-left .jspScrollable .jspDrag:after {
+    .cui-menu-left .jspScrollable .jspDrag:after {
       background: lighten($color2, 40%) !important;
     }
 
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: $color3;
-        }
-      }
-    }
-
     // horizontal layout
-    &.config--horizontal {
-      .menu-left {
-        border-right: none;
-        border-bottom: 1px solid $color4;
-      }
+    // &.config--horizontal {
+    //   .cui-menu-left {
+    //     border-right: none;
+    //     border-bottom: 1px solid $color4;
+    //   }
 
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item {
-          > a {
-            border-left-color: $color3;
-          }
+    //   @media (min-width: 768px) {
+    //     .cui-menu-left-list-root > li.cui-menu-left-item {
+    //       > a {
+    //         border-left-color: $color3;
+    //       }
 
-          &:hover {
-            > a {
-              border-left-color: $color5;
-              .menu-left__icon {
-                color: $color1 !important;
-              }
-            }
-          }
-        }
+    //       &:hover {
+    //         > a {
+    //           border-left-color: $color5;
+    //           .cui-menu-left-icon {
+    //             color: $color1 !important;
+    //           }
+    //         }
+    //       }
+    //     }
 
-        .menu-left__list--root > li.menu-left__item:hover > a {
-          background: $color5;
-          color: $white;
-        }
+    //     .cui-menu-left-list-root > li.cui-menu-left-item:hover > a {
+    //       background: $color5;
+    //       color: $white;
+    //     }
 
-        .menu-left__list--root > li.menu-left__item:hover > a > .menu-left__icon {
-          color: lighten($color2, 10%);
-        }
-      }
-    }
+    //     .cui-menu-left-list-root > li.cui-menu-left-item:hover > a > .cui-menu-left-icon {
+    //       color: lighten($color2, 10%);
+    //     }
+    //   }
+    // }
   }
 }

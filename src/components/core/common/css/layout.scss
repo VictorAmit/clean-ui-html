@@ -3,26 +3,27 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  "LAYOUT" STYLES */
 
-.layout {
+.cui-layout {
   display: flex;
   flex-direction: column;
   flex: auto;
   min-height: 100vh;
+  min-width: 0;
 
-  &.layout--hasSider {
+  &.cui-layout-has-sider {
     flex-direction: row;
   }
 
-  &__content {
+  &-content {
     flex: auto;
     min-height: 0;
   }
 
-  &__footer {
+  &-footer {
     flex: 0 0 auto;
   }
 
-  &__header {
+  &-header {
     flex: 0 0 auto;
     height: 64px;
   }

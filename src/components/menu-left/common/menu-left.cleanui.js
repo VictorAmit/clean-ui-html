@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////
-// "menu-right" module scripts
+// "cui-menu-right" module scripts
 
 ;(function($) {
   'use strict'
@@ -9,41 +9,41 @@
 
     var url = window.location.href
     var page = url.substr(url.lastIndexOf('/') + 1)
-    var currentItem = $('.menu-left__list--root').find('a[href="' + page + '"]')
-    currentItem.parent().toggleClass('menu-left__item--active')
+    var currentItem = $('.cui-menu-left-list-root').find('a[href="' + page + '"]')
+    currentItem.parent().toggleClass('cui-menu-left-item-active')
     currentItem
-      .closest('.menu-left__submenu')
-      .addClass('menu-left__submenu--toggled')
-      .find('> .menu-left__list')
+      .closest('.cui-menu-left-submenu')
+      .addClass('cui-menu-left-submenu-toggled')
+      .find('> .cui-menu-left-list')
       .slideToggle(0)
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // add backdrop
 
-    $('.menu-left').after('<div class="menu-left__backdrop"><!-- --></div>')
+    $('.cui-menu-left').after('<div class="cui-menu-left-backdrop"><!-- --></div>')
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // menu logic
 
-    $('.menu-left__trigger--action').on('click', function() {
-      $('body').toggleClass('menu-left--toggled')
+    $('.cui-menu-left-trigger-action').on('click', function() {
+      $('body').toggleClass('cui-menu-left-toggled')
     })
 
     var isTabletView = false
 
     function toggleMenu() {
       if (!isTabletView) {
-        $('body').addClass('menu-left--toggled')
+        $('body').addClass('cui-menu-left-toggled')
       }
     }
 
-    if ($(window).width() < 992) {
+    if ($(window).innerWidth() <= 992) {
       toggleMenu()
       isTabletView = true
     }
 
     $(window).on('resize', function() {
-      if ($(window).width() <= 992) {
+      if ($(window).innerWidth() <= 992) {
         toggleMenu()
         isTabletView = true
       } else {
@@ -51,41 +51,41 @@
       }
     })
 
-    $('.menu-left__handler, .menu-left__backdrop').on('click', function() {
-      $('body').toggleClass('menu-left--toggled-mobile')
+    $('.cui-menu-left-handler, .cui-menu-left-backdrop').on('click', function() {
+      $('body').toggleClass('cui-menu-left-toggled-mobile')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.menu-left__submenu > a').on('click', function() {
-      if ($('body').hasClass('menu-left--toggled') && !($('body').width() < 768)) {
+    $('.cui-menu-left-submenu > a').on('click', function() {
+      if ($('body').hasClass('cui-menu-left-toggled') && !($('body').innerWidth() < 768)) {
         return
       }
-      if ($('body').find('.menu-left').length) {
+      if ($('body').find('.cui-menu-left').length) {
         var parent = $(this).parent(),
-          opened = $('.menu-left__submenu--toggled')
+          opened = $('.cui-menu-left-submenu-toggled')
 
         if (
-          !parent.hasClass('menu-left__submenu--toggled') &&
-          !parent.parent().closest('.menu-left__submenu').length
+          !parent.hasClass('cui-menu-left-submenu-toggled') &&
+          !parent.parent().closest('.cui-menu-left-submenu').length
         )
           opened
-            .removeClass('menu-left__submenu--toggled')
-            .find('> .menu-left__list')
+            .removeClass('cui-menu-left-submenu-toggled')
+            .find('> .cui-menu-left-list')
             .slideUp(200)
 
-        parent.toggleClass('menu-left__submenu--toggled')
-        parent.find('> .menu-left__list').slideToggle(200)
+        parent.toggleClass('cui-menu-left-submenu-toggled')
+        parent.find('> .cui-menu-left-list').slideToggle(200)
       }
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // custom scroll init
 
-    if ($('body').find('.menu-left').length) {
+    if ($('body').find('.cui-menu-left').length) {
       if (!/Mobi/.test(navigator.userAgent) && jQuery().perfectScrollbar) {
-        $('.menu-left__scroll').perfectScrollbar({
+        $('.cui-menu-left-scroll').perfectScrollbar({
           theme: 'cleanui',
         })
       }
@@ -95,11 +95,11 @@
     // colorful menu
 
     var colorfulClasses =
-        'menu-left--colorful--primary menu-left--colorful--secondary menu-left--colorful--primary menu-left--colorful--default menu-left--colorful--info menu-left--colorful--success menu-left--colorful--warning menu-left--colorful--danger menu-left--colorful--yellow',
+        'cui-menu-left-colorful-primary cui-menu-left-colorful-secondary cui-menu-left-colorful-primary cui-menu-left-colorful-default cui-menu-left-colorful-info cui-menu-left-colorful-success cui-menu-left-colorful-warning cui-menu-left-colorful-danger cui-menu-left-colorful-yellow',
       colorfulClassesArray = colorfulClasses.split(' ')
 
     function setColorfulClasses() {
-      $('.menu-left__list--root > .menu-left__item').each(function() {
+      $('.cui-menu-left-list-root > .cui-menu-left-item').each(function() {
         var randomClass =
           colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
         $(this).addClass(randomClass)
@@ -107,10 +107,10 @@
     }
 
     function removeColorfulClasses() {
-      $('.menu-left__list--root > .menu-left__item').removeClass(colorfulClasses)
+      $('.cui-menu-left-list-root > .cui-menu-left-item').removeClass(colorfulClasses)
     }
 
-    if ($('body').hasClass('menu-left--colorful')) {
+    if ($('body').hasClass('cui-menu-left-colorful')) {
       setColorfulClasses()
     }
 

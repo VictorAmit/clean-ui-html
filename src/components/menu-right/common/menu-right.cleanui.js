@@ -1,42 +1,19 @@
 /////////////////////////////////////////////////////////////////////////////////////////
-// "menu-right" module scripts
+// "cui-menu-right" module scripts
 ;(function($) {
   'use strict'
   $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle right menu
 
-    $('.menu-right__action--menu-toggle').on('click', function() {
-      $('body').toggleClass('menu-right--visible')
+    $('.cui-menu-right-action-toggle').on('click', function() {
+      $('body').toggleClass('cui-menu-right-visible')
     })
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // custom scroll init
-
-    if (!/Mobi/.test(navigator.userAgent) && jQuery().jScrollPane) {
-      $('.menu-right').each(function() {
-        $(this).jScrollPane({
-          contentWidth: '0px',
-          autoReinitialise: true,
-          autoReinitialiseDelay: 100,
-        })
-        var api = $(this).data('jsp'),
-          throttleTimeout
-        $(window).on('resize', function() {
-          if (!throttleTimeout) {
-            throttleTimeout = setTimeout(function() {
-              api.reinitialise()
-              throttleTimeout = null
-            }, 50)
-          }
-        })
-      })
-    }
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // options scripts
 
-    $('.menu-right--example-option').each(function() {
+    $('.cui-menu-right-example-option').each(function() {
       var inputs = $(this).find('input'),
         buttons = $(this).find('.btn')
 
@@ -55,7 +32,7 @@
           .find('input[value=""]')
           .parent()
           .trigger('click')
-        $('.menu-right .jspPane').css({ top: 0 })
+        $('.cui-menu-right .jspPane').css({ top: 0 })
       }
 
       // change options on click
@@ -84,7 +61,7 @@
               .attr('name') == 'options-colorful' &&
             $(this)
               .find('input')
-              .val() == 'menu-left--colorful'
+              .val() == 'cui-menu-left-colorful'
           ) {
             $('body').trigger('removeColorfulClasses')
             $('body').trigger('setColorfulClasses')

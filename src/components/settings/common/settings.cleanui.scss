@@ -1,10 +1,10 @@
 @import '../../core/common/css/mixins';
 
-body.config {
-  &--borderLess {
+.cui-config {
+  &-borderless {
     .card {
       border: none;
-      &.utils__sortable__collapsed {
+      &.cui-utils-sortable-collapsed {
         .card-header {
           padding-bottom: rem(20);
         }
@@ -22,35 +22,28 @@ body.config {
       border-top: 0;
     }
 
-    .utils__title {
+    .cui-utils-title {
       text-transform: uppercase;
       font-size: rem(16);
     }
   }
 
-  &--squaredCorners {
+  &-squared-corners {
     .card,
-    .footer,
-    .utils__widget {
+    .cui-footer,
+    .cui-utils-widget {
       border-radius: 0 !important;
     }
   }
 
-  &--fixedWidth {
+  &-fixed-width {
     > .layout {
       max-width: 1420px;
       margin: 0 auto;
     }
 
-    &:not(.config--horizontal) {
-      .utils__content,
-      .footer {
-        padding-right: 0;
-      }
-    }
-
     @media (min-width: 1435px) {
-      .menu-left__inner {
+      .cui-cui-menu-left-inner {
         border-left: 1px solid $gray-border;
       }
     }

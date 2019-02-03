@@ -1,9 +1,9 @@
 <!-- START: pages/login-beta -->
-<div class="login" style="background-image: url(../../components/pages/common/img/login/1.jpeg)">
-  <div class="login__header">
+<div class="cui-login" style="background-image: url(../../components/pages/common/img/login/1.jpeg)">
+  <div class="cui-login-header">
     <div class="row">
       <div class="col-lg-8">
-        <div class="login__header__logo">
+        <div class="cui-login-header-logo">
           <a href="javascript: history.back();">
             <img
               src="../../components/pages/common/img/logo-inverse.png"
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="login__header__menu">
+        <div class="cui-login-header-menu">
           <ul class="list-unstyled list-inline">
             <li class="list-inline-item"><a href="javascript: history.back();">&larr; Back</a></li>
             <li class="list-inline-item active"><a href="javascript: void(0);">Login</a></li>
@@ -35,11 +35,11 @@
       </div>
     </div>
   </div>
-  <div class="login__block login__block--extended">
+  <div class="cui-login-block cui-login-block-extended">
     <div class="row">
       <div class="col-xl-12">
-        <div class="login__block__inner">
-          <div class="login__block__form">
+        <div class="cui-login-block-inner">
+          <div class="cui-login-block-form">
             <h4 class="text-uppercase">
               <strong>Please log in</strong>
             </h4>
@@ -71,7 +71,7 @@
               <div class="form-group">
                 <a
                   href="javascript: void(0);"
-                  class="pull-right utils__link--blue utils__link--underlined"
+                  class="pull-right cui-utils-link-blue cui-utils-link-underlined"
                   >Forgot Password?</a
                 >
                 <div class="checkbox">
@@ -84,7 +84,7 @@
               <div class="form-actions">
                 <button type="submit" class="btn btn-primary mr-3">Sign In</button>
                 <span class="register-link">
-                  <a href="" class="utils__link--blue utils__link--underlined">Register</a> if you
+                  <a href="" class="cui-utils-link-blue cui-utils-link-underlined">Register</a> if you
                   don't have account
                 </span>
               </div>
@@ -109,20 +109,20 @@
               </div>
             </form>
           </div>
-          <div class="login__block__sidebar">
-            <h4 class="login__block__sidebar__title">
+          <div class="cui-login-block-sidebar">
+            <h4 class="cui-login-block-sidebar-title">
               <strong>Agile Dev Meetup</strong>
               <br />
-              <span>2017</span>
+              <span>2019</span>
             </h4>
-            <div class="login__block__sidebar__item">
+            <div class="cui-login-block-sidebar-item">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s.
             </div>
-            <div class="login__block__sidebar__item">
+            <div class="cui-login-block-sidebar-item">
               Ipsum has been the industry's standard dummy text ever since the 1500s.
             </div>
-            <div class="login__block__sidebar__place">
+            <div class="cui-login-block-sidebar-place">
               <i class="icmn-location mr-3"><!-- --></i>
               New York, USA
             </div>
@@ -131,7 +131,7 @@
       </div>
     </div>
   </div>
-  <div class="login__footer text-center">
+  <div class="cui-login-footer text-center">
     <ul class="list-unstyled list-inline">
       <li class="list-inline-item"><a href="javascript: void(0);">Terms of Use</a></li>
       <li class="active list-inline-item"><a href="javascript: void(0);">Compliance</a></li>
@@ -141,7 +141,7 @@
     </ul>
   </div>
 </div>
-<!-- END: pages/login-beta -->
+<!-- END: pages/cui-login-beta -->
 
 <!-- START: page scripts -->
 <script>
@@ -168,7 +168,7 @@
 
       // Switch to fullscreen
       $('.switch-to-fullscreen').on('click', function() {
-        $('.login').toggleClass('login--fullscreen')
+        $('.cui-login').toggleClass('cui-login-fullscreen')
       })
 
       // Change BG
@@ -179,7 +179,7 @@
           final = next > max ? min : next
 
         $('.random-bg-image').data('img', final)
-        $('.login')
+        $('.cui-login')
           .data('img', final)
           .css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpeg)')
       })

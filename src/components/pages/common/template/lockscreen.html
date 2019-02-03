@@ -1,12 +1,12 @@
 <!-- START: pages/lockscreen -->
 <div
-  class="lockscreen"
+  class="cui-lockscreen"
   style="background-image: url(../../components/pages/common/img/login/1.jpeg)"
 >
-  <div class="lockscreen__header">
+  <div class="cui-lockscreen-header">
     <div class="row">
       <div class="col-lg-8">
-        <div class="lockscreen__header__logo">
+        <div class="cui-lockscreen-header-logo">
           <a href="javascript: void(0);" class="btn btn-sm btn-outline switch-to-fullscreen"
             >Switch Fullscreen / Windowed</a
           >
@@ -20,15 +20,15 @@
       </div>
     </div>
   </div>
-  <div class="lockscreen__block">
+  <div class="cui-lockscreen-block">
     <div class="row">
       <div class="col-xl-12">
-        <div class="lockscreen__block__inner">
-          <div class="lockscreen__block__form">
+        <div class="cui-lockscreen-block-inner">
+          <div class="cui-lockscreen-block-form">
             <form id="form-validation" name="form-validation" method="POST">
               <div class="text-center mb-3">
                 <span
-                  class="utils__avatar utils__avatar--border utils__avatar--90"
+                  class="cui-utils-avatar cui-utils-avatar-border cui-utils-avatar-90"
                   href="javascript:void(0);"
                 >
                   <img
@@ -65,9 +65,9 @@
       </div>
     </div>
   </div>
-  <div class="lockscreen__footer text-center"></div>
+  <div class="cui-lockscreen-footer text-center"></div>
 </div>
-<!-- END: pages/lockscreen -->
+<!-- END: pages/cui-lockscreen -->
 
 <!-- START: page scripts -->
 <script>
@@ -94,7 +94,7 @@
 
       // Switch to fullscreen
       $('.switch-to-fullscreen').on('click', function() {
-        $('.lockscreen').toggleClass('lockscreen--fullscreen')
+        $('.cui-lockscreen').toggleClass('cui-lockscreen-fullscreen')
       })
 
       // Change BG
@@ -105,7 +105,7 @@
           final = next > max ? min : next
 
         $('.random-bg-image').data('img', final)
-        $('.lockscreen')
+        $('.cui-lockscreen')
           .data('img', final)
           .css('backgroundImage', 'url(../../components/pages/common/img/login/' + final + '.jpeg)')
       })

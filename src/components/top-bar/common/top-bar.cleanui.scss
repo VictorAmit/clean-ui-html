@@ -1,9 +1,9 @@
 @import '../../core/common/css/mixins';
 
 /////////////////////////////////////////////////////////////////////////////////////////
-/*  STYLES FOR "TOP-BAR" MODULE */
+/*  STYLES FOR "cui-topbar" MODULE */
 
-.top-bar {
+.cui-topbar {
   min-height: 64px;
   display: flex;
   flex-direction: row;
@@ -14,7 +14,7 @@
   padding: 0 rem(20);
 
   // avatar styles
-  &__avatar {
+  &-avatar {
     width: rem(35);
     height: rem(35);
     background-color: $gray-lighten;
@@ -28,7 +28,7 @@
       height: auto;
     }
   }
-  &__avatar-dropdown {
+  &-avatar-dropdown {
     // next styles affects on "vendors#bootstrap" module
     // dropdown arrow fix
     margin-top: 5px;
@@ -45,14 +45,14 @@
   }
 
   // left block
-  &__left {
+  &-left {
     //float: left;
     display: flex;
     align-items: center;
     //height: 100%;
 
     // margins of items inside left block
-    .top-bar__item {
+    .cui-topbar-item {
       margin-right: rem(20);
 
       &:last-child {
@@ -62,20 +62,20 @@
   }
 
   // right block
-  &__right {
+  &-right {
     //float: right;
     display: flex;
     align-items: center;
     //height: 100%;
 
     // margins of items inside right block
-    .top-bar__item {
+    .cui-topbar-item {
       margin-left: rem(20);
     }
   }
 
   // mini chart
-  &__mini-chart {
+  &-mini-chart {
     height: rem(30);
     line-height: rem(30);
     margin-left: rem(20);
@@ -84,13 +84,13 @@
       display: none;
     }
 
-    &__inner {
+    &-inner {
       height: 80%;
       display: inline-flex;
       vertical-align: sub;
       margin: 0 rem(5);
       i {
-        display: inline-block;
+        display: block;
         float: left;
         width: 4px;
         background: $primary;
@@ -101,7 +101,7 @@
   }
 
   // menu button
-  &__menu-button {
+  &-menu-button {
     cursor: pointer;
     height: rem(30);
     padding-top: rem(4);
@@ -114,7 +114,7 @@
   }
 
   // search box
-  &__search {
+  &-search {
     position: relative;
 
     input {
@@ -123,13 +123,14 @@
       padding: 4px 15px 4px 34px;
       transition: all 0.3s;
       border-radius: 4px;
+      height: 32px;
 
       &:focus,
       &:hover {
         border-color: $primary;
       }
 
-      @media screen and (max-width: $sm-max-width) {
+      @media screen and (max-width: $md-max-width) {
         width: 30px !important;
         padding-left: 22px !important;
       }
@@ -151,11 +152,11 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  NOTIFICATION BLOCK (TOP MENU) */
 
-.top-bar__activity {
+.cui-topbar-activity {
   width: rem(290);
   margin: rem(-7) 0;
   background: $white;
-  &__item {
+  &-item {
     border-bottom: 1px solid $gray-border;
     padding: rem(10) 0;
     position: relative;
@@ -165,14 +166,14 @@
     &:hover {
       background: $gray-lighten;
 
-      .top-bar__activity__icon {
+      .cui-topbar-activity-icon {
         background: $text-lighten;
         color: $white;
         border-color: $text-lighten;
       }
     }
   }
-  &__icon {
+  &-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -185,19 +186,19 @@
     background: $gray-lighten-more;
     border-bottom: 1px solid $gray-lighten;
   }
-  &__inner {
+  &-inner {
     margin-left: rem(50);
     padding-right: rem(15);
     label {
       font-size: rem(12);
     }
   }
-  &__descr {
+  &-descr {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  &__title {
+  &-title {
     > span {
       font-size: rem(13);
       color: $gray;

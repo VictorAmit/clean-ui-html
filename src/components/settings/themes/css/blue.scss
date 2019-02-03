@@ -8,99 +8,69 @@ $color2: #000730;
 $color3: #000942;
 $color4: rgba(255, 255, 255, 0.17);
 
-body.theme {
-  &--blue {
-    // "menu-left" module styles
+.cui-theme {
+  &-blue {
+    // "cui-menu-left" module styles
 
-    .menu-left__logo {
-      background: lighten($color3, 7%);
-    }
-
-    .menu-left__lock {
-      background: lighten($color3, 7%);
-    }
-
-    .menu-left__pin-button {
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .menu-left__pin-button div {
-      background: #fff;
-    }
-
-    .menu-left__pin-button div:before,
-    .menu-left__pin-button div:after {
-      background: #fff;
-    }
-
-    .menu-left {
+    .cui-menu-left {
       background: $color2;
     }
 
-    .menu-left__item > a {
-      color: $color1;
-    }
-
-    .menu-left__divider {
-      background: $color4;
-    }
-
-    .menu-left__icon {
-      color: $color1;
-    }
-
-    .menu-left__submenu.menu-left__item > a::after {
-      border-color: transparent $color4 transparent transparent;
-    }
-
-    .menu-left__item--active > a,
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
+    .cui-menu-left-logo {
       background: lighten($color3, 7%);
     }
 
-    .menu-left__submenu--toggled.menu-left__item {
+    .cui-menu-left-item > a {
+      color: $color1;
+    }
+
+    .cui-menu-left-divider {
+      background: $color4;
+    }
+
+    .cui-menu-left-icon {
+      color: $color1;
+    }
+
+    .cui-menu-left-submenu.cui-menu-left-item > a::after {
+      border-color: transparent $color4 transparent transparent;
+    }
+
+    .cui-menu-left-item-active > a,
+    .cui-menu-left-item:hover > a,
+    .cui-menu-left-item:active > a,
+    .cui-menu-left-item:focus > a {
+      background: lighten($color3, 7%);
+    }
+
+    .cui-menu-left-submenu-toggled.cui-menu-left-item {
       color: $color1;
 
       > a {
         background: lighten($color3, 7%);
         color: $white;
-        .menu-left__icon {
+        .cui-menu-left-icon {
           color: $white;
         }
       }
     }
 
-    .menu-left__submenu > .menu-left__list {
+    .cui-menu-left-submenu > .cui-menu-left-list {
       background: lighten($color3, 3%);
     }
 
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: lighten($color2, 10%);
-        }
-      }
-    }
-
     // horizontal layout
-    &.config--horizontal {
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item {
-          > a {
-            border-left-color: darken($color2, 10%);
-          }
-          &:hover > a {
-            background: $color3;
-          }
-        }
-      }
-    }
+    // &.config--horizontal {
+    //   @media (min-width: 768px) {
+    //     .cui-menu-left-list-root > li.cui-menu-left-item {
+    //       > a {
+    //         border-left-color: darken($color2, 10%);
+    //       }
+    //       &:hover > a {
+    //         background: $color3;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

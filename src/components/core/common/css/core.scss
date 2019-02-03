@@ -64,9 +64,4 @@ pre {
   border-radius: 3px;
   border: 1px solid $gray-border;
   background: $gray-lighten-more;
-
-  &.utils__pre--darken {
-    background: $black-lighten;
-    $color: $text;
-  }
 }

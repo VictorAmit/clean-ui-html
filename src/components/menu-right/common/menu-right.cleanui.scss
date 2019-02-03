@@ -3,7 +3,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  MENU RIGHT */
 
-.menu-right {
+.cui-menu-right {
   position: fixed;
   z-index: 995;
   top: 0;
@@ -15,18 +15,18 @@
   transition: transform 0.2s ease-in-out;
   overflow-y: auto;
 
-  &--example-option {
+  &-example-option {
     input {
       display: none;
     }
   }
 
-  &__inner {
+  &-inner {
     padding: rem(20);
   }
 
   // header styles
-  &__header {
+  &-header {
     border-bottom: 1px solid $gray-border;
     padding: rem(5) 0;
     font-weight: bold;
@@ -45,12 +45,12 @@
   }
 
   //content block
-  &__content {
+  &-content {
     padding: rem(20) 0;
   }
 
   // description block
-  &__descr {
+  &-descr {
     font-size: rem(12);
     color: $text;
     margin-bottom: rem(20);
@@ -58,7 +58,7 @@
   }
 
   // labels
-  &__label {
+  &-label {
     color: $text;
     font-size: rem(12);
     font-weight: bold;
@@ -67,13 +67,13 @@
   }
 
   // setting item
-  &__setting {
+  &-setting {
     margin-bottom: rem(15);
   }
 
   // show when class visible
   @at-root {
-    body.menu-right--visible & {
+    .cui-menu-right-visible & {
       transform: translate3d(0, 0, 0);
       box-shadow: 0 0 200px -30px rgba($black-lighten-more, 0.4);
     }

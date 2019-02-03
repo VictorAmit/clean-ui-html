@@ -4,7 +4,7 @@
 /*  JQUERY STEPS */
 
 .wizard {
-  &__steps__icon,
+  &-steps-icon,
   .number {
     border: 3px solid $primary;
     border-radius: 100%;
@@ -17,10 +17,10 @@
     font-size: rem(24);
     background: $white;
   }
-  &__steps__title {
+  &-steps-title {
     display: block;
   }
-  > .utils__content {
+  > .cui-utils-content {
     min-height: rem(150);
     margin: 0 0 rem(15);
     background: transparent;
@@ -83,7 +83,7 @@
           &:after {
             background: $gray-darken;
           }
-          .wizard__steps__icon,
+          .wizard-steps-icon,
           .number {
             border-color: $gray-darken;
             background: $gray-darken;
@@ -125,7 +125,7 @@
       }
     }
   }
-  &__numbers {
+  &-numbers {
     .number {
       padding-left: 3px;
     }
@@ -143,7 +143,7 @@
     }
   }
 
-  .utils__content > .body input {
+  .cui-utils-content > .body input {
     border-color: $gray-border;
     &:focus {
       border-color: $primary;
