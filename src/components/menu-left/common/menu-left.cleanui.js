@@ -59,9 +59,6 @@
     // submenu
 
     $('.cui-menu-left-submenu > a').on('click', function() {
-      if ($('body').hasClass('cui-menu-left-toggled') && !($('body').innerWidth() < 768)) {
-        return
-      }
       if ($('body').find('.cui-menu-left').length) {
         var parent = $(this).parent(),
           opened = $('.cui-menu-left-submenu-toggled')
@@ -76,7 +73,12 @@
             .slideUp(200)
 
         parent.toggleClass('cui-menu-left-submenu-toggled')
-        parent.find('> .cui-menu-left-list').slideToggle(200)
+        var item = parent.find('> .cui-menu-left-list')
+        if (item.is(':visible')) {
+          item.slideUp(200)
+        } else {
+          item.slideDown(200)
+        }
       }
     })
 
@@ -85,7 +87,7 @@
 
     if ($('body').find('.cui-menu-left').length) {
       if (!/Mobi/.test(navigator.userAgent) && jQuery().perfectScrollbar) {
-        $('.cui-menu-left-scroll').perfectScrollbar({
+        const menuCustomScroll = $('.cui-menu-left-scroll').perfectScrollbar({
           theme: 'cleanui',
         })
       }

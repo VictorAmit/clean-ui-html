@@ -52,7 +52,7 @@
   }
 
   // calendar app
-  &__calendar {
+  &-calendar {
     margin: -1.25rem -1.25rem calc(-1.25rem - 1px) calc(-1.25rem - 1px);
 
     .fc-toolbar {
@@ -162,7 +162,7 @@
       }
       &-avatar {
         float: left;
-        .cui-utils-avatar {
+        .cui-avatar {
           border: 2px solid $white;
         }
       }

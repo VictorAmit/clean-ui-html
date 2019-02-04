@@ -1,10 +1,10 @@
 @import '../../common/css/mixins';
 
-.paymentCard {
+.cui-payment-card {
   padding: rem(30) rem(30);
   position: relative;
 
-  &__icon {
+  &-icon {
     text-align: center;
     margin-bottom: rem(15);
     i {
@@ -13,7 +13,7 @@
     }
   }
 
-  &__name {
+  &-name {
     display: block;
     text-align: center;
     font-size: rem(21);
@@ -21,7 +21,7 @@
     font-weight: bold;
   }
 
-  &__number {
+  &-number {
     display: block;
     text-align: center;
     font-size: rem(16);
@@ -29,7 +29,7 @@
     margin-bottom: rem(20);
   }
 
-  &__type {
+  &-type {
     display: block;
     text-align: center;
     font-size: rem(16);
@@ -38,7 +38,7 @@
     color: $text;
   }
 
-  &__sum {
+  &-sum {
     position: absolute;
     top: rem(10);
     right: rem(-10);
@@ -56,7 +56,7 @@
     }
   }
 
-  &__footer {
+  &-footer {
     text-align: center;
     border-top: 1px solid $gray-border;
     color: $text;

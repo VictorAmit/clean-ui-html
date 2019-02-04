@@ -43,7 +43,7 @@
   margin-bottom: rem(30);
   border-radius: 7px;
 
-  &--withShadow {
+  &-with-shadow {
     transition: box-shadow 0.1s ease-in-out;
 
     &:hover {
@@ -51,7 +51,7 @@
     }
   }
 
-  &--fullHeight {
+  &-full-height {
     height: calc(100% - 2.3rem);
   }
 }

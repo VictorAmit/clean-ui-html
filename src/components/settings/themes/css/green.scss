@@ -51,9 +51,13 @@ $color5: #528e74;
 
     // "cui-menu-left" module styles
     .cui-menu-left {
-      background: $color1;
-      &__inner {
+      &-inner {
+        background: $color1;
         border-right: 1px solid $gray-border;
+      }
+
+      &-trigger {
+        background: $gray-border;
       }
     }
     

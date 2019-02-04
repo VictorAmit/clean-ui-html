@@ -1,22 +1,22 @@
 @import '../../common/css/mixins';
 
-.graphCard {
-  &__lonelyValue {
+.cui-graph-card {
+  &-lonely-value {
     font-size: rem(33);
     font-weight: 700;
   }
 
-  &__chartist {
+  &-chartist {
     position: relative;
 
-    &--centered {
+    &-centered {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-    &--primary {
+    &-primary {
       .ct-series-a {
         .ct-area {
           fill: $primary !important;
@@ -32,7 +32,7 @@
       }
     }
 
-    &--success {
+    &-success {
       .ct-series-a {
         .ct-area {
           fill: $success !important;
@@ -48,7 +48,7 @@
       }
     }
 
-    &--warning {
+    &-warning {
       .ct-series-a {
         .ct-area {
           fill: $warning !important;
@@ -64,7 +64,7 @@
       }
     }
 
-    &--danger {
+    &-danger {
       .ct-series-a {
         .ct-area {
           fill: $danger !important;
@@ -80,7 +80,7 @@
       }
     }
 
-    &--default {
+    &-default {
       .ct-series-a {
         .ct-area {
           fill: $default !important;
@@ -97,7 +97,7 @@
     }
   }
 
-  &__table {
+  &-table {
     thead {
       th,
       td {
@@ -114,8 +114,8 @@
     }
   }
 
-  &__donutChartist {
-    &--widthCenterData {
+  &-donut-chartist {
+    &-with-center-data {
       .ct-label-pie {
         display: none;
         font-size: rem(30);
@@ -133,7 +133,7 @@
       }
     }
 
-    &--example {
+    &-example {
       .ct-series-a path {
         stroke: $success;
       }
@@ -148,14 +148,14 @@
     }
   }
 
-  &__donutChartistArea-1 {
+  &-donut-chartist-area-1 {
     height: rem(170);
   }
 
-  &__donuts {
+  &-donuts {
     color: $gray-darken;
 
-    &--centered {
+    &-centered {
       display: flex;
       flex-direction: column;
       justify-content: center;

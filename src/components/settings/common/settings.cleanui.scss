@@ -37,13 +37,24 @@
   }
 
   &-fixed-width {
-    > .layout {
+    > .cui-layout {
       max-width: 1420px;
       margin: 0 auto;
+      
+    }
+
+    @media (min-width: $md-min-width) {
+      .cui-utils-content {
+        padding-right: 0
+      }
+  
+      .cui-footer {
+        padding-right: 0
+      }
     }
 
     @media (min-width: 1435px) {
-      .cui-cui-menu-left-inner {
+      .cui-menu-left-inner {
         border-left: 1px solid $gray-border;
       }
     }

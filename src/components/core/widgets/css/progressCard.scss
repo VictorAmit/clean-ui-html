@@ -1,7 +1,7 @@
 @import '../../common/css/mixins';
 
-.progressCard {
-  &__head {
+.cui-progress-card {
+  &-head {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -10,24 +10,24 @@
     margin-bottom: rem(15);
   }
 
-  &__name {
+  &-name {
     flex-shrink: 0;
     flex-grow: 1;
   }
 
-  &__title {
+  &-title {
     font-weight: 700;
     font-size: rem(15);
     margin-bottom: rem(5);
   }
 
-  &__note {
+  &-note {
     font-size: rem(13);
     font-weight: 300;
     margin-bottom: 0;
   }
 
-  &__value {
+  &-value {
     text-transform: uppercase;
     font-weight: 700;
     font-size: rem(23);
@@ -37,12 +37,12 @@
     margin-left: auto;
   }
 
-  &__line {
+  &-line {
     margin-bottom: rem(5);
     height: rem(8);
   }
 
-  &__lineDescr {
+  &-line-descr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

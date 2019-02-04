@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.shortItemInfo {
+.cui-short-item-info {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -8,17 +8,17 @@
   border-top: 1px dashed $gray-border;
   padding-top: rem(15);
 
-  &--large {
-    .shortItemInfo {
-      &__name {
+  &-large {
+    .cui-short-item-info {
+      &-name {
         font-size: rem(16);
       }
 
-      &__note {
+      &-note {
         font-size: rem(13);
       }
 
-      &__actionData {
+      &-action-data {
         font-size: rem(20);
       }
     }
@@ -28,13 +28,11 @@
     border-top: none;
   }
 
-  &--borderedBottom {
+  &-bordered-bottom {
     border-bottom: 1px dashed $gray-border;
   }
 
-  &__img {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+  &-img {
     border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
@@ -47,26 +45,26 @@
     }
   }
 
-  &__description {
+  &-description {
     flex-grow: 1;
     padding-right: rem(15);
     margin-right: auto;
     margin-bottom: rem(15);
   }
 
-  &__name {
+  &-name {
     font-size: rem(13);
     font-weight: 700;
   }
 
-  &__note {
+  &-note {
     font-weight: 300;
     font-size: rem(11);
     margin-bottom: 0;
     color: $gray-darken;
   }
 
-  &__actionData {
+  &-action-data {
     margin-bottom: rem(15);
     margin-left: auto;
     margin-right: auto;

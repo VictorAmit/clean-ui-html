@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.userCard {
+.cui-user-card {
   background: $white;
   position: relative;
   border-radius: 0.25rem;
@@ -10,27 +10,27 @@
     margin-bottom: 1.35rem;
   }
 
-  &__userName {
+  &-user-name {
     font-weight: 700;
   }
 
-  &--whiteFont {
-    .userCard {
-      &__userName {
+  &-white-font {
+    .cui-user-card {
+      &-user-name {
         color: $white;
       }
 
-      &__post {
+      &-post {
         color: $white;
       }
     }
   }
 
-  &__post {
+  &-post {
     color: $text-lighten;
   }
 
-  &__plusBtn {
+  &-plus-btn {
     font-size: 0;
     background-color: $white;
     position: absolute;

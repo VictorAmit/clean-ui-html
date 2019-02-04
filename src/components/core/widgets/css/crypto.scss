@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.crypto {
+.cui-crypto {
   #cryptoChart {
     text.version {
       display: none;
@@ -196,7 +196,7 @@
     }
   }
 
-  &__table {
+  &-table {
     .table {
       tr {
         &:first-child {
@@ -224,16 +224,7 @@
     }
   }
 
-  &__listMobile {
-    display: none;
-    margin-bottom: rem(30);
-
-    @media (max-width: $md-max-width) {
-      display: block;
-    }
-  }
-
-  &__list {
+  &-list {
     float: left;
     width: 200px;
 
@@ -242,21 +233,21 @@
     }
   }
 
-  &__mobileList {
+  &-list-mobile {
     display: none;
+    margin-bottom: rem(30);
 
     @media (max-width: $md-max-width) {
       display: block;
-      margin-bottom: rem(20);
     }
   }
 
-  &__listTitle {
+  &-list-title {
     font-weight: bold;
     display: block;
   }
 
-  &__listItem {
+  &-list-item {
     display: block;
     background: $white;
     padding: rem(10) rem(20);
@@ -266,11 +257,11 @@
     transition: all 0.1s ease-in-out;
 
     &:hover,
-    &--current {
+    &-current {
       background: $primary;
       color: $white;
 
-      .crypto__listPercents {
+      .cui-crypto-list-percents {
         span {
           color: $white !important;
         }
@@ -283,8 +274,8 @@
       display: block;
     }
 
-    &--negative {
-      .crypto__listPercents {
+    &-negative {
+      .cui-crypto-list-percents {
         span {
           color: #f75535;
           &:after {
@@ -297,7 +288,7 @@
     }
   }
 
-  &__listCurrency {
+  &-list-currency {
     float: left;
     span {
       display: block;
@@ -305,7 +296,7 @@
     }
   }
 
-  &__listPercents {
+  &-list-percents {
     float: right;
     text-align: right;
     span {
@@ -322,7 +313,7 @@
     }
   }
 
-  &__content {
+  &-content {
     margin-left: 230px;
 
     @media (max-width: $md-max-width) {
@@ -330,21 +321,21 @@
     }
   }
 
-  &__warning {
+  &-warning {
     padding-top: rem(20) !important;
     padding-bottom: rem(20) !important;
     cursor: pointer;
   }
 
-  &__order {
+  &-order {
     display: flex;
 
-    @media (max-width: $xl-max-width) {
+    @media (max-width: $xxl-max-width) {
       display: block;
     }
   }
 
-  &__orderLeft {
+  &-order-left {
     flex-grow: 1;
 
     .table {
@@ -361,17 +352,17 @@
     }
   }
 
-  &__orderMiddle {
+  &-order-middle {
     width: rem(250);
     padding: 0 rem(30);
 
-    @media (max-width: $xl-max-width) {
+    @media (max-width: $xxl-max-width) {
       width: auto;
       margin: rem(20) auto rem(40);
     }
   }
 
-  &__orderRight {
+  &-order-right {
     flex-grow: 1;
 
     .table {
@@ -386,19 +377,19 @@
     }
   }
 
-  &__form {
+  &-form {
     .form-control {
       padding-left: rem(10);
     }
   }
 
-  &__formLabel {
+  &-form-label {
     font-weight: bold;
     text-transform: uppercase;
     font-size: rem(12);
   }
 
-  &__orderPagination {
+  &-order-pagination {
     display: flex;
     .pagination {
       margin-left: auto;

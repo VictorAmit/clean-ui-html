@@ -20,12 +20,12 @@
   &-steps-icon,
   .number {
     border: 3px solid $primary;
-    border-radius: 100%;
+    border-radius: 5px;
     width: rem(45);
     height: rem(45);
     display: inline-block;
     text-align: center;
-    line-height: rem(37);
+    line-height: rem(42);
     color: $primary;
     font-size: rem(24);
     background: $white;

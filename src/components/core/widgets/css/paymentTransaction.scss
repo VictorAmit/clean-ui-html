@@ -1,21 +1,21 @@
 @import '../../common/css/mixins';
 
-.paymentTransaction {
+.cui-payment-transaction {
   padding: rem(15) rem(25);
   position: relative;
   border-left: 4px solid $danger !important;
 
-  &--income {
+  &-income {
     border-left: 4px solid $success !important;
 
-    .paymentTransaction__icon {
+    .cui-payment-transaction-icon {
       i {
         color: $success;
       }
     }
   }
 
-  &__icon {
+  &-icon {
     position: absolute;
     top: rem(14);
     right: rem(20);
@@ -25,13 +25,13 @@
     }
   }
 
-  &__amount {
+  &-amount {
     font-size: rem(18);
     color: $black;
     font-weight: bold;
   }
 
-  &__info {
+  &-info {
     font-size: rem(13);
     color: $text;
     margin-left: rem(5);
@@ -42,7 +42,7 @@
     }
   }
 
-  &__footer {
+  &-footer {
     color: $text;
     padding: rem(10) rem(25);
     margin: rem(10) rem(-25) rem(-15) rem(-24);
