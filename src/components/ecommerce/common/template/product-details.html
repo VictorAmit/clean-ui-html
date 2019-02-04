@@ -368,7 +368,9 @@
             .find('img')
             .attr('src'),
         )
-        $('.cui-ecommerce-product-photos-item').removeClass('cui-ecommerce-product-photos-item-active')
+        $('.cui-ecommerce-product-photos-item').removeClass(
+          'cui-ecommerce-product-photos-item-active',
+        )
         $(this).addClass('cui-ecommerce-product-photos-item-active')
       })
 
