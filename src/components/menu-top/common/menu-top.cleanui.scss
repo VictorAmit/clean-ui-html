@@ -285,30 +285,41 @@
         position: relative;
         display: block;
         flex: none;
-        height: 64px;
+        height: 48px;
         min-width: 0;
         max-width: none;
         width: auto;
+        
 
         &-inner {
           position: static;
           overflow: visible;
-          height: 64px;
+          height: 48px;
           width: auto;
           border: none !important;
         }
 
         &-logo {
-          width: 256px;
+          width: 200px;
+          height: 48px;
+          padding: 10px 20px 10px 17px;
+          img {
+            height: 28px;
+          }
+        }
+        
+        &-icon {
+          height: 14px;
+          line-height: 14px;
         }
 
         &-scroll {
           overflow: visible;
           position: absolute;
           top: 0;
-          left: 256px;
+          left: 200px;
           right: 0;
-          height: 64px;
+          height: 48px;
           width: 200%;
           border-bottom: 1px solid transparent;
         }
@@ -319,25 +330,23 @@
             > .cui-menu-top-item {
               float: left;
               margin: 0;
-              border-right: 1px solid darken($black-lighten-more, 5%);
               > a {
-                height: 64px;
+                height: 48px;
                 padding: rem(14) rem(17) 0;
                 line-height: 20px;
                 .cui-menu-top-icon {
-                  display: block;
-                  line-height: 14px;
+                  float: left;
                   position: static;
-                  margin: 0 auto;
+                  margin: 0 rem(5) 0 0 !important;
+                  height: 19px;
+                  line-height: 19px;
+                  color: $text;
                 }
               }
               &.cui-menu-top-submenu {
                 > a {
                   &::before, &::after {
-                    top: auto;
-                    bottom: 10px;
-                    left: 50%;
-                    margin-left: -3px;
+                    display: none !important;
                   }
                 }
               }
@@ -358,6 +367,7 @@
                 box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.15);
               }
               &:hover {
+                z-index: 20;
                 > .cui-menu-top-list {
                   display: block;
                 }

@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "bower": "bower install",
+    "setup": "bower install",
+    "clean": "gulp clean",
     "prettier": "prettier --write \"src/**/*.{js,html,scss,css}\"",
     "stylelint": "stylelint \"src/**/*.{scss,css}\""
   },

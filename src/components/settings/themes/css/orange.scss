@@ -199,32 +199,6 @@ body.cui-theme {
           border-color: transparent lighten($color2, 35%) transparent transparent;
         }
       }
-
-      // top menu related
-      @media (min-width: $sm-min-width) {
-        &-list {
-          &-root {
-            > .cui-menu-top-item {
-              border-right: 1px solid $gray-border;
-
-              &-disabled {
-                &:hover,
-                &:active,
-                &:focus {
-                  border-right: 1px solid $gray-border !important;
-                }
-              }
-
-              &-active,
-              &:hover,
-              &:active,
-              &:focus {
-                border-right: 1px solid $color5;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

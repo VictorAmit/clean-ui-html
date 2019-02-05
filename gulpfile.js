@@ -198,7 +198,7 @@ gulp.task('build', [
     'build:css', // run build:css task
     'build:js', // run build:js task
     'build:img', // run build:img task
-    // 'build:vendors' // run build:vendors task
+    'build:vendors' // run build:vendors task
 ]);
 
 

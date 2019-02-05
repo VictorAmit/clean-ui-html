@@ -177,32 +177,6 @@ $color5: #528e74;
           background: lighten($color3, 5%);
         }
       }
-
-      // top menu related
-      @media (min-width: $sm-min-width) {
-        &-list {
-          &-root {
-            > .cui-menu-top-item {
-              border-right: 1px solid $gray-border;
-
-              &-disabled {
-                &:hover,
-                &:active,
-                &:focus {
-                  border-right: 1px solid $gray-border !important;
-                }
-              }
-
-              &-active,
-              &:hover,
-              &:active,
-              &:focus {
-                border-right: 1px solid $color5;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }
