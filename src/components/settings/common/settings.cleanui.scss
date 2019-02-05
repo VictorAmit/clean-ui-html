@@ -53,7 +53,8 @@
     }
 
     @media (min-width: 1435px) {
-      .cui-menu-left-inner {
+      .cui-menu-left-inner,
+      .cui-menu-top-inner {
         border-left: 1px solid $gray-border;
       }
     }

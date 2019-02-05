@@ -11,6 +11,7 @@ $color5: #e6f8ff;
 
 body.cui-theme {
   &-light {
+
     // "cui-menu-left" module styles
     .cui-menu-left {
       &-inner {
@@ -21,95 +22,185 @@ body.cui-theme {
       &-trigger {
         background: $gray-border;
       }
-    }
+      
+      &-icon {
+        color: lighten($color2, 30%);
+      }
 
-    .cui-menu-left-item {
-      & > a {
-        color: $color2;
-        &:hover,
-        &:focus {
-          color: $primary;
+      &-item {
+        & > a {
+          color: $color2;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+  
+          &:active {
+            color: $primary;
+            background-color: $color5;
+          }
+        }
+  
+        &.cui-menu-left-submenu {
+          &:hover {
+            & > a {
+              &::after {
+                border-color: transparent $color2 transparent transparent;
+              }
+            }
+          }
         }
 
-        &:active {
-          color: $primary;
-          background-color: $color5;
+        &-active {
+          > a {
+            background: $color5;
+          }
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a > .cui-menu-left-icon {
+            color: lighten($color2, 10%);
+          }
         }
       }
 
-      &.cui-menu-left-submenu {
-        &:hover {
-          & > a {
-            &::after {
-              border-color: transparent $color2 transparent transparent;
+      &-submenu {
+        &.cui-menu-left-item {
+          color: $color2;
+          background-color: $white;
+          > a {
+            &:after {
+              border-color: transparent lighten($color2, 30%) transparent transparent;
+            }
+          }
+        }
+
+        &-toggled.cui-menu-left-item {
+          > a {
+            background: $color5;
+            .cui-menu-left-icon {
+              color: lighten($color2, 10%);
+            }
+          }
+        }
+
+        > .cui-menu-left-list {
+          background: $white;
+        }
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      .jspScrollable .jspDrag:after {
+        background: lighten($color2, 40%) !important;
+      }
+    }
+
+    // "cui-menu-top" module styles
+    .cui-menu-top {
+      &-inner {
+        background: $color1;
+      }
+      &-trigger {
+        background: $gray-border;
+      }
+      
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-item {
+        & > a {
+          color: $color2;
+
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+  
+          &:active {
+            color: $primary;
+            background-color: $color5;
+          }
+        }
+  
+        &.cui-menu-top-submenu {
+          &:hover {
+            & > a {
+              &::after {
+                border-color: transparent $color2 transparent transparent;
+              }
+            }
+          }
+        }
+
+        &-active {
+          > a {
+            background: $color5;
+          }
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a > .cui-menu-top-icon {
+            color: lighten($color2, 10%);
+          }
+        }
+      }
+
+      &-submenu {
+        &.cui-menu-top-item {
+          color: $color2;
+          background-color: $white;
+          > a {
+            &:after {
+              border-color: transparent lighten($color2, 30%) transparent transparent;
+            }
+          }
+        }
+
+        &-toggled.cui-menu-top-item {
+          > a {
+            background: $color5;
+            .cui-menu-left-icon {
+              color: lighten($color2, 10%);
+            }
+          }
+        }
+
+        > .cui-menu-top-list {
+          background: $white;
+        }
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      // top menu related
+      @media (min-width: $sm-min-width) {
+        &-scroll {
+          border-bottom: 1px solid $gray-border;
+        }
+  
+        &-list {
+          &-root {
+            > .cui-menu-top-item {
+              border-right: 1px solid $gray-border;
+              > a {
+               border-bottom: 1px solid $gray-border;
+              }
             }
           }
         }
       }
     }
-
-    .cui-menu-left-item-active > a {
-      background: $color5;
-    }
-
-    .cui-menu-left-submenu-toggled.cui-menu-left-item {
-      color: $color2;
-      background-color: $white;
-      & > a {
-        .cui-menu-left-icon {
-          color: #8f8ca4;
-        }
-      }
-    }
-
-    .cui-menu-left-submenu > .cui-menu-left-list {
-      background: $white;
-    }
-
-    .cui-menu-left-icon {
-      color: lighten($color2, 30%);
-    }
-
-    .cui-menu-left-item-active > a > .cui-menu-left-icon,
-    .cui-menu-left-item:hover > a > .cui-menu-left-icon,
-    .cui-menu-left-item:active > a > .cui-menu-left-icon,
-    .cui-menu-left-item:focus > a > .cui-menu-left-icon {
-      color: lighten($color2, 10%);
-    }
-
-    .cui-menu-left-submenu.cui-menu-left-item > a:after {
-      border-color: transparent lighten($color2, 30%) transparent transparent;
-    }
-
-    .cui-menu-left-divider {
-      background: $color3;
-    }
-
-    .cui-menu-left .jspScrollable .jspDrag:after {
-      background: lighten($color2, 40%) !important;
-    }
-
-    // horizontal layout
-    // &.config--horizontal {
-    //   .cui-menu-left {
-    //     border-right: none;
-    //     border-bottom: 1px solid $color4;
-    //   }
-
-    //   @media (min-width: 768px) {
-    //     .cui-menu-left-list-root > li.cui-menu-left-item > a {
-    //       border-left-color: $color3;
-    //     }
-
-    //     .cui-menu-left-list-root > li.cui-menu-left-item:hover > a {
-    //       background: $color3;
-    //       color: darken($color2, 20%);
-    //     }
-
-    //     .cui-menu-left-list-root > li.cui-menu-left-item:hover > a > .cui-menu-left-icon {
-    //       color: lighten($color2, 10%);
-    //     }
-    //   }
-    // }
   }
 }
