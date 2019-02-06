@@ -35,13 +35,13 @@ $warning: #f39834;
 $danger: #fb434a;
 
 // Font Family
-$base__font-family: 'Nunito Sans', sans-serif;
+$base-font-family: 'Nunito Sans', sans-serif;
 
 // Font Size
-$base__font-size: 13 !default;
+$base-font-size: 13 !default;
 
 // Convert value rem() sass mixin
-@function rem($px, $base: $base__font-size) {
+@function rem($px, $base: $base-font-size) {
   @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
 
   // comment code above and uncomment below for change REMs to PXs

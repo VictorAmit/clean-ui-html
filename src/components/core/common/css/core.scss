@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: $base__font-family;
+  font-family: $base-font-family;
   color: $text-darken-more;
   background: $gray-lighten-more;
   line-height: 1.7;
@@ -32,7 +32,7 @@ a {
 
 input {
   outline: none !important;
-  font-family: $base__font-family;
+  font-family: $base-font-family;
   color: $text-darken-more;
 }
 

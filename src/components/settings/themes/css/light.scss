@@ -80,7 +80,6 @@ body.cui-theme {
 
         &-toggled.cui-menu-left-item {
           > a {
-            background: $color5;
             .cui-menu-left-icon {
               color: lighten($color2, 10%);
             }
@@ -168,7 +167,6 @@ body.cui-theme {
 
         &-toggled.cui-menu-top-item {
           > a {
-            background: $color5;
             .cui-menu-left-icon {
               color: lighten($color2, 10%);
             }
