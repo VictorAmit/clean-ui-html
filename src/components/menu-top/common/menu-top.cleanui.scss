@@ -289,7 +289,6 @@
         min-width: 0;
         max-width: none;
         width: auto;
-        
 
         &-inner {
           position: static;
@@ -307,7 +306,7 @@
             height: 28px;
           }
         }
-        
+
         &-icon {
           height: 14px;
           line-height: 14px;
@@ -345,7 +344,8 @@
               }
               &.cui-menu-top-submenu {
                 > a {
-                  &::before, &::after {
+                  &::before,
+                  &::after {
                     display: none !important;
                   }
                 }
@@ -356,7 +356,7 @@
               position: relative;
               z-index: 10;
             }
-    
+
             .cui-menu-top-submenu {
               > .cui-menu-top-list {
                 position: absolute;

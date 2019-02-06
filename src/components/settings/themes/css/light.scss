@@ -11,7 +11,6 @@ $color5: #e6f8ff;
 
 body.cui-theme {
   &-light {
-
     // "cui-menu-left" module styles
     .cui-menu-left {
       &-inner {
@@ -22,7 +21,7 @@ body.cui-theme {
       &-trigger {
         background: $gray-border;
       }
-      
+
       &-icon {
         color: lighten($color2, 30%);
       }
@@ -34,13 +33,13 @@ body.cui-theme {
           &:focus {
             color: $primary;
           }
-  
+
           &:active {
             color: $primary;
             background-color: $color5;
           }
         }
-  
+
         &.cui-menu-left-submenu {
           &:hover {
             & > a {
@@ -80,7 +79,6 @@ body.cui-theme {
 
         &-toggled.cui-menu-left-item {
           > a {
-            background: $color5;
             .cui-menu-left-icon {
               color: lighten($color2, 10%);
             }
@@ -109,7 +107,7 @@ body.cui-theme {
       &-trigger {
         background: $gray-border;
       }
-      
+
       &-icon {
         color: lighten($color2, 30%);
       }
@@ -122,13 +120,13 @@ body.cui-theme {
           &:focus {
             color: $primary;
           }
-  
+
           &:active {
             color: $primary;
             background-color: $color5;
           }
         }
-  
+
         &.cui-menu-top-submenu {
           &:hover {
             & > a {
@@ -168,7 +166,6 @@ body.cui-theme {
 
         &-toggled.cui-menu-top-item {
           > a {
-            background: $color5;
             .cui-menu-left-icon {
               color: lighten($color2, 10%);
             }
@@ -189,12 +186,12 @@ body.cui-theme {
         &-scroll {
           border-bottom: 1px solid $gray-border;
         }
-  
+
         &-list {
           &-root {
             > .cui-menu-top-item {
               > a {
-               border-bottom: 1px solid $gray-border;
+                border-bottom: 1px solid $gray-border;
               }
             }
           }

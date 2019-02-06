@@ -45,11 +45,12 @@ body.cui-theme {
           > a {
             background: $color5 !important;
             color: $white !important;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
-      
+
             > .cui-menu-left-icon {
               color: $color1 !important;
             }
@@ -61,8 +62,9 @@ body.cui-theme {
         &:focus {
           > a {
             background: lighten($color5, 35%);
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
 
@@ -85,15 +87,16 @@ body.cui-theme {
         &-toggled.cui-menu-left-item {
           background: lighten($color3, 5%);
           color: $color1 !important;
-    
+
           > a {
             color: $white !important;
             background: $color5 !important;
             .cui-menu-left-icon {
               color: $white !important;
             }
-            
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
           }
@@ -137,11 +140,12 @@ body.cui-theme {
           > a {
             background: $color5 !important;
             color: $white !important;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
-      
+
             > .cui-menu-top-icon {
               color: $color1 !important;
             }
@@ -153,8 +157,9 @@ body.cui-theme {
         &:focus {
           > a {
             background: lighten($color5, 35%);
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
 
@@ -177,15 +182,16 @@ body.cui-theme {
         &-toggled.cui-menu-top-item {
           background: lighten($color3, 5%);
           color: $color1 !important;
-    
+
           > a {
             color: $white !important;
             background: $color5 !important;
             .cui-menu-left-icon {
               color: $white !important;
             }
-            
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
           }

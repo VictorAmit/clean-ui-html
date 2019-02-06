@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // set active menu item
 
@@ -20,7 +20,7 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // menu logic
 
-    $('.cui-menu-top-trigger-action').on('click', function () {
+    $('.cui-menu-top-trigger-action').on('click', function() {
       $('body').toggleClass('cui-menu-top-toggled')
     })
 
@@ -37,7 +37,7 @@
       isTabletView = true
     }
 
-    $(window).on('resize', function () {
+    $(window).on('resize', function() {
       if ($(window).innerWidth() <= 992) {
         toggleMenu()
         isTabletView = true
@@ -46,14 +46,14 @@
       }
     })
 
-    $('.cui-menu-top-handler, .cui-menu-top-backdrop').on('click', function () {
+    $('.cui-menu-top-handler, .cui-menu-top-backdrop').on('click', function() {
       $('body').toggleClass('cui-menu-top-toggled-mobile')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui-menu-top-submenu > a').on('click', function () {
+    $('.cui-menu-top-submenu > a').on('click', function() {
       if ($('body').find('.cui-menu-top').length && $(window).innerWidth() < 768) {
         var parent = $(this).parent(),
           opened = $('.cui-menu-top-submenu-toggled')
@@ -81,11 +81,11 @@
     // colorful menu
 
     var colorfulClasses =
-      'cui-menu-top-colorful-primary cui-menu-top-colorful-secondary cui-menu-top-colorful-primary cui-menu-top-colorful-default cui-menu-top-colorful-info cui-menu-top-colorful-success cui-menu-top-colorful-warning cui-menu-top-colorful-danger cui-menu-top-colorful-yellow',
+        'cui-menu-top-colorful-primary cui-menu-top-colorful-secondary cui-menu-top-colorful-primary cui-menu-top-colorful-default cui-menu-top-colorful-info cui-menu-top-colorful-success cui-menu-top-colorful-warning cui-menu-top-colorful-danger cui-menu-top-colorful-yellow',
       colorfulClassesArray = colorfulClasses.split(' ')
 
     function setColorfulClasses() {
-      $('.cui-menu-top-list-root > .cui-menu-top-item').each(function () {
+      $('.cui-menu-top-list-root > .cui-menu-top-item').each(function() {
         var randomClass =
           colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
         $(this).addClass(randomClass)
@@ -100,11 +100,11 @@
       setColorfulClasses()
     }
 
-    $('body').on('setColorfulClasses', function () {
+    $('body').on('setColorfulClasses', function() {
       setColorfulClasses()
     })
 
-    $('body').on('removeColorfulClasses', function () {
+    $('body').on('removeColorfulClasses', function() {
       removeColorfulClasses()
     })
   })

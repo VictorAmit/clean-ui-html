@@ -34,7 +34,7 @@ $color5: #528e74;
 
       &-item > .dropdown > a {
         color: $color1;
-  
+
         &:hover {
           color: $color3;
         }
@@ -60,7 +60,7 @@ $color5: #528e74;
         > a {
           color: $color2;
         }
-        
+
         &-active,
         &:hover,
         &:active,
@@ -68,8 +68,9 @@ $color5: #528e74;
           > a {
             background: $color5;
             color: $white;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
 
@@ -92,7 +93,7 @@ $color5: #528e74;
         &-toggled.cui-menu-left-item {
           color: $color1;
           background: lighten($color3, 5%);
-    
+
           > a {
             background: $color5;
             color: $white;
@@ -131,7 +132,7 @@ $color5: #528e74;
         > a {
           color: $color2;
         }
-        
+
         &-active,
         &:hover,
         &:active,
@@ -139,8 +140,9 @@ $color5: #528e74;
           > a {
             background: $color5;
             color: $white;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
 
@@ -163,7 +165,7 @@ $color5: #528e74;
         &-toggled.cui-menu-top-item {
           color: $color1;
           background: lighten($color3, 5%);
-    
+
           > a {
             background: $color5;
             color: $white;
