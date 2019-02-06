@@ -11,7 +11,6 @@ $color5: #d24667;
 
 body.cui-theme {
   &-red {
-
     // "cui-menu-left" module styles
     .cui-menu-left {
       &-inner {
@@ -47,11 +46,12 @@ body.cui-theme {
           > a {
             background: $color5;
             color: $white;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
-            
+
             > .cui-menu-left-icon {
               color: $color1;
             }
@@ -63,7 +63,7 @@ body.cui-theme {
         &-toggled.cui-menu-left-item {
           background: lighten($color3, 5%);
           color: $color1;
-    
+
           > a {
             background: $color5;
             color: $white;
@@ -72,7 +72,8 @@ body.cui-theme {
               color: $white;
             }
 
-            &:before, &:after {
+            &:before,
+            &:after {
               background: $white !important;
             }
           }
@@ -127,11 +128,12 @@ body.cui-theme {
           > a {
             background: $color5;
             color: $white;
-      
-            &:before, &:after {
+
+            &:before,
+            &:after {
               background: $white !important;
             }
-            
+
             > .cui-menu-top-icon {
               color: $color1;
             }
@@ -143,7 +145,7 @@ body.cui-theme {
         &-toggled.cui-menu-top-item {
           background: lighten($color3, 5%);
           color: $color1;
-    
+
           > a {
             background: $color5;
             color: $white;
@@ -152,7 +154,8 @@ body.cui-theme {
               color: $white;
             }
 
-            &:before, &:after {
+            &:before,
+            &:after {
               background: $white !important;
             }
           }

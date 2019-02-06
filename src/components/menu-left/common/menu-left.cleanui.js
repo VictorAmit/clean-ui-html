@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // set active menu item
 
@@ -25,7 +25,7 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // menu logic
 
-    $('.cui-menu-left-trigger-action').on('click', function () {
+    $('.cui-menu-left-trigger-action').on('click', function() {
       $('body').toggleClass('cui-menu-left-toggled')
     })
 
@@ -42,7 +42,7 @@
       isTabletView = true
     }
 
-    $(window).on('resize', function () {
+    $(window).on('resize', function() {
       if ($(window).innerWidth() <= 992) {
         toggleMenu()
         isTabletView = true
@@ -51,14 +51,14 @@
       }
     })
 
-    $('.cui-menu-left-handler, .cui-menu-left-backdrop').on('click', function () {
+    $('.cui-menu-left-handler, .cui-menu-left-backdrop').on('click', function() {
       $('body').toggleClass('cui-menu-left-toggled-mobile')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui-menu-left-submenu > a').on('click', function () {
+    $('.cui-menu-left-submenu > a').on('click', function() {
       if ($('body').find('.cui-menu-left').length) {
         var parent = $(this).parent(),
           opened = $('.cui-menu-left-submenu-toggled')
@@ -97,11 +97,11 @@
     // colorful menu
 
     var colorfulClasses =
-      'cui-menu-left-colorful-primary cui-menu-left-colorful-secondary cui-menu-left-colorful-primary cui-menu-left-colorful-default cui-menu-left-colorful-info cui-menu-left-colorful-success cui-menu-left-colorful-warning cui-menu-left-colorful-danger cui-menu-left-colorful-yellow',
+        'cui-menu-left-colorful-primary cui-menu-left-colorful-secondary cui-menu-left-colorful-primary cui-menu-left-colorful-default cui-menu-left-colorful-info cui-menu-left-colorful-success cui-menu-left-colorful-warning cui-menu-left-colorful-danger cui-menu-left-colorful-yellow',
       colorfulClassesArray = colorfulClasses.split(' ')
 
     function setColorfulClasses() {
-      $('.cui-menu-left-list-root > .cui-menu-left-item').each(function () {
+      $('.cui-menu-left-list-root > .cui-menu-left-item').each(function() {
         var randomClass =
           colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
         $(this).addClass(randomClass)
@@ -116,11 +116,11 @@
       setColorfulClasses()
     }
 
-    $('body').on('setColorfulClasses', function () {
+    $('body').on('setColorfulClasses', function() {
       setColorfulClasses()
     })
 
-    $('body').on('removeColorfulClasses', function () {
+    $('body').on('removeColorfulClasses', function() {
       removeColorfulClasses()
     })
   })

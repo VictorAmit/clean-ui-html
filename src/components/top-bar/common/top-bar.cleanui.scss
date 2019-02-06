@@ -210,7 +210,6 @@
 /*  LIVESEARCH */
 
 .cui-topbar-livesearch {
-
   position: fixed;
   top: 0;
   left: 0;
@@ -221,12 +220,12 @@
   opacity: 0;
   visibility: hidden;
   @include transition-slow;
-  
+
   &-visible {
     opacity: 1;
     visibility: visible;
   }
-  
+
   &-close {
     font-size: rem(12);
     color: $default;
@@ -239,33 +238,33 @@
     border: none;
     background-color: transparent;
     @include transition-slow;
-  
+
     &:hover {
       color: $text;
     }
   }
-  
+
   &-wrapper {
     padding-top: rem(14);
     padding-left: rem(65);
     padding-right: rem(15);
     line-height: 1.7;
-  
+
     @media screen and (max-width: $sm-max-width) {
       padding-left: rem(60);
       padding-right: rem(30);
     }
   }
-  
+
   &-logo {
     height: rem(45);
-    
+
     &-container {
       margin-top: rem(20);
       margin-bottom: rem(30);
     }
   }
-  
+
   &-input {
     width: 100%;
     border: none;
@@ -274,38 +273,38 @@
     font-weight: bold;
     padding: 0;
     margin-bottom: rem(20);
-  
+
     @media screen and (max-width: $sm-max-width) {
       font-size: rem(40);
     }
   }
-  
+
   &-options {
     padding: 0;
     margin: 0;
     margin-bottom: rem(30);
     list-style: none;
   }
-  
+
   &-option {
     display: inline-block;
     margin-right: rem(26);
     font-size: rem(13);
     color: $text;
-  
+
     &:last-child {
       margin-right: 0;
     }
   }
-  
+
   &-suggestion {
     margin-bottom: rem(40);
-  
+
     @media (max-width: $sm-max-width) {
       margin-bottom: rem(15);
     }
   }
-  
+
   &-results {
     &-title {
       font-weight: 700;
@@ -343,7 +342,7 @@
       font-weight: 300;
       font-size: rem(20);
       line-height: 1;
-    
+
       @media (max-width: $xs-max-width) {
         font-size: rem(16);
       }
