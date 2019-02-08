@@ -13,20 +13,6 @@
   font-size: 13px;
   transition: transform 0.3s;
 
-  @at-root {
-    // box shadow option
-    .cui-menu-top-shadow {
-      @media (min-width: $sm-min-width) {
-        .cui-menu-top {
-          &-inner {
-            box-shadow: 0 0 200px -30px rgba($black-lighten-more, 0.4);
-            border: none !important;
-          }
-        }
-      }
-    }
-  }
-
   &-inner {
     position: fixed;
     width: 256px;
@@ -537,6 +523,14 @@
     .cui-menu-top-toggled-mobile & {
       opacity: 0.4;
       visibility: visible;
+    }
+  }
+}
+
+@media (min-width: $md-min-width) {
+  .cui-menu-top-backdrop + .cui-layout {
+    .cui-utils-content, .cui-footer {
+      padding-left: 0;
     }
   }
 }

@@ -6,8 +6,6 @@
 .cui-github-explore {
   max-width: rem(1000);
   margin: 0 auto;
-  padding-left: rem(30);
-  padding-right: rem(30);
 
   &-descr {
     margin-bottom: rem(14);
@@ -89,6 +87,8 @@
 }
 
 .cui-github-discuss {
+  max-width: rem(1000);
+  margin: 0 auto;
 
   &-header {
     position: relative;

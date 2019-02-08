@@ -7,18 +7,18 @@
 
   &__sidebar {
     background-color: $lighter-gray;
-    //position: relative;
-    //flex: 0;
-    //display: flex;
-    //z-index: 5;
-    //width: 252px;
-    //top: 0;
-    //flex-direction: column;
-    //height: 100vh;
-    //align-items: flex-end;
-    //user-select: none;
-    //flex-grow: 1;
-    //overflow: hidden;
+    position: relative;
+    flex: 0;
+    display: flex;
+    z-index: 5;
+    width: 252px;
+    top: 0;
+    flex-direction: column;
+    height: 100vh;
+    align-items: flex-end;
+    user-select: none;
+    flex-grow: 1;
+    overflow: hidden;
 
     &::before {
       content: "";

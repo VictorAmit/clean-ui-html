@@ -31,11 +31,15 @@
       float: left;
     }
     &-content {
-      padding: rem(10) rem(15) rem(1);
+      padding: rem(10) rem(15);
       background: #f2f4f8;
       margin-left: rem(70);
       border-radius: 5px;
       position: relative;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
 
       &:after {
         position: absolute;

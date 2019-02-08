@@ -4,10 +4,8 @@
 /*  STYLES FOR "YOUTUBE" MODULE */
 
 .cui-video-page {
-  max-width: rem(1200);
+  max-width: rem(1000);
   margin: 0 auto;
-  padding-left: rem(30);
-  padding-right: rem(30);
 
   &-content {
     img {
@@ -20,8 +18,6 @@
   &-feeds {
     max-width: rem(1250);
     margin: 0 auto;
-    padding-left: rem(30);
-    padding-right: rem(30);
   }
 
   .card {
@@ -173,8 +169,7 @@
   }
 
   &-item-thumb-img {
-    width: 168px;
-    height: 94px;
+    width: 170px;
   }
 
   &-item-descr {
@@ -238,18 +233,19 @@
   }
 
   &-partition-title {
-    font-size: rem(15);
+    font-size: rem(24);
     font-weight: bold;
     margin-bottom: 0;
-    vertical-align: middle;
+    border-radius: 5px;
   }
 
   &-partition-thumb {
     display: inline-block;
     vertical-align: middle;
     margin-top: rem(-2);
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
   }
 
   &-next-item-feed {
@@ -264,8 +260,7 @@
       }
 
       &-item-thumb-img {
-        width: 196px;
-        height: 110px;
+        width: 100%;
       }
 
       &-item-descr {
@@ -274,6 +269,9 @@
 
       &-item-name {
         font-size: rem(14);
+        color: $text;
+        margin: rem(10) 0 rem(5);
+        display: block;
       }
     }
   }

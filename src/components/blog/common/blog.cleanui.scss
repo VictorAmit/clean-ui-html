@@ -6,6 +6,8 @@
 .cui {
 
   &-blog-feed {
+    max-width: rem(1000);
+    margin: 0 auto;
 
     &-article {
       margin-bottom: rem(40);
@@ -26,6 +28,7 @@
     &-article-title {
       h1 {
         font-size: rem(28);
+        font-weight: bold;
         margin-bottom: rem(5);
         @media (max-width: $sm-max-width) {
           font-size: rem(24);
@@ -129,20 +132,20 @@
       z-index: 10;
     }
 
-    &-cuiegories-list {
+    &-categories-list {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    &-cuiegories-item {
+    &-categories-item {
       display: block;
       margin-bottom: rem(8);
     }
 
-    &-cuiegories-link {
+    &-categories-link {
       display: block;
-      font-size: rem(16);
+      font-size: rem(14);
       padding: rem(6) rem(10);
       background: $gray-lighten-more;
       border-radius: 3px;
@@ -292,6 +295,8 @@
   }
 
   &-add-post {
+    max-width: rem(1000);
+    margin: 0 auto;
 
     &-type-list {
       margin: 0;
