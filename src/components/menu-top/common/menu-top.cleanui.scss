@@ -529,7 +529,8 @@
 
 @media (min-width: $md-min-width) {
   .cui-menu-top-backdrop + .cui-layout {
-    .cui-utils-content, .cui-footer {
+    .cui-utils-content,
+    .cui-footer {
       padding-left: 0;
     }
   }

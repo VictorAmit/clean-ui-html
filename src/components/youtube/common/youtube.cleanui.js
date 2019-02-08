@@ -1,5 +1,5 @@
 $(function() {
-    ///////////////////////////////////////////////////////////
-    // ADJUSTABLE TEXTAREA
-    autosize($('.adjustable-textarea'));
-});
+  ///////////////////////////////////////////////////////////
+  // ADJUSTABLE TEXTAREA
+  autosize($('.adjustable-textarea'))
+})
