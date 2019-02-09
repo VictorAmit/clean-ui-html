@@ -55,16 +55,16 @@
 
     @media (min-width: $md-min-width) {
       &-extended {
-        .login-block-inner {
+        .cui-login-block-inner {
           max-width: rem(800);
           padding: rem(80) rem(80) rem(50);
         }
 
-        .login-block-form {
+        .cui-login-block-form {
           margin-right: rem(300);
         }
 
-        .login-block-sidebar {
+        .cui-login-block-sidebar {
           display: block;
           position: absolute;
           top: 0;
