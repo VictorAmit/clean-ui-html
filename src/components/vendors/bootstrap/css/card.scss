@@ -3,11 +3,15 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /* CARDS */
 
-.card, .card-header, .list-group-item, .card-footer {
+.card,
+.card-header,
+.list-group-item,
+.card-footer {
   border-color: $gray-border;
 }
 
-.card-header, .card-footer {
+.card-header,
+.card-footer {
   padding-left: rem(30);
   padding-right: rem(30);
   background: $white;
@@ -27,7 +31,6 @@
 }
 
 .card-body {
-  flex: 1 1 auto;
   padding: rem(25) rem(30);
 
   @media (max-width: $md-max-width) {
@@ -40,15 +43,15 @@
   margin-bottom: rem(30);
   border-radius: 7px;
 
-  &--withShadow {
-    transition: box-shadow .1s ease-in-out;
+  &-with-shadow {
+    transition: box-shadow 0.1s ease-in-out;
 
     &:hover {
       box-shadow: 0 0 2.25rem #e1e1e1;
     }
   }
 
-  &--fullHeight {
+  &-full-height {
     height: calc(100% - 2.3rem);
   }
 }

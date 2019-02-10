@@ -75,24 +75,25 @@
     background: transparent;
     line-height: rem(33);
     text-align: center;
-    font-family: FontAwesome;
+    font-family: 'FontAwesome', sans-serif;
     font-size: rem(11);
     color: $text;
     &:before {
-      content: "\f067";
+      content: '\f067';
       display: block;
       position: absolute;
       width: 100%;
       text-align: center;
       text-indent: 0;
     }
-    &[data-action="collapse"]:before {
-      content: "\f068";
+    &[data-action='collapse']:before {
+      content: '\f068';
     }
   }
 }
 
-.dd-placeholder, .dd-empty {
+.dd-placeholder,
+.dd-empty {
   margin: rem(5) 0;
   padding: 0;
   min-height: rem(30);
@@ -111,7 +112,7 @@
   position: absolute;
   pointer-events: none;
   z-index: 9999;
-  opacity: .8;
+  opacity: 0.8;
   list-style: none;
   li {
     list-style: none;
@@ -167,8 +168,8 @@
   border-bottom-right-radius: 0;
   color: $text;
   &:before {
-    font-family: FontAwesome;
-    content: "\f0c9";
+    font-family: 'FontAwesome', sans-serif;
+    content: '\f0c9';
     display: block;
     position: absolute;
     left: 0;

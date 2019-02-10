@@ -1,9 +1,7 @@
 @import '../../common/css/mixins';
 
-.crypto {
-
+.cui-crypto {
   #cryptoChart {
-
     text.version {
       display: none;
     }
@@ -25,7 +23,7 @@
     }
 
     path.candle {
-      stroke: #000000;
+      stroke: #000;
     }
 
     path.candle.body {
@@ -33,32 +31,31 @@
     }
 
     path.candle {
-      fill: #777777;
-      stroke: #777777;
+      fill: #777;
+      stroke: #777;
     }
 
     path.candle.up {
-      fill: #06A35A;
-      stroke: #06A35A;
+      fill: #06a35a;
+      stroke: #06a35a;
     }
 
     path.candle.down {
-      fill: #C23F3F;
-      stroke: #C23F3F;
+      fill: #c23f3f;
+      stroke: #c23f3f;
     }
 
     .closeValue.annotation.up path {
-      fill: #06A35A;
+      fill: #06a35a;
     }
 
     .closeValue.annotation text {
-      fill: $white;
       fill: $white;
       font-size: 10px;
     }
 
     path.volume {
-      fill: #555555;
+      fill: #555;
     }
 
     .indicator-plot path.line {
@@ -89,39 +86,43 @@
     }
 
     path.signal {
-      stroke: #FF9999;
+      stroke: #f99;
     }
 
     path.zero {
-      stroke: #BBBBBB;
+      stroke: #bbb;
       stroke-dasharray: 0;
       stroke-opacity: 0.5;
     }
 
     path.difference {
-      fill: #555555;
+      fill: #555;
     }
 
     path.rsi {
       stroke: #aec7e8;
     }
 
-    path.overbought, path.oversold {
-      stroke: #FF9999;
+    path.overbought,
+    path.oversold {
+      stroke: #f99;
       stroke-dasharray: 5, 5;
     }
 
-    path.middle, path.zero {
-      stroke: #BBBBBB;
+    path.middle,
+    path.zero {
+      stroke: #bbb;
       stroke-dasharray: 5, 5;
     }
 
-    .analysis path, .analysis circle {
+    .analysis path,
+    .analysis circle {
       stroke: yellow;
       stroke-width: 0.7;
     }
 
-    .interaction path, .interaction circle {
+    .interaction path,
+    .interaction circle {
       pointer-events: all;
     }
 
@@ -129,7 +130,8 @@
       cursor: move;
     }
 
-    .trendlines .interaction .start, .trendlines .interaction .end {
+    .trendlines .interaction .start,
+    .trendlines .interaction .end {
       cursor: nwse-resize;
     }
 
@@ -178,12 +180,12 @@
     }
 
     .crosshair path.wire {
-      stroke: #555555;
+      stroke: #555;
       stroke-dasharray: 1, 1;
     }
 
     .crosshair .axisannotation path {
-      fill: #777777;
+      fill: #777;
     }
 
     .scope-composed-annotation {
@@ -194,8 +196,7 @@
     }
   }
 
-
-  &__table {
+  &-table {
     .table {
       tr {
         &:first-child {
@@ -223,16 +224,7 @@
     }
   }
 
-  &__listMobile {
-    display: none;
-    margin-bottom: rem(30);
-
-    @media (max-width: $md-max-width) {
-      display: block;
-    }
-  }
-
-  &__list {
+  &-list {
     float: left;
     width: 200px;
 
@@ -241,34 +233,35 @@
     }
   }
 
-  &__mobileList {
+  &-list-mobile {
     display: none;
+    margin-bottom: rem(30);
 
-    @media(max-width: $md-max-width) {
+    @media (max-width: $md-max-width) {
       display: block;
-      margin-bottom: rem(20);
     }
   }
 
-  &__listTitle {
+  &-list-title {
     font-weight: bold;
     display: block;
   }
 
-  &__listItem {
+  &-list-item {
     display: block;
     background: $white;
     padding: rem(10) rem(20);
     margin-bottom: rem(10);
     border-radius: 5px;
     color: $black;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
-    &:hover, &--current {
+    &:hover,
+    &-current {
       background: $primary;
       color: $white;
 
-      .crypto__listPercents {
+      .cui-crypto-list-percents {
         span {
           color: $white !important;
         }
@@ -281,8 +274,8 @@
       display: block;
     }
 
-    &--negative {
-      .crypto__listPercents {
+    &-negative {
+      .cui-crypto-list-percents {
         span {
           color: #f75535;
           &:after {
@@ -295,7 +288,7 @@
     }
   }
 
-  &__listCurrency {
+  &-list-currency {
     float: left;
     span {
       display: block;
@@ -303,14 +296,14 @@
     }
   }
 
-  &__listPercents {
+  &-list-percents {
     float: right;
     text-align: right;
     span {
       display: block;
       font-weight: bold;
       color: #00a45b;
-      transition: all .1s ease-in-out;
+      transition: all 0.1s ease-in-out;
 
       &:after {
         content: ' ↑';
@@ -320,30 +313,29 @@
     }
   }
 
-  &__content {
+  &-content {
     margin-left: 230px;
 
     @media (max-width: $md-max-width) {
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 
-  &__warning {
+  &-warning {
     padding-top: rem(20) !important;
     padding-bottom: rem(20) !important;
     cursor: pointer;
   }
 
-  &__order {
+  &-order {
     display: flex;
 
-    @media (max-width: $xl-max-width) {
+    @media (max-width: $xxl-max-width) {
       display: block;
     }
-
   }
 
-  &__orderLeft {
+  &-order-left {
     flex-grow: 1;
 
     .table {
@@ -360,17 +352,17 @@
     }
   }
 
-  &__orderMiddle {
+  &-order-middle {
     width: rem(250);
     padding: 0 rem(30);
 
-    @media (max-width: $xl-max-width) {
+    @media (max-width: $xxl-max-width) {
       width: auto;
       margin: rem(20) auto rem(40);
     }
   }
 
-  &__orderRight {
+  &-order-right {
     flex-grow: 1;
 
     .table {
@@ -385,19 +377,19 @@
     }
   }
 
-  &__form {
+  &-form {
     .form-control {
       padding-left: rem(10);
     }
   }
 
-  &__formLabel {
+  &-form-label {
     font-weight: bold;
     text-transform: uppercase;
     font-size: rem(12);
   }
 
-  &__orderPagination {
+  &-order-pagination {
     display: flex;
     .pagination {
       margin-left: auto;

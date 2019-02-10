@@ -19,7 +19,7 @@
     top: rem(13);
     margin-left: rem(-73);
     &:after {
-      content: "Loading...";
+      content: 'Loading...';
       display: inline-block;
       position: absolute;
       top: rem(7);
@@ -29,13 +29,5 @@
   .spinner-icon {
     border-top-color: $primary;
     border-left-color: $primary;
-  }
-}
-
-body.menu-top {
-  #nprogress {
-    .bar {
-      height: 4px;
-    }
   }
 }

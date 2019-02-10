@@ -1,15 +1,15 @@
 @import '../../common/css/mixins';
 
-.paymentAccount {
+.cui-payment-account {
   padding: rem(30) rem(30);
   position: relative;
-  transition: box-shadow .1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
 
   &:hover {
     box-shadow: 0 0 2.25rem #e1e1e1;
   }
 
-  &__icon {
+  &-icon {
     position: absolute;
     top: rem(25);
     right: rem(30);
@@ -19,14 +19,14 @@
     }
   }
 
-  &__number {
+  &-number {
     display: block;
     font-size: rem(21);
     color: $black;
     font-weight: bold;
   }
 
-  &__sum {
+  &-sum {
     display: block;
     font-size: rem(18);
     margin-bottom: rem(20);
@@ -38,7 +38,7 @@
     }
   }
 
-  &__footer {
+  &-footer {
     text-align: center;
     border-top: 1px solid $gray-border;
     color: $text;

@@ -1,24 +1,22 @@
 @import '../../common/css/mixins';
 
-.graphCard {
+.cui-graph-card {
+  &-lonely-value {
+    font-size: rem(33);
+    font-weight: 700;
+  }
 
-    &__lonelyValue {
-      font-size: rem(33);
-      font-weight: 700;
-    }
-
-  &__chartist {
+  &-chartist {
     position: relative;
 
-    &--centered {
+    &-centered {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
-
-    &--primary {
+    &-primary {
       .ct-series-a {
         .ct-area {
           fill: $primary !important;
@@ -34,7 +32,7 @@
       }
     }
 
-    &--success {
+    &-success {
       .ct-series-a {
         .ct-area {
           fill: $success !important;
@@ -50,7 +48,7 @@
       }
     }
 
-    &--warning {
+    &-warning {
       .ct-series-a {
         .ct-area {
           fill: $warning !important;
@@ -66,7 +64,7 @@
       }
     }
 
-    &--danger {
+    &-danger {
       .ct-series-a {
         .ct-area {
           fill: $danger !important;
@@ -82,7 +80,7 @@
       }
     }
 
-    &--default {
+    &-default {
       .ct-series-a {
         .ct-area {
           fill: $default !important;
@@ -99,10 +97,10 @@
     }
   }
 
-  &__table {
-
+  &-table {
     thead {
-      th,td {
+      th,
+      td {
         border: none;
         color: $text;
         border-bottom-style: dashed !important;
@@ -116,48 +114,48 @@
     }
   }
 
-  &__donutChartist {
-     &--widthCenterData {
-       .ct-label-pie {
-         display: none;
-         font-size: rem(30);
-         font-weight: 700;
-         color: $gray;
-         transform: translate(1%, 6%);
-       }
+  &-donut-chartist {
+    &-with-center-data {
+      .ct-label-pie {
+        display: none;
+        font-size: rem(30);
+        font-weight: 700;
+        color: $gray;
+        transform: translate(1%, 6%);
+      }
 
-       .ct-label-pie:first-of-type {
-         display: block;
-       }
+      .ct-label-pie:first-of-type {
+        display: block;
+      }
 
-       .ct-slice-donut {
-         transition: opacity 0.2s ease-in-out;
-       }
-     }
+      .ct-slice-donut {
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
 
-    &--example {
-      .ct-series-a  path {
+    &-example {
+      .ct-series-a path {
         stroke: $success;
       }
 
-      .ct-series-b  path {
+      .ct-series-b path {
         stroke: $primary;
       }
 
-      .ct-series-c  path{
+      .ct-series-c path {
         stroke: $danger;
       }
     }
   }
 
-  &__donutChartistArea-1 {
+  &-donut-chartist-area-1 {
     height: rem(170);
   }
 
-  &__donuts {
+  &-donuts {
     color: $gray-darken;
 
-    &--centered {
+    &-centered {
       display: flex;
       flex-direction: column;
       justify-content: center;

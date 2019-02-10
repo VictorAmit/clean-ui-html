@@ -14,7 +14,8 @@
               background: none;
               color: $primary !important;
             }
-            &.prev, &.next {
+            &.prev,
+            &.next {
               color: $gray;
             }
           }
@@ -31,7 +32,8 @@
           background-color: $default;
           color: $white;
         }
-        &.timepicker-hour, &.timepicker-minute {
+        &.timepicker-hour,
+        &.timepicker-minute {
           color: $black-lighten;
           background: none !important;
         }
@@ -72,14 +74,17 @@
         }
       }
     }
-    td.active, table td.active:hover {
-      &.active, &:active:hover {
+    td.active,
+    table td.active:hover {
+      &.active,
+      &:active:hover {
         background-color: $primary;
         color: $white !important;
       }
     }
   }
-  .timepicker-hours, .timepicker-minutes {
+  .timepicker-hours,
+  .timepicker-minutes {
     td {
       &:hover {
         background: $default !important;
@@ -114,7 +119,8 @@
   }
   &.dropdown-menu {
     width: 300px;
-    &:before, &:after {
+    &:before,
+    &:after {
       display: none;
     }
   }

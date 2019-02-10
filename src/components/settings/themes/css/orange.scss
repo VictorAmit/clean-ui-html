@@ -10,160 +10,201 @@ $color4: #e4e9f0;
 $color5: #f39834;
 $color6: #c7c5d1;
 
-body.theme {
-  &--orange {
-
-    // "top-bar" module styles
-    .top-bar {
-      background: lighten($color5, 35%);
-    }
-
-    .top-bar__search input {
-      background: none;
-    }
-
-    // "menu-left" module styles
-    .menu-left__logo {
-      background: $color5;
-    }
-
-    .menu-left__lock {
-      background: $color5;
-    }
-
-    .menu-left__pin-button {
-      opacity: .7;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
-    .menu-left__pin-button div {
-      background: #fff;
-    }
-
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
-      background: #fff;
-    }
-
-    .menu-left {
-      background: $color1;
-      border-right: 1px solid $color4;
-    }
-
-    .menu-left__item > a {
-      color: $color2;
-    }
-
-    .menu-left__item--active > a {
-      background: $color5 !important;
-      color: $white !important;
-
-      &:before {
-        display: none !important;
-      }
-
-      > .menu-left__icon {
-        color: $color1 !important;
-      }
-    }
-
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
+body.cui-theme {
+  &-orange {
+    // "cui-topbar" module styles
+    .cui-topbar {
       background: lighten($color5, 35%);
 
-      &:before {
-        display: none !important;
+      &-search input {
+        background: $white;
       }
     }
 
-    .menu-left__submenu--toggled.menu-left__item {
-      background: $color5 !important;
-      color: $color1 !important;
+    // "cui-menu-left" module styles
+    .cui-menu-left {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
 
-      > a {
-        color: $white !important;
-        background: $color5 !important;
-        .menu-left__icon {
-          color: $white !important;
+      &-trigger {
+        background: $gray-border;
+      }
+
+      &-logo {
+        background: $color5;
+      }
+
+      &-item {
+        > a {
+          color: $color2;
         }
-      }
-    }
 
-    .menu-left__submenu > .menu-left__list {
-      background: lighten($color3, 5%);
-    }
-
-    .menu-left__icon {
-      color: lighten($color2, 35%);
-    }
-
-    .menu-left__item--active > a > .menu-left__icon {
-      color: $color1;
-    }
-
-    .menu-left__item:hover > a > .menu-left__icon,
-    .menu-left__item:active > a > .menu-left__icon,
-    .menu-left__item:focus > a > .menu-left__icon {
-      color: $color6;
-    }
-
-    .menu-left__submenu.menu-left__item > a:after {
-      border-color: transparent lighten($color2, 35%) transparent transparent;
-    }
-
-    .menu-left__divider {
-      background: $color3;
-    }
-
-    .menu-left .jspScrollable .jspDrag:after {
-      background: lighten($color2, 40%) !important;
-    }
-
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: $color3;
-        }
-      }
-    }
-
-    // horizontal layout
-    &.config--horizontal {
-      .menu-left {
-        border-right: none;
-        border-bottom: 1px solid $color4;
-      }
-
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item {
+        &-active {
           > a {
-            border-left-color: lighten($color3, 3%);
-          }
+            background: $color5 !important;
+            color: $white !important;
 
-          &:hover {
-            > a {
-              border-left-color: $color5;
-              .menu-left__icon {
-                color: $color1 !important;
-              }
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-left-icon {
+              color: $color1 !important;
             }
           }
         }
 
-        .menu-left__list--root > li.menu-left__item:hover > a {
-          background: $color5;
-          color: $white;
+        &:hover,
+        &:active,
+        &:focus {
+          > a {
+            background: lighten($color5, 35%);
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-left-icon {
+              color: $color6;
+            }
+          }
+        }
+      }
+
+      &-icon {
+        color: lighten($color2, 35%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-left-item {
+          background: lighten($color3, 5%);
+          color: $color1 !important;
+
+          > a {
+            color: $white !important;
+            background: $color5 !important;
+            .cui-menu-left-icon {
+              color: $white !important;
+            }
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+          }
         }
 
-        .menu-left__list--root > li.menu-left__item:hover > a > .menu-left__icon {
-          color: lighten($color2, 10%);
+        > .cui-menu-left-list {
+          background: lighten($color3, 5%);
         }
+
+        &.cui-menu-left-item > a:after {
+          border-color: transparent lighten($color2, 35%) transparent transparent;
+        }
+      }
+
+      .jspScrollable .jspDrag:after {
+        background: lighten($color2, 40%) !important;
       }
     }
 
+    // "cui-menu-top" module styles
+    .cui-menu-top {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
+
+      &-trigger {
+        background: $gray-border;
+      }
+
+      &-logo {
+        background: $color5;
+      }
+
+      &-item {
+        > a {
+          color: $color2;
+        }
+
+        &-active {
+          > a {
+            background: $color5 !important;
+            color: $white !important;
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-top-icon {
+              color: $color1 !important;
+            }
+          }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          > a {
+            background: lighten($color5, 35%);
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-top-icon {
+              color: $color6;
+            }
+          }
+        }
+      }
+
+      &-icon {
+        color: lighten($color2, 35%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-top-item {
+          background: lighten($color3, 5%);
+          color: $color1 !important;
+
+          > a {
+            color: $white !important;
+            background: $color5 !important;
+            .cui-menu-left-icon {
+              color: $white !important;
+            }
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+          }
+        }
+
+        > .cui-menu-top-list {
+          background: lighten($color3, 5%);
+        }
+
+        &.cui-menu-top-item > a:after {
+          border-color: transparent lighten($color2, 35%) transparent transparent;
+        }
+      }
+    }
   }
 }

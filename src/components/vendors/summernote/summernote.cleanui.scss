@@ -18,12 +18,12 @@
   .note-resizebar {
     border-top: 1px solid $gray-border !important;
     background: $white !important;
-    padding: 2px 0px 3px !important;
+    padding: 2px 0 3px !important;
     height: 12px !important;
-    border-radius: 0px 0px 3px 3px;
+    border-radius: 0 0 3px 3px;
   }
   .panel-heading {
-    padding: 0px 5px;
+    padding: 0 5px;
   }
   .note-btn-group {
     .dropdown-menu {
@@ -46,8 +46,8 @@
     min-width: 140px;
   }
   .note-color-reset {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     border-radius: 1px !important;
     background: $default !important;
     color: $white !important;
@@ -64,7 +64,7 @@
   .note-toolbar {
     padding: 5px 10px 10px 10px;
     background: $white;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0 0;
     border-bottom: 1px solid $gray-border;
   }
 }
@@ -72,10 +72,10 @@
 .note-editor {
   div.panel-heading {
     padding: 5px 10px 10px !important;
-    margin-left: 0px !important;
+    margin-left: 0 !important;
     height: auto !important;
   }
   div.panel-body {
-    margin-left: 0px !important;
+    margin-left: 0 !important;
   }
 }

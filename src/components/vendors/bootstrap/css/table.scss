@@ -13,7 +13,8 @@
       }
     }
   }
-  td, th {
+  td,
+  th {
     border-color: $gray-border;
     &:focus {
       background-color: $gray-border;
@@ -31,12 +32,12 @@
       tr {
         &:hover {
           background: $gray-lighten-more;
-
         }
       }
     }
   }
-  tr.active, th.active {
+  tr.active,
+  th.active {
     background: $gray-lighten-more;
   }
   .thead-inverse {
@@ -57,7 +58,8 @@
   }
 
   &.table-vertical-middle {
-    td, th {
+    td,
+    th {
       vertical-align: middle;
     }
   }
@@ -70,16 +72,20 @@
     border-bottom-color: $black-lighten-more;
     color: $white;
   }
-  th, td {
+  th,
+  td {
     border-top-color: $black-lighten-more;
   }
-  th, td, thead th {
+  th,
+  td,
+  thead th {
     background: $black-lighten;
     &:focus {
       background: $black-lighten;
     }
   }
-  tr.active, th.active {
+  tr.active,
+  th.active {
     background: $gray-lighten;
   }
 }

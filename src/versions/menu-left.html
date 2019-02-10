@@ -1,12 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
 //= ../../versions/head.html
-<body class="config--vertical config--borderLess menu-left--colorful menu-left--shadow">
+<body class="cui-config-borderless cui-menu-left-toggled cui-menu-colorful cui-menu-left-shadow">
+<div class="cui-initial-loading"></div>
+<div class="cui-layout cui-layout-has-sider">
 //= ../../components/menu-right/common/template/menu-right.html
-//= ../../components/menu-left/common/template/menu-left-vertical.html
+//= ../../components/menu-left/common/template/menu-left.html
+<div class="cui-layout">
+<div class="cui-layout-header">
 //= ../../components/top-bar/common/template/top-bar.html
-<div class="utils__content">
-<div class="utils__contentInner">
+</div>
+<div class="cui-layout-content">
+//= ../../components/breadcrumbs/common/template/breadcrumbs.html
+<div class="cui-utils-content">
 <%= contents %>
+</div>
+</div>
+<div class="cui-layout-footer">
 //= ../../components/footer/common/template/footer.html
+</div>
 </div>
 </div>
 </body>

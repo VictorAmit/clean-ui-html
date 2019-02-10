@@ -3,206 +3,131 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 /* MENU LEFT */
 
-.menu-left {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: rem(256);
-  height: 100%;
-  background: $black-lighten;
-  transform: translate3d(rem(-256), 0, 0);
-  transition: transform .2s ease-in-out;
+.cui-menu-left {
+  flex: 0 0 256px;
+  max-width: 256px;
+  min-width: 256px;
+  width: 256px;
+  position: relative;
+  z-index: 100;
+  font-size: 13px;
+  transition: transform 0.3s;
 
   @at-root {
     // box shadow option
-    .menu-left--shadow {
+    .cui-menu-left-shadow {
       @media (min-width: $sm-min-width) {
-        .menu-left {
-          box-shadow: 0 0 200px -30px rgba($black-lighten-more, .4);
+        .cui-menu-left {
+          &-inner {
+            box-shadow: 0 0 200px -30px rgba($black-lighten-more, 0.4);
+            border: none !important;
+          }
         }
       }
     }
   }
 
-  // next styles affects on "top-bar" module
-  // left padding
-  @at-root {
-    .top-bar {
-      padding-left: rem(80);
-    }
-  }
-
-  // > 768px (breakpoint) styles
-  @media (min-width: $sm-min-width) {
-
-    // hide menu
-    transform: translate3d(rem(-176), 0, 0);
-
-    // show menu on hover
-    &:hover {
-      transform: translate3d(0, 0, 0);
-    }
-
-    // show menu on body class
-    body.menu-left--visible & {
-      transform: translate3d(0, 0, 0);
-    }
-
-    // next styles affects on "styles-core" module
-    // left margin when menu in default state
-    @at-root {
-      .utils__content {
-        margin-left: rem(80);
-      }
-    }
-
-    // next styles affects on "styles-core" module
-    // left margin when menu visible
-    @at-root {
-      body.menu-left--visible .utils__content {
-        margin-left: rem(256);
-      }
-    }
-  }
-
-  // < 768px (breakpoint) styles
-  @media (max-width: $sm-max-width) {
-
-    // show menu button when menu closed
-    .menu-left__lock {
-      right: rem(-80);
-      transition: right .2s ease-in-out;
-    }
-
-    // show menu and slide back menu button
-    body.menu-left--visible--mobile & {
-      transform: translate3d(0, 0, 0);
-
-      .menu-left__lock {
-        right: rem(0);
-      }
-    }
-  }
-
-  // logo styles
-  &__logo {
-    width: rem(250);
-    height: rem(65);
-    display: inline-block;
-    background: $black;
-    padding: rem(14) rem(18);
-    a {
-      line-height: rem(33);
-    }
-    img {
-      max-height: rem(35);
-      max-width: 90%;
-      vertical-align: bottom;
-    }
-  }
-
-  // inner block, fix for jScrollPane
-  &__inner {
-    position: absolute;
-    top: rem(65);
-    bottom: 0;
-    width: 100% !important;
-
+  &-inner {
+    position: fixed;
+    width: 256px;
+    height: 100%;
+    overflow: hidden;
+    background: $menuBg;
+    transition: width 0.3s;
     @media (max-width: $sm-max-width) {
       overflow-y: auto;
     }
   }
 
-  // submenu styles
-  &__submenu {
-
-    // submenu ul list
-    > .menu-left__list {
+  // logo styles
+  &-logo {
+    height: 64px;
+    display: block;
+    background: $menuBg-darken;
+    padding: 13px 20px 15px 22px;
+    overflow: hidden;
+    &-default {
+      display: block;
+    }
+    &-toggled {
       display: none;
-      background: $black;
     }
-
-    // submenu menu item modifier (adds arrow marker)
-    &.menu-left__item {
-      > a {
-        &:after {
-          display: block;
-          content: '';
-          border-width: rem(5) rem(5) rem(5) 0;
-          border-color: transparent $black-lighten-more transparent transparent;
-          border-style: solid;
-          position: absolute;
-          top: rem(17);
-          right: rem(80);
-          transition: transform .1s ease-in-out, border-color 0.2s ease-in-out;
-        }
-
-        &:hover {
-          &::after {
-            border-color: transparent $white transparent transparent;
-          }
-        }
-      }
-    }
-
-    // toggled submenu
-    &--toggled {
-
-      // menu item
-      &.menu-left__item {
-        background: $black;
-
-        > a {
-          color: $white;
-
-          .menu-left__icon {
-            color: $white;
-          }
-          // arrow marker styles
-          &:after {
-            border-color: transparent $white transparent transparent;
-            transform: rotate(-90deg);
-          }
-        }
-
-        > .menu-left__icon {
-          color: $white;
-        }
-      }
+    img {
+      height: 36px;
     }
   }
 
+  &-buy-pro {
+    padding: rem(20);
+    background: $gray-border;
+    border-radius: 3px;
+    text-align: center;
+    margin: rem(20);
+    overflow: hidden;
+  }
+
+  &-trigger {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 256px;
+    height: 48px;
+    background: #002140;
+    transition: width 0.3s;
+    &:after {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      border-left: 2px solid darken($gray-darken, 15%);
+      border-top: 2px solid darken($gray-darken, 15%);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-scroll {
+    position: absolute;
+    top: 64px;
+    height: calc(100% - 64px - 48px);
+    width: 100%;
+  }
+
   // ul list
-  &__list {
+  &-list {
     list-style: none;
     padding-left: 0;
-    &--root {
-      margin: rem(20) 0;;
+    &-root {
+      margin: rem(20) 0;
     }
   }
 
   // menu item divider
-  &__divider {
+  &-divider {
     background: $black-lighten-more;
     height: 1px;
-    margin: rem(10) rem(20);
+    margin: 0 rem(23) rem(8);
   }
 
   // menu item
-  &__item {
+  &-item {
+    margin: rem(4) 0 rem(8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     > a {
       position: relative;
-      min-height: rem(45);
-      padding: rem(12) rem(80) rem(12) rem(20);
+      min-height: rem(40);
+      padding: rem(9) rem(60) rem(9) rem(24);
       display: block;
       color: $gray-darken;
 
       &:hover {
         color: $white;
 
-        .menu-left__icon {
+        .cui-menu-left-icon {
           color: $white;
         }
       }
@@ -214,26 +139,27 @@
     }
 
     // menu item states
-    &--active {
-
-      > a, &:hover, &:active, &:focus {
-        background: $ant-blue;
+    &-active {
+      > a,
+      &:hover,
+      &:active,
+      &:focus {
+        background: $primary;
         color: $white;
 
-        > .menu-left__icon {
+        > .cui-menu-left-icon {
           color: $white;
         }
       }
     }
 
-
-    &--disabled {
+    &-disabled {
       > a {
         cursor: default;
         background: transparent !important;
         color: $gray-darken !important;
-        opacity: .4;
-        > .menu-left__icon {
+        opacity: 0.4;
+        > .cui-menu-left-icon {
           color: $text !important;
         }
       }
@@ -241,37 +167,308 @@
   }
 
   // menu item icon
-  &__icon {
+  &-icon {
     position: absolute;
     width: rem(20);
     text-align: center;
-    top: rem(15);
-    right: rem(32);
+    top: rem(13);
+    right: rem(20);
     color: $text;
-    font-weight: bold;
-    line-height: 1.1;
+    font-size: 13px;
     text-transform: uppercase;
     transition: color 0.2s ease-in-out;
   }
 
-  // menu toggle button container for animated button
-  &__lock {
+  // submenu styles
+  &-submenu {
+    // submenu items padding
+    .cui-menu-left-item {
+      > a {
+        padding-left: rem(48);
+      }
+    }
+
+    // submenu ul list
+    > .cui-menu-left-list {
+      display: none;
+      background: $menuBg-darken;
+    }
+
+    // submenu menu item modifier (adds arrow marker)
+    &.cui-menu-left-item {
+      > a {
+        &:after,
+        &:before {
+          content: '';
+          position: absolute;
+          right: 50px;
+          top: 20px;
+          vertical-align: baseline;
+          background: $gray-darken;
+          width: 6px;
+          height: 2px;
+          border-radius: 2px;
+          transition: all 0.3s;
+        }
+
+        &:after {
+          transform: rotate(45deg) translateX(-2px);
+        }
+
+        &:before {
+          transform: rotate(-45deg) translateX(2px);
+        }
+
+        &:hover {
+          &:after,
+          &:before {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    // toggled submenu
+    &-toggled {
+      // menu item
+      &.cui-menu-left-item {
+        background: $menuBg-darken;
+
+        > a {
+          color: $white;
+
+          .cui-menu-left-icon {
+            color: $white;
+          }
+
+          &:after {
+            transform: rotate(-45deg) translateX(-2px);
+          }
+
+          &:before {
+            transform: rotate(45deg) translateX(2px);
+          }
+        }
+
+        > .cui-menu-left-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-handler {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: rem(80);
-    height: rem(65);
+    right: -41px;
+    top: 72px;
+    width: 41px;
+    height: 40px;
     cursor: pointer;
-    background: $black;
-    padding: rem(23) rem(2) 0 0;
+    z-index: 0;
     text-align: center;
-    user-select: none;
+    line-height: 40px;
+    font-size: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: #001529;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+
+    &-icon {
+      width: 14px;
+      height: 2px;
+      background: #fff;
+      position: relative;
+
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: #fff;
+        width: 100%;
+        height: 2px;
+      }
+
+      &:before {
+        top: -5px;
+      }
+
+      &:after {
+        top: 5px;
+      }
+    }
+  }
+
+  // toggled menu
+  @media (min-width: $sm-min-width) {
+    @at-root {
+      .cui-menu-left-toggled {
+        .cui-menu-left {
+          flex: 0 0 80px;
+          max-width: 80px;
+          min-width: 80px;
+          width: 80px;
+
+          .cui-menu-left-inner {
+            width: 80px;
+          }
+
+          .cui-menu-left-logo {
+            &-default {
+              display: none;
+            }
+            &-toggled {
+              display: block;
+            }
+          }
+
+          .cui-menu-left-list-root {
+            > * {
+              display: none;
+            }
+            > .cui-menu-left-item {
+              display: block;
+              > a {
+                display: block;
+                > * {
+                  display: none;
+                }
+                &:after,
+                &:before {
+                  display: none;
+                }
+                > .cui-menu-left-icon {
+                  right: 35px;
+                  display: inline;
+                }
+              }
+
+              > .cui-menu-left-list {
+                overflow: hidden;
+                height: 0;
+              }
+            }
+
+            > .cui-menu-left-divider {
+              display: block;
+            }
+
+            .cui-menu-left-item-special {
+              display: none;
+            }
+          }
+
+          .cui-menu-left-trigger {
+            width: 80px;
+            &:after {
+              left: 40%;
+              transform: rotate(-225deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // toggled menu hover
+  @at-root {
+    .cui-menu-left-toggled {
+      .cui-menu-left:hover {
+        .cui-menu-left-inner {
+          width: 256px;
+        }
+
+        .cui-menu-left-list-root {
+          > * {
+            display: block;
+          }
+
+          > .cui-menu-left-item {
+            > a {
+              > * {
+                display: inline-block;
+              }
+              &:after,
+              &:before {
+                display: block;
+              }
+              > .cui-menu-left-icon {
+                right: rem(20);
+                display: inline;
+              }
+            }
+
+            &.cui-menu-left-submenu-toggled {
+              > .cui-menu-left-list {
+                overflow: visible;
+                height: auto;
+              }
+            }
+          }
+
+          .cui-menu-left-item-special {
+            display: block;
+          }
+        }
+
+        .cui-menu-left-logo {
+          &-default {
+            display: block;
+          }
+          &-toggled {
+            display: none;
+          }
+        }
+
+        .cui-menu-left-trigger {
+          width: 256px;
+          &:after {
+            left: 50%;
+            transform: rotate(-225deg);
+          }
+        }
+      }
+    }
+  }
+
+  // mobile menu
+  @media (max-width: $sm-max-width) {
+    @at-root {
+      .cui-menu-left {
+        position: fixed;
+        z-index: 9999;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: visible;
+        transform: translateX(-256px);
+
+        .cui-menu-left-trigger {
+          display: none;
+        }
+
+        .cui-menu-left-scroll {
+          height: calc(100% - 64px);
+        }
+
+        .cui-menu-left-handler {
+          display: flex;
+        }
+      }
+
+      .cui-menu-left-toggled-mobile {
+        .cui-menu-left {
+          transform: translateX(0);
+        }
+      }
+    }
   }
 
   // colorful menu
-
-  &__list--root {
-    > .menu-left__item {
+  &-list-root {
+    > .cui-menu-left-item {
       position: relative;
       &:before {
         content: '';
@@ -284,57 +481,73 @@
         background: transparent;
       }
 
-      &.menu-left--colorful--primary {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-primary {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $primary;
           }
         }
       }
-      &.menu-left--colorful--secondary {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-secondary {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $secondary;
           }
         }
       }
-      &.menu-left--colorful--default {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-default {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $default;
           }
         }
       }
-      &.menu-left--colorful--info {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-info {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $info;
           }
         }
       }
-      &.menu-left--colorful--success {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-success {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $success;
           }
         }
       }
-      &.menu-left--colorful--warning {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-warning {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $warning;
           }
         }
       }
-      &.menu-left--colorful--danger {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-danger {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $danger;
           }
         }
       }
-      &.menu-left--colorful--yellow {
-        &:hover, &.menu-left__submenu--toggled, &.menu-left__item--active {
+      &.cui-menu-left-colorful-yellow {
+        &:hover,
+        &.cui-menu-left-submenu-toggled,
+        &.cui-menu-left-item-active {
           &:before {
             background-color: $yellow;
           }
@@ -348,9 +561,8 @@
 // backdrop block for menu mobile view
 
 @media (max-width: $sm-max-width) {
-
   // backdrop block styles
-  .menu-left__backdrop {
+  .cui-menu-left-backdrop {
     position: fixed;
     z-index: 999;
     top: 0;
@@ -363,97 +575,9 @@
     transition: opacity 0.2s ease-in-out;
 
     // visible styles
-    body.menu-left--visible--mobile & {
-      opacity: .4;
+    .cui-menu-left-toggled-mobile & {
+      opacity: 0.4;
       visibility: visible;
-      transition: opacity 0.2s ease-in-out;
-    }
-  }
-
-  // preventing body scroll
-  body.menu-left--visible--mobile {
-    overflow: hidden;
-  }
-}
-
-/////////////////////////////////////////////////////////////////////////////////////////
-/*  ANIMATED BUTTON (MENU TOGGLE) */
-
-.menu-left__pin-button {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  width: rem(19);
-  height: rem(20);
-  font-size: 0;
-  text-indent: -9999px;
-  outline: none;
-  div {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: $text-darken-more;
-    transition: transform .2s;
-    &:before, &:after {
-      position: absolute;
-      display: block;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: $text-darken-more;
-      content: "";
-    }
-    &:before {
-      top: -6px;
-      transform-origin: top right;
-      transition: transform .2s;
-    }
-    &:after {
-      bottom: -6px;
-      transform-origin: bottom right;
-      transition: transform .2s, width .2s;
-    }
-  }
-  &:hover {
-    div {
-      background: $text;
-      &:before, &:after {
-        background-color: $text;
-      }
-    }
-  }
-  @media (max-width: $sm-max-width) {
-    body.menu-left--visible--mobile & {
-      div {
-        transform: rotate(-180deg);
-        background: transparent;
-        &:before {
-          top: 0;
-          transform: translateX(rem(-2)) translateY(rem(6)) rotate(45deg);
-        }
-        &:after {
-          bottom: 0;
-          transform: translateX(rem(-2)) translateY(rem(-8)) rotate(-45deg);
-        }
-      }
-    }
-  }
-  @media (min-width: $sm-min-width) {
-    body.menu-left--visible & {
-      div {
-        transform: rotate(-180deg);
-        background: transparent;
-        &:before {
-          top: 0;
-          transform: translateX(rem(-2)) translateY(rem(7)) rotate(45deg);
-        }
-        &:after {
-          bottom: 0;
-          transform: translateX(rem(-2)) translateY(rem(-7)) rotate(-45deg);
-        }
-      }
     }
   }
 }
@@ -461,16 +585,16 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  JSCROLLPNAE CUSTOM STYLES */
 
-.menu-left {
+.cui-menu-left {
   .jspScrollable {
     outline: none;
     &:hover {
       .jspVerticalBar {
-        opacity: .7;
+        opacity: 0.7;
         @include transition-very-slow();
       }
       .jspHorizontalBar {
-        opacity: .7;
+        opacity: 0.7;
         @include transition-very-slow();
       }
     }
@@ -495,7 +619,8 @@
         bottom: 0;
       }
     }
-    .jspPane, .jspContainer {
+    .jspPane,
+    .jspContainer {
       width: 100% !important;
     }
     .jspCap {

@@ -9,111 +9,194 @@ $color3: #e4e9f0;
 $color4: #e4e9f0;
 $color5: #e6f8ff;
 
-body.theme {
-  &--light {
+body.cui-theme {
+  &-light {
+    // "cui-menu-left" module styles
+    .cui-menu-left {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
 
-    // "menu-left" module styles
-    .menu-left {
-      background: $color1;
-      border-right: 1px solid $color4;
-    }
+      &-trigger {
+        background: $gray-border;
+      }
 
-    .menu-left__item {
-      & > a {
-        color: $color2;
-        &:hover, &:focus {
-          color: $ant-blue;
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-item {
+        & > a {
+          color: $color2;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+
+          &:active {
+            color: $primary;
+            background-color: $color5;
+          }
         }
 
-        &:active {
-          color: $ant-blue;
-          background-color: $color5;
+        &.cui-menu-left-submenu {
+          &:hover {
+            & > a {
+              &::after {
+                border-color: transparent $color2 transparent transparent;
+              }
+            }
+          }
+        }
+
+        &-active {
+          > a {
+            background: $color5;
+          }
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a > .cui-menu-left-icon {
+            color: lighten($color2, 10%);
+          }
         }
       }
 
-      &.menu-left__submenu {
-        &:hover {
-          & > a {
-            &::after {
-              border-color: transparent $color2 transparent transparent;
+      &-submenu {
+        &.cui-menu-left-item {
+          color: $color2;
+          background-color: $white;
+          > a {
+            &:after {
+              border-color: transparent lighten($color2, 30%) transparent transparent;
+            }
+          }
+        }
+
+        &-toggled.cui-menu-left-item {
+          > a {
+            .cui-menu-left-icon {
+              color: lighten($color2, 10%);
+            }
+          }
+        }
+
+        > .cui-menu-left-list {
+          background: $white;
+        }
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      .jspScrollable .jspDrag:after {
+        background: lighten($color2, 40%) !important;
+      }
+    }
+
+    // "cui-menu-top" module styles
+    .cui-menu-top {
+      &-inner {
+        background: $color1;
+      }
+      &-trigger {
+        background: $gray-border;
+      }
+
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-item {
+        & > a {
+          color: $color2;
+
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+
+          &:active {
+            color: $primary;
+            background-color: $color5;
+          }
+        }
+
+        &.cui-menu-top-submenu {
+          &:hover {
+            & > a {
+              &::after {
+                border-color: transparent $color2 transparent transparent;
+              }
+            }
+          }
+        }
+
+        &-active {
+          > a {
+            background: $color5;
+          }
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a > .cui-menu-top-icon {
+            color: lighten($color2, 10%);
+          }
+        }
+      }
+
+      &-submenu {
+        &.cui-menu-top-item {
+          color: $color2;
+          background-color: $white;
+          > a {
+            &:after {
+              border-color: transparent lighten($color2, 30%) transparent transparent;
+            }
+          }
+        }
+
+        &-toggled.cui-menu-top-item {
+          > a {
+            .cui-menu-left-icon {
+              color: lighten($color2, 10%);
+            }
+          }
+        }
+
+        > .cui-menu-top-list {
+          background: $white;
+        }
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      // top menu related
+      @media (min-width: $sm-min-width) {
+        &-scroll {
+          border-bottom: 1px solid $gray-border;
+        }
+
+        &-list {
+          &-root {
+            > .cui-menu-top-item {
+              > a {
+                border-bottom: 1px solid $gray-border;
+              }
             }
           }
         }
       }
     }
-
-    .menu-left__item--active > a{
-      background: $color5;
-    }
-
-    .menu-left__submenu--toggled.menu-left__item {
-      color: $color2;
-      background-color: $white;
-      & > a {
-        .menu-left__icon {
-          color: #8f8ca4;
-        }
-      }
-    }
-
-    .menu-left__submenu > .menu-left__list {
-      background: $white;
-    }
-
-    .menu-left__icon {
-      color: lighten($color2, 30%);
-    }
-
-    .menu-left__item--active > a > .menu-left__icon,
-    .menu-left__item:hover > a > .menu-left__icon,
-    .menu-left__item:active > a > .menu-left__icon,
-    .menu-left__item:focus > a > .menu-left__icon {
-      color: lighten($color2, 10%);
-    }
-
-    .menu-left__submenu.menu-left__item > a:after {
-      border-color: transparent lighten($color2, 30%) transparent transparent;
-    }
-
-    .menu-left__divider {
-      background: $color3;
-    }
-
-    .menu-left .jspScrollable .jspDrag:after {
-      background: lighten($color2, 40%) !important;
-    }
-
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: $color3;
-        }
-      }
-    }
-
-    // horizontal layout
-    &.config--horizontal {
-      .menu-left {
-        border-right: none;
-        border-bottom: 1px solid $color4;
-      }
-
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item > a {
-          border-left-color: $color3;
-        }
-
-        .menu-left__list--root > li.menu-left__item:hover > a {
-          background: $color3;
-          color: darken($color2, 20%);
-        }
-
-        .menu-left__list--root > li.menu-left__item:hover > a > .menu-left__icon {
-          color: lighten($color2, 10%);
-        }
-      }
-    }
-
   }
 }

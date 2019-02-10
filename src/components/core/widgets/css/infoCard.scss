@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.infoCard {
+.cui-info-card {
   color: $text;
   background-color: $white;
   padding: rem(20);
@@ -8,24 +8,24 @@
   display: block;
   margin-bottom: rem(20);
 
-  &--aroundBorder {
+  &-around-border {
     border: 1px solid $gray-border;
   }
 
-  &--interactive {
+  &-interactive {
     padding-top: 25px;
     padding-bottom: 30px;
   }
 
-  &--whiteFont {
+  &-white-font {
     color: $white;
 
-    .infoCard__icon {
+    .cui-info-card-icon {
       color: $white;
     }
   }
 
-  &__digit {
+  &-digit {
     float: left;
     margin-right: rem(20);
     font-size: rem(42);
@@ -38,71 +38,76 @@
     }
   }
 
-  &__title {
+  &-title {
     font-weight: bold;
     font-size: rem(16);
   }
 
-  &__desc {
+  &-desc {
     p {
       margin-bottom: 0;
     }
   }
 
-  &--default, &--primary, &--secondary,
-  &--success, &--info, &--warning, &--danger {
+  &-default,
+  &-primary,
+  &-secondary,
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
     color: $white !important;
   }
 
-  &--empty {
+  &-empty {
     border: 1px solid $gray-border;
   }
 
-  &--default {
+  &-default {
     background: $default !important;
     border-bottom-color: $default;
   }
 
-  &--primary {
+  &-primary {
     background: $primary !important;
     border-bottom-color: $primary;
   }
 
-  &--secondary {
+  &-secondary {
     background: $secondary !important;
     border-bottom-color: $secondary;
   }
 
-  &--success {
+  &-success {
     background: $success !important;
     border-bottom-color: $success;
   }
 
-  &--info {
+  &-info {
     background: $info !important;
     border-bottom-color: $info;
   }
 
-  &--warning {
+  &-warning {
     background: $warning !important;
     border-bottom-color: $warning;
   }
 
-  &--danger {
+  &-danger {
     background: $danger !important;
     border-bottom-color: $danger;
   }
 
-  &--disabled {
+  &-disabled {
     cursor: not-allowed;
-    opacity: .65;
+    opacity: 0.65;
   }
 
-  &--squared {
+  &-squared {
     border-radius: 0;
   }
 
-  &--bordered {
+  &-bordered {
     padding: rem(5) 0 rem(10) 0;
     margin-bottom: rem(-12);
     margin-top: rem(0);
@@ -111,8 +116,8 @@
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-radius: 0;
-    .infoCard {
-      &__digit {
+    .cui-info-card {
+      &-digit {
         font-size: rem(28);
         line-height: rem(38);
         height: rem(24);
@@ -124,11 +129,11 @@
           font-size: rem(24);
         }
       }
-      &__title {
+      &-title {
         font-weight: bold;
         font-size: rem(13);
       }
-      &__desc {
+      &-desc {
         padding-top: 0;
         p {
           font-size: rem(12);
@@ -143,5 +148,4 @@
     margin-bottom: rem(16) !important;
     margin-top: 0 !important;
   }
-
 }

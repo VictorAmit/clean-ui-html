@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.avatar {
+.cui-avatar {
   width: rem(35);
   height: rem(35);
   background-color: $gray-lighten;
@@ -15,41 +15,41 @@
     height: auto;
   }
 
-  &--20 {
+  &-20 {
     width: rem(20);
     height: rem(20);
   }
 
-  &--25 {
+  &-25 {
     width: rem(25);
     height: rem(25);
   }
 
-  &--50 {
+  &-50 {
     width: rem(50);
     height: rem(50);
   }
 
-  &--70 {
+  &-70 {
     width: rem(70);
     height: rem(70);
   }
 
-  &--90 {
+  &-90 {
     width: rem(90);
     height: rem(90);
   }
 
-  &--110 {
+  &-110 {
     width: rem(110);
     height: rem(110);
   }
 
-  &--bordered {
+  &-bordered {
     border: 4px solid $gray;
   }
 
-  &--borderWhite {
+  &-border-white {
     border-color: $white;
   }
 }

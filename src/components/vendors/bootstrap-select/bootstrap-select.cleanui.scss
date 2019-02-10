@@ -12,7 +12,8 @@
       border-color: $gray-darken;
       background: $white !important;
     }
-    &:focus, &:active {
+    &:focus,
+    &:active {
       border-color: $blue !important;
       background: $white !important;
       color: $text !important;

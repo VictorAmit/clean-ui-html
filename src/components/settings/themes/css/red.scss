@@ -9,136 +9,166 @@ $color3: #e4e9f0;
 $color4: #e4e9f0;
 $color5: #d24667;
 
-body.theme {
-  &--red {
-
-    // "menu-left" module styles
-    .menu-left__logo {
-      background: $color5;
-    }
-
-    .menu-left__lock {
-      background: $color5;
-    }
-
-    .menu-left__pin-button {
-      opacity: .7;
-
-      &:hover {
-        opacity: 1;
+body.cui-theme {
+  &-red {
+    // "cui-menu-left" module styles
+    .cui-menu-left {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
       }
-    }
 
-    .menu-left__pin-button div {
-      background: #fff;
-    }
-
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
-      background: #fff;
-    }
-
-    .menu-left {
-      background: $color1;
-      border-right: 1px solid $color4;
-    }
-
-    .menu-left__item > a {
-      color: $color2;
-    }
-
-    .menu-left__item--active > a,
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
-      background: $color5;
-      color: $white;
-
-      &:before {
-        display: none !important;
+      &-trigger {
+        background: $gray-border;
       }
-    }
 
-    .menu-left__submenu--toggled.menu-left__item {
-      background: $color5;
-      color: $color1;
+      &-logo {
+        background: $color5;
+      }
 
-      > a {
-        color: $white;
-        .menu-left__icon {
-          color: $white;
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-item {
+        > a {
+          color: $color2;
         }
-      }
-    }
 
-    .menu-left__submenu > .menu-left__list {
-      background: lighten($color3, 5%);
-    }
-
-    .menu-left__icon {
-      color: lighten($color2, 30%);
-    }
-
-    .menu-left__item--active > a > .menu-left__icon,
-    .menu-left__item:hover > a > .menu-left__icon,
-    .menu-left__item:active > a > .menu-left__icon,
-    .menu-left__item:focus > a > .menu-left__icon {
-      color: $color1;
-    }
-
-    .menu-left__submenu.menu-left__item > a:after {
-      border-color: transparent lighten($color2, 30%) transparent transparent;
-    }
-
-    .menu-left__divider {
-      background: $color3;
-    }
-
-    .menu-left .jspScrollable .jspDrag:after {
-      background: lighten($color2, 40%) !important;
-    }
-
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: $color3;
-        }
-      }
-    }
-
-    // horizontal layout
-    &.config--horizontal {
-      .menu-left {
-        border-right: none;
-        border-bottom: 1px solid $color4;
-      }
-
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item {
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
           > a {
-            border-left-color: $color3;
-          }
+            background: $color5;
+            color: $white;
 
-          &:hover {
-            > a {
-              border-left-color: $color5;
-              .menu-left__icon {
-                color: $color1 !important;
-              }
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-left-icon {
+              color: $color1;
+            }
+          }
+        }
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-left-item {
+          background: lighten($color3, 5%);
+          color: $color1;
+
+          > a {
+            background: $color5;
+            color: $white;
+
+            .cui-menu-left-icon {
+              color: $white;
+            }
+
+            &:before,
+            &:after {
+              background: $white !important;
             }
           }
         }
 
-        .menu-left__list--root > li.menu-left__item:hover > a {
-          background: $color5;
-          color: $white;
+        > .cui-menu-left-list {
+          background: lighten($color3, 5%);
         }
 
-        .menu-left__list--root > li.menu-left__item:hover > a > .menu-left__icon {
-          color: lighten($color2, 10%);
+        &.cui-menu-left-item > a:after {
+          border-color: transparent lighten($color2, 30%) transparent transparent;
         }
+      }
+
+      .jspScrollable .jspDrag:after {
+        background: lighten($color2, 40%) !important;
       }
     }
 
+    // "cui-menu-top" module styles
+    .cui-menu-top {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
+
+      &-trigger {
+        background: $gray-border;
+      }
+
+      &-logo {
+        background: $color5;
+      }
+
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-item {
+        > a {
+          color: $color2;
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a {
+            background: $color5;
+            color: $white;
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-top-icon {
+              color: $color1;
+            }
+          }
+        }
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-top-item {
+          background: lighten($color3, 5%);
+          color: $color1;
+
+          > a {
+            background: $color5;
+            color: $white;
+
+            .cui-menu-top-icon {
+              color: $white;
+            }
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+          }
+        }
+
+        > .cui-menu-top-list {
+          background: lighten($color3, 5%);
+        }
+
+        &.cui-menu-top-item > a:after {
+          border-color: transparent lighten($color2, 30%) transparent transparent;
+        }
+      }
+    }
   }
 }

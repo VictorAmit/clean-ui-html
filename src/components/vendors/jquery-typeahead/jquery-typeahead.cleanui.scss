@@ -23,7 +23,7 @@
       list-style: none;
       padding: 0;
       border: 1px solid $primary;
-      border-radius: 0px 0px 3px 3px;
+      border-radius: 0 0 3px 3px;
       border-top: 1px solid $gray-darken;
       .typeahead__item {
         a {
@@ -55,5 +55,4 @@
       border-right-color: transparent;
     }
   }
-
 }

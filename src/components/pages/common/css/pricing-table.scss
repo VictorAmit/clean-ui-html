@@ -1,10 +1,10 @@
 @import '../../../core/common/css/mixins';
 
-.pricingTable {
+.cui-pricing-table {
   width: 100%;
   display: flex;
   padding: rem(40) 0;
-  &__item {
+  &-item {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
@@ -25,51 +25,51 @@
       padding: 0;
       margin: 0;
     }
-    &--featured {
+    &-featured {
       margin: rem(-40) 0 rem(-40) rem(-1);
       padding: rem(60) rem(20);
       border-radius: 6px;
       border-left: 1px solid $gray-border;
     }
-    &--default {
+    &-default {
       background: $default;
       border-color: $default;
       color: $white;
     }
-    &--primary {
+    &-primary {
       background: $primary;
       border-color: $primary;
       color: $white;
     }
-    &--secondary {
+    &-secondary {
       background: $secondary;
       border-color: $secondary;
       color: $white;
     }
-    &--success {
+    &-success {
       background: $success;
       border-color: $success;
       color: $white;
     }
-    &--warning {
+    &-warning {
       background: $warning;
       border-color: $warning;
       color: $white;
     }
-    &--danger {
+    &-danger {
       background: $danger;
       border-color: $danger;
       color: $white;
     }
-    &--info {
+    &-info {
       background: $info;
       border-color: $info;
       color: $white;
     }
   }
-  &__header {
+  &-header {
     padding: rem(30) 0;
-    &__title {
+    &-title {
       text-transform: uppercase;
       letter-spacing: rem(3);
       font-size: rem(24);
@@ -77,41 +77,41 @@
       margin-top: rem(10);
     }
   }
-  &__pricing {
-    &__price {
+  &-pricing {
+    &-price {
       font-size: rem(48);
     }
-    &__currency {
+    &-currency {
       display: inline-block;
       margin-top: rem(10);
       margin-right: rem(-10);
       font-size: rem(20);
       vertical-align: top;
     }
-    &__amount {
+    &-amount {
       font-weight: 600;
       font-size: rem(56);
     }
-    &__period {
+    &-period {
       font-size: rem(16);
     }
   }
-  &__features {
+  &-features {
     li {
       margin-bottom: rem(10);
     }
   }
-  &__footer {
+  &-footer {
     padding: rem(30) 0 rem(40);
   }
   @media (max-width: $xl-max-width) {
     display: block;
     padding: 0;
-    .pricingTable__item {
+    .cui-pricing-table-item {
       margin-bottom: rem(20) !important;
       border: 1px solid $gray-border;
       border-radius: 6px !important;
-      &--featured {
+      &-featured {
         margin-top: 0;
       }
     }

@@ -1,26 +1,26 @@
 @import '../../common/css/mixins';
-.ProfileHeadCard {
-  border: 0px solid $white;
+.cui-profile-head-card {
+  border: 0 solid $white;
   background: $white;
   position: relative;
   border-radius: 3px;
 
-  &__head {
+  &-head {
     height: rem(250);
     background: $gray-lighten-more center center;
     background-size: cover;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     line-height: 1.1;
     padding: rem(25) rem(30);
   }
 
-  &__left {
+  &-left {
     float: left;
     padding-left: rem(20);
     margin-top: rem(-50);
   }
 
-  &__right {
+  &-right {
     margin-left: rem(140);
     padding-top: rem(40);
     padding-right: rem(20);

@@ -1,106 +1,127 @@
 /////////////////////////////////////////////////////////////////////////////////////////
-// "menu-right" module scripts
+// "cui-menu-right" module scripts
 
-(function($) {
-  "use strict";
-  $(function () {
-
+;(function($) {
+  'use strict'
+  $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // set active menu item
-    
+
     var url = window.location.href
     var page = url.substr(url.lastIndexOf('/') + 1)
-    var currentItem = $('.menu-left__list--root').find('a[href="' + page + '"]')
-    currentItem.parent().toggleClass('menu-left__item--active')
-    currentItem.closest('.menu-left__submenu').addClass('menu-left__submenu--toggled').find('> .menu-left__list').slideToggle(0)
-
+    var currentItem = $('.cui-menu-left-list-root').find('a[href="' + page + '"]')
+    currentItem.parent().toggleClass('cui-menu-left-item-active')
+    currentItem
+      .closest('.cui-menu-left-submenu')
+      .addClass('cui-menu-left-submenu-toggled')
+      .find('> .cui-menu-left-list')
+      .slideToggle(0)
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // add backdrop
 
-    $('.menu-left').after('<div class="menu-left__backdrop menu-left__action--backdrop-toggle"><!-- --></div>')
+    $('.cui-menu-left').after('<div class="cui-menu-left-backdrop"><!-- --></div>')
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // menu logic
+
+    $('.cui-menu-left-trigger-action').on('click', function() {
+      $('body').toggleClass('cui-menu-left-toggled')
+    })
+
+    var isTabletView = false
+
+    function toggleMenu() {
+      if (!isTabletView) {
+        $('body').addClass('cui-menu-left-toggled')
+      }
+    }
+
+    if ($(window).innerWidth() <= 992) {
+      toggleMenu()
+      isTabletView = true
+    }
+
+    $(window).on('resize', function() {
+      if ($(window).innerWidth() <= 992) {
+        toggleMenu()
+        isTabletView = true
+      } else {
+        isTabletView = false
+      }
+    })
+
+    $('.cui-menu-left-handler, .cui-menu-left-backdrop').on('click', function() {
+      $('body').toggleClass('cui-menu-left-toggled-mobile')
+    })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.menu-left__submenu > a').on('click', function () {
-
-      if ($('body').hasClass('config--vertical') || $('body').width() < 768) {
-
+    $('.cui-menu-left-submenu > a').on('click', function() {
+      if ($('body').find('.cui-menu-left').length) {
         var parent = $(this).parent(),
-          opened = $('.menu-left__submenu--toggled')
+          opened = $('.cui-menu-left-submenu-toggled')
 
-        if (!parent.hasClass('menu-left__submenu--toggled') && !parent.parent().closest('.menu-left__submenu').length)
-          opened.removeClass('menu-left__submenu--toggled').find('> .menu-left__list').slideUp(200)
+        if (
+          !parent.hasClass('cui-menu-left-submenu-toggled') &&
+          !parent.parent().closest('.cui-menu-left-submenu').length
+        )
+          opened
+            .removeClass('cui-menu-left-submenu-toggled')
+            .find('> .cui-menu-left-list')
+            .slideUp(200)
 
-        parent.toggleClass('menu-left__submenu--toggled')
-        parent.find('> .menu-left__list').slideToggle(200)
-
-      }
-
-    })
-
-    // remove submenu toggle class when viewport back to full view
-    $(window).on('resize', function () {
-      if ($('body').hasClass('config--horizontal') || $('body').width() > 768) {
-        $('.menu-left__submenu--toggled').removeClass('menu-left__submenu--toggled').find('> .menu-left__list').attr('style', '')
+        parent.toggleClass('cui-menu-left-submenu-toggled')
+        var item = parent.find('> .cui-menu-left-list')
+        if (item.is(':visible')) {
+          item.slideUp(200)
+        } else {
+          item.slideDown(200)
+        }
       }
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // custom scroll init
 
-    if ($('body').hasClass('config--vertical')) {
-      if (!(/Mobi/.test(navigator.userAgent)) && jQuery().perfectScrollbar) {
-        $('.menu-left__inner').perfectScrollbar({
-          theme: 'cleanui'
+    if ($('body').find('.cui-menu-left').length) {
+      if (!/Mobi/.test(navigator.userAgent) && jQuery().perfectScrollbar) {
+        const menuCustomScroll = $('.cui-menu-left-scroll').perfectScrollbar({
+          theme: 'cleanui',
         })
       }
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle menu
-
-    $('.menu-left__action--menu-toggle').on('click', function () {
-      if ($('body').width() < 768) {
-        $('body').toggleClass('menu-left--visible--mobile')
-      } else {
-        $('body').toggleClass('menu-left--visible')
-      }
-    })
-
-    $('.menu-left__action--backdrop-toggle').on('click', function () {
-      $('body').removeClass('menu-left--visible--mobile')
-    })
-
-    /////////////////////////////////////////////////////////////////////////////////////////
     // colorful menu
 
-    var colorfulClasses = 'menu-left--colorful--primary menu-left--colorful--secondary menu-left--colorful--primary menu-left--colorful--default menu-left--colorful--info menu-left--colorful--success menu-left--colorful--warning menu-left--colorful--danger menu-left--colorful--yellow',
+    var colorfulClasses =
+        'cui-menu-left-colorful-primary cui-menu-left-colorful-secondary cui-menu-left-colorful-primary cui-menu-left-colorful-default cui-menu-left-colorful-info cui-menu-left-colorful-success cui-menu-left-colorful-warning cui-menu-left-colorful-danger cui-menu-left-colorful-yellow',
       colorfulClassesArray = colorfulClasses.split(' ')
 
     function setColorfulClasses() {
-      $('.menu-left__list--root > .menu-left__item').each(function () {
-        var randomClass = colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
+      $('.cui-menu-left-list-root > .cui-menu-left-item').each(function() {
+        var randomClass =
+          colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
         $(this).addClass(randomClass)
       })
     }
 
     function removeColorfulClasses() {
-      $('.menu-left__list--root > .menu-left__item').removeClass(colorfulClasses)
+      $('.cui-menu-left-list-root > .cui-menu-left-item').removeClass(colorfulClasses)
     }
 
-    if ($('body').hasClass('menu-left--colorful')) {
+    if ($('body').hasClass('cui-menu-colorful')) {
       setColorfulClasses()
     }
 
-    $('body').on('setColorfulClasses', function () {
+    $('body').on('setColorfulClasses', function() {
       setColorfulClasses()
     })
 
-    $('body').on('removeColorfulClasses', function () {
+    $('body').on('removeColorfulClasses', function() {
       removeColorfulClasses()
     })
-
   })
 })(jQuery)

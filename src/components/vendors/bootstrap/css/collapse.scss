@@ -6,10 +6,10 @@
 .accordion {
   .card {
     border-radius: 0;
-    margin-bottom: 0px;
-    border-bottom-width: 0px;
+    margin-bottom: 0;
+    border-bottom-width: 0;
     &:first-child {
-      border-radius: 5px 5px 0 0
+      border-radius: 5px 5px 0 0;
     }
     &:last-child {
       border-radius: 0 0 5px 5px;
@@ -53,4 +53,3 @@
     }
   }
 }
-

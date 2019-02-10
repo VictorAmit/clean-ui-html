@@ -1,5 +1,5 @@
 // Colors
-$white: #ffffff;
+$white: #fff;
 
 $text: #74708d;
 $text-lighten: #c0bdd0;
@@ -12,18 +12,31 @@ $gray-lighten-more: #f2f4f8;
 $gray-lighten-more-more: #f9fafc;
 $gray-darken: #b8beca;
 $gray-border: #e4e9f0;
+$lighter-gray: #f9f9f9;
+$light-gray: #e4e4e4;
 
 $black: #0e0b20;
 $black-lighten: #222034;
 $black-lighten-more: #393749;
 
+$dark-black-blue: #525f7f;
+$dark-black-blue-2: #42526e;
 
-$ant-blue: #0190FE;
-
-$blue: #0088ff;
+$blue: #08f;
 $blue-darken: #0072d6;
 $orange: #f2a654;
 $yellow: yellow;
+$cyan: #0099e5;
+
+$dark-gray: #333;
+$dark-gray-2: #373e42;
+
+$purple: #6772e5;
+$light-purple: #8089ff;
+$dark-purple: #32325d;
+$menuBg: #001529;
+$menuBg-darken: #000c17;
+$red: #e13760;
 
 // Accent colors
 $default: #acb7bf;
@@ -35,14 +48,14 @@ $warning: #f39834;
 $danger: #fb434a;
 
 // Font Family
-$base__font-family: 'Nunito Sans', sans-serif;
+$base-font-family: 'Nunito Sans', sans-serif;
 
 // Font Size
-$base__font-size: 13 !default;
+$base-font-size: 13 !default;
 
 // Convert value rem() sass mixin
-@function rem($px, $base: $base__font-size) {
-  @return #{floor( ($px/$base) * 100 ) / 100}rem; // to REMs
+@function rem($px, $base: $base-font-size) {
+  @return #{floor(($px/$base) * 100) / 100}rem; // to REMs
 
   // comment code above and uncomment below for change REMs to PXs
   //@return #{$px}px;

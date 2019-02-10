@@ -59,6 +59,7 @@
   &-white {
     background-color: $white !important;
   }
+
   &-default {
     background-color: $default !important;
   }
@@ -69,6 +70,5 @@
   background: $gray-lighten-more;
   &-bar {
     height: rem(18);
-
   }
 }

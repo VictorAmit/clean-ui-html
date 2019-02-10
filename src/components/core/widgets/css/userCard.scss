@@ -1,37 +1,36 @@
 @import '../../common/css/mixins';
 
-.userCard {
+.cui-user-card {
   background: $white;
   position: relative;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border: 1px solid $gray-border;
 
   @media (max-width: $md-max-width) {
     margin-bottom: 1.35rem;
   }
 
-  &__userName {
+  &-user-name {
     font-weight: 700;
   }
 
-  &--whiteFont {
-    .userCard {
-
-      &__userName {
+  &-white-font {
+    .cui-user-card {
+      &-user-name {
         color: $white;
       }
 
-      &__post {
+      &-post {
         color: $white;
       }
     }
   }
 
-  &__post {
+  &-post {
     color: $text-lighten;
   }
 
-  &__plusBtn {
+  &-plus-btn {
     font-size: 0;
     background-color: $white;
     position: absolute;
@@ -42,10 +41,10 @@
     border: 1px solid $gray;
     border-radius: 500px;
     cursor: pointer;
-    opacity: .7;
+    opacity: 0.7;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: rem(3);
       left: rem(9);
@@ -54,7 +53,7 @@
       background: $gray;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       width: rem(13);
       height: 1px;

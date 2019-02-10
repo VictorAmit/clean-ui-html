@@ -9,174 +9,176 @@ $color3: #e4e9f0;
 $color4: #e4e9f0;
 $color5: #528e74;
 
-body.theme {
-  &--green {
-
-    // top-bar
-    .top-bar {
+.cui-theme {
+  &-green {
+    // cui-topbar
+    .cui-topbar {
       background: $color5;
       border-bottom-color: $color5;
-    }
 
-    .top-bar__mini-chart {
-      color: $color1;
-    }
-
-    .top-bar__mini-chart__inner i {
-      background: $color1;
-    }
-
-    .top-bar__search {
-      border-bottom-color: rgba($color1, .2);
-    }
-
-    .top-bar__search input {
-      background: none;
-    }
-
-    .top-bar__item > .dropdown > a {
-      color: $color1;
-
-      &:hover {
-        color: $color3;
+      &-mini-chart {
+        color: $color1;
       }
-    }
 
-    .top-bar__menu-button {
-      color: $color1;
-
-      &:hover {
-        opacity: .7;
+      &-mini-chart-inner i {
+        background: $color1;
       }
-    }
 
-    // "menu-left" module styles
-    .menu-left__logo {
-      background: $color5;
-    }
+      &-search {
+        border-bottom-color: rgba($color1, 0.2);
 
-    .menu-left__lock {
-      background: $color5;
-    }
-
-    .menu-left__pin-button {
-      opacity: .7;
-
-      &:hover {
-        opacity: 1;
+        input {
+          background: $white;
+        }
       }
-    }
 
-    .menu-left__pin-button div {
-      background: #fff;
-    }
+      &-item > .dropdown > a {
+        color: $color1;
 
-    .menu-left__pin-button div:before, .menu-left__pin-button div:after {
-      background: #fff;
-    }
-
-    .menu-left {
-      background: $color1;
-      border-right: 1px solid $color4;
-    }
-
-    .menu-left__item > a {
-      color: $color2;
-    }
-
-    .menu-left__item--active > a,
-    .menu-left__item:hover > a,
-    .menu-left__item:active > a,
-    .menu-left__item:focus > a {
-      background: $color5;
-      color: $white;
-
-      &:before {
-        display: none !important;
-      }
-    }
-
-    .menu-left__submenu--toggled.menu-left__item {
-      background: $color5;
-      color: $color1;
-
-      > a {
-        color: $white;
-        .menu-left__icon {
-          color: $white;
+        &:hover {
+          color: $color3;
         }
       }
     }
 
-    .menu-left__submenu > .menu-left__list {
-      background: lighten($color3, 5%);
-    }
+    // "cui-menu-left" module styles
+    .cui-menu-left {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
 
-    .menu-left__icon {
-      color: lighten($color2, 30%);
-    }
+      &-trigger {
+        background: $gray-border;
+      }
 
-    .menu-left__item--active > a > .menu-left__icon,
-    .menu-left__item:hover > a > .menu-left__icon,
-    .menu-left__item:active > a > .menu-left__icon,
-    .menu-left__item:focus > a > .menu-left__icon {
-      color: $color1;
-    }
+      &-logo {
+        background: $color5;
+      }
 
-    .menu-left__submenu.menu-left__item > a:after {
-      border-color: transparent lighten($color2, 30%) transparent transparent;
-    }
-
-    .menu-left__divider {
-      background: $color3;
-    }
-
-    .menu-left .jspScrollable .jspDrag:after {
-      background: lighten($color2, 40%) !important;
-    }
-
-    // compact & vertical layout
-    &.config--vertical.config--compact {
-      @media (min-width: 768px) {
-        .menu-left__item > a:before {
-          background: $color3;
+      &-item {
+        > a {
+          color: $color2;
         }
-      }
-    }
 
-    // horizontal layout
-    &.config--horizontal {
-      .menu-left {
-        border-right: none;
-        border-bottom: 1px solid $color4;
-      }
-
-      @media (min-width: 768px) {
-        .menu-left__list--root > li.menu-left__item {
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
           > a {
-            border-left-color: $color3;
-          }
+            background: $color5;
+            color: $white;
 
-          &:hover {
-            > a {
-              border-left-color: $color5;
-              .menu-left__icon {
-                color: $color1 !important;
-              }
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-left-icon {
+              color: $color1;
+            }
+          }
+        }
+      }
+
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-left-item {
+          color: $color1;
+          background: lighten($color3, 5%);
+
+          > a {
+            background: $color5;
+            color: $white;
+            .cui-menu-left-icon {
+              color: $white;
             }
           }
         }
 
-        .menu-left__list--root > li.menu-left__item:hover > a {
-          background: $color5;
-          color: $white;
+        > .cui-menu-left-list {
+          background: lighten($color3, 5%);
         }
+      }
 
-        .menu-left__list--root > li.menu-left__item:hover > a > .menu-left__icon {
-          color: lighten($color2, 10%);
-        }
+      .jspScrollable .jspDrag:after {
+        background: lighten($color2, 40%) !important;
       }
     }
 
+    // "cui-menu-top" module styles
+    .cui-menu-top {
+      &-inner {
+        background: $color1;
+        border-right: 1px solid $gray-border;
+      }
+
+      &-trigger {
+        background: $gray-border;
+      }
+
+      &-logo {
+        background: $color5;
+      }
+
+      &-item {
+        > a {
+          color: $color2;
+        }
+
+        &-active,
+        &:hover,
+        &:active,
+        &:focus {
+          > a {
+            background: $color5;
+            color: $white;
+
+            &:before,
+            &:after {
+              background: $white !important;
+            }
+
+            > .cui-menu-top-icon {
+              color: $color1;
+            }
+          }
+        }
+      }
+
+      &-icon {
+        color: lighten($color2, 30%);
+      }
+
+      &-divider {
+        background: $color3;
+      }
+
+      &-submenu {
+        &-toggled.cui-menu-top-item {
+          color: $color1;
+          background: lighten($color3, 5%);
+
+          > a {
+            background: $color5;
+            color: $white;
+            .cui-menu-left-icon {
+              color: $white;
+            }
+          }
+        }
+
+        > .cui-menu-top-list {
+          background: lighten($color3, 5%);
+        }
+      }
+    }
   }
 }

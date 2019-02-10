@@ -1,6 +1,6 @@
 @import '../../common/css/mixins';
 
-.chartCard {
+.cui-chart-card {
   padding: rem(15) rem(30) rem(20);
   position: relative;
   overflow: hidden;
@@ -20,7 +20,7 @@
     }
   }
 
-  &__chart {
+  &-chart {
     height: 100%;
     width: 120px;
     position: absolute;
@@ -28,13 +28,13 @@
     right: 0;
   }
 
-  &__amount {
+  &-amount {
     font-size: rem(36);
     color: $black;
     margin-bottom: rem(-10);
   }
 
-  &__title {
+  &-title {
     color: $text;
     text-transform: uppercase;
     font-weight: bold;
