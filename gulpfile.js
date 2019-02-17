@@ -121,6 +121,7 @@ gulp.task('build:versions', function () {
                         var prefix = path.dirname;
                         path.dirname = "/";
                         path.basename = prefix + '-' + path.basename;
+                        // path.extname = ".blade.php" // laravel build
                     })) // rename pages
                     .on('error', printError) // print error if found
                     .pipe(gulp.dest(path.build.versions + arrayHtml[i].replace('.html', ''))) // copy generated pages to build folder
