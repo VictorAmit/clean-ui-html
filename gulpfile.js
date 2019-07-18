@@ -8,9 +8,9 @@
 // CONFIGURATION
 
 var settings = {
-  "templateName": "Clean UI HTML Admin Template",
-  "title": "Clean UI HTML Admin Template",
-  "version": "1.0.0",
+  "templateName": "Clean UI HTML Pro Admin Template",
+  "title": "Clean UI HTML Pro Admin Template",
+  "version": "2.1.2",
   "description": "",
 };
 
