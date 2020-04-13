@@ -1,0 +1,26 @@
+@import '../../../kit-core/mixins';
+
+.kit__c11 {
+  &__chartContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__chart {
+    .ct-line {
+      stroke-width: 1px;
+    }
+
+    .ct-series-a {
+      .ct-area {
+        fill: rgba(75,124,243, 0.1) !important;
+        fill-opacity: 1 !important;
+      }
+
+      .ct-line {
+        stroke: #4b7cf3 !important;
+      }
+    }
+  }
+}

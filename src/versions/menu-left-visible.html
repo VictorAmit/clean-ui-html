@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-//= ../versions/head.html
+@@include('../versions/head.html')
 
 <body class="cui-config-borderless cui-menu-colorful cui-theme-light cui-menu-left-shadow">
   <div class="cui-initial-loading"></div>
   <div class="cui-layout cui-layout-has-sider">
-    //= ../components/menu-right/common/template/menu-right.html
-    //= ../components/menu-left/common/template/menu-left.html
+    @@include('../components/layout/sidebar/template.html')
+    @@include('../components/layout/menu-left/template.html')
     <div class="cui-layout">
-      <div class="cui-layout-header">
-        //= ../components/top-bar/common/template/top-bar.html
+      <div class="cui-layout-header">ß
+        @@include('../components/layout/topbar/template.html')
       </div>
       <div class="cui-layout-content">
-        //= ../components/breadcrumbs/common/template/breadcrumbs.html
+        @@include('../components/layout/breadcrumbs/template.html')
         <div class="cui-utils-content">
           <%= contents %>
         </div>
       </div>
       <div class="cui-layout-footer">
-        //= ../components/footer/common/template/footer.html
+        @@include('../components/layout/footer/template.html')
       </div>
     </div>
   </div>
-</body>
+</body>´
 
 </html>

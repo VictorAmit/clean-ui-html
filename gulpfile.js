@@ -7,51 +7,48 @@
 /////////////////////////////////////////////////////////////////////////////
 // CONFIGURATION
 
-var settings = {
-  "templateName": "Clean UI HTML Pro Admin Template",
-  "title": "Clean UI HTML Pro Admin Template",
-  "version": "2.1.2",
+var appVars = {
+  "templateName": "Clean UI Pro Html Admin Template",
+  "title": "Clean UI Pro Html Admin Template",
+  "version": "3.0.0",
   "description": "",
 };
 
 /////////////////////////////////////////////////////////////////////////////
 // GULP PLUGINS
 
-var gulp = require('gulp'),
-  watch = require('gulp-watch'),
+const gulp = require('gulp'),
   autoprefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   rename = require('gulp-rename'),
-  rigger = require('gulp-rigger'),
+  fileinclude = require('gulp-file-include'),
   ignore = require('gulp-ignore'),
   rimraf = require('gulp-rimraf'),
-  browserSync = require("browser-sync"),
+  browserSync = require('browser-sync').create(),
   wrap = require('gulp-wrap'),
   template = require('gulp-template'),
   data = require('gulp-data'),
   fs = require('fs'),
-  runSequence = require('run-sequence').use(gulp),
   flatten = require('gulp-flatten');
 
 /////////////////////////////////////////////////////////////////////////////
 // GULP PATHS
 
-var path = {
+const path = {
   src: {
     versions: 'src/versions/',
     versionsFiles: 'src/versions/**/*.html',
     pages: 'src/pages/**/*.html',
     components: 'src/components/',
+    componentsFiles: 'src/components/**/*.html',
 
     templates: 'src/components/**/**/*.html',
     img: 'src/components/**/img/**/*.*',
     css: 'src/components/**/**/*.scss',
     js: 'src/components/**/**/*.js',
-    favicon: 'src/components/dummy-assets/img/favicon.ico',
 
     tmpPages: './dist/versions/tmp/pages/',
     tmpPagesFiles: './dist/versions/tmp/pages/**/*.html',
-    tmpVersions: './dist/versions/tmp/versions/',
     tmpVersionsFiles: './dist/versions/tmp/versions/*.html',
 
     vendors_by_bower: 'src/vendors/by_bower/**/*.*',
@@ -59,11 +56,20 @@ var path = {
   },
   build: {
     versions: './dist/versions/',
+    tmpVersions: './dist/versions/tmp/',
     components: 'dist/components/',
     vendors: 'dist/vendors/',
   },
   clean: ['dist/*']
 };
+
+/////////////////////////////////////////////////////////////////////////////
+// CLEAN PRODUCTION
+
+function clean() {
+  return gulp.src(path.clean) // get build folder
+    .pipe(rimraf()); // erase all
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // PRINT ERRORS
@@ -76,88 +82,112 @@ function printError(error) {
 /////////////////////////////////////////////////////////////////////////////
 // BROWSERSYNC SERVE
 
-gulp.task('serve', function () {
-  browserSync({
+function serve(cb) {
+  browserSync.init({
     server: {
-      baseDir: "./dist/", // base dir path
+      baseDir: './dist/', // base dir path
       directory: true // show as directory
     },
     tunnel: false, // tunnel
     host: 'localhost', // host
     port: 9000, // port
-    logPrefix: "frontend", // console log prefix
+    logPrefix: 'Frontend', // console log prefix
+    notify: false,
   }); // run BrowserSync
-});
+  cb();
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// RELOAD BROWSER
+
+function reload(cb) {
+  browserSync.reload();
+  cb();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // BUILD PAGES
 
-gulp.task('build:versions', function () {
+function buildVersions() {
+  return gulp.src(path.src.versionsFiles) // get pages templates
+    .pipe(ignore.exclude('**/head.html')) // exclude head.html file
+    .pipe(fileinclude({ // include component templates to generated pages
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(path.build.tmpVersions)) // copy generated pages to build folder
+}
 
-  const arrayHtml = fs.readdirSync(path.src.versions).filter(function (e) { return e !== 'head.html' }); //  get template versions path excluding head.html
+function buildPages(cb) {
+  const versions = fs.readdirSync(path.src.versions).filter(function (e) { return e !== 'head.html' });
+  const pages = versions.map(function (version) {
+    const versionName = version.replace('.html', '');
 
-  for (const i in arrayHtml) {
-    gulp.task(arrayHtml[i], function () {
-      return gulp.src(path.src.tmpPagesFiles, { base: './' }) // get pages templates
+    function buildVersionPages() {
+      return gulp.src(path.src.pages)
+        .pipe(fileinclude({
+          prefix: '@@',
+          basepath: '@file'
+        }))
         .pipe(rename(function (path) {
           const prefix = path.dirname;
           path.dirname = "/";
           path.basename = prefix + '-' + path.basename;
         }))
         .pipe(data({
-          templateName: settings.templateName,
-          title: settings.title,
-          productVersion: settings.version
+          templateName: appVars.templateName,
+          title: appVars.title,
+          productVersion: appVars.version
         })) // set variables
-        .pipe(wrap({ src: path.src.tmpVersions + arrayHtml[i] })) // insert all pages to layout
+        .pipe(wrap({ src: `${path.build.tmpVersions}${version}` }))
         .pipe(template())
         .pipe(flatten())
-        .pipe(gulp.dest(path.build.versions + arrayHtml[i].replace('.html', ''))) // copy generated pages to build folder
-    })
+        .pipe(gulp.dest(`${path.build.versions}${versionName}`))  // copy generated pages to build folder
+    }
+
+    buildVersionPages.displayName = `build ${versionName} pages`
+    return buildVersionPages;
+  });
+  function removeTmp() {
+    return gulp.src(path.build.tmpVersions) // get tmp folder
+      .pipe(rimraf()); // erase tmp folder
   }
-
-  gulp.task('build:tmp-pages', function () {
-    return gulp.src(path.src.pages) // get pages templates
-      .pipe(rigger()) // include component templates to generated pages
-      .pipe(gulp.dest(path.src.tmpPages)) // copy generated pages to build folder
-  })
-
-  gulp.task('build:tmp-versions', function () {
-    return gulp.src(path.src.versionsFiles) // get pages templates
-      .pipe(ignore.exclude('**/head.html')) // exclude mixins.scss file
-      .pipe(rigger()) // include component templates to generated pages
-      .pipe(gulp.dest(path.src.tmpVersions)) // copy generated pages to build folder
-  })
-
-  gulp.task('build:del-tmp-files', function () {
-    return gulp.src('./dist/versions/tmp') // get build folder
-      .pipe(rimraf()); // erase all
-  })
-
-  runSequence('build:tmp-pages', 'build:tmp-versions', ...arrayHtml, 'reload', 'build:del-tmp-files');
-});
+  return gulp.series(gulp.series(
+    ...pages,
+    removeTmp
+  ),
+    function doneBuildPages(done) {
+      cb();
+      done();
+    })();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // VENDORS BUILD
 
-gulp.task('build:vendors', function () {
+function buildVendors(cb) {
   gulp.src([path.src.vendors_by_bower, path.src.vendors_by_hands]) // get folders with vendors components
-    .pipe(gulp.dest(path.build.vendors)); // copy to destination folder
-});
+    .on('error', printError) // print error if found
+    .pipe(gulp.dest(path.build.vendors)) // copy to destination folder
+    .on('end', function () { browserSync.reload(); }) // reload BrowserSync
+  cb();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // JAVASCRIPT BUILD
 
-gulp.task('build:js', function () {
+function buildJs(cb) {
   gulp.src(path.src.js, { base: path.src.components }) // get folder with js
+    .on('error', printError) // print error if found
     .pipe(gulp.dest(path.build.components)) // copy to destination folder
     .on('end', function () { browserSync.reload(); }) // reload BrowserSync
-});
+  cb();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // STYLES BUILD
 
-gulp.task('build:css', function () {
+function buildCss(cb) {
   gulp.src(path.src.css, { base: path.src.components }) // get folder with css
     .pipe(ignore.exclude('**/mixins.scss')) // exclude mixins.scss file
     .pipe(sass({ outputStyle: 'expanded', indentWidth: 4 })) // css formatting
@@ -167,72 +197,56 @@ gulp.task('build:css', function () {
     })) // add cross-browser prefixes
     .pipe(gulp.dest(path.build.components))  // copy sources
     .on('end', function () { browserSync.reload(); }) // reload BrowserSync
-});
+  cb();
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // IMAGES BUILD
 
-gulp.task('build:img', function () {
-  gulp.src(path.src.img, { base: path.src.components }) // get folder with images
-    .pipe(ignore.exclude('**/favicon.ico')) // exclude favicon.css file
+function buildImg() {
+  return gulp.src(path.src.img, { base: path.src.components }) // get folder with images
     .on('error', printError) // print error if found
     .pipe(gulp.dest(path.build.components)); // copy to destination folder
-
-  gulp.src(path.src.favicon, { base: path.src.components }) // get favicon
-    .pipe(gulp.dest(path.build.components)); // copy to destination folder
-});
-
-/////////////////////////////////////////////////////////////////////////////
-// GLOBAL BUILD
-
-gulp.task('build', function () {
-  runSequence(
-    'build:versions', // run build:html task
-    'build:css', // run build:css task
-    'build:js', // run build:js task
-    'build:img', // run build:img task
-    'build:vendors' // run build:vendors task
-  );
-});
+}
 
 /////////////////////////////////////////////////////////////////////////////
 // FILES CHANGE WATCHER
 
-gulp.task('watch', function () {
-  watch([path.src.versions, path.src.pages, path.src.templates], function () { // watch components, components, versions and templates folders
-    gulp.start('build:versions'); // run build:versions task
-  });
-  watch([path.src.css], function () { // watch css folder
-    gulp.start('build:css'); // run build:css task
-  });
-  watch([path.src.js], function () { // watch js folder
-    gulp.start('build:js'); // run build:js task
-  });
-  watch([path.src.img], function () { // watch img folder
-    gulp.start('build:img'); // run build:img task
-  });
-  watch([path.src.vendors_by_bower, path.src.vendors_by_hands], function () { // watch folder with vendors components
-    gulp.start('build:vendors'); // run build:vendors task
-  });
-});
+function watch(cb) {
+  gulp.watch([path.src.versions, path.src.pages, path.src.templates, path.src.componentsFiles], gulp.series(buildVersions, buildPages, reload));
+  gulp.watch([path.src.css], buildCss);
+  gulp.watch([path.src.js], buildJs);
+  gulp.watch([path.src.img], buildImg);
+  gulp.watch([path.src.vendors_by_bower, path.src.vendors_by_hands], buildVendors);
+  cb();
+}
 
 /////////////////////////////////////////////////////////////////////////////
-// CLEAN PRODUCTION
+// DECLARING TASKS
 
-gulp.task('clean', function () {
-  return gulp.src(path.clean) // get build folder
-    .pipe(rimraf()); // erase all
-});
+exports.clean = clean;
+exports.serve = serve;
+exports.buildCss = buildCss;
+exports.buildJs = buildJs;
+exports.buildImg = buildImg;
+exports.buildVendors = buildVendors;
+exports.buildPages = gulp.series(buildVersions, buildPages);
+exports.watch = watch;
 
 /////////////////////////////////////////////////////////////////////////////
-// RELOAD BROWSER
+// GLOBAL BUILD
 
-gulp.task('reload', function () {
-  browserSync.reload()
-})
+exports.build = gulp.series(
+  clean,
+  gulp.parallel(gulp.series(buildVersions, buildPages), buildCss, buildJs, buildImg, buildVendors)
+);
 
 /////////////////////////////////////////////////////////////////////////////
 // DEFAULT TASK
-gulp.task('default', function () {
-  runSequence('build', 'watch', 'serve')
-});
+
+exports.default = gulp.series(
+  clean,
+  gulp.parallel(gulp.series(buildVersions, buildPages), buildCss, buildJs, buildImg, buildVendors),
+  watch,
+  serve
+);
