@@ -1,12 +1,12 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "chat" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
-    $('.kit__chat__actionToggle').on('click', function () {
+    $('.kit__chat__actionToggle').on('click', function() {
       $('body').toggleClass('kit__chat--open')
     })
   })

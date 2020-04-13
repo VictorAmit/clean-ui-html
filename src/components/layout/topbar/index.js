@@ -1,20 +1,20 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-topbar" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
-    $('.cui__topbar__actionsDropdown .dropdown-menu').on('click', function () {
-      $('.cui__topbar__actionsDropdown').on('hide.bs.dropdown', function (event) {
+  $(function() {
+    $('.cui__topbar__actionsDropdown .dropdown-menu').on('click', function() {
+      $('.cui__topbar__actionsDropdown').on('hide.bs.dropdown', function(event) {
         event.preventDefault() // stop hiding dropdown on click
 
-        $('.cui__topbar__actionsDropdown .nav-link').on('shown.bs.tab', function (e) {
+        $('.cui__topbar__actionsDropdown .nav-link').on('shown.bs.tab', function(e) {
           $('.cui__topbar__actionsDropdown .dropdown-toggle').dropdown('update')
         })
       })
     })
 
-    $(document, '.cui__topbar__actionsDropdown .dropdown-toggle').mouseup(function (e) {
+    $(document, '.cui__topbar__actionsDropdown .dropdown-toggle').mouseup(function(e) {
       var dropdown = $('.cui__topbar__actionsDropdown')
       var dropdownMenu = $('.cui__topbar__actionsDropdownMenu')
 
@@ -46,9 +46,9 @@
         setHidden()
       }
     }
-    input.on('focus', function () {
+    input.on('focus', function() {
       livesearch.addClass(visibleClass)
-      setTimeout(function () {
+      setTimeout(function() {
         inputInner.focus()
       }, 200)
     })

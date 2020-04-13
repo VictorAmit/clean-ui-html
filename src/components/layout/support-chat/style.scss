@@ -31,12 +31,12 @@
       border-radius: 30px;
       color: $primary;
       transition: all 0.3s ease-in-out;
-    
-      &:hover  {
+
+      &:hover {
         background: $primary;
         color: $white;
       }
-    
+
       span {
         font-size: 16px;
         vertical-align: top;
@@ -75,7 +75,7 @@
         left: 0;
         width: 100%;
       }
-    
+
       &::before {
         content: '';
         position: absolute;
@@ -87,7 +87,7 @@
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-bottom: 0;
-    
+
         @media (max-width: $md-max-width) {
           right: rem(10);
         }
@@ -102,7 +102,7 @@ body.kit__dark {
     &__chat {
       &__container {
         background: $dark-gray-4;
-    
+
         &::before {
           border-top: 7px solid $dark-gray-4;
         }

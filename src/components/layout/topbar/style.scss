@@ -77,11 +77,11 @@
     &__item {
       cursor: pointer;
       margin-right: rem(8);
-    
+
       &:last-child {
         margin-right: 0;
       }
-    
+
       > div {
         display: inline;
       }
@@ -95,7 +95,7 @@
       line-height: 1;
       position: relative;
       top: 2px;
-    
+
       &:hover,
       &.cui__topbar__favs__setIconActive {
         opacity: 1;
@@ -109,7 +109,7 @@
       background: $white;
       @include transition-slow;
       border-radius: 3px;
-    
+
       > span {
         display: block;
         width: calc(100% - 20px);
@@ -117,7 +117,7 @@
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-    
+
       &:hover {
         background: $gray-1;
       }
@@ -138,12 +138,12 @@
     opacity: 0;
     visibility: hidden;
     @include transition-slow;
-  
+
     &__visible {
       opacity: 1;
       visibility: visible;
     }
-  
+
     &__close {
       font-size: rem(12);
       color: $default;
@@ -156,34 +156,33 @@
       border: none;
       background-color: transparent;
       @include transition-slow;
-  
+
       &:hover {
         color: $text;
       }
     }
-  
+
     &__wrapper {
       padding-top: rem(60);
       padding-left: rem(65);
       padding-right: rem(15);
       line-height: 1.7;
-  
 
       @media screen and (max-width: $sm-max-width) {
         padding-left: rem(20);
         padding-right: rem(20);
       }
     }
-  
+
     &__logo {
       height: rem(45);
-  
+
       &__container {
         margin-top: rem(20);
         margin-bottom: rem(30);
       }
     }
-  
+
     &__input {
       width: 100%;
       border: none;
@@ -192,50 +191,50 @@
       font-weight: bold;
       padding: 0;
       margin-bottom: rem(20);
-  
+
       @media screen and (max-width: $sm-max-width) {
         font-size: rem(40);
       }
     }
-  
+
     &__options {
       padding: 0;
       margin: 0;
       margin-bottom: rem(30);
       list-style: none;
     }
-  
+
     &__option {
       display: inline-block;
       margin-right: rem(26);
       font-size: rem(14);
       color: $text;
-  
+
       &:last-child {
         margin-right: 0;
       }
     }
-  
+
     &__suggestion {
       margin-bottom: rem(40);
-  
+
       @media (max-width: $sm-max-width) {
         margin-bottom: rem(15);
       }
     }
-  
+
     &__results {
       &__title {
         font-weight: 700;
         margin-bottom: rem(20);
       }
     }
-  
+
     &__result {
       display: block;
       margin-left: rem(70);
       padding-top: rem(8);
-  
+
       &__thumb {
         display: block;
         width: rem(50);
@@ -251,29 +250,28 @@
         background-size: cover;
         float: left;
       }
-  
+
       &__content {
         margin-bottom: rem(20);
         min-height: rem(50);
       }
-  
+
       &__text {
         font-weight: 300;
         font-size: rem(20);
         line-height: 1;
-  
+
         @media (max-width: $sm-max-width) {
           font-size: rem(16);
         }
       }
-  
+
       &__source {
         color: $text;
       }
     }
   }
 }
-
 
 // dark theme
 body.kit__dark {
@@ -320,15 +318,15 @@ body.kit__dark {
     &__favs {
       &__icon {
         color: $dark-gray-2;
-    
+
         &:hover {
           color: $primary;
         }
       }
-    
+
       &__link {
         background: $dark-gray-6;
-    
+
         &:hover {
           background: $dark-gray-5;
         }
