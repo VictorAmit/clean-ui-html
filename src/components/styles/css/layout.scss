@@ -2,6 +2,32 @@
 
 .cui {
   &__layout {
+
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    min-height: 100vh;
+    min-width: 0;
+
+    &--hasSider {
+      flex-direction: row;
+    }
+  
+    &__content {
+      flex: auto;
+      min-height: 0;
+    }
+  
+    &__footer {
+      flex: 0 0 auto;
+    }
+  
+    &__header {
+      flex: 0 0 auto;
+      height: 64px;
+    }
+  
+
     &__header {
       background: $white !important;
     }

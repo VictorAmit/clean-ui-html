@@ -3,8 +3,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 /* CHAT */
 
-.air__chat--open {
-  .air__chat__container {
+.kit__chat--open {
+  .kit__chat__container {
     z-index: 10;
     visibility: visible;
     opacity: 1;
@@ -12,19 +12,39 @@
   }
 }
 
-.air {
+.kit {
   &__chat {
     position: fixed;
-    z-index: 1998;
+    z-index: 998;
     bottom: rem(45);
     right: rem(40);
     @include transition-slow();
 
-    &__innerContainer {
-      height: rem(300);
+    &__toggleButton {
+      font-size: 18px;
+      height: rem(40);
+      padding: rem(10) rem(20);
+      background: $white;
+      border: none;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1) !important;
+      font-weight: bold;
+      border-radius: 30px;
+      color: $primary;
+      transition: all 0.3s ease-in-out;
+    
+      &:hover  {
+        background: $primary;
+        color: $white;
+      }
+    
+      span {
+        font-size: 16px;
+        vertical-align: top;
+      }
 
-      @media (max-width: $sm-max-width) {
-        flex-grow: 1;
+      .fe {
+        position: relative;
+        bottom: -1px;
       }
     }
 
@@ -55,7 +75,7 @@
         left: 0;
         width: 100%;
       }
-
+    
       &::before {
         content: '';
         position: absolute;
@@ -67,17 +87,28 @@
         border-left: 12px solid transparent;
         border-right: 12px solid transparent;
         border-bottom: 0;
-
+    
         @media (max-width: $md-max-width) {
           right: rem(10);
         }
       }
     }
+  }
+}
 
-    &__toggleButton {
-      .fe {
-        position: relative;
-        bottom: -1px;
+// dark theme
+body.kit__dark {
+  .kit {
+    &__chat {
+      &__container {
+        background: $dark-gray-4;
+    
+        &::before {
+          border-top: 7px solid $dark-gray-4;
+        }
+      }
+      &__toggleButton {
+        background: $dark-gray-4;
       }
     }
   }

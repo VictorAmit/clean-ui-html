@@ -6,8 +6,8 @@
   $(function () {
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
-    $('.air__chat__actionToggle').on('click', function () {
-      $('body').toggleClass('air__chat--open')
+    $('.kit__chat__actionToggle').on('click', function () {
+      $('body').toggleClass('kit__chat--open')
     })
   })
 })(jQuery)
