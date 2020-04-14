@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     /////////////////////////////////////////////////////////////////////////////////////////
     // set active menu item on load
 
@@ -19,11 +19,9 @@
       .find('> .cui__menuLeft__navigation')
       .show()
 
-      /////////////////////////////////////////////////////////////////////////////////////////
-      // toggle on resize
-
-      ;
-    (function () {
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // toggle on resize
+    ;(function() {
       var isTabletView = false
       function toggleMenu() {
         if (!isTabletView) {
@@ -34,7 +32,7 @@
         toggleMenu()
         isTabletView = true
       }
-      $(window).on('resize', function () {
+      $(window).on('resize', function() {
         if ($(window).innerWidth() <= 992) {
           toggleMenu()
           isTabletView = true
@@ -47,14 +45,14 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
 
-    $('.cui__menuLeft__trigger').on('click', function () {
+    $('.cui__menuLeft__trigger').on('click', function() {
       $('body').toggleClass('cui__menuLeft--toggled')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // mobile toggle
 
-    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function () {
+    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function() {
       $('body').toggleClass('cui__menuLeft--mobileToggled')
     })
 
@@ -93,7 +91,7 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function () {
+    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function() {
       if ($('body').find('.cui__menuLeft').length) {
         var el = $(this).closest('.cui__menuLeft__submenu'),
           opened = $('.cui__menuLeft__submenu--toggled')
@@ -116,6 +114,5 @@
         }
       }
     })
-
   })
 })(jQuery)
