@@ -1,79 +1,114 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-;(function($) {
+; (function ($) {
   'use strict'
-  $(function() {
+  $(function () {
     /////////////////////////////////////////////////////////////////////////////////////////
-    // set active menu item
+    // set active menu item on load
 
     var url = window.location.href
     var page = url.substr(url.lastIndexOf('/') + 1)
-    var currentItem = $('.cui-menu-left-list-root').find('a[href="' + page + '"]')
-    currentItem.parent().toggleClass('cui-menu-left-item-active')
+    var currentItem = $('.cui__menuLeft').find('a[href="' + page + '"]')
+
+    console.log(page)
     currentItem
-      .closest('.cui-menu-left-submenu')
-      .addClass('cui-menu-left-submenu-toggled')
-      .find('> .cui-menu-left-list')
-      .slideToggle(0)
+      .addClass('cui__menuLeft__item--active')
+      .closest('.cui__menuLeft__submenu')
+      .addClass('cui__menuLeft__submenu--toggled')
+      .find('> .cui__menuLeft__navigation')
+      .show()
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // add backdrop
+      /////////////////////////////////////////////////////////////////////////////////////////
+      // toggle on resize
 
-    $('.cui-menu-left').after('<div class="cui-menu-left-backdrop"><!-- --></div>')
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // menu logic
-
-    $('.cui-menu-left-trigger-action').on('click', function() {
-      $('body').toggleClass('cui-menu-left-toggled')
-    })
-
-    var isTabletView = false
-
-    function toggleMenu() {
-      if (!isTabletView) {
-        $('body').addClass('cui-menu-left-toggled')
+      ;
+    (function () {
+      var isTabletView = false
+      function toggleMenu() {
+        if (!isTabletView) {
+          $('body').addClass('cui__menuLeft--toggled')
+        }
       }
-    }
-
-    if ($(window).innerWidth() <= 992) {
-      toggleMenu()
-      isTabletView = true
-    }
-
-    $(window).on('resize', function() {
       if ($(window).innerWidth() <= 992) {
         toggleMenu()
         isTabletView = true
-      } else {
-        isTabletView = false
       }
+      $(window).on('resize', function () {
+        if ($(window).innerWidth() <= 992) {
+          toggleMenu()
+          isTabletView = true
+        } else {
+          isTabletView = false
+        }
+      })
+    })()
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // toggle
+
+    $('.cui__menuLeft__trigger').on('click', function () {
+      $('body').toggleClass('cui__menuLeft--toggled')
     })
 
-    $('.cui-menu-left-handler, .cui-menu-left-backdrop').on('click', function() {
-      $('body').toggleClass('cui-menu-left-toggled-mobile')
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // mobile toggle
+
+    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function () {
+      $('body').toggleClass('cui__menuLeft--mobileToggled')
     })
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // mobile toggle slide
+
+    var touchStartPrev = 0
+    var touchStartLocked = false
+
+    const unify = e => {
+      return e.changedTouches ? e.changedTouches[0] : e
+    }
+    document.addEventListener(
+      'touchstart',
+      e => {
+        const x = unify(e).clientX
+        touchStartPrev = x
+        touchStartLocked = x > 70
+      },
+      { passive: false },
+    )
+    document.addEventListener(
+      'touchmove',
+      e => {
+        const x = unify(e).clientX
+        const prev = touchStartPrev
+        if (x - prev > 50 && !touchStartLocked) {
+          console.log(123)
+          $('body').toggleClass('cui__menuLeft--mobileToggled')
+          touchStartLocked = true
+        }
+      },
+      { passive: false },
+    )
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui-menu-left-submenu > a').on('click', function() {
-      if ($('body').find('.cui-menu-left').length) {
-        var parent = $(this).parent(),
-          opened = $('.cui-menu-left-submenu-toggled')
+    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function () {
+      if ($('body').find('.cui__menuLeft').length) {
+        var el = $(this).closest('.cui__menuLeft__submenu'),
+          opened = $('.cui__menuLeft__submenu--toggled')
 
         if (
-          !parent.hasClass('cui-menu-left-submenu-toggled') &&
-          !parent.parent().closest('.cui-menu-left-submenu').length
+          !el.hasClass('cui__menuLeft__submenu--toggled') &&
+          !el.parent().closest('.cui__menuLeft__submenu').length
         )
           opened
-            .removeClass('cui-menu-left-submenu-toggled')
-            .find('> .cui-menu-left-list')
+            .removeClass('cui__menuLeft__submenu--toggled')
+            .find('> .cui__menuLeft__navigation')
             .slideUp(200)
 
-        parent.toggleClass('cui-menu-left-submenu-toggled')
-        var item = parent.find('> .cui-menu-left-list')
+        el.toggleClass('cui__menuLeft__submenu--toggled')
+        var item = el.find('> .cui__menuLeft__navigation')
         if (item.is(':visible')) {
           item.slideUp(200)
         } else {
@@ -82,46 +117,5 @@
       }
     })
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // custom scroll init
-
-    if ($('body').find('.cui-menu-left').length) {
-      if (!/Mobi/.test(navigator.userAgent) && jQuery().perfectScrollbar) {
-        const menuCustomScroll = $('.cui-menu-left-scroll').perfectScrollbar({
-          theme: 'cleanui',
-        })
-      }
-    }
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // colorful menu
-
-    var colorfulClasses =
-        'cui-menu-left-colorful-primary cui-menu-left-colorful-secondary cui-menu-left-colorful-primary cui-menu-left-colorful-default cui-menu-left-colorful-info cui-menu-left-colorful-success cui-menu-left-colorful-warning cui-menu-left-colorful-danger cui-menu-left-colorful-yellow',
-      colorfulClassesArray = colorfulClasses.split(' ')
-
-    function setColorfulClasses() {
-      $('.cui-menu-left-list-root > .cui-menu-left-item').each(function() {
-        var randomClass =
-          colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
-        $(this).addClass(randomClass)
-      })
-    }
-
-    function removeColorfulClasses() {
-      $('.cui-menu-left-list-root > .cui-menu-left-item').removeClass(colorfulClasses)
-    }
-
-    if ($('body').hasClass('cui-menu-colorful')) {
-      setColorfulClasses()
-    }
-
-    $('body').on('setColorfulClasses', function() {
-      setColorfulClasses()
-    })
-
-    $('body').on('removeColorfulClasses', function() {
-      removeColorfulClasses()
-    })
   })
 })(jQuery)
