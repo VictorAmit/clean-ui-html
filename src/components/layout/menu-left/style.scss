@@ -15,7 +15,6 @@
   width: 256px;
   position: relative;
   z-index: 100;
-  font-size: rem(14);
 
   &__outer {
     background: $white;
@@ -157,7 +156,7 @@
       position: absolute;
       right: 14px;
       width: 20px;
-      top: 11px;
+      top: 12px;
       margin: 0 !important;
       line-height: 1 !important;
       color: $gray-5;
@@ -231,11 +230,11 @@
 
       > .cui__menuLeft__item__link {
         &:after {
-          transform: rotate(-45deg) translateX(-2px);
+          transform: rotate(-45deg) translateX(-1px) translateY(-1px);
         }
 
         &:before {
-          transform: rotate(45deg) translateX(2px);
+          transform: rotate(45deg) translateX(1px) translateY(-1px);
         }
       }
     }
@@ -413,6 +412,91 @@
               display: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////////
+  /* GRAY COLOR */
+
+  &--gray {
+    .cui__menuLeft {
+      background: $gray-1;
+
+      &__outer {
+        background: $gray-1;
+      }
+    }
+  }
+
+  &--dark {
+    .cui__menuLeft {
+      color: $dark-gray-2;
+      background: $dark-gray-6;
+
+      &__outer {
+        background: $dark-gray-6;
+      }
+
+      &__logo {
+        &__name {
+          color: $white;
+        }
+        &__descr {
+          color: $dark-gray-2;
+          border-left: 1px solid $dark-gray-4;
+        }
+      }
+
+      &__category {
+        color: darken($dark-gray-3, 10%) !important;
+
+        &:after {
+          background-color: $dark-gray-4 !important;
+        }
+      }
+
+      &__item {
+        &__icon {
+          color: $dark-gray-2;
+        }
+
+        &__link {
+          color: $dark-gray-2;
+          &:hover {
+            color: $primary;
+            background: $dark-gray-4 !important;
+          }
+
+          &.cui__menuLeft__item--active {
+            background: $primary !important;
+            color: $white !important;
+          }
+
+          &:after, &:before {
+            background: darken($dark-gray-3, 10%);
+          }
+        }
+      }
+
+      &__submenu {
+        &--toggled {
+          background: $dark-gray-4 !important;
+        }
+      }
+
+      &__banner {
+        background: $dark-gray-4;
+        border: 1px solid $dark-gray-4;
+      }
+
+      &__trigger {
+        background: lighten($dark-gray-6, 5%);
+
+        &:after {
+          border-left-color: $dark-gray-3;
+          border-top-color: $dark-gray-3;
         }
       }
     }
