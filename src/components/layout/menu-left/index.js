@@ -1,9 +1,13 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-;(function($) {
+; (function ($) {
   'use strict'
-  $(function() {
+  $(function () {
+    if ($('body').find('.cui__menuLeft').length < 1) {
+      return
+    }
+
     /////////////////////////////////////////////////////////////////////////////////////////
     // set active menu item on load
 
@@ -19,40 +23,40 @@
       .find('> .cui__menuLeft__navigation')
       .show()
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle on resize
-    ;(function() {
-      var isTabletView = false
-      function toggleMenu() {
-        if (!isTabletView) {
-          $('body').addClass('cui__menuLeft--toggled')
+      /////////////////////////////////////////////////////////////////////////////////////////
+      // toggle on resize
+      ; (function () {
+        var isTabletView = false
+        function toggleMenu() {
+          if (!isTabletView) {
+            $('body').addClass('cui__menuLeft--toggled')
+          }
         }
-      }
-      if ($(window).innerWidth() <= 992) {
-        toggleMenu()
-        isTabletView = true
-      }
-      $(window).on('resize', function() {
         if ($(window).innerWidth() <= 992) {
           toggleMenu()
           isTabletView = true
-        } else {
-          isTabletView = false
         }
-      })
-    })()
+        $(window).on('resize', function () {
+          if ($(window).innerWidth() <= 992) {
+            toggleMenu()
+            isTabletView = true
+          } else {
+            isTabletView = false
+          }
+        })
+      })()
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
 
-    $('.cui__menuLeft__trigger').on('click', function() {
+    $('.cui__menuLeft__trigger').on('click', function () {
       $('body').toggleClass('cui__menuLeft--toggled')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // mobile toggle
 
-    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function() {
+    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function () {
       $('body').toggleClass('cui__menuLeft--mobileToggled')
     })
 
@@ -80,7 +84,6 @@
         const x = unify(e).clientX
         const prev = touchStartPrev
         if (x - prev > 50 && !touchStartLocked) {
-          console.log(123)
           $('body').toggleClass('cui__menuLeft--mobileToggled')
           touchStartLocked = true
         }
@@ -91,27 +94,25 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function() {
-      if ($('body').find('.cui__menuLeft').length) {
-        var el = $(this).closest('.cui__menuLeft__submenu'),
-          opened = $('.cui__menuLeft__submenu--toggled')
+    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function () {
+      var el = $(this).closest('.cui__menuLeft__submenu'),
+        opened = $('.cui__menuLeft__submenu--toggled')
 
-        if (
-          !el.hasClass('cui__menuLeft__submenu--toggled') &&
-          !el.parent().closest('.cui__menuLeft__submenu').length
-        )
-          opened
-            .removeClass('cui__menuLeft__submenu--toggled')
-            .find('> .cui__menuLeft__navigation')
-            .slideUp(200)
+      if (
+        !el.hasClass('cui__menuLeft__submenu--toggled') &&
+        !el.parent().closest('.cui__menuLeft__submenu').length
+      )
+        opened
+          .removeClass('cui__menuLeft__submenu--toggled')
+          .find('> .cui__menuLeft__navigation')
+          .slideUp(200)
 
-        el.toggleClass('cui__menuLeft__submenu--toggled')
-        var item = el.find('> .cui__menuLeft__navigation')
-        if (item.is(':visible')) {
-          item.slideUp(200)
-        } else {
-          item.slideDown(200)
-        }
+      el.toggleClass('cui__menuLeft__submenu--toggled')
+      var item = el.find('> .cui__menuLeft__navigation')
+      if (item.is(':visible')) {
+        item.slideUp(200)
+      } else {
+        item.slideDown(200)
       }
     })
   })

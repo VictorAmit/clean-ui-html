@@ -1,9 +1,91 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-;(function($) {
+; (function ($) {
   'use strict'
-  $(function() {
+  $(function () {
+    if ($('body').find('.cui__menuTop').length < 1) {
+      return
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // set active menu item on load
+
+    var url = window.location.href
+    var page = url.substr(url.lastIndexOf('/') + 1)
+    var currentItem = $('.cui__menuTop').find('a[href="' + page + '"]')
+
+    console.log(page)
+    currentItem
+      .addClass('cui__menuTop__item--active')
+      .parents('.cui__menuTop__submenu')
+      .addClass('cui__menuTop__submenu--toggled')
+      .find('> .cui__menuTop__navigation')
+      .show()
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // mobile toggle
+
+    $('.cui__menuTop__backdrop, .cui__menuTop__mobileTrigger').on('click', function () {
+      $('body').toggleClass('cui__menuTop--mobileToggled')
+    })
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // mobile toggle slide
+
+    var touchStartPrev = 0
+    var touchStartLocked = false
+
+    const unify = e => {
+      return e.changedTouches ? e.changedTouches[0] : e
+    }
+    document.addEventListener(
+      'touchstart',
+      e => {
+        const x = unify(e).clientX
+        touchStartPrev = x
+        touchStartLocked = x > 70
+      },
+      { passive: false },
+    )
+    document.addEventListener(
+      'touchmove',
+      e => {
+        const x = unify(e).clientX
+        const prev = touchStartPrev
+        if (x - prev > 50 && !touchStartLocked) {
+          $('body').toggleClass('cui__menuTop--mobileToggled')
+          touchStartLocked = true
+        }
+      },
+      { passive: false },
+    )
+
+    $('.cui__menuTop__submenu > .cui__menuTop__item__link').on('click', function () {
+      if ($(window).innerWidth() < 768) {
+        var el = $(this).closest('.cui__menuTop__submenu'),
+          opened = $('.cui__menuTop__submenu--toggled')
+
+        if (
+          !el.hasClass('cui__menuTop__submenu--toggled') &&
+          !el.parent().closest('.cui__menuTop__submenu').length
+        )
+          opened
+            .removeClass('cui__menuTop__submenu--toggled')
+            .find('> .cui__menuTop__navigation')
+            .slideUp(200)
+
+        el.toggleClass('cui__menuTop__submenu--toggled')
+        var item = el.find('> .cui__menuTop__navigation')
+        if (item.is(':visible')) {
+          item.slideUp(200)
+        } else {
+          item.slideDown(200)
+        }
+      }
+    })
+
     // /////////////////////////////////////////////////////////////////////////////////////////
     // // set active menu item
     // var url = window.location.href
@@ -62,29 +144,10 @@
     //     }
     //   }
     // })
-    // /////////////////////////////////////////////////////////////////////////////////////////
-    // // colorful menu
-    // var colorfulClasses =
-    //     'cui-menu-top-colorful-primary cui-menu-top-colorful-secondary cui-menu-top-colorful-primary cui-menu-top-colorful-default cui-menu-top-colorful-info cui-menu-top-colorful-success cui-menu-top-colorful-warning cui-menu-top-colorful-danger cui-menu-top-colorful-yellow',
-    //   colorfulClassesArray = colorfulClasses.split(' ')
-    // function setColorfulClasses() {
-    //   $('.cui-menu-top-list-root > .cui-menu-top-item').each(function() {
-    //     var randomClass =
-    //       colorfulClassesArray[Math.floor(Math.random() * colorfulClassesArray.length)]
-    //     $(this).addClass(randomClass)
-    //   })
-    // }
-    // function removeColorfulClasses() {
-    //   $('.cui-menu-top-list-root > .cui-menu-top-item').removeClass(colorfulClasses)
-    // }
-    // if ($('body').hasClass('cui-menu-colorful')) {
-    //   setColorfulClasses()
-    // }
-    // $('body').on('setColorfulClasses', function() {
-    //   setColorfulClasses()
-    // })
-    // $('body').on('removeColorfulClasses', function() {
-    //   removeColorfulClasses()
-    // })
+
+
+
+
+
   })
 })(jQuery)
