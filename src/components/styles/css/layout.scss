@@ -32,25 +32,25 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     /* SETTINGS */
-    &__grayBackground {
+    &--grayBackground {
       background: $gray-1;
     }
-    &__contentMaxWidth {
+    &--contentMaxWidth {
       .cui__utils__content {
         max-width: 1420px;
         margin: 0 auto;
       }
     }
-    &__appMaxWidth {
+    &--appMaxWidth {
       max-width: 1420px;
       margin: 0 auto;
     }
-    &__squaredBorders {
+    &--squaredBorders {
       .card {
         border-radius: 0 !important;
       }
     }
-    &__cardsShadow {
+    &--cardsShadow {
       .card {
         box-shadow: $shadow-4;
         .card {
@@ -58,18 +58,10 @@
         }
       }
     }
-    &__borderless {
+    &--borderless {
       .card {
         border: none !important;
       }
-    }
-    &__fixedHeader {
-      position: sticky;
-      top: 0;
-      z-index: 998;
-    }
-    &__headerGray {
-      background: $gray-1 !important;
     }
   }
 }

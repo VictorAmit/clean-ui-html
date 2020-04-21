@@ -7,130 +7,109 @@
     <div class="cui__utils__line" style="margin-top: 25px; margin-bottom: 30px"></div>
     <div class="cui__sidebar__type">
       <div class="cui__sidebar__type__title">
-        <span>Menu Type</span>
+        <span>Application Name</span>
       </div>
       <div class="cui__sidebar__type__items">
-        <div class="row">
-          <div class="col-6">
-            <label class="kit__utils__control kit__utils__control__radio">
-              <input type="radio" name="menuType" checked to="body" setting="" />
-              <span class="kit__utils__control__indicator"></span>
-              Default
-            </label>
-            <label class="kit__utils__control kit__utils__control__radio hideIfMenuTop">
-              <input type="radio" name="menuType" to="body" setting="cui__menu--flyout" />
-              <span class="kit__utils__control__indicator"></span>
-              Flyout
-            </label>
-          </div>
-          <div class="col-6">
-            <label class="kit__utils__control kit__utils__control__radio hideIfMenuTop">
-              <input type="radio" name="menuType" to="body" setting="cui__menu--compact" />
-              <span class="kit__utils__control__indicator"></span>
-              Compact
-            </label>
-            <label class="kit__utils__control kit__utils__control__radio">
-              <input type="radio" name="menuType" to="body" setting="cui__menu--nomenu" />
-              <span class="kit__utils__control__indicator"></span>
-              No Menu
-            </label>
-          </div>
-        </div>
+        <input id="appName" class="form-control" value="Clean UI Pro" />
       </div>
     </div>
     <div class="cui__sidebar__item hideIfMenuTop">
       <div class="cui__sidebar__label">
-        Toggled left menu
+        Left Menu: Collapsed
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__menu--toggled" />
+          <input type="checkbox" to="body" setting="cui__menuLeft--toggled" />
           <span class="cui__sidebar__switch__slider"></span>
         </label>
       </div>
     </div>
     <div class="cui__sidebar__item hideIfMenuTop">
       <div class="cui__sidebar__label">
-        Unfixed left menu
+        Left Menu: Unfixed
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__menu--unfixed" />
+          <input type="checkbox" to="body" setting="cui__menuLeft--unfixed" />
+          <span class="cui__sidebar__switch__slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="cui__sidebar__item hideIfMenuTop">
+      <div class="cui__sidebar__label">
+        Left Menu: Shadow
+      </div>
+      <div class="cui__sidebar__container">
+        <label class="cui__sidebar__switch">
+          <input type="checkbox" to="body" setting="cui__menuLeft--shadow" />
           <span class="cui__sidebar__switch__slider"></span>
         </label>
       </div>
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Fixed topbar
-      </div>
-      <div class="cui__sidebar__container">
-        <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__layout--fixedHeader" />
-          <span class="cui__sidebar__switch__slider"></span>
-        </label>
-      </div>
-    </div>
-    <div class="cui__sidebar__item">
-      <div class="cui__sidebar__label">
-        Menu color
+        Menu: Color
       </div>
       <div class="cui__sidebar__container">
         <div class="cui__sidebar__select" to="body">
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--white" setting="cui__menu--white"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--gray" setting="cui__menu--gray"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--blue" setting="cui__menu--blue"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--black cui__sidebar__select__item--active">
+          <div class="cui__sidebar__select__item cui__sidebar__select__item--white cui__sidebar__select__item--active">
           </div>
+          <div class="cui__sidebar__select__item cui__sidebar__select__item--gray"
+            setting="cui__menuLeft--gray cui__menuTop--gray"></div>
+          <div class="cui__sidebar__select__item cui__sidebar__select__item--black"
+            setting="cui__menuLeft--dark cui__menuTop--dark"></div>
         </div>
       </div>
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Flyout menu
+        Auth: Background
       </div>
       <div class="cui__sidebar__container">
         <div class="cui__sidebar__select" to="body">
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--white" setting="cui__menu__submenu--white">
+          <div class="cui__sidebar__select__item cui__sidebar__select__item--white cui__sidebar__select__item--active">
           </div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--gray" setting="cui__menu__submenu--gray">
-          </div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--blue cui__sidebar__select__item--active"
-            setting="cui__menu__submenu--blue"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--black" setting="cui__menu__submenu--black">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cui__sidebar__item">
-      <div class="cui__sidebar__label">
-        Login color
-      </div>
-      <div class="cui__sidebar__container">
-        <div class="cui__sidebar__select" to="body">
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--white" setting="cui__auth--white"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--gray cui__sidebar__select__item--active"
-            setting=""></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--blue" setting="cui__auth--blue"></div>
-          <div class="cui__sidebar__select__item cui__sidebar__select__item--black" setting="cui__auth--black"></div>
+          <div class="cui__sidebar__select__item cui__sidebar__select__item--gray" setting="cui__auth--white"></div>
           <div class="cui__sidebar__select__item cui__sidebar__select__item--img" setting="cui__auth--img"></div>
         </div>
       </div>
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Content no max-width
+        Topbar: Fixed
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__layout--contentNoMaxWidth" />
+          <input type="checkbox" to="body" setting="cui__topbar--fixed" />
           <span class="cui__sidebar__switch__slider"></span>
         </label>
       </div>
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        App max-width
+        Topbar: Gray Background
+      </div>
+      <div class="cui__sidebar__container">
+        <label class="cui__sidebar__switch">
+          <input type="checkbox" to="body" setting="cui__topbar--gray" />
+          <span class="cui__sidebar__switch__slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="cui__sidebar__item">
+      <div class="cui__sidebar__label">
+        App: Content Max-Width
+      </div>
+      <div class="cui__sidebar__container">
+        <label class="cui__sidebar__switch">
+          <input type="checkbox" to="body" setting="cui__layout--contentMaxWidth" />
+          <span class="cui__sidebar__switch__slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="cui__sidebar__item">
+      <div class="cui__sidebar__label">
+        App: Max-Width
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
@@ -141,7 +120,7 @@
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Gray background
+        App: Gray background
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
@@ -152,18 +131,7 @@
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Gray topbar
-      </div>
-      <div class="cui__sidebar__container">
-        <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__layout--grayTopbar" />
-          <span class="cui__sidebar__switch__slider"></span>
-        </label>
-      </div>
-    </div>
-    <div class="cui__sidebar__item">
-      <div class="cui__sidebar__label">
-        Squared card borders
+        Cards: Squared Borders
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
@@ -174,7 +142,7 @@
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Card shadow
+        Cards: Shadow
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
@@ -185,22 +153,11 @@
     </div>
     <div class="cui__sidebar__item">
       <div class="cui__sidebar__label">
-        Borderless cards
+        Cards: Borderless
       </div>
       <div class="cui__sidebar__container">
         <label class="cui__sidebar__switch">
           <input type="checkbox" to="body" setting="cui__layout--borderless" />
-          <span class="cui__sidebar__switch__slider"></span>
-        </label>
-      </div>
-    </div>
-    <div class="cui__sidebar__item">
-      <div class="cui__sidebar__label">
-        Menu shadow
-      </div>
-      <div class="cui__sidebar__container">
-        <label class="cui__sidebar__switch">
-          <input type="checkbox" to="body" setting="cui__menu--shadow" />
           <span class="cui__sidebar__switch__slider"></span>
         </label>
       </div>
@@ -218,12 +175,12 @@
   <i class=" fe fe-moon cui__sidebar__on"></i>
   <i class="fe fe-sun cui__sidebar__off"></i>
 </a>
-<a href="javascript: void(0);" style="bottom: calc(50%)" class="cui__sidebar__toggleButton color" data-toggle="tooltip"
-  data-placement="left" title="Set Primary Color">
-  <button type=" button" tabindex="0">
+<a href="javascript: void(0);" style="bottom: calc(50%)" class="cui__sidebar__toggleButton color reset"
+  data-toggle="tooltip" data-placement="left" title="Set Primary Color">
+  <button type="button" id="resetColor" tabindex="0">
     <i class="fe fe-x-circle"></i>
   </button>
-  <input type="color" id="colorPicker" />
+  <input type="color" id="colorPicker" value="#4b7cf3" />
   <i class="fe fe-package"></i>
 </a>
 <a href="https://docs.cleanuitemplate.com" target="_blank" rel="noopener noreferrer" style="bottom: calc(50% - 60px)"

@@ -271,6 +271,23 @@
       }
     }
   }
+  
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  /* SETTINGS */
+  &--fixed {
+    .cui__layout__header {
+      position: sticky;
+      top: 0;
+      z-index: 998;
+    }
+  }
+  
+  &--gray:not(.kit__dark) {
+    .cui__topbar {
+      background: $gray-1 !important;
+    }
+  }
 }
 
 // dark theme
