@@ -1,83 +1,113 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
-;(function($) {
+; (function ($) {
   'use strict'
-  $(function() {
+  $(function () {
     /////////////////////////////////////////////////////////////////////////////////////////
-    // toggle right menu
+    // hide non top menu related settings
+    if ($('.cui__menuTop').length) {
+      $('.hideIfMenuTop').css({
+        pointerEvents: 'none',
+        opacity: 0.4,
+      })
+    }
 
-    $('.cui-menu-right-action-toggle').on('click', function() {
-      $('body').toggleClass('cui-menu-right-visible')
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // toggle
+    $('.cui__sidebar__actionToggle').on('click', function () {
+      $('body').toggleClass('cui__sidebar--toggled')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
-    // options scripts
-
-    $('.cui-menu-right-example-option').each(function() {
-      var inputs = $(this).find('input'),
-        buttons = $(this).find('.btn')
-
-      // detect current options and set active buttons
-      var found = false
-      inputs.each(function() {
-        if ($('body').hasClass($(this).val())) {
-          $(this)
-            .parent()
-            .trigger('click')
-          found = true
-        }
-      })
-      if (!found) {
-        $(this)
-          .find('input[value=""]')
-          .parent()
-          .trigger('click')
-        $('.cui-menu-right .jspPane').css({ top: 0 })
+    // toggle theme
+    $('.cui__sidebar__actionToggleTheme').on('click', function () {
+      if ($('body').hasClass('kit__dark')) {
+        $('body').removeClass('kit__dark cui__menuLeft--gray cui__menuTop--gray cui__menuLeft--dark cui__menuTop--dark')
+        return
       }
 
-      // change options on click
-      $(this)
-        .find('.btn')
-        .on('click', function() {
-          var removeClasses = '',
-            addClass = $(this)
-              .find('input')
-              .val()
+      $('body').removeClass('cui__menuLeft--gray cui__menuTop--gray cui__menuLeft--dark cui__menuTop--dark')
+      $('body').addClass('kit__dark cui__menuLeft--dark cui__menuTop--dark')
+    })
 
-          buttons.removeClass('active')
-          $(this).addClass('active')
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // switch
+    $('.cui__sidebar__switch input').on('change', function () {
+      var el = $(this)
+      var checked = el.is(':checked')
+      var to = el.attr('to')
+      var setting = el.attr('setting')
+      if (checked) {
+        $(to).addClass(setting)
+      } else {
+        $(to).removeClass(setting)
+      }
+    })
 
-          inputs.each(function() {
-            removeClasses += $(this).val() + ' '
-          })
+    $('.cui__sidebar__switch input').each(function () {
+      var el = $(this)
+      var to = el.attr('to')
+      var setting = el.attr('setting')
+      if ($(to).hasClass(setting)) {
+        el.attr('checked', true)
+      }
+    })
 
-          $('body')
-            .removeClass(removeClasses)
-            .addClass(addClass)
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // colors
+    $('.cui__sidebar__select__item').on('click', function () {
+      var el = $(this)
+      var parent = el.parent()
+      var to = parent.attr('to')
+      var setting = el.attr('setting')
+      var items = parent.find('> div')
+      var classList = ''
+      items.each(function () {
+        var setting = $(this).attr('setting')
+        if (setting) {
+          classList = classList + ' ' + setting
+        }
+      })
+      items.removeClass('cui__sidebar__select__item--active')
+      el.addClass('cui__sidebar__select__item--active')
+      $(to).removeClass(classList)
+      $(to).addClass(setting)
+    })
 
-          if (
-            $(this)
-              .find('input')
-              .attr('name') == 'options-colorful' &&
-            $(this)
-              .find('input')
-              .val() == 'cui-menu-left-colorful'
-          ) {
-            $('body').trigger('removeColorfulClasses')
-            $('body').trigger('setColorfulClasses')
-          }
+    $('.cui__sidebar__select__item').each(function () {
+      var el = $(this)
+      var parent = el.parent()
+      var to = parent.attr('to')
+      var setting = el.attr('setting')
+      var items = parent.find('> div')
+      if ($(to).hasClass(setting)) {
+        items.removeClass('cui__sidebar__select__item--active')
+        el.addClass('cui__sidebar__select__item--active')
+      }
+    })
 
-          if (
-            $(this)
-              .find('input')
-              .attr('name') == 'options-colorful' &&
-            $(this)
-              .find('input')
-              .val() == ''
-          ) {
-            $('body').trigger('removeColorfulClasses')
-          }
-        })
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // type
+    $('.cui__sidebar__type__items input').on('change', function () {
+      var el = $(this)
+      var checked = el.is(':checked')
+      var to = el.attr('to')
+      var setting = el.attr('setting')
+      $('body').removeClass('cui__menu--compact cui__menu--flyout cui__menu--nomenu')
+      if (checked) {
+        $(to).addClass(setting)
+      } else {
+        $(to).removeClass(setting)
+      }
+    })
+
+    $('.cui__sidebar__type__items input').each(function () {
+      var el = $(this)
+      var to = el.attr('to')
+      var setting = el.attr('setting')
+      if ($(to).hasClass(setting)) {
+        el.attr('checked', true)
+      }
     })
   })
 })(jQuery)

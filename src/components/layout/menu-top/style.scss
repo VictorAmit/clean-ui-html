@@ -105,9 +105,10 @@
       cursor: pointer;
       border-radius: 5px;
       @include transition-middle();
+      color: $text !important;
 
       &:hover {
-        color: $primary;
+        color: $primary !important;
         background: $gray-2;
 
         .cui__menuTop__item__icon {
@@ -341,9 +342,9 @@
         }
 
         &__link {
-          color: $dark-gray-2;
+          color: $dark-gray-2 !important;
           &:hover {
-            color: $primary;
+            color: $primary !important;
             background: $dark-gray-4 !important;
           }
 
@@ -491,7 +492,9 @@
         }
 
         .cui__menuTop__navigation {
-          background: $black;
+          .cui__menuTop__navigation {
+            background: $black;
+          }
         }
       }
     }

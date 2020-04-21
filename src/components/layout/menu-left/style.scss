@@ -140,9 +140,10 @@
       cursor: pointer;
       border-radius: 5px;
       @include transition-middle();
+      color: $text !important;
 
       &:hover {
-        color: $primary;
+        color: $primary !important;
         background: $gray-2;
 
         .cui__menuLeft__item__icon {
@@ -171,11 +172,11 @@
     }
 
     &--disabled {
-      color: $gray-4;
+      color: $gray-4 !important;
       background: transparent !important;
 
       .cui__menuLeft__item__link {
-        color: $gray-4;
+        color: $gray-4 !important;
         background: transparent !important;
       }
 
@@ -463,9 +464,10 @@
         }
 
         &__link {
-          color: $dark-gray-2;
+          color: $dark-gray-2 !important;
+
           &:hover {
-            color: $primary;
+            color: $primary !important;
             background: $dark-gray-4 !important;
           }
 
