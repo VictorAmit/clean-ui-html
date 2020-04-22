@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     if ($('body').find('.cui__menuTop').length < 1) {
       return
     }
@@ -23,11 +23,10 @@
       .find('> .cui__menuTop__navigation')
       .show()
 
-
     /////////////////////////////////////////////////////////////////////////////////////////
     // mobile toggle
 
-    $('.cui__menuTop__backdrop, .cui__menuTop__mobileTrigger').on('click', function () {
+    $('.cui__menuTop__backdrop, .cui__menuTop__mobileTrigger').on('click', function() {
       $('body').toggleClass('cui__menuTop--mobileToggled')
     })
 
@@ -62,7 +61,7 @@
       { passive: false },
     )
 
-    $('.cui__menuTop__submenu > .cui__menuTop__item__link').on('click', function () {
+    $('.cui__menuTop__submenu > .cui__menuTop__item__link').on('click', function() {
       if ($(window).innerWidth() < 768) {
         var el = $(this).closest('.cui__menuTop__submenu'),
           opened = $('.cui__menuTop__submenu--toggled')
@@ -144,10 +143,5 @@
     //     }
     //   }
     // })
-
-
-
-
-
   })
 })(jQuery)

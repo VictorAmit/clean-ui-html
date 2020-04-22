@@ -199,12 +199,12 @@
     @media (max-width: $md-max-width) {
       &--toggled {
         background: $gray-2;
-  
+
         > .cui__menuTop__item__link {
           &:after {
             transform: rotate(-45deg) translateX(-1px) translateY(-1px);
           }
-  
+
           &:before {
             transform: rotate(45deg) translateX(1px) translateY(-1px);
           }
@@ -299,8 +299,6 @@
     }
   }
 
-  
-
   //////////////////////////////////////////////////////////////////////////////////////////
   /* GRAY & DARK THEME */
 
@@ -358,7 +356,8 @@
             color: $white !important;
           }
 
-          &:after, &:before {
+          &:after,
+          &:before {
             background: darken($dark-gray-3, 10%);
           }
         }
@@ -409,7 +408,6 @@
 
     &__navigation {
       &--root {
-        
         > .cui__menuTop__item {
           display: inline-block;
         }
@@ -425,7 +423,8 @@
             padding-right: rem(30);
             padding-left: rem(12) !important;
 
-            &:after, &:before {
+            &:after,
+            &:before {
               right: 15px;
             }
 
@@ -472,7 +471,7 @@
               &:after {
                 transform: rotate(-45deg) translateX(-2px) !important;
               }
-        
+
               &:before {
                 transform: rotate(-135deg) translateX(2px) !important;
               }
@@ -481,8 +480,6 @@
         }
       }
     }
-
-    
 
     @at-root {
       // .cui__menuTop--gray {

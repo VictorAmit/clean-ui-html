@@ -15,21 +15,21 @@
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
-  
+
     &--white {
       background: $white;
     }
-  
+
     &--gray {
       background: $gray-1;
     }
   }
-  
+
   &__containerInner {
     max-width: 32rem;
     width: 100%;
   }
-  
+
   &__topbar {
     height: rem(64);
     border-bottom: 1px solid $border;
@@ -41,18 +41,18 @@
     justify-content: space-between;
     padding: rem(28);
     width: 100%;
-  
+
     &--gray {
       background: $gray-1;
     }
   }
-  
+
   &__logoContainer {
     height: 64px;
     display: flex;
     align-items: center;
     padding: 0 rem(28) 0 0;
-  
+
     &__logo {
       display: flex;
       flex-direction: row;
@@ -80,7 +80,7 @@
       font-size: rem(14);
     }
   }
-  
+
   &__footerNav {
     li {
       margin: rem(5) rem(14);
@@ -117,12 +117,12 @@ body.kit__dark {
     &__authContainer {
       background: transparent !important;
     }
-  
+
     &__topbar {
       background: $dark-gray-5 !important;
       border-bottom: 1px solid $dark-gray-4 !important;
     }
-  
+
     &__logoContainer {
       &__name {
         color: $white;

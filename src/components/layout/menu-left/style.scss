@@ -502,7 +502,8 @@
             color: $white !important;
           }
 
-          &:after, &:before {
+          &:after,
+          &:before {
             background: darken($dark-gray-3, 10%);
           }
         }

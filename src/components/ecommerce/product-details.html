@@ -3,10 +3,15 @@
   <div class="card-body">
     <div class="row">
       <div class="col-lg-4">
-        <a class="cui__ecommerce__productFavorite" href="javascript: void(0);"><i
-            class="fe fe-heart font-size-21"></i></a>
+        <a class="cui__ecommerce__productFavorite" href="javascript: void(0);"
+          ><i class="fe fe-heart font-size-21"></i
+        ></a>
         <div class="height-250 cui__ecommerce__productMainImage mb-3">
-          <img class="img-fluid" src="../../components/kit-core/img/products/001.jpg" alt="Product" />
+          <img
+            class="img-fluid"
+            src="../../components/kit-core/img/products/001.jpg"
+            alt="Product"
+          />
         </div>
         <div class="d-flex flex-wrap justify-content-center mb-3">
           <div class="cui__ecommerce__productThumb width-100 height-100 border border-primary m-2">
@@ -53,8 +58,10 @@
             </optgroup>
           </select>
         </div>
-        <a href="javascript: void(0);"
-          class="width-200 btn btn-success btn-with-addon mr-auto mb-3 text-nowrap d-none d-md-block">
+        <a
+          href="javascript: void(0);"
+          class="width-200 btn btn-success btn-with-addon mr-auto mb-3 text-nowrap d-none d-md-block"
+        >
           <span class="btn-addon">
             <i class="btn-addon-icon fe fe-plus-circle"></i>
           </span>
@@ -62,21 +69,38 @@
         </a>
         <div class="card-header p-0 mb-4">
           <div class="d-flex align-items-stretch">
-            <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched">
+            <ul
+              class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+            >
               <li class="nav-item">
-                <a class="nav-link py-3 active" href="#tab-information-content" data-toggle="tab" aria-selected="true"
-                  id="tab-information">Information</a>
+                <a
+                  class="nav-link py-3 active"
+                  href="#tab-information-content"
+                  data-toggle="tab"
+                  aria-selected="true"
+                  id="tab-information"
+                  >Information</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link py-3" href="#tab-description-content" data-toggle="tab"
-                  id="tab-description">Description</a>
+                <a
+                  class="nav-link py-3"
+                  href="#tab-description-content"
+                  data-toggle="tab"
+                  id="tab-description"
+                  >Description</a
+                >
               </li>
             </ul>
           </div>
         </div>
         <div class="tab-content">
-          <div class="tab-pane active" id="tab-information-content" role="tabpanel"
-            aria-labelledby="tab-information-content">
+          <div
+            class="tab-pane active"
+            id="tab-information-content"
+            role="tabpanel"
+            aria-labelledby="tab-information-content"
+          >
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -114,12 +138,12 @@
   /////////////////////////////////////////////////////////////////////////////////////////
   // "ECOMMERCE" module scripts
 
-  ; (function ($) {
+  ;(function($) {
     'use strict'
-    $(function () {
+    $(function() {
       /////////////////////////////////////////////////////////////////////////////////////////
       $('.select2').select2()
-      $('.cui__ecommerce__productThumb').on('click', function () {
+      $('.cui__ecommerce__productThumb').on('click', function() {
         $('.cui__ecommerce__productMainImage img').attr(
           'src',
           $(this)
