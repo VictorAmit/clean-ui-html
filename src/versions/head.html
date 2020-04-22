@@ -5,11 +5,10 @@
   <title>
     <%= title %>
   </title>
-  <link href="../../components/dummy-assets/common/img/favicon.png" rel="shortcut icon">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../components/kit-core/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Mukta:400,700,800&display=swap" rel="stylesheet">
 
   <!-- VENDORS -->
-  <!-- v2.1.0 -->
   <link rel="stylesheet" type="text/css" href="../../vendors/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../../vendors/perfect-scrollbar/css/perfect-scrollbar.css">
   <link rel="stylesheet" type="text/css" href="../../vendors/ladda/dist/ladda-themeless.min.css">
@@ -74,36 +73,36 @@
   <script src="../../vendors/d3-time-format/dist/d3-time-format.js"></script>
   <script src="../../vendors/techan/dist/techan.min.js"></script>
 
-  <!-- CLEAN UI HTML ADMIN TEMPLATE MODULES-->
-  <!-- v2.1.0 -->
-  <link rel="stylesheet" type="text/css" href="../../components/core/common/core.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/core/widgets/widgets.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/vendors/common/vendors.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/settings/common/settings.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/settings/themes/themes.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/menu-left/common/menu-left.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/menu-top/common/menu-top.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/menu-right/common/menu-right.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/top-bar/common/top-bar.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/breadcrumbs/common/breadcrumbs.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/footer/common/footer.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/pages/common/pages.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/ecommerce/common/ecommerce.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/apps/common/apps.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/blog/common/blog.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/youtube/common/youtube.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/github/common/github.cleanui.css">
-  <link rel="stylesheet" type="text/css" href="../../components/docs/common/docs.cleanui.css">
-  <script src="../../components/menu-left/common/menu-left.cleanui.js"></script>
-  <script src="../../components/menu-top/common/menu-top.cleanui.js"></script>
-  <script src="../../components/menu-right/common/menu-right.cleanui.js"></script>
-  <script src="../../components/blog/common/blog.cleanui.js"></script>
-  <script src="../../components/github/common/github.cleanui.js"></script>
+  <!-- CLEAN UI PRO HTML ADMIN TEMPLATE MODULES-->
+  <link rel="stylesheet" type="text/css" href="../../components/kit-vendors/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/kit-core/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/styles/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/kit-widgets/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/kit-apps/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/ecommerce/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/dashboards/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/system/auth/style.css">
+
+  <link rel="stylesheet" type="text/css" href="../../components/layout/breadcrumbs/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/footer/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/menu-left/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/menu-top/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/sidebar/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/support-chat/style.css">
+  <link rel="stylesheet" type="text/css" href="../../components/layout/topbar/style.css">
+
+
+  <script src="../../components/kit-core/index.js"></script>
+  <script src="../../components/layout/menu-left/index.js"></script>
+  <script src="../../components/layout/menu-top/index.js"></script>
+  <script src="../../components/layout/sidebar/index.js"></script>
+  <script src="../../components/layout/support-chat/index.js"></script>
+  <script src="../../components/layout/topbar/index.js"></script>
 
 
   <!-- PRELOADER STYLES-->
   <style>
-    .cui-initial-loading {
+    .cui__initialLoading {
       position: fixed;
       z-index: 99999;
       top: 0;
@@ -113,12 +112,12 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDFweCIgIGhlaWdodD0iNDFweCIgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIiBjbGFzcz0ibGRzLXJvbGxpbmciPiAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiBmaWxsPSJub25lIiBuZy1hdHRyLXN0cm9rZT0ie3tjb25maWcuY29sb3J9fSIgbmctYXR0ci1zdHJva2Utd2lkdGg9Int7Y29uZmlnLndpZHRofX0iIG5nLWF0dHItcj0ie3tjb25maWcucmFkaXVzfX0iIG5nLWF0dHItc3Ryb2tlLWRhc2hhcnJheT0ie3tjb25maWcuZGFzaGFycmF5fX0iIHN0cm9rZT0iIzAxOTBmZSIgc3Ryb2tlLXdpZHRoPSIxMCIgcj0iMzUiIHN0cm9rZS1kYXNoYXJyYXk9IjE2NC45MzM2MTQzMTM0NjQxNSA1Ni45Nzc4NzE0Mzc4MjEzOCIgdHJhbnNmb3JtPSJyb3RhdGUoODQgNTAgNTApIj4gICAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgY2FsY01vZGU9ImxpbmVhciIgdmFsdWVzPSIwIDUwIDUwOzM2MCA1MCA1MCIga2V5VGltZXM9IjA7MSIgZHVyPSIxcyIgYmVnaW49IjBzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSI+PC9hbmltYXRlVHJhbnNmb3JtPiAgICA8L2NpcmNsZT4gIDwvc3ZnPg==);
-      background-color: #f2f4f8;
+      background-color: #fff;
     }
   </style>
   <script>
     $(document).ready(function () {
-      $('.cui-initial-loading').delay(200).fadeOut(400)
+      $('.cui__initialLoading').delay(200).fadeOut(400)
     })
   </script>
 </head>

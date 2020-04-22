@@ -1,0 +1,16 @@
+@import '../../../kit-core/mixins';
+
+.kit__g15 {
+  &__contentContainer {
+    border-bottom: 1px solid $gray-2;
+  }
+}
+
+// dark theme
+body.kit__dark {
+  .kit__g15 {
+    &__contentContainer {
+      border-bottom: 1px solid $dark-gray-4;
+    }
+  }
+}

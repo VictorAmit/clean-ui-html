@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-//= ../versions/head.html
+@@include('../versions/head.html')
 
-<body class="cui-config-borderless cui-menu-colorful">
-  <div class="cui-initial-loading"></div>
-  <div class="cui-layout">
-    //= ../components/menu-right/common/template/menu-right.html
-    //= ../components/menu-top/common/template/menu-top.html
-    <div class="cui-layout">
-      <div class="cui-layout-header">
-        //= ../components/top-bar/common/template/top-bar.html
+<body class="cui__layout--cardsShadow cui__layout--grayBackground cui__menuTop--dark cui__menuLeft--dark">
+  <div class="cui__initialLoading"></div>
+  <div class="cui__layout">
+    @@include('../components/layout/support-chat/template.html')
+    @@include('../components/layout/sidebar/template.html')
+    @@include('../components/layout/menu-top/template.html')
+    <div class="cui__layout">
+      <div class="cui__layout__header">
+        @@include('../components/layout/topbar/template.html')
       </div>
-      <div class="cui-layout-content">
-        //= ../components/breadcrumbs/common/template/breadcrumbs.html
-        <div class="cui-utils-content">
+      <div class="cui__layout__content">
+        @@include('../components/layout/breadcrumbs/template.html')
+        <div class="cui__utils__content">
           <%= contents %>
         </div>
       </div>
-      <div class="cui-layout-footer">
-        //= ../components/footer/common/template/footer.html
+      <div class="cui__layout__footer">
+        @@include('../components/layout/footer/template.html')
       </div>
     </div>
   </div>
