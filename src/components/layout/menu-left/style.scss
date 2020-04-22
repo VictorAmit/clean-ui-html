@@ -169,6 +169,11 @@
     &--active {
       background: $primary !important;
       color: $white !important;
+
+      &:hover {
+        background: $primary !important;
+        color: $white !important;
+      }
     }
 
     &--disabled {
