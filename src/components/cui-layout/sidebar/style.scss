@@ -210,7 +210,7 @@
   }
 
   @at-root {
-    .kit__dark {
+    [data-kit-theme='dark'] {
       .cui__sidebar {
         &__on {
           display: none;
@@ -269,7 +269,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .cui__sidebar {
     background: $dark-gray-6;
 

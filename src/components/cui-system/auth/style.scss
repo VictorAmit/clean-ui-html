@@ -112,7 +112,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .cui__auth {
     &__authContainer {
       background: transparent !important;

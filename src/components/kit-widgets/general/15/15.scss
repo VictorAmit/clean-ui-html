@@ -7,7 +7,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__g15 {
     &__contentContainer {
       border-bottom: 1px solid $dark-gray-4;

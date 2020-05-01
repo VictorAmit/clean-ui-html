@@ -102,7 +102,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .table {
     thead {
       th {

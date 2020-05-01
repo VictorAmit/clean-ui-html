@@ -24,7 +24,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__t6 {
     &__textDivider {
       &::before,

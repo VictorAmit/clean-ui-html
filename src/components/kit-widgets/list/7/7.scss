@@ -152,7 +152,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__l7 {
     &__list {
       &:before {

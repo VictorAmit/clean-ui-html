@@ -146,7 +146,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .wizard {
     > .content {
       background: $dark-gray-5 !important;

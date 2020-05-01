@@ -109,7 +109,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .irs {
     .irs-line {
       background: $dark-gray-4;

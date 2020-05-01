@@ -26,7 +26,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .dropify-wrapper {
     background-color: $dark-gray-5;
     border-color: $dark-gray-4;

@@ -58,7 +58,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .typeahead__container {
     .typeahead__result {
       .typeahead__list {

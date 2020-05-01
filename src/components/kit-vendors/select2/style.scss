@@ -120,7 +120,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .select2 {
     .select2-selection--single {
       border-color: $dark-gray-4;

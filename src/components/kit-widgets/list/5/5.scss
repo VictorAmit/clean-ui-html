@@ -90,7 +90,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__l5 {
     &__item {
       border-bottom: 1px solid $dark-gray-4;

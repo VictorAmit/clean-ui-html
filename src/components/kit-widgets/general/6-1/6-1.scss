@@ -20,7 +20,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__g6 {
     &__footer {
       background: $dark-gray-4;

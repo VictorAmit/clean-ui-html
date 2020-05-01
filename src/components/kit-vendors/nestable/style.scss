@@ -189,7 +189,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .dd-handle,
   .dd3-content {
     background: $dark-gray-5;

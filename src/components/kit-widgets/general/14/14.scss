@@ -71,7 +71,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__g14 {
     &__messageContent {
       background-color: $dark-gray-5;

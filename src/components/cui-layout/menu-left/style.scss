@@ -366,7 +366,7 @@
             &__logo {
               &__name,
               &__descr {
-                display: none;
+                display: none !important;
               }
             }
 

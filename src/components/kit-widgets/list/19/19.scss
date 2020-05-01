@@ -89,7 +89,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__l19 {
     &__itemSeparator {
       &:before {

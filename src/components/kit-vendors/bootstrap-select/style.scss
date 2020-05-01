@@ -63,7 +63,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .dropdown-menu {
     .no-results {
       background: $dark-gray-5;

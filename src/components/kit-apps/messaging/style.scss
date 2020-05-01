@@ -78,7 +78,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit {
     &__messaging {
       &__dialogItem {

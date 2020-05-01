@@ -22,7 +22,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .modal {
     &-content {
       background: $dark-gray-6;

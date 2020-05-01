@@ -50,7 +50,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .kit__l1 {
     &__itemPic {
       background: $dark-gray-4;

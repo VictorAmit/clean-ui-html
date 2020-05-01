@@ -249,7 +249,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .fc-unthemed {
     .fc-state-default {
       background: $dark-gray-4;

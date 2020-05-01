@@ -1,8 +1,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
-;(function($) {
+; (function ($) {
   'use strict'
-  $(function() {
+  $(function () {
     /////////////////////////////////////////////////////////////////////////////////////////
     // hide non top menu related settings
     if ($('.cui__menuTop').length) {
@@ -14,24 +14,27 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
-    $('.cui__sidebar__actionToggle').on('click', function() {
+    $('.cui__sidebar__actionToggle').on('click', function () {
       $('body').toggleClass('cui__sidebar--toggled')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle theme
-    $('.cui__sidebar__actionToggleTheme').on('click', function() {
-      if ($('body').hasClass('kit__dark')) {
+    $('.cui__sidebar__actionToggleTheme').on('click', function () {
+      var theme = document.querySelector('html').getAttribute('data-kit-theme')
+      if (theme === 'dark') {
+        document.querySelector('html').setAttribute('data-kit-theme', 'default')
         $('body').removeClass(
           'kit__dark cui__menuLeft--gray cui__menuTop--gray cui__menuLeft--dark cui__menuTop--dark',
         )
-        return
       }
-
-      $('body').removeClass(
-        'cui__menuLeft--gray cui__menuTop--gray cui__menuLeft--dark cui__menuTop--dark',
-      )
-      $('body').addClass('kit__dark cui__menuLeft--dark cui__menuTop--dark')
+      if (theme === 'default') {
+        document.querySelector('html').setAttribute('data-kit-theme', 'dark')
+        $('body').removeClass(
+          'cui__menuLeft--gray cui__menuTop--gray cui__menuLeft--dark cui__menuTop--dark',
+        )
+        $('body').addClass('cui__menuLeft--dark cui__menuTop--dark')
+      }
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
@@ -51,7 +54,7 @@
         descr.show()
       }
     }
-    $('#appName').on('keyup', function(e) {
+    $('#appName').on('keyup', function (e) {
       var value = e.target.value
       updateName(value)
     })
@@ -84,14 +87,14 @@
         .parent()
         .removeClass('reset')
     }
-    $('#colorPicker').on('change', function() {
+    $('#colorPicker').on('change', function () {
       var value = $(this).val()
       setPrimaryColor(value)
       $('#resetColor')
         .parent()
         .removeClass('reset')
     })
-    $('#resetColor').on('click', function() {
+    $('#resetColor').on('click', function () {
       window.localStorage.removeItem('kit.primary')
       $('#primaryColor').remove()
       $('#resetColor')
@@ -101,7 +104,7 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // switch
-    $('.cui__sidebar__switch input').on('change', function() {
+    $('.cui__sidebar__switch input').on('change', function () {
       var el = $(this)
       var checked = el.is(':checked')
       var to = el.attr('to')
@@ -113,7 +116,7 @@
       }
     })
 
-    $('.cui__sidebar__switch input').each(function() {
+    $('.cui__sidebar__switch input').each(function () {
       var el = $(this)
       var to = el.attr('to')
       var setting = el.attr('setting')
@@ -124,14 +127,14 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // colors
-    $('.cui__sidebar__select__item').on('click', function() {
+    $('.cui__sidebar__select__item').on('click', function () {
       var el = $(this)
       var parent = el.parent()
       var to = parent.attr('to')
       var setting = el.attr('setting')
       var items = parent.find('> div')
       var classList = ''
-      items.each(function() {
+      items.each(function () {
         var setting = $(this).attr('setting')
         if (setting) {
           classList = classList + ' ' + setting
@@ -143,7 +146,7 @@
       $(to).addClass(setting)
     })
 
-    $('.cui__sidebar__select__item').each(function() {
+    $('.cui__sidebar__select__item').each(function () {
       var el = $(this)
       var parent = el.parent()
       var to = parent.attr('to')
@@ -157,7 +160,7 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // type
-    $('.cui__sidebar__type__items input').on('change', function() {
+    $('.cui__sidebar__type__items input').on('change', function () {
       var el = $(this)
       var checked = el.is(':checked')
       var to = el.attr('to')
@@ -170,7 +173,7 @@
       }
     })
 
-    $('.cui__sidebar__type__items input').each(function() {
+    $('.cui__sidebar__type__items input').each(function () {
       var el = $(this)
       var to = el.attr('to')
       var setting = el.attr('setting')

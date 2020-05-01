@@ -25,7 +25,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .cui {
     &__utils {
       &__heading {

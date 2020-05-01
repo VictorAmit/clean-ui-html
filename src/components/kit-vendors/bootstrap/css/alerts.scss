@@ -68,7 +68,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .alert {
     &.alert-light {
       background: $dark;

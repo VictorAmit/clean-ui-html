@@ -5,7 +5,7 @@
 /* JUMBOTRON */
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .jumbotron {
     background: $dark-gray-4;
   }

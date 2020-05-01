@@ -409,7 +409,7 @@
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark']{
   .cui__crypto {
     &__table .table tr td {
       border-color: $dark-gray-4;

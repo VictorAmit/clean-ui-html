@@ -282,15 +282,22 @@
     }
   }
 
-  &--gray:not(.kit__dark) {
-    .cui__topbar {
-      background: $gray-1 !important;
+  @at-root {
+    [data-kit-theme='default'] &--gray {
+      .cui__topbar {
+        background: $gray-1 !important;
+      }
     }
   }
+  // &--gray:not(.kit__dark) {
+  //   .cui__topbar {
+  //     background: $gray-1 !important;
+  //   }
+  // }
 }
 
 // dark theme
-body.kit__dark {
+[data-kit-theme='dark'] {
   .cui__topbar {
     background: $dark-gray-6;
     color: $dark-gray-1;
