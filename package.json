@@ -1,8 +1,6 @@
 {
-  "name": "project",
-  "version": "3.0.0",
-  "author": "Mediatec Software http://www.mediatec.org <hello@mediatec.com>",
-  "description": "Clean UI Pro Html Admin Template",
+  "name": "cleanui-admin-template-html",
+  "version": "3.1.1",
   "private": true,
   "scripts": {
     "start": "gulp",
