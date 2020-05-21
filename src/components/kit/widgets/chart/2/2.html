@@ -3,15 +3,15 @@
   <div class="text-gray-6 mb-2">Revenue by location and date</div>
   <div class="font-weight-bold font-size-36 text-dark">$437,246.00</div>
 </div>
-<div class="kit__c2__chart height-200"></div>
+<div class="kit__c2__chart height-200 ct-hidden-points"></div>
 
 <script>
   /////////////////////////////////////////////////////////////////////////////////////////
   // "Chart Widget 2" module scripts
 
-  ;(function($) {
+  ; (function ($) {
     'use strict'
-    $(function() {
+    $(function () {
       /////////////////////////////////////////////////////////////////////////////////////////
       new Chartist.Line(
         '.kit__c2__chart',
@@ -32,7 +32,7 @@
             bottom: 0,
           },
           fullWidth: true,
-          showPoint: false,
+          showPoint: true,
           lineSmooth: false,
           axisY: {
             showGrid: false,
@@ -45,6 +45,7 @@
             offset: 0,
           },
           showArea: true,
+          plugins: [Chartist.plugins.tooltip()],
         },
       )
       /////////////////////////////////////////////////////////////////////////////////////////

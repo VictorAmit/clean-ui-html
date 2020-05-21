@@ -6,9 +6,9 @@
   /////////////////////////////////////////////////////////////////////////////////////////
   // "Chart Widget 5" module scripts
 
-  ;(function($) {
+  ; (function ($) {
     'use strict'
-    $(function() {
+    $(function () {
       /////////////////////////////////////////////////////////////////////////////////////////
       new Chartist.Bar(
         '.kit__c5__chart',
@@ -45,6 +45,7 @@
             offset: 0,
           },
           seriesBarDistance: 5,
+          plugins: [Chartist.plugins.tooltip()],
         },
       )
 

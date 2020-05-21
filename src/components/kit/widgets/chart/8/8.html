@@ -34,7 +34,7 @@
         +3125
       </td>
       <td class="text-right">
-        <div class="kit__c8__chartist kit__c8__chartist--1"></div>
+        <div class="kit__c8__chartist kit__c8__chartist--1 ct-hidden-points"></div>
       </td>
     </tr>
     <tr>
@@ -55,7 +55,7 @@
         +643
       </td>
       <td class="text-right">
-        <div class="kit__c8__chartist kit__c8__chartist--2"></div>
+        <div class="kit__c8__chartist kit__c8__chartist--2 ct-hidden-points"></div>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@
         +982
       </td>
       <td class="text-right">
-        <div class="kit__c8__chartist kit__c8__chartist--3"></div>
+        <div class="kit__c8__chartist kit__c8__chartist--3 ct-hidden-points"></div>
       </td>
     </tr>
   </table>
@@ -86,9 +86,9 @@
   /////////////////////////////////////////////////////////////////////////////////////////
   // "Chart Widget 8" module scripts
 
-  ;(function($) {
+  ; (function ($) {
     'use strict'
-    $(function() {
+    $(function () {
       /////////////////////////////////////////////////////////////////////////////////////////
       new Chartist.Line(
         '.kit__c8__chartist--1',
@@ -108,7 +108,7 @@
             bottom: 5,
           },
           fullWidth: true,
-          showPoint: false,
+          showPoint: true,
           lineSmooth: true,
           axisY: {
             showGrid: false,
@@ -121,6 +121,7 @@
             offset: 0,
           },
           showArea: false,
+          plugins: [Chartist.plugins.tooltip()],
         },
       )
 
@@ -142,7 +143,7 @@
             bottom: 5,
           },
           fullWidth: true,
-          showPoint: false,
+          showPoint: true,
           lineSmooth: true,
           axisY: {
             showGrid: false,
@@ -155,6 +156,7 @@
             offset: 0,
           },
           showArea: false,
+          plugins: [Chartist.plugins.tooltip()],
         },
       )
 
@@ -176,7 +178,7 @@
             bottom: 5,
           },
           fullWidth: true,
-          showPoint: false,
+          showPoint: true,
           lineSmooth: true,
           axisY: {
             showGrid: false,
@@ -189,6 +191,7 @@
             offset: 0,
           },
           showArea: false,
+          plugins: [Chartist.plugins.tooltip()],
         },
       )
       /////////////////////////////////////////////////////////////////////////////////////////
