@@ -10,7 +10,7 @@
 var appVars = {
   "templateName": "Clean UI Pro Html Admin Template",
   "title": "Clean UI Pro Html Admin Template",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "",
 };
 
@@ -113,7 +113,7 @@ function buildVersions() {
     .pipe(ignore.exclude('**/head.html')) // exclude head.html file
     .pipe(fileinclude({ // include component templates to generated pages
       prefix: '@@',
-      basepath: '@file'
+      basepath: '@root'
     }))
     .pipe(gulp.dest(path.build.tmpVersions)) // copy generated pages to build folder
 }
@@ -127,7 +127,7 @@ function buildPages(cb) {
       return gulp.src(path.src.pages)
         .pipe(fileinclude({
           prefix: '@@',
-          basepath: '@file'
+          basepath: '@root'
         }))
         .pipe(rename(function (path) {
           const prefix = path.dirname;
