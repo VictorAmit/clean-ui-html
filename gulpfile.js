@@ -44,7 +44,7 @@ const path = {
 
     templates: 'src/components/**/**/*.html',
     img: 'src/components/**/img/**/*.*',
-    css: 'src/components/**/**/*.scss',
+    css: 'src/components/**/*.scss',
     js: 'src/components/**/**/*.js',
 
     tmpPages: './dist/versions/tmp/pages/',

@@ -1,4 +1,4 @@
-<div class="kit__c7__mapContainer height-300"></div>
+<div class="kit__c7__mapContainer height-300" id="vmap"></div>
 <div class="table-responsive">
   <table class="table table-borderless">
     <tr>
@@ -38,7 +38,23 @@
     'use strict'
     $(function () {
       /////////////////////////////////////////////////////////////////////////////////////////
-
+      $('#vmap').vectorMap({
+        map: 'usa_en',
+        backgroundColor: null,
+        color: '#d9dee9',
+        enableZoom: true,
+        showTooltip: true,
+        selectedColor: null,
+        hoverColor: '#c8c4db',
+        colors: {
+          mo: '#2980b9',
+          fl: '#27ae60',
+          or: '#8e44ad'
+        },
+        onRegionClick: function (event, code, region) {
+          event.preventDefault();
+        }
+      });
       /////////////////////////////////////////////////////////////////////////////////////////
     })
   })(jQuery)
