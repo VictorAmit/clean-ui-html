@@ -1,4 +1,4 @@
-@import 'src/components/mixins';;
+@import 'src/components/mixins';
 
 .cui {
   &__layout {
@@ -32,7 +32,7 @@
 
     /////////////////////////////////////////////////////////////////////////////////////////
     /* SETTINGS */
-    &--grayBackground  {
+    &--grayBackground {
       background: $gray-1;
     }
     &--contentMaxWidth {

@@ -1,9 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // "cui-menu-right" module scripts
 
-; (function ($) {
+;(function($) {
   'use strict'
-  $(function () {
+  $(function() {
     if ($('body').find('.cui__menuLeft').length < 1) {
       return
     }
@@ -22,40 +22,40 @@
       .find('> .cui__menuLeft__navigation')
       .show()
 
-      /////////////////////////////////////////////////////////////////////////////////////////
-      // toggle on resize
-      ; (function () {
-        var isTabletView = false
-        function toggleMenu() {
-          if (!isTabletView) {
-            $('body').addClass('cui__menuLeft--toggled')
-          }
+    /////////////////////////////////////////////////////////////////////////////////////////
+    // toggle on resize
+    ;(function() {
+      var isTabletView = false
+      function toggleMenu() {
+        if (!isTabletView) {
+          $('body').addClass('cui__menuLeft--toggled')
         }
+      }
+      if ($(window).innerWidth() <= 992) {
+        toggleMenu()
+        isTabletView = true
+      }
+      $(window).on('resize', function() {
         if ($(window).innerWidth() <= 992) {
           toggleMenu()
           isTabletView = true
+        } else {
+          isTabletView = false
         }
-        $(window).on('resize', function () {
-          if ($(window).innerWidth() <= 992) {
-            toggleMenu()
-            isTabletView = true
-          } else {
-            isTabletView = false
-          }
-        })
-      })()
+      })
+    })()
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // toggle
 
-    $('.cui__menuLeft__trigger').on('click', function () {
+    $('.cui__menuLeft__trigger').on('click', function() {
       $('body').toggleClass('cui__menuLeft--toggled')
     })
 
     /////////////////////////////////////////////////////////////////////////////////////////
     // mobile toggle
 
-    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function () {
+    $('.cui__menuLeft__backdrop, .cui__menuLeft__mobileTrigger').on('click', function() {
       $('body').toggleClass('cui__menuLeft--mobileToggled')
     })
 
@@ -93,7 +93,7 @@
     /////////////////////////////////////////////////////////////////////////////////////////
     // submenu
 
-    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function () {
+    $('.cui__menuLeft__submenu > .cui__menuLeft__item__link').on('click', function() {
       var el = $(this).closest('.cui__menuLeft__submenu'),
         opened = $('.cui__menuLeft__submenu--toggled')
 

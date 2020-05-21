@@ -6,18 +6,33 @@
     <div class="card">
       <div class="card-header card-header-flex">
         <div class="d-flex align-items-stretch">
-          <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched">
+          <ul
+            class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+          >
             <li class="nav-item">
-              <a class="nav-link active" href="#tab-orders-content" data-toggle="tab" id="tab-orders">Orders</a>
+              <a
+                class="nav-link active"
+                href="#tab-orders-content"
+                data-toggle="tab"
+                id="tab-orders"
+                >Orders</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tab-revenue-content" data-toggle="tab" id="tab-revenue">Revenue</a>
+              <a class="nav-link" href="#tab-revenue-content" data-toggle="tab" id="tab-revenue"
+                >Revenue</a
+              >
             </li>
           </ul>
         </div>
       </div>
       <div class="card-body">
-        <div class="tab-pane" id="tab-orders-content" role="tabpanel" aria-labelledby="tab-orders-content">
+        <div
+          class="tab-pane"
+          id="tab-orders-content"
+          role="tabpanel"
+          aria-labelledby="tab-orders-content"
+        >
           @@include('src/components/kit/widgets/chart/3/3.html')
         </div>
       </div>
@@ -25,16 +40,31 @@
     <div class="card">
       <div class="card-header card-header-flex">
         <div class="d-flex align-items-stretch">
-          <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched">
+          <ul
+            class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+          >
             <li class="nav-item">
-              <a class="nav-link active" href="#tab-bestsellers-content" data-toggle="tab"
-                id="tab-bestsellers">Bestsellers</a>
+              <a
+                class="nav-link active"
+                href="#tab-bestsellers-content"
+                data-toggle="tab"
+                id="tab-bestsellers"
+                >Bestsellers</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tab-mostviewed-content" data-toggle="tab" id="tab-mostviewed">Most Viewed</a>
+              <a
+                class="nav-link"
+                href="#tab-mostviewed-content"
+                data-toggle="tab"
+                id="tab-mostviewed"
+                >Most Viewed</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#tab-highrated-content" data-toggle="tab" id="tab-highrated">Highest Rated</a>
+              <a class="nav-link" href="#tab-highrated-content" data-toggle="tab" id="tab-highrated"
+                >Highest Rated</a
+              >
             </li>
           </ul>
         </div>
@@ -95,12 +125,12 @@
   /////////////////////////////////////////////////////////////////////////////////////////
   // "ECOMMERCE" module scripts
 
-  ; (function ($) {
+  ;(function($) {
     'use strict'
-    $(function () {
+    $(function() {
       /////////////////////////////////////////////////////////////////////////////////////////
 
-      $('.air__ecommerce__productFavorite').on('click', function () {
+      $('.air__ecommerce__productFavorite').on('click', function() {
         $(this).toggleClass('text-dark')
       })
 

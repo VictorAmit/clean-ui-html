@@ -169,7 +169,7 @@
 </div>
 
 <script>
-  ; (function ($) {
+  ;(function($) {
     'use strict'
     var chart = new Chartist.Pie(
       '.cui-graph-card-donut-chartist-area-1',
@@ -180,15 +180,15 @@
       {
         donut: true,
         donutWidth: 25,
-        labelInterpolationFnc: function (value, index) {
-          var total = chart.data.series.reduce(function (pv, cv) {
+        labelInterpolationFnc: function(value, index) {
+          var total = chart.data.series.reduce(function(pv, cv) {
             return pv + cv
           }, 0)
           return Math.round((chart.data.series[index] / total) * 100) + '%'
         },
       },
     )
-    chart.on('draw', function (ctx) {
+    chart.on('draw', function(ctx) {
       if (ctx.type === 'label') {
         ctx.element.addClass('ct-label-pie')
         ctx.element.attr({
@@ -203,7 +203,7 @@
       }
     })
 
-    $(document).on('mouseenter', '.ct-slice-donut', function () {
+    $(document).on('mouseenter', '.ct-slice-donut', function() {
       $(this).css({
         opacity: '0.8',
       })
@@ -218,7 +218,7 @@
       })
     })
 
-    $(document).on('mouseleave', '.ct-slice-donut', function () {
+    $(document).on('mouseleave', '.ct-slice-donut', function() {
       $(this).css({
         opacity: '1',
       })

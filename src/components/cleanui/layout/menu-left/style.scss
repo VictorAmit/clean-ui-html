@@ -1,4 +1,4 @@
-@import 'src/components/mixins';;
+@import 'src/components/mixins';
 
 //////////////////////////////////////////////////////////////////////////////////////////
 /* MENU LEFT */
@@ -103,7 +103,6 @@
 
   &__navigation {
     list-style: none;
-    padding: 0;
     margin: 0;
     padding: 0 15px;
 
@@ -174,7 +173,7 @@
         background: $primary !important;
         color: $white !important;
       }
-      
+
       .cui__menuLeft__item__icon {
         color: $white !important;
       }

@@ -9,7 +9,11 @@
       <div class="col-lg-12">
         <h5 class="mb-4">
           <strong class="mr-3">Popup Alerts</strong>
-          <a href="https://github.com/mouse0270/bootstrap-notify" target="_blank" class="btn btn-sm btn-light">
+          <a
+            href="https://github.com/mouse0270/bootstrap-notify"
+            target="_blank"
+            class="btn btn-sm btn-light"
+          >
             Official Documentation
             <i class="fe fe-corner-right-up"></i>
           </a>
@@ -60,7 +64,11 @@
       <div class="col-lg-12">
         <h5 class="mb-4">
           <strong class="mr-3">Modal Alerts</strong>
-          <a href="https://github.com/mouse0270/bootstrap-notify" target="_blank" class="btn btn-sm btn-light">
+          <a
+            href="https://github.com/mouse0270/bootstrap-notify"
+            target="_blank"
+            class="btn btn-sm btn-light"
+          >
             Official Documentation
             <i class="fe fe-corner-right-up"></i>
           </a>
@@ -80,16 +88,16 @@
 </div>
 
 <script>
-  ; (function ($) {
+  ;(function($) {
     'use strict'
-    $(function () {
+    $(function() {
       // Sweet Alert
-      $('.swal-btn-basic').on('click', function (e) {
+      $('.swal-btn-basic').on('click', function(e) {
         e.preventDefault()
         swal("Here's a message!")
       })
 
-      $('.swal-btn-text').on('click', function (e) {
+      $('.swal-btn-text').on('click', function(e) {
         e.preventDefault()
         swal({
           title: "Here's a message!",
@@ -97,7 +105,7 @@
         })
       })
 
-      $('.swal-btn-success').on('click', function (e) {
+      $('.swal-btn-success').on('click', function(e) {
         e.preventDefault()
         swal({
           title: 'Good job!',
@@ -108,7 +116,7 @@
         })
       })
 
-      $('.swal-btn-warning').on('click', function (e) {
+      $('.swal-btn-warning').on('click', function(e) {
         e.preventDefault()
         swal(
           {
@@ -121,7 +129,7 @@
             confirmButtonText: 'Remove',
             closeOnConfirm: false,
           },
-          function () {
+          function() {
             swal({
               title: 'Deleted!',
               text: 'File has been deleted',
@@ -132,7 +140,7 @@
         )
       })
 
-      $('.swal-btn-cancel').on('click', function (e) {
+      $('.swal-btn-cancel').on('click', function(e) {
         e.preventDefault()
         swal(
           {
@@ -146,7 +154,7 @@
             closeOnConfirm: false,
             closeOnCancel: false,
           },
-          function (isConfirm) {
+          function(isConfirm) {
             if (isConfirm) {
               swal({
                 title: 'Deleted!',
@@ -166,7 +174,7 @@
         )
       })
 
-      $('.swal-btn-custom-img').on('click', function (e) {
+      $('.swal-btn-custom-img').on('click', function(e) {
         e.preventDefault()
         swal({
           title: 'Sweet!',
@@ -176,7 +184,7 @@
         })
       })
 
-      $('.swal-btn-info').on('click', function (e) {
+      $('.swal-btn-info').on('click', function(e) {
         e.preventDefault()
         swal({
           title: 'Are you sure?',
@@ -190,18 +198,18 @@
       })
 
       // Bootstrap Notify
-      $('#notify-basic').on('click', function () {
+      $('#notify-basic').on('click', function() {
         $.notify('Hello World')
       })
 
-      $('#notify-passing-title').on('click', function () {
+      $('#notify-passing-title').on('click', function() {
         $.notify({
           title: 'Welcome:',
           message: 'This plugin has been provided to you by Robert McIntosh aka mouse0270',
         })
       })
 
-      $('#notify-passing-html').on('click', function () {
+      $('#notify-passing-html').on('click', function() {
         $.notify({
           title: '<strong>Welcome:</strong> ',
           message:
@@ -209,21 +217,21 @@
         })
       })
 
-      $('#notify-url').on('click', function () {
+      $('#notify-url').on('click', function() {
         $.notify({
           message: 'Check out my twitter account by clicking on this notification!',
           url: 'https://twitter.com/Mouse0270',
         })
       })
 
-      $('#notify-icomoon-premuim').on('click', function () {
+      $('#notify-icomoon-premuim').on('click', function() {
         $.notify({
           icon: 'fe fe-database',
           message: 'Everyone loves font icons! Use them in your notification!',
         })
       })
 
-      $('#notify-fontawesome').on('click', function () {
+      $('#notify-fontawesome').on('click', function() {
         $.notify({
           icon: 'fa fa-star',
           title: 'Title',
@@ -231,7 +239,7 @@
         })
       })
 
-      $('#notify-center').on('click', function () {
+      $('#notify-center').on('click', function() {
         $.notify(
           {
             icon: 'font-icon font-icon-warning',
@@ -246,7 +254,7 @@
         )
       })
 
-      $('#notify-bottom').on('click', function () {
+      $('#notify-bottom').on('click', function() {
         $.notify(
           {
             icon: 'font-icon font-icon-warning',
@@ -261,7 +269,7 @@
         )
       })
 
-      $('#notify-bottom-center').on('click', function () {
+      $('#notify-bottom-center').on('click', function() {
         $.notify(
           {
             icon: 'font-icon font-icon-warning',
@@ -277,7 +285,7 @@
         )
       })
 
-      $('#notify-default').on('click', function () {
+      $('#notify-default').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -289,7 +297,7 @@
         )
       })
 
-      $('#notify-primary').on('click', function () {
+      $('#notify-primary').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -301,7 +309,7 @@
         )
       })
 
-      $('#notify-secondary').on('click', function () {
+      $('#notify-secondary').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -313,7 +321,7 @@
         )
       })
 
-      $('#notify-success').on('click', function () {
+      $('#notify-success').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -325,7 +333,7 @@
         )
       })
 
-      $('#notify-warning').on('click', function () {
+      $('#notify-warning').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -337,7 +345,7 @@
         )
       })
 
-      $('#notify-danger').on('click', function () {
+      $('#notify-danger').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -349,7 +357,7 @@
         )
       })
 
-      $('#notify-info').on('click', function () {
+      $('#notify-info').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -361,7 +369,7 @@
         )
       })
 
-      $('#notify-light').on('click', function () {
+      $('#notify-light').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
@@ -373,7 +381,7 @@
         )
       })
 
-      $('#notify-dark').on('click', function () {
+      $('#notify-dark').on('click', function() {
         $.notify(
           {
             title: '<strong>Heads up!</strong>',
