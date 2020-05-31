@@ -196,6 +196,7 @@
 
   &__submenu {
     @include transition-middle();
+    will-change: transform;
 
     > .cui__menuLeft__navigation {
       display: none;

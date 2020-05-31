@@ -3,29 +3,41 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /*  PERFECT SCROLLBAR CUSTOM STYLES */
 
-.ps--theme_kit {
+.ps-theme-kit {
   position: relative;
   overflow: auto;
 
-  &.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
-    width: 5px !important;
+  .ps-scrollbar-y-rail {
+    width: 4px !important;
+    background: none !important;
+    > .ps-scrollbar-y {
+      width: 4px !important;
+      background: #c5cdd2 !important;
+    }
   }
 
-  &.ps:hover > .ps__scrollbar-y-rail:hover,
-  &.ps:hover > .ps__scrollbar-x-rail:hover {
-    background: none;
-    opacity: 0.7;
+  .ps-scrollbar-x-rail {
+    height: 4px !important;
+    background: none !important;
+    > .ps-scrollbar-x {
+      height: 4px !important;
+      background: #c5cdd2 !important;
+    }
   }
+}
 
-  &.ps > .ps__scrollbar-y-rail > .ps__scrollbar-x,
-  &.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
-    background-color: $gray-4 !important;
-    opacity: 0.5;
-  }
-
-  &.ps.ps--in-scrolling.ps--x > .ps__scrollbar-x-rail,
-  &.ps.ps--in-scrolling.ps--y > .ps__scrollbar-y-rail {
-    background-color: transparent;
-    opacity: 0.9;
+[data-kit-theme='dark'] {
+  .ps-theme-kit {
+    .ps-scrollbar-y-rail {
+      > .ps-scrollbar-y {
+        background: #32304b !important;
+      }
+    }
+  
+    .ps-scrollbar-x-rail {
+      > .ps-scrollbar-x {
+        background: #32304b !important;
+      }
+    }
   }
 }
